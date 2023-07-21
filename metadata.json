@@ -1,15 +1,38 @@
 {
-    "title": "",
+    "title": "Downscaling metawebs: propagation of uncertainties in species distribution and interaction probability",
     "authors": [
         {
             "affiliations": [
                 "Université de Montréal",
                 "Québec Centre for Biodiversity Sciences"
             ],
-            "familyname": "Gabriel",
-            "givennames": "Dansereau",
+            "familyname": "Dansereau",
+            "givennames": "Gabriel",
             "email": "gabriel.dansereau@umontreal.ca",
             "orcid": "0000-0002-2212-3584",
+            "status": [
+                "corresponding",
+                "equal"
+            ]
+        },
+        {
+            "affiliations": [
+                "University of British Columbia"
+            ],
+            "familyname": "Barros",
+            "givennames": "Ceres",
+            "email": "ceres.barros@ubc.ca",
+            "orcid": "0000-0003-4036-977X"
+        },
+        {
+            "affiliations": [
+                "Université de Montréal",
+                "Québec Centre for Biodiversity Sciences"
+            ],
+            "familyname": "Poisot",
+            "givennames": "Timothée",
+            "email": "timothee.poisot@umontreal.ca",
+            "orcid": "0000-0002-0735-5184",
             "status": [
                 "corresponding",
                 "equal"
@@ -22,5 +45,5 @@
     "keywords": [
 
     ],
-    "citationstyle": "ecology-letters"
+    "citationstyle": "vancouver"
 }
