@@ -49,3 +49,57 @@ The spatial probabilistic metaweb I produced here is a first attempt at downscal
 Furthermore, a key distinction is that our approach is probabilistic, does not assume species interact whenever they co-occur, and incorporates variability based on environmental conditions from the species occurrence distributions. In comparison, previous studies with local network predictions based on metawebs instead assembled binary networks and recorded an interaction whenever two species with a known interaction in the metaweb co-occurred [@Braga2019SpaAna; @OConnor2020UnvFoo; @Galiana2021SpaSca; @Gauzere2022DivBio; @Botella2023LanInt]. According to @Braga2019SpaAna, assuming interactions as constant across space was a potential limitation to their design, as it a) ignores behaviour variability (diet shift) and potentially inflates the number of interactions; and b) does not consider the effect of environmental conditions on interaction realization. In contrast, our framework compensates for those in some way using our probabilistic metaweb. First, our network estimates (e.g. total number of links on @Fig:mean_links) are likely less inflated and more realistic, as binary networks overestimate connectance and nestedness compared to probabilistic ones [@Poisot2016StrPro]. Second, while we do not model interaction probability based on environmental conditions directly, we do incorporate environmental variability through the co-occurrence probabilities based on climate and land cover data. We also assess the uncertainty around this measure, which could be used as a quantitative proxy for environmental variability in further investigations. Third, another way in which our framework might differ is by introducing a different association between species richness and network properties. @Galiana2021SpaSca found that species richness had a large explanatory power over network properties but mentioned it could potentially be due to interactions between species being fixed in space. Our framework partly responds to that, as local interaction values are never the same as in the metaweb because we considered co-occurrence probabilities. Moreover, in the very rare case where two sites would have the exact same co-occurrence probabilities, the local interaction probabilities would be different because of the random draws of local realizations in the final assembly step. As a result, we did find differences in the distribution of species richness and the number of links (@Fig:bivariate_estimates); therefore, it might be interesting to revisit the explanatory power of species richness over networks properties [as done by @Galiana2021SpaSca].
 
 Our LCBD and uniqueness results highlighted that sites with unique network composition might differ from sites with unique species composition. @Poisot2017HosPar showed a similar result with host-parasite communities of rodents and ecto-fleas. Our results further show how these site differences could be distributed across a broad continuous spatial extent. Areas unique for only one element (species or network composition) differed in their combination of species richness and number of links (@Fig:lcbd_scatter), with species-unique sites displaying high values of both measures and network-unique sites displaying low values. One possible explanation for this could be the difference in the proportion of rare "events" in the community and interaction matrices, which would respectively be rare species and rare interactions. Communities with a low proportion of rare species show a negative relationship between their species richness and LCBD score, while communities with a higher proportion instead show a positive relationship [@daSilva2018DisCor; @Yao2021EcoUni; @Dansereau2022EvaEco]. However, rare species and rare interactions are probably not distributed in the same way; therefore, those "rare events" could possibly influence LCBD scores in different ways and determine different unique sites.
+
+# References
+
+![Conceptual figure of the workflow to obtain the spatial probabilistic metaweb (Chapter 1). The workflow has three components: the inputs, the localized steps, and the final spatial output. The inputs are composed of the spatial data (data with information in every cell) and the non-spatial data (constant for all of Canada). The localized steps use these data and are performed separately in every cell, first at a single-species level (using distribution data), then for every species pair (adding interaction data from the metaweb), and finally at the network level by combining the results of all species pairs. The final output coming out of the network-level steps contains a spatialized probabilistic metaweb for every cell across the study extent.](figures/conceptual-figure.png){#fig:conceptual}
+
+<!-- Main richness & links figures -->
+
+<div id="fig:mean" class="subfigures">
+
+  ![Expected richness](figures/richness_mean.png){#fig:mean_richness height=40%}
+
+  ![Expected number of links](figures/links_mean.png){#fig:mean_links height=40%}
+
+Example of a community measure (a, expected species richness) and a network one (b, expected number of links). Both measures are assembled from the predicted probabilistic communities and networks, respectively.
+
+</div>
+
+<!-- Bivariate figures -->
+
+<div id="fig:bivariate" class="subfigures">
+
+  ![Comparison of the estimates](figures/bivariate_richness_links.png){#fig:bivariate_estimates height=40%}
+
+  ![Comparison of the estimates' uncertainty](figures/bivariate_richness_links_variance.png){#fig:bivariate_uncertainty height=40%}
+
+Bivariate representation of the estimates (a) and uncertainty (b) of species richness and the number of links. Values are grouped into three quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The richness (horizontal axis) goes left to right from low richness (light grey, bottom left) to high richness (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left).
+
+</div>
+
+\newpage
+
+<!-- LCBD -->
+
+![Bivariate representation of species and network composition uniqueness. Values are grouped into three quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The network uniqueness (horizontal axis) goes left to right from low uniqueness (light grey, bottom left) to high uniqueness (pink, bottom right). The species composition uniqueness goes bottom-up from low uniqueness (light grey, bottom left) to high uniqueness (cyan, top left).](figures/lcbd_bivariate_mean.png){#fig:lcbd_bivariate}
+
+\newpage
+
+<!-- LCBD densities -->
+
+![Difference in the grouping of the sites identified as unique only for their networks (pink) or only their species composition (cyan). Sites unique only for their species composition mostly have high species richness and a high number of links while sites unique for their network composition only have low richness and number of links. Other sites not belonging to the unique species or network groups are shown in the background (black) and span a wider range. Values on the y-axis for the density figures (right) are probability densities scaled so that the area under the curve equals one. Similarly, the area under the curve for a given range of values on the x-axis (richness or links) represents the probability of observing a value in that range for the different site groupings.](figures/lcbd_bivariate_densities.png){#fig:lcbd_scatter}
+
+\newpage
+
+<!-- Ecoregion LCBD -->
+
+![Representation of the ecoregion LCBD values based on species composition (a) and network composition (b). LCBD values were first computed across all sites and scaled relative to the maximum value observed. The ecoregion LCBD value is the median value for the sites in the ecoregion. The bottom figures represent the probability densities of: c) the (median) ecoregion LCBD values for species and network LCBD, highlighting the variability of the LCBD between ecoregions, and d) the 89% interquartile range of the values within each ecoregion, highlighting the variability within the ecoregions.](figures/ecoregion_LCBD_all_included.png){#fig:ecoregion_lcbd height=85%}
+
+<!-- </div> -->
+
+\newpage
+
+<!-- Sampling options -->
+
+![Illustration of the effect of changing the sampling options for the species occurrence probabilities: a) taking the mean from the distribution as the probability of occurrence; b) converting the mean value to a binary one using a specific threshold per species; c) sampling a random value within the Normal distribution; d) converting the random value into a binary result.](figures/richness_all_committee.png){#fig:sampling_options}
