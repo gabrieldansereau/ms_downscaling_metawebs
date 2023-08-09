@@ -102,4 +102,4 @@ Bivariate representation of the estimates (a) and uncertainty (b) of species ric
 
 <!-- Sampling options -->
 
-![Illustration of the effect of changing the sampling options for the species occurrence probabilities: a) taking the mean from the distribution as the probability of occurrence; b) converting the mean value to a binary one using a specific threshold per species; c) sampling a random value within the Normal distribution; d) converting the random value into a binary result.](figures/richness_all_committee.png){#fig:sampling_options}
+![Illustration of the effect of changing the sampling options for the species occurrence probabilities: a) taking the mean from the distribution as the probability of occurrence; b) converting the mean value to a binary one using a specific threshold per species; c) sampling a random value within the Normal distribution; d) converting the random value into a binary result.](figures/richness_all.png){#fig:sampling_options}
