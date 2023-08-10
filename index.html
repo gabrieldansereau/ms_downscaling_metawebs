@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Template to prepare preprints and manuscripts using markdown
-and github actions</title>
+    <title>Downscaling metawebs: propagation of uncertainties in species
+distribution and interaction probability</title>
     <script src="https://hypothes.is/embed.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
@@ -239,20 +239,25 @@ and github actions</title>
 <body>
     <header>
         <div class="container">
-            <div class="header--title">Template to prepare preprints and
-manuscripts using markdown and github actions</div>
+            <div class="header--title">Downscaling metawebs: propagation
+of uncertainties in species distribution and interaction
+probability</div>
             <div class="header--authors">
                 <span class="header--author">
+                <a href="https://orcid.org/0000-0002-2212-3584" target="_blank">
+                    Gabriel Dansereau
+                </a>
+                <sup class="affiliation">1,2,‡</sup>
+                </span><span class="header--author">
+                <a href="https://orcid.org/0000-0003-4036-977X" target="_blank">
+                    Ceres Barros
+                </a>
+                <sup class="affiliation">3</sup>
+                </span><span class="header--author">
                 <a href="https://orcid.org/0000-0002-0735-5184" target="_blank">
                     Timothée Poisot
                 </a>
                 <sup class="affiliation">1,2,‡</sup>
-                </span><span class="header--author">
-                Peregrin Took
-                <sup class="affiliation">3,4</sup>
-                </span><span class="header--author">
-                Merriadoc Brandybuck
-                <sup class="affiliation">4,5,‡</sup>
                 </span>
             </div>
         </div>
@@ -263,274 +268,418 @@ manuscripts using markdown and github actions</div>
             
 
             <dl>
-                    <dt>Purpose</dt>
-                <dd>This template provides a series of scripts to render
-            a markdown document into an interactive website and a series
-            of PDFs.</dd>
-                    <dt>Internals</dt>
-                <dd>GitHub actions and a series of python scritpts. The
-            markdown is handled with <code>pandoc</code>.</dd>
-                    <dt>Motivation</dt>
-                <dd>It makes collaborating on text with GitHub easier,
-            and means that we never need to think about the output.</dd>
                 </dl>
 
             <div class="artifacts">
-                <a href="Poisot_et_al_2023_template_prepare_draft.pdf" title="Draft" target="_blank">Draft</a>
-                <a href="Poisot_et_al_2023_template_prepare_preprint.pdf" title="Preprint" target="_blank">Preprint</a>
-                <a href="Poisot_et_al_2023_template_prepare.odt" title="OpenDocument" target="_blank">Libre Office</a>
+                <a href="Dansereau_et_al_2023_downscaling_metawebs_draft.pdf" title="Draft" target="_blank">Draft</a>
+                <a href="Dansereau_et_al_2023_downscaling_metawebs_preprint.pdf" title="Preprint" target="_blank">Preprint</a>
+                <a href="Dansereau_et_al_2023_downscaling_metawebs.odt" title="OpenDocument" target="_blank">Libre Office</a>
             </div>
         </section>
 
         <article>
-            <p>This template templates turns README files hosted in a
-            GitHub repo into a formatted manuscript. In practice, this
-            involves converting the <code>README.md</code> file into
-            various LaTeX files, an interactive website, and an
-            OpenDocument text file (for use in Word, or to generate
-            track changes).</p>
-            <p>The workflow is <em>entirely</em> GitHub-based, so the
-            manuscript file is contained entirely in the README. There
-            are a few differences with “normal” markdown (or with GFM,
-            the most commonly used variant). First, because manuscripts
-            require extensive metadata, the metadata are stored in a
-            JSON file, as opposed to a YAML front-matter. Second, we use
-            the <a
-            href="https://github.com/lierdakil/pandoc-crossref"><code>pandoc-crossref</code></a>
-            filter to generate references to figures and tables, which
-            are not rendered when looking at the README on Github.
-            Everything else is standard markdown.</p>
-            <p>There are <em>two</em> important folders:
-            <code>figures</code> and <code>appendix</code>. Both of them
-            will remain in the repository even if they are empty (they
-            come with a <code>.gitkeep</code> file). The
-            <code>figures</code> folder is where figures are stored, and
-            the <code>appendix</code> folder is where you can put
-            markdown files for the appendices. Note that the appendices
-            will come with their <em>own</em> bibliography (which draws
-            from the global <code>references.bib</code> file at the root
-            of the project).</p>
-            <h1 id="the-typesetting">The typesetting</h1>
-            <p>The <em>actual</em> typesetting is handled by another
-            repository, which is located at <a
-            href="https://github.com/PoisotLab/manuscript-typesetter">PoisotLab/manuscript-typesetter</a>.
-            If you don’t feel like running foreign code on your repo,
-            you are absolutely correct. This is why the GitHub action
-            file associated to this template will specify which release
-            of the typesetter will be downloaded, so that you can
-            inspect what the typesetting steps are doing. The
-            typesetting versions follow semantic versioning, so as long
-            the <em>major</em> (as in <code>major.minor.patch</code>)
-            version remains the same, you will not need to change your
-            <code>README.md</code> or <code>metadata.json</code>.</p>
-            <p>In short: they convert the bibliography into a CSL JSON,
-            reformat the metadata so they are usable with pandoc
-            templates, downloads a whole bunch of binaries to do the
-            typesetting (as well as the TeX Gyre fonts we use for text,
-            and the <code>JuliaMono</code> font we use for code), and
-            then return everything as a compressed file, which is then
-            deployed using GitHub pages.</p>
-            <p>All documents will be deployed to <code>gh-pages</code>
-            <em>only</em> on push events from the <code>main</code>
-            branch. All of the artifacts will be built when doing pull
-            requests, so you can check that merging a branch is
-            <em>not</em> going to cause the compilation of the documents
-            to fail; indeed, you can download the artifacts produced
-            during the run, to check the PDF and html files. The website
-            is only updated from the <code>main</code> branch. When
-            doing a pull request, you will be notified of the word count
-            of the manuscript (approximate, and excluding
-            references).</p>
-            <p>If you want to use the typesetting system locally,
-            <em>you can</em>. We do not recommend it, but you absolutely
-            can. All you need to do is make sure it is downloaded in the
-            <code>.typesetter</code> folder in your repository (which is
-            going to be ignored by <code>git</code> by default), and
-            then install <code>Julia</code> (we know…), and then run the
-            top-level script. Again, we definitely advise against
-            running things locally.</p>
-            <h1 id="deploying-the-template">Deploying the template</h1>
-            <p>The process of deploying this template has been
-            <em>greatly</em> streamlined from previous versions. Click
-            on the “Use this template” button at the top of the Github
-            repo, making sure to check the option to import all branches
-            (this will import <code>gh-pages</code> and allow deploys to
-            start immediately). An example is given in fig. 1.</p>
-            <figure>
-            <img src="figures/how-to-clone.png" id="fig:clone"
-            alt="Figure 1: The important steps in using this template are (1) to pick the new name for your repository, (2) to make sure “Include all branches” is checked, and (3) to finish the process by clicking on “Create repository from template”." />
-            <figcaption aria-hidden="true">Figure 1: The important steps
-            in using this template are (1) to pick the new name for your
-            repository, (2) to make sure “Include all branches” is
-            checked, and (3) to finish the process by clicking on
-            “Create repository from template”.</figcaption>
-            </figure>
-            <p>When this is done, you can open your own repository, edit
-            <code>README.md</code> with your own text, commit, and push.
-            This will trigger the website build, which will become
-            available at <code>http://you.github.io/repo-name/</code>.
-            You can then edit the <code>references.bib</code> file,
-            change the <code>logo.png</code> file, and update the
-            <code>metadata.json</code> file. Every time you push a new
-            commit, everything will be updated.</p>
-            <h1 id="the-metadata-file">The metadata file</h1>
-            <p>The <code>metadata.json</code> file provided with this
-            template is reasonably complete, but the full format is
-            explained in the Supp. Mat. on the metadata specification.
-            From the website, Supp. Mat. can be accessed at the very
-            bottom of the page.</p>
-            <h1 id="references-management">References management</h1>
-            <p>The references are managed by <code>pandoc</code>.
-            References <em>must</em> be stored in a
-            <code>references.bib</code> file, and that it would make
-            sense to order it alphabetically by key, but this makes no
-            difference.</p>
-            <p>We use <a href="https://www.zotero.org/">Zotero</a> for
-            references management, and for the lab’s manuscripts, we
-            work from folders in a shared library (with a folder for
-            every manuscript).</p>
-            <p>We recommend the <a
-            href="https://retorque.re/zotero-better-bibtex/">Better
-            BibTeX</a> plugin for citation key generations, and
-            auto-export of the shared library to the
-            <code>references.bib</code> file. We use a citation key
-            format meant to convey information on the author (first
-            author full name), date (complet year), and title (first
-            non-stop-word word of the title). It must be set in the
-            Better BibTeX preferences as (you might need to remove the
-            line changes):</p>
-            <pre><code>auth.fold.fold + year + title.fold.nopunctordash.skipwords.lower.select(1,1).capitalize()</code></pre>
-            <p>It is a good idea to configure Better BibTeX to
-            auto-export on change, and to remove a lot of fields that
-            are not strictly speaking required for references. The list
-            of fields we usually ignore is:</p>
-            <pre><code>abstract,copyright,annotation,file,pmid,month,shorttitle,keywords</code></pre>
-            <p>The citations are done using the normal markdown syntax,
-            where <code>@Elton1927AniEco</code> produces <span
-            class="citation" data-cites="Elton1927AniEco">Elton
-            (1927)</span>, and <code>[@Camerano1880EquViv]</code>
-            produces <span class="citation"
-            data-cites="Camerano1880EquViv">(Camerano 1880)</span>.</p>
-            <h1 id="figures-tables-and-other-things">Figures, Tables,
-            and other things</h1>
-            <p>Note that you can wrap the text of legends for both
-            figures and tables. This avoids the issue of having very
-            long lines.</p>
-            <h2 id="mathematics">Mathematics</h2>
-            <p>The following equation</p>
-            <p><span id="eq:eq1"><span class="math display">$$J'(p) =
-            \frac{1}{\text{log}(S)}\times\left(-\sum p \times
-            \text{log}(p)\right)\qquad{(1)}$$</span></span></p>
-            <p>is produced using</p>
-            <div class="sourceCode" id="cb3"><pre
-            class="sourceCode latex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$J&#39;(p) = </span><span class="sc">\frac</span><span class="ss">{1}{</span><span class="sc">\text</span>{log}<span class="ss">(S)}</span><span class="sc">\times</span><span class="ss"> ... $$</span> {#eq:eq1}</span></code></pre></div>
-            <p>and can be referenced using <code>@eq:eq1</code>, which
-            will result in eq. 1. Note that because we use
-            <code>pandoc-crossref</code>, the label “eq.” will be
-            generated automatically.</p>
-            <h2 id="tables">Tables</h2>
-            <p>Table legends go on the line after the table itself. To
-            generate a reference to the table, use
-            <code>{#tbl:id}</code> – then, in the text, you can use
-            <code>{@tbl:id}</code> to refer to the table. For example,
-            the table below is tbl. 1. You can remove the <em>table</em>
-            in front by using <code>!@tbl:id</code>, or force it to be
-            capitalized with <code>\*tbl:id</code>.</p>
-            <div id="tbl:id">
-            <table>
-            <caption>Table 1: This is a table, and its identifier is
-            <code>id</code> – we can refer to it using
-            <code>{@tbl:id}</code>. Note that even if the table legend
-            is written below the table itself, it will appear on top in
-            the PDF document.</caption>
-            <thead>
-            <tr class="header">
-            <th style="text-align: right;">Sepal.Length</th>
-            <th style="text-align: right;">Sepal.Width</th>
-            <th style="text-align: right;">Petal.Length</th>
-            <th style="text-align: right;">Petal.Width</th>
-            <th style="text-align: left;">Species</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="odd">
-            <td style="text-align: right;">5.1</td>
-            <td style="text-align: right;">3.5</td>
-            <td style="text-align: right;">1.4</td>
-            <td style="text-align: right;">0.2</td>
-            <td style="text-align: left;">setosa</td>
-            </tr>
-            <tr class="even">
-            <td style="text-align: right;">5.0</td>
-            <td style="text-align: right;">3.6</td>
-            <td style="text-align: right;">1.4</td>
-            <td style="text-align: right;">0.2</td>
-            <td style="text-align: left;">setosa</td>
-            </tr>
-            <tr class="odd">
-            <td style="text-align: right;">5.4</td>
-            <td style="text-align: right;">3.9</td>
-            <td style="text-align: right;">1.7</td>
-            <td style="text-align: right;">0.4</td>
-            <td style="text-align: left;">setosa</td>
-            </tr>
-            </tbody>
-            </table>
-            </div>
-            <h1 id="figures">Figures</h1>
-            <p>Figures can have a legend – all figures <em>must</em> be
-            in the <code>figures/</code> folder of the project, as it is
-            also used for the website. We recommend to use good
-            resolution images, rather than PDFs, or at least to have
-            multiple versions available.</p>
-            <pre><code>![This is the legend of the figure...](figures/figure.png){#fig:figure}</code></pre>
-            <figure>
-            <img src="figures/figure.png" id="fig:figure"
-            alt="Figure 2: This is the legend of the figure, which will be shown in the margin in preprint mode, and underneath the figure in draft mode. The legend can contain references, etc. It is advised to use a resolution of at least 600dpi for the figures." />
-            <figcaption aria-hidden="true">Figure 2: This is the legend
-            of the figure, which will be shown in the margin in preprint
-            mode, and underneath the figure in draft mode. The legend
-            can contain references, etc. It is advised to use a
-            resolution of at least 600dpi for the figures.</figcaption>
-            </figure>
-            <p>We can now use <code>@fig:figure</code> to refer to
-            fig. 2.</p>
-            <h1 id="unicode-support">Unicode support</h1>
-            <p>The PDFs are rendered using the excellent <a
-            href="https://tectonic-typesetting.github.io/en-US/"><code>tectonic</code></a>
-            engine, and use <code>fontspec</code> for better looking
-            fonts. The text is set in TeX Gyre Termes, the titles are
-            set in TeX Gyre Heros, and the code is set in JuliaMono.</p>
-            <p>The text can use unicode: for example, this α is written
-            as is in the main text. The code can, similarly, use
-            unicode. For example, we can use the one-liner neural
-            network from the <a href=""
-            title="https://github.com/mossr/BeautifulAlgorithms.jl/blob/master/src/neural_network_one_liner.jl">beautiful
-            algorithms</a> repository:</p>
-            <div class="sourceCode" id="cb5"><pre
-            class="sourceCode julia"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">neural_network</span>(x, 𝐕, 𝐰, <span class="cn">φ</span>, g) <span class="op">=</span> 𝐰 <span class="op">⋅</span> <span class="fu">map</span>(𝐯ⱼ <span class="op">-&gt;</span> <span class="fu">g</span>(𝐯ⱼ <span class="op">⋅</span> <span class="fu">φ</span>(x)), 𝐕)</span></code></pre></div>
-            <p>Every character that <code>JuliaMono</code> supports
-            (which is <em>a lot</em>) can be used in code.</p>
-            <h1 id="suppl.-mat.">Suppl. Mat.</h1>
-            <p>The supplementary material <em>must</em> be in markdown
-            files stored in <code>appendix</code>, and <em>must</em>
-            have a front-matter with <code>order</code> (a number giving
-            the order of the supp. mat. document) and <code>name</code>
-            (a string giving the name of the supp. mat.).</p>
-            <h1 class="unnumbered" id="references">References</h1>
-            <div id="refs"
-            class="references csl-bib-body hanging-indent"
+            <h2 id="methods">Methods</h2>
+            <p>Fig. <strong>¿fig:conceptual?</strong> shows a conceptual
+            overview of the methodological steps. The components were
+            grouped as the inputs (spatial or non-spatial), the
+            localized steps (divided into single-species-level,
+            two-species-level, and network-level steps), and the final
+            spatial output.</p>
+            <h3 id="inputs">Inputs</h3>
+            <p>The inputs were divided into two main categories: the
+            spatial and non-spatial ones (<em>Inputs</em> box on
+            Fig. <strong>¿fig:conceptual?</strong>).</p>
+            <p>The main building block for the interaction data was the
+            metaweb for Canadian mammals from <span class="citation"
+            data-cites="Strydom2022FooWeb">(1)</span>, a non-spatial
+            input (represented as nodes and links on
+            Fig. <strong>¿fig:conceptual?</strong>). As stated above, a
+            metaweb contains all the possible interactions between the
+            species found in a given regional species pool <span
+            class="citation" data-cites="Dunne2006NetStr">(2)</span>.
+            The species list for the Canadian metaweb was extracted from
+            the International Union for the Conservation of Nature
+            (IUCN) checklist <span class="citation"
+            data-cites="Strydom2022FooWeb">(1)</span>. Briefly, the
+            metaweb was developed using graph embedding and phylogenetic
+            transfer learning based on the metaweb of European mammals,
+            which is itself based on a comprehensive survey of
+            interactions reported in the scientific literature <span
+            class="citation" data-cites="Maiorano2020TetSpe">(3)</span>.
+            The Canadian metaweb is probabilistic, which has the
+            advantage of taking into account that species do not
+            necessarily interact whenever they co-occur <span
+            class="citation" data-cites="Blanchet2020CoOcc">(4)</span>.
+            However, the Canadian metaweb is not explicitly spatial: it
+            only gives information on interactions in Canada as a whole
+            and does not represent networks at specific locations. Local
+            networks, on the other hand, are realizations from the
+            metaweb resulting from sorting the species and the
+            interactions <span class="citation"
+            data-cites="Poisot2015SpeWhy">(5)</span>. A spatial and
+            localized metaweb is not equivalent to the local networks,
+            as it will have a different structure and a higher
+            connectance <span class="citation"
+            data-cites="Strydom2022PreMet">(6)</span>. Therefore,
+            producing a spatial metaweb requires additional steps to
+            account for species composition and interaction variability
+            in space.</p>
+            <p>The spatial data used to develop the spatial component of
+            the metaweb were species occurrences and environmental data.
+            First, I extracted species occurrences from the Global
+            Biodiversity Information Facility (GBIF; www.gbif.org) for
+            the Canadian mammals using <code>GBIF.jl</code> <span
+            class="citation" data-cites="Dansereau2021SimJl">(7)</span>.
+            Since GBIF observations represent presence-only data and
+            most predictive models require absence data, I generated
+            pseudo-absence data using the surface range envelope method
+            available in <code>SimpleSDMLayers.jl</code> <span
+            class="citation" data-cites="Dansereau2021SimJl">(7)</span>.
+            This method generates pseudo-absences by selecting random
+            non-observed locations within the spatial range delimited by
+            the presence data <span class="citation"
+            data-cites="Barbet-Massin2012SelPse">(8)</span>. Then, I
+            used environmental data and species distribution models
+            <span class="citation" data-cites="Guisan2005PreSpe">(SDMs,
+            9)</span> to predict the distribution of Canadian mammals
+            across the whole country. The environmental data I used were
+            the 19 standard BIOCLIM climate variables from WorldClim 2.0
+            <span class="citation"
+            data-cites="Fick2017WorNew">(10)</span> and the 12 consensus
+            land cover variables from EarthEnv <span class="citation"
+            data-cites="Tuanmu2014Glo1km">(11)</span>. The climate
+            variables represent various measures of temperature and
+            precipitation (e.g., annual ranges, monthly maximum or
+            minimum, seasonality) and are available for land areas
+            across the globe. Therefore, they can be used to capture the
+            climatic tolerance of species and model habitat suitability
+            in new locations. The WorldClim data are available at
+            various resolutions. I decided to use the 2.5 arcmin
+            resolution (around 4.5 km at the Equator) as a compromise to
+            catch potential local variations while limiting computation
+            costs to a manageable level. The land cover variables
+            represent classes such as Evergreen broadleaf trees,
+            Cultivated and managed vegetation, Urban/Built-up, and Open
+            Water. Values range between 0 and 100 and represent the
+            consensus prevalence of each class in percentage within a
+            pixel at a 1-km resolution. Since this is finer than the
+            resolution for the climate data, I coarsened the land cover
+            ones to the same 2.5 arcmin resolution using <span
+            class="citation"
+            data-cites="GDAL/OGRcontributors2021GdaOgr">(12)</span>.</p>
+            <p>Our selection criteria for choosing an SDM algorithm was
+            to have a method that generated probabilistic results,
+            including both a probability of occurrence for a species in
+            a specific location and the uncertainty associated with the
+            prediction. These were crucial to obtaining a probabilistic
+            version of the metaweb as they were used to create spatial
+            variations in the localized interaction probabilities (see
+            next section). One promising method for this is Gradient
+            Boosted Trees with a Gaussian maximum likelihood from the
+            <code>EvoTrees.jl</code> <em>Julia</em> package
+            (https://github.com/Evovest/EvoTrees.jl). This method
+            returns a prediction for every pixel with an average value
+            and a standard deviation, which I used as a measure of
+            uncertainty to build a Normal distribution for the
+            probability of occurrence of a given species at all pixels
+            (represented as probability distributions on
+            Fig. <strong>¿fig:conceptual?</strong>).</p>
+            <h3 id="localized-steps">Localized steps</h3>
+            <p>The next part of the method was the localized steps which
+            produce local metawebs in every pixel. This component was
+            divided into single-species, two-species, and network-level
+            steps (<em>Localized steps</em> box on
+            Fig. <strong>¿fig:conceptual?</strong>).</p>
+            <p>The single-species steps represented four possible ways
+            to account for uncertainty in the species distributions and
+            bring variation to the spatial metaweb. I explored four
+            different options to select a value from the occurrence
+            distributions obtained in the previous steps (Inputs
+            section): 1) taking the mean from the distribution as the
+            probability of occurrence (option 1 on
+            Fig. <strong>¿fig:conceptual?</strong>); 2) converting the
+            mean value to a binary one using a specific threshold per
+            species (option 2); 3) sampling a random value within the
+            Normal distribution (option 3); 4) converting the random
+            value into a binary result (option 4). The threshold (<span
+            class="math inline"><em>τ</em></span> on
+            Fig. <strong>¿fig:conceptual?</strong>) used was the value
+            that maximized Youden’s <em>J</em> informedness statistic
+            <span class="citation"
+            data-cites="Youden1950IndRat">(13)</span>, the same metric
+            used by <span class="citation"
+            data-cites="Strydom2022FooWeb">(1)</span> at an intermediate
+            step while building the metaweb. The four sampling options
+            were intended to explore how uncertainty and variation in
+            the species distributions can affect the metaweb result and
+            reproduce some of the filterings that create the local
+            network realizations <span class="citation"
+            data-cites="Poisot2015SpeWhy">(5)</span>. I expected
+            thresholding to have a more pronounced effect on network
+            structure as it should reduce the number of links by
+            removing many of the rare interactions <span
+            class="citation" data-cites="Poisot2016StrPro">(14)</span>.
+            Meanwhile, I expected random sampling to create spatial
+            heterogeneity compared to the mean probabilities, as
+            including some extreme values should disrupt the potential
+            effects of environmental gradients.</p>
+            <p>Next, the two-species steps aimed to give the probability
+            of observing a given interaction in a location. For all
+            species pairs, I multiplied the two species’ occurrence
+            probability obtained using the sampling options described in
+            the previous paragraph, then multiplied the co-occurrence
+            probability by the interaction probability from the Canadian
+            metaweb.</p>
+            <p>The network-level steps then created the probabilistic
+            metaweb for the location. I assembled all the local
+            interaction probabilities (from the two-species steps) into
+            a probabilistic network <span class="citation"
+            data-cites="Poisot2016StrPro">(<em>sensu</em> 14)</span>. I
+            then sampled several random network realizations to
+            represent the potential local realization process <span
+            class="citation" data-cites="Poisot2015SpeWhy">(5)</span>.
+            Finally, this resulted in a distribution of localized
+            networks, which I averaged over the number of simulations to
+            obtain a probabilistic network.</p>
+            <h3 id="outputs-and-additional-steps">Outputs and additional
+            steps</h3>
+            <p>The final output of my method was the spatial
+            probabilistic metaweb, which contains a localized
+            probabilistic metaweb in every cell across the student
+            extent (Outputs box on
+            Fig. <strong>¿fig:conceptual?</strong>). This gives us an
+            idea of the possible networks in all locations as the
+            metaweb essentially serves to set an upper bound on the
+            potential interactions <span class="citation"
+            data-cites="Strydom2022PreMet">(6)</span>, but with the
+            added benefit of accounting for co-occurrence probabilities
+            in this case. From there, I can create maps of network
+            properties (e.g. number of links, connectance) measured on
+            the local realizations, display their spatial distribution,
+            and compute some community-level measures such as species
+            richness. Importantly, I can also calculate the uncertainty
+            associated with the network and community measurements and
+            contrast their spatial distribution. I computed uncertainty
+            for species richness by summing the standard deviations of
+            the species occurrence probabilities. For networks, I
+            computed link variance based on the link probabilities
+            according to <span class="citation"
+            data-cites="Poisot2016StrPro">(14)</span>. I then contrasted
+            their spatial distributions to identify areas where their
+            uncertainty matches. These would either indicate that we
+            should trust the predictions (if the uncertainty is low) or
+            need more sampling (if the uncertainty is high) to improve
+            our current knowledge. On the other hand, identifying areas
+            where the richness and link uncertainty do not match would
+            also be highly informative. It could lead to targeted
+            sampling programs for either component (community or network
+            composition).</p>
+            <p>I compared the compositional uniqueness of the networks
+            and the communities to verify if they indicated different
+            exceptional areas. I measured uniqueness using the local
+            contributions to beta diversity <span class="citation"
+            data-cites="Legendre2013BetDiv">(LCBD, 15)</span>, which
+            identify sites with exceptional composition by quantifying
+            how much one site contributes to the total variance in the
+            community composition. While many studies used LCBD values
+            to evaluate uniqueness on local scales or few study sites
+            <span class="citation"
+            data-cites="daSilva2014LocReg Heino2017ExpSpe">(for example,
+            16,17)</span>, recent studies used the measure on predicted
+            species compositions over broad spatial extents and a large
+            number of sites <span class="citation"
+            data-cites="Vasconcelos2018ExpImp Dansereau2022EvaEco">(18,19)</span>.
+            LCBD values can also be used to measure uniqueness for
+            networks by computing the values over the adjacency matrix,
+            which has been shown to capture more unique sites and
+            uniqueness variability than through species composition
+            <span class="citation"
+            data-cites="Poisot2017HosPar">(20)</span>. Here, I measured
+            and compared the uniqueness of our localized community and
+            network predictions. I was especially interested in seeing
+            if the sites identified as unique were the same based on the
+            species and the interactions or if this method allowed
+            identifying areas unique for one element (interactions, for
+            instance) but not the other. Sites with such mismatches
+            should warrant more investigation to understand the reasons
+            for this difference.</p>
+            <div id="refs" class="references csl-bib-body"
             role="doc-bibliography">
-            <div id="ref-Camerano1880EquViv" class="csl-entry"
+            <div id="ref-Strydom2022FooWeb" class="csl-entry"
             role="doc-biblioentry">
-            Camerano, L. (1880). Dell’equilibrio dei viventi merce la
-            reciproca distruzione. <em>Atti Della R. Accad. Delle Sci.
-            Torino</em>, 15, 393–414.
+            <div class="csl-left-margin">1. </div><div
+            class="csl-right-inline">Strydom T, Bouskila S, Banville F,
+            Barros C, Caron D, Farrell MJ, et al. <a
+            href="https://doi.org/10.1111/2041-210X.13835">Food web
+            reconstruction through phylogenetic transfer of low-rank
+            network representation</a>. Methods in Ecology and
+            Evolution. 2022;n/a(n/a). </div>
             </div>
-            <div id="ref-Elton1927AniEco" class="csl-entry"
+            <div id="ref-Dunne2006NetStr" class="csl-entry"
             role="doc-biblioentry">
-            Elton, C.S. (1927). <em>Animal ecology</em>. University of
-            Chicago Press.
+            <div class="csl-left-margin">2. </div><div
+            class="csl-right-inline">Dunne J. The network structure of
+            food webs. In: Ecological Networks: Linking Structure to
+            Dynamics in Food Webs. 2006. p. 27–86. </div>
+            </div>
+            <div id="ref-Maiorano2020TetSpe" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">3. </div><div
+            class="csl-right-inline">Maiorano L, Montemaggiori A,
+            Ficetola GF, O’Connor L, Thuiller W. <a
+            href="https://doi.org/10.1111/geb.13138">TETRA-EU 1.0: A
+            species-level trophic metaweb of European tetrapods</a>.
+            Global Ecology and Biogeography. 2020;29(9):1452–7. </div>
+            </div>
+            <div id="ref-Blanchet2020CoOcc" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">4. </div><div
+            class="csl-right-inline">Blanchet FG, Cazelles K, Gravel D.
+            <a href="https://doi.org/10.1111/ele.13525">Co-occurrence is
+            not evidence of ecological interactions</a>. Jeffers E,
+            editor. Ecology Letters. 2020;23(7):1050–63. </div>
+            </div>
+            <div id="ref-Poisot2015SpeWhy" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">5. </div><div
+            class="csl-right-inline">Poisot T, Stouffer DB, Gravel D. <a
+            href="https://doi.org/10.1111/oik.01719">Beyond species: Why
+            ecological interaction networks vary through space and
+            time</a>. Oikos. 2015;124(3):243–51. </div>
+            </div>
+            <div id="ref-Strydom2022PreMet" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">6. </div><div
+            class="csl-right-inline">Strydom T, Bouskila S, Banville F,
+            Barros C, Caron D, Farrell MJ, et al. <a
+            href="https://doi.org/10.32942/osf.io/vyzgr">Predicting
+            metawebs: Transfer of graph embeddings can help alleviate
+            spatial data deficiencies</a>. 2022; </div>
+            </div>
+            <div id="ref-Dansereau2021SimJl" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">7. </div><div
+            class="csl-right-inline">Dansereau G, Poisot T. <a
+            href="https://doi.org/10.21105/joss.02872">SimpleSDMLayers.jl
+            and GBIF.jl: A framework for species distribution modeling
+            in Julia</a>. Journal of Open Source Software.
+            2021;6(57):2872. </div>
+            </div>
+            <div id="ref-Barbet-Massin2012SelPse" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">8. </div><div
+            class="csl-right-inline">Barbet-Massin M, Jiguet F, Albert
+            CH, Thuiller W. <a
+            href="https://doi.org/10.1111/j.2041-210X.2011.00172.x">Selecting
+            pseudo-absences for species distribution models: How, where
+            and how many?</a> Methods in Ecology and Evolution.
+            2012;3(2):327–38. </div>
+            </div>
+            <div id="ref-Guisan2005PreSpe" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">9. </div><div
+            class="csl-right-inline">Guisan A, Thuiller W. <a
+            href="https://doi.org/10.1111/j.1461-0248.2005.00792.x">Predicting
+            species distribution: Offering more than simple habitat
+            models</a>. Ecology Letters. 2005;8(9):993–1009. </div>
+            </div>
+            <div id="ref-Fick2017WorNew" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">10. </div><div
+            class="csl-right-inline">Fick SE, Hijmans RJ. <a
+            href="https://doi.org/10.1002/joc.5086">WorldClim 2: New
+            1-km spatial resolution climate surfaces for global land
+            areas</a>. International Journal of Climatology.
+            2017;37(12):4302–15. </div>
+            </div>
+            <div id="ref-Tuanmu2014Glo1km" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">11. </div><div
+            class="csl-right-inline">Tuanmu MN, Jetz W. <a
+            href="https://doi.org/10.1111/geb.12182">A global 1-km
+            consensus land-cover product for biodiversity and ecosystem
+            modelling</a>. Global Ecology and Biogeography.
+            2014;23(9):1031–45. </div>
+            </div>
+            <div id="ref-GDAL/OGRcontributors2021GdaOgr"
+            class="csl-entry" role="doc-biblioentry">
+            <div class="csl-left-margin">12. </div><div
+            class="csl-right-inline">GDAL/OGR contributors. GDAL/OGR
+            geospatial data abstraction software library. Open Source
+            Geospatial Foundation; 2021. </div>
+            </div>
+            <div id="ref-Youden1950IndRat" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">13. </div><div
+            class="csl-right-inline">Youden WJ. <a
+            href="https://doi.org/10.1002/1097-0142(1950)3:1&lt;32::AID-CNCR2820030106&gt;3.0.CO;2-3">Index
+            for rating diagnostic tests</a>. Cancer. 1950;3(1):32–5.
+            </div>
+            </div>
+            <div id="ref-Poisot2016StrPro" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">14. </div><div
+            class="csl-right-inline">Poisot T, Cirtwill AR, Cazelles K,
+            Gravel D, Fortin MJ, Stouffer DB. <a
+            href="https://doi.org/10.1111/2041-210X.12468">The structure
+            of probabilistic networks</a>. Vamosi J, editor. Methods in
+            Ecology and Evolution. 2016;7(3):303–12. </div>
+            </div>
+            <div id="ref-Legendre2013BetDiv" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">15. </div><div
+            class="csl-right-inline">Legendre P, De Cáceres M. <a
+            href="https://doi.org/10.1111/ele.12141">Beta diversity as
+            the variance of community data: Dissimilarity coefficients
+            and partitioning</a>. Ecology Letters. 2013;16(8):951–63.
+            </div>
+            </div>
+            <div id="ref-daSilva2014LocReg" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">16. </div><div
+            class="csl-right-inline">da Silva PG, Hernández MIM. <a
+            href="https://doi.org/10.1371/journal.pone.0111883">Local
+            and regional effects on community structure of dung beetles
+            in a mainland-island scenario</a>. PLOS ONE.
+            2014;9(10):e111883. </div>
+            </div>
+            <div id="ref-Heino2017ExpSpe" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">17. </div><div
+            class="csl-right-inline">Heino J, Grönroos M. <a
+            href="https://doi.org/10.1007/s00442-016-3754-7">Exploring
+            species and site contributions to beta diversity in stream
+            insect assemblages</a>. Oecologia. 2017;183(1):151–60.
+            </div>
+            </div>
+            <div id="ref-Vasconcelos2018ExpImp" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">18. </div><div
+            class="csl-right-inline">Vasconcelos TS, Nascimento BTM do,
+            Prado VHM. <a
+            href="https://doi.org/10.1002/ece3.4357">Expected impacts of
+            climate change threaten the anuran diversity in the
+            Brazilian hotspots</a>. Ecology and Evolution.
+            2018;8(16):7894–906. </div>
+            </div>
+            <div id="ref-Dansereau2022EvaEco" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">19. </div><div
+            class="csl-right-inline">Dansereau G, Legendre P, Poisot T.
+            <a href="https://doi.org/10.1111/oik.09063">Evaluating
+            ecological uniqueness over broad spatial extents using
+            species distribution modelling</a>. Oikos.
+            2022;2022(5):e09063. </div>
+            </div>
+            <div id="ref-Poisot2017HosPar" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">20. </div><div
+            class="csl-right-inline">Poisot T, Guéveneux-Julien C,
+            Fortin MJ, Gravel D, Legendre P. <a
+            href="https://doi.org/10.1111/geb.12602">Hosts, parasites
+            and their interactions respond to different climatic
+            variables</a>. Global Ecology and Biogeography.
+            2017;26(8):942–51. </div>
             </div>
             </div>
         </article>
@@ -538,24 +687,10 @@ manuscripts using markdown and github actions</div>
 
     <footer>
                 <div class="container">
-            <h2>Supplementary Material</h2>
-            <span class="appendix--list">
-                <a href="appendix/Poisot_et_al_2023_template_prepare_s1.pdf" target="_blank">
-                    <b>1:</b>&nbsp;The metadata configuration file
-                </a><br />
-            </span><span class="appendix--list">
-                <a href="appendix/Poisot_et_al_2023_template_prepare_s2.pdf" target="_blank">
-                    <b>2:</b>&nbsp;Bibliography in supp. mat.
-                </a><br />
-            </span>
-        </div>
-                <div class="container">
             <h2>Affiliations</h2>
             <sup>1</sup>&nbsp;Université de
             Montréal; <sup>2</sup>&nbsp;Québec Centre for Biodiversity
-            Sciences; <sup>3</sup>&nbsp;Inn of the Prancing
-            Pony; <sup>4</sup>&nbsp;Fellowship of the
-            Ring; <sup>5</sup>&nbsp;Green Dragon Inn
+            Sciences; <sup>3</sup>&nbsp;University of British Columbia
             <br />
             
         </div>

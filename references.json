@@ -4,88 +4,1017 @@
         "issued": {
             "date-parts": [
                 [
-                    1932,
-                    2
+                    2012
                 ]
             ]
         },
-        "container-title": "Journal of Experimental Zoology",
+        "container-title": "Methods in Ecology and Evolution",
         "author": [
             {
-                "family": "Allee",
-                "given": "W. C."
+                "family": "Barbet-Massin",
+                "given": "Morgane"
             },
             {
-                "family": "Bowen",
-                "given": "Edith S."
+                "family": "Jiguet",
+                "given": "Frédéric"
+            },
+            {
+                "family": "Albert",
+                "given": "Cécile Hélène"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
             }
         ],
-        "id": "Allee1932StuAni",
-        "DOI": "10.1002/jez.1400610202",
-        "volume": "61",
-        "page": "185-207",
-        "title": "Studies in animal aggregations: Mass protection against colloidal silver among goldfishes",
+        "id": "Barbet-Massin2012SelPse",
+        "DOI": "10.1111/j.2041-210X.2011.00172.x",
+        "volume": "3",
+        "page": "327-338",
+        "title": "Selecting pseudo-absences for species distribution models: How, where and how many?",
         "type": "article-journal"
     },
     {
-        "volume": "15",
-        "author": [
-            {
-                "family": "Camerano",
-                "given": "Lorenzo"
-            }
-        ],
-        "id": "Camerano1880EquViv",
-        "page": "393-414",
-        "title": "Dell’equilibrio dei viventi merce la reciproca distruzione",
+        "issue": "7",
         "issued": {
             "date-parts": [
                 [
-                    1880
+                    2020
                 ]
             ]
         },
-        "container-title": "Atti Della R. Accad. Delle Sci. Torino",
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Blanchet",
+                "given": "F. Guillaume"
+            },
+            {
+                "family": "Cazelles",
+                "given": "Kevin"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "id": "Blanchet2020CoOcc",
+        "editor": [
+            {
+                "family": "Jeffers",
+                "given": "Elizabeth"
+            }
+        ],
+        "DOI": "10.1111/ele.13525",
+        "volume": "23",
+        "page": "1050-1063",
+        "title": "Co-occurrence is not evidence of ecological interactions",
         "type": "article-journal"
     },
     {
-        "publisher": "University of Chicago Press",
+        "publisher": "Preprints",
+        "DOI": "10.22541/au.168010211.10402875/v1",
+        "genre": "Preprint",
         "author": [
             {
-                "family": "Elton",
-                "given": "Charles S"
+                "family": "Botella",
+                "given": "Christophe"
+            },
+            {
+                "family": "Gaüzère",
+                "given": "Pierre"
+            },
+            {
+                "family": "O’Connor",
+                "given": "Louise"
+            },
+            {
+                "family": "Ohlmann",
+                "given": "Marc"
+            },
+            {
+                "family": "Renaud",
+                "given": "Julien"
+            },
+            {
+                "family": "Dou",
+                "given": "Yue"
+            },
+            {
+                "family": "Graham",
+                "given": "Catherine"
+            },
+            {
+                "family": "Verburg",
+                "given": "Peter"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
             }
         ],
-        "id": "Elton1927AniEco",
-        "title": "Animal ecology",
+        "id": "Botella2023LanInt",
+        "title": "Land-use intensity influences European tetrapod food-webs",
         "issued": {
             "date-parts": [
                 [
-                    1927
+                    2023
+                ]
+            ]
+        },
+        "type": "report"
+    },
+    {
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Global Ecology and Biogeography",
+        "author": [
+            {
+                "family": "Braga",
+                "given": "João"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura J."
+            },
+            {
+                "family": "Barros",
+                "given": "Ceres"
+            },
+            {
+                "family": "Galiana",
+                "given": "Núria"
+            },
+            {
+                "family": "Montoya",
+                "given": "José M."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Montemaggiori",
+                "given": "Alessandro"
+            },
+            {
+                "family": "Ficetola",
+                "given": "Gentile Francesco"
+            },
+            {
+                "family": "Dray",
+                "given": "Stéphane"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "Braga2019SpaAna",
+        "DOI": "10.1111/geb.12981",
+        "volume": "28",
+        "page": "1636-1648",
+        "title": "Spatial analyses of multi-trophic terrestrial vertebrate assemblages in Europe",
+        "type": "article-journal"
+    },
+    {
+        "issue": "57",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Journal of Open Source Software",
+        "author": [
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Dansereau2021SimJl",
+        "DOI": "10.21105/joss.02872",
+        "volume": "6",
+        "page": "2872",
+        "title": "SimpleSDMLayers.jl and GBIF.jl: A framework for species distribution modeling in Julia",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Oikos",
+        "author": [
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Legendre",
+                "given": "Pierre"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Dansereau2022EvaEco",
+        "DOI": "10.1111/oik.09063",
+        "volume": "2022",
+        "page": "e09063",
+        "title": "Evaluating ecological uniqueness over broad spatial extents using species distribution modelling",
+        "other-ids": "DansereauEvaEco",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Public Library of Science",
+        "issue": "10",
+        "issued": {
+            "date-parts": [
+                [
+                    2014
+                ]
+            ]
+        },
+        "container-title": "PLOS ONE",
+        "author": [
+            {
+                "family": "Silva",
+                "given": "Pedro Giovâni",
+                "non-dropping-particle": "da"
+            },
+            {
+                "family": "Hernández",
+                "given": "Malva Isabel Medina"
+            }
+        ],
+        "id": "daSilva2014LocReg",
+        "DOI": "10.1371/journal.pone.0111883",
+        "volume": "9",
+        "page": "e111883",
+        "title": "Local and regional effects on community structure of dung beetles in a mainland-island scenario",
+        "type": "article-journal"
+    },
+    {
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "container-title": "Diversity and Distributions",
+        "author": [
+            {
+                "family": "Silva",
+                "given": "Pedro Giovâni",
+                "non-dropping-particle": "da"
+            },
+            {
+                "family": "Hernández",
+                "given": "Malva Isabel Medina"
+            },
+            {
+                "family": "Heino",
+                "given": "Jani"
+            }
+        ],
+        "id": "daSilva2018DisCor",
+        "DOI": "10.1111/ddi.12785",
+        "volume": "24",
+        "page": "1674-1686",
+        "title": "Disentangling the correlates of species and site contributions to beta diversity in dung beetle assemblages",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "BioScience",
+        "author": [
+            {
+                "family": "Dinerstein",
+                "given": "Eric"
+            },
+            {
+                "family": "Olson",
+                "given": "David"
+            },
+            {
+                "family": "Joshi",
+                "given": "Anup"
+            },
+            {
+                "family": "Vynne",
+                "given": "Carly"
+            },
+            {
+                "family": "Burgess",
+                "given": "Neil D."
+            },
+            {
+                "family": "Wikramanayake",
+                "given": "Eric"
+            },
+            {
+                "family": "Hahn",
+                "given": "Nathan"
+            },
+            {
+                "family": "Palminteri",
+                "given": "Suzanne"
+            },
+            {
+                "family": "Hedao",
+                "given": "Prashant"
+            },
+            {
+                "family": "Noss",
+                "given": "Reed"
+            },
+            {
+                "family": "Hansen",
+                "given": "Matt"
+            },
+            {
+                "family": "Locke",
+                "given": "Harvey"
+            },
+            {
+                "family": "Ellis",
+                "given": "Erle C"
+            },
+            {
+                "family": "Jones",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Barber",
+                "given": "Charles Victor"
+            },
+            {
+                "family": "Hayes",
+                "given": "Randy"
+            },
+            {
+                "family": "Kormos",
+                "given": "Cyril"
+            },
+            {
+                "family": "Martin",
+                "given": "Vance"
+            },
+            {
+                "family": "Crist",
+                "given": "Eileen"
+            },
+            {
+                "family": "Sechrest",
+                "given": "Wes"
+            },
+            {
+                "family": "Price",
+                "given": "Lori"
+            },
+            {
+                "family": "Baillie",
+                "given": "Jonathan E. M."
+            },
+            {
+                "family": "Weeden",
+                "given": "Don"
+            },
+            {
+                "family": "Suckling",
+                "given": "Kierán"
+            },
+            {
+                "family": "Davis",
+                "given": "Crystal"
+            },
+            {
+                "family": "Sizer",
+                "given": "Nigel"
+            },
+            {
+                "family": "Moore",
+                "given": "Rebecca"
+            },
+            {
+                "family": "Thau",
+                "given": "David"
+            },
+            {
+                "family": "Birch",
+                "given": "Tanya"
+            },
+            {
+                "family": "Potapov",
+                "given": "Peter"
+            },
+            {
+                "family": "Turubanova",
+                "given": "Svetlana"
+            },
+            {
+                "family": "Tyukavina",
+                "given": "Alexandra"
+            },
+            {
+                "family": "Souza",
+                "given": "Nadia",
+                "non-dropping-particle": "de"
+            },
+            {
+                "family": "Pintea",
+                "given": "Lilian"
+            },
+            {
+                "family": "Brito",
+                "given": "José C."
+            },
+            {
+                "family": "Llewellyn",
+                "given": "Othman A."
+            },
+            {
+                "family": "Miller",
+                "given": "Anthony G."
+            },
+            {
+                "family": "Patzelt",
+                "given": "Annette"
+            },
+            {
+                "family": "Ghazanfar",
+                "given": "Shahina A."
+            },
+            {
+                "family": "Timberlake",
+                "given": "Jonathan"
+            },
+            {
+                "family": "Klöser",
+                "given": "Heinz"
+            },
+            {
+                "family": "Shennan-Farpón",
+                "given": "Yara"
+            },
+            {
+                "family": "Kindt",
+                "given": "Roeland"
+            },
+            {
+                "family": "Lillesø",
+                "given": "Jens-Peter Barnekow"
+            },
+            {
+                "family": "Breugel",
+                "given": "Paulo",
+                "non-dropping-particle": "van"
+            },
+            {
+                "family": "Graudal",
+                "given": "Lars"
+            },
+            {
+                "family": "Voge",
+                "given": "Maianna"
+            },
+            {
+                "family": "Al-Shammari",
+                "given": "Khalaf F."
+            },
+            {
+                "family": "Saleem",
+                "given": "Muhammad"
+            }
+        ],
+        "id": "Dinerstein2017EcoApp",
+        "DOI": "10.1093/biosci/bix014",
+        "volume": "67",
+        "page": "534-545",
+        "title": "An Ecoregion-Based Approach to Protecting Half the Terrestrial Realm",
+        "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "family": "Dunne",
+                "given": "Jennifer"
+            }
+        ],
+        "id": "Dunne2006NetStr",
+        "page": "27-86",
+        "title": "The network structure of food webs",
+        "issued": {
+            "date-parts": [
+                [
+                    2006
+                ]
+            ]
+        },
+        "container-title": "Ecological Networks: Linking Structure to Dynamics in Food Webs",
+        "type": "chapter"
+    },
+    {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "International Journal of Climatology",
+        "author": [
+            {
+                "family": "Fick",
+                "given": "Stephen E."
+            },
+            {
+                "family": "Hijmans",
+                "given": "Robert J."
+            }
+        ],
+        "id": "Fick2017WorNew",
+        "DOI": "10.1002/joc.5086",
+        "volume": "37",
+        "page": "4302-4315",
+        "title": "WorldClim 2: New 1-km spatial resolution climate surfaces for global land areas",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Galiana",
+                "given": "Núria"
+            },
+            {
+                "family": "Barros",
+                "given": "Ceres"
+            },
+            {
+                "family": "Braga",
+                "given": "João"
+            },
+            {
+                "family": "Ficetola",
+                "given": "Gentile Francesco"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            },
+            {
+                "family": "Montoya",
+                "given": "José M."
+            },
+            {
+                "family": "Lurgi",
+                "given": "Miguel"
+            }
+        ],
+        "id": "Galiana2021SpaSca",
+        "DOI": "10.1111/ecog.05229",
+        "volume": "44",
+        "page": "653-664",
+        "title": "The spatial scaling of food web structure across European biogeographical regions",
+        "type": "article-journal"
+    },
+    {
+        "DOI": "10.1016/j.cub.2022.03.009",
+        "author": [
+            {
+                "family": "Gaüzère",
+                "given": "Pierre"
+            },
+            {
+                "family": "O’Connor",
+                "given": "Louise"
+            },
+            {
+                "family": "Botella",
+                "given": "Christophe"
+            },
+            {
+                "family": "Poggiato",
+                "given": "Giovanni"
+            },
+            {
+                "family": "Münkemüller",
+                "given": "Tamara"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura J."
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Harfoot",
+                "given": "Michael"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "Gauzere2022DivBio",
+        "title": "The diversity of biotic interactions complements functional and phylogenetic facets of biodiversity",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Current Biology",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Open Source Geospatial Foundation",
+        "genre": "Manual",
+        "author": [
+            {
+                "literal": "GDAL/OGR contributors"
+            }
+        ],
+        "id": "GDAL/OGRcontributors2021GdaOgr",
+        "title": "GDAL/OGR geospatial data abstraction software library",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
                 ]
             ]
         },
         "type": "book"
     },
     {
-        "volume": "41",
-        "author": [
-            {
-                "family": "Fahrenholz",
-                "given": "H."
-            }
-        ],
-        "id": "Fahrenholz1913EctUnd",
-        "page": "371-374",
-        "title": "Ectoparasiten und abstammungslehre",
+        "issue": "9",
         "issued": {
             "date-parts": [
                 [
-                    1913
+                    2005
                 ]
             ]
         },
-        "container-title": "Zool. Anz.",
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Guisan",
+                "given": "Antoine"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "Guisan2005PreSpe",
+        "DOI": "10.1111/j.1461-0248.2005.00792.x",
+        "volume": "8",
+        "page": "993-1009",
+        "title": "Predicting species distribution: Offering more than simple habitat models",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "Oecologia",
+        "author": [
+            {
+                "family": "Heino",
+                "given": "Jani"
+            },
+            {
+                "family": "Grönroos",
+                "given": "Mira"
+            }
+        ],
+        "id": "Heino2017ExpSpe",
+        "DOI": "10.1007/s00442-016-3754-7",
+        "volume": "183",
+        "page": "151-160",
+        "title": "Exploring species and site contributions to beta diversity in stream insect assemblages",
+        "type": "article-journal"
+    },
+    {
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Legendre",
+                "given": "Pierre"
+            },
+            {
+                "family": "De Cáceres",
+                "given": "Miquel"
+            }
+        ],
+        "id": "Legendre2013BetDiv",
+        "DOI": "10.1111/ele.12141",
+        "volume": "16",
+        "page": "951-963",
+        "title": "Beta diversity as the variance of community data: Dissimilarity coefficients and partitioning",
+        "type": "article-journal"
+    },
+    {
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "container-title": "Global Ecology and Biogeography",
+        "author": [
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Montemaggiori",
+                "given": "Alessandro"
+            },
+            {
+                "family": "Ficetola",
+                "given": "Gentile Francesco"
+            },
+            {
+                "family": "O’Connor",
+                "given": "Louise"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "Maiorano2020TetSpe",
+        "DOI": "10.1111/geb.13138",
+        "volume": "29",
+        "page": "1452-1457",
+        "title": "TETRA-EU 1.0: A species-level trophic metaweb of European tetrapods",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Nature Publishing Group",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Nature Communications",
+        "author": [
+            {
+                "family": "Martins",
+                "given": "Lucas P."
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Blendinger",
+                "given": "Pedro G."
+            },
+            {
+                "family": "Böhning-Gaese",
+                "given": "Katrin"
+            },
+            {
+                "family": "Buitrón-Jurado",
+                "given": "Galo"
+            },
+            {
+                "family": "Correia",
+                "given": "Marta"
+            },
+            {
+                "family": "Costa",
+                "given": "José Miguel"
+            },
+            {
+                "family": "Dehling",
+                "given": "D. Matthias"
+            },
+            {
+                "family": "Donatti",
+                "given": "Camila I."
+            },
+            {
+                "family": "Emer",
+                "given": "Carine"
+            },
+            {
+                "family": "Galetti",
+                "given": "Mauro"
+            },
+            {
+                "family": "Heleno",
+                "given": "Ruben"
+            },
+            {
+                "family": "Jordano",
+                "given": "Pedro"
+            },
+            {
+                "family": "Menezes",
+                "given": "Ícaro"
+            },
+            {
+                "family": "Morante-Filho",
+                "given": "José Carlos"
+            },
+            {
+                "family": "Muñoz",
+                "given": "Marcia C."
+            },
+            {
+                "family": "Neuschulz",
+                "given": "Eike Lena"
+            },
+            {
+                "family": "Pizo",
+                "given": "Marco Aurélio"
+            },
+            {
+                "family": "Quitián",
+                "given": "Marta"
+            },
+            {
+                "family": "Ruggera",
+                "given": "Roman A."
+            },
+            {
+                "family": "Saavedra",
+                "given": "Francisco"
+            },
+            {
+                "family": "Santillán",
+                "given": "Vinicio"
+            },
+            {
+                "family": "Sanz D’Angelo",
+                "given": "Virginia"
+            },
+            {
+                "family": "Schleuning",
+                "given": "Matthias"
+            },
+            {
+                "family": "Silva",
+                "given": "Luís Pascoal",
+                "non-dropping-particle": "da"
+            },
+            {
+                "family": "Ribeiro da Silva",
+                "given": "Fernanda"
+            },
+            {
+                "family": "Timóteo",
+                "given": "Sérgio"
+            },
+            {
+                "family": "Traveset",
+                "given": "Anna"
+            },
+            {
+                "family": "Vollstädt",
+                "given": "Maximilian G. R."
+            },
+            {
+                "family": "Tylianakis",
+                "given": "Jason M."
+            }
+        ],
+        "id": "Martins2022GloReg",
+        "DOI": "10.1038/s41467-022-34355-w",
+        "volume": "13",
+        "page": "6943",
+        "title": "Global and regional ecological boundaries explain abrupt spatial discontinuities in avian frugivory interactions",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "container-title": "Journal of Biogeography",
+        "author": [
+            {
+                "family": "O’Connor",
+                "given": "Louise M. J."
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura J."
+            },
+            {
+                "family": "Braga",
+                "given": "João"
+            },
+            {
+                "family": "Ficetola",
+                "given": "Gentile Francesco"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Martinez-Almoyna",
+                "given": "Camille"
+            },
+            {
+                "family": "Montemaggiori",
+                "given": "Alessandro"
+            },
+            {
+                "family": "Ohlmann",
+                "given": "Marc"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "OConnor2020UnvFoo",
+        "DOI": "10.1111/jbi.13773",
+        "volume": "47",
+        "page": "181-192",
+        "title": "Unveiling the food webs of tetrapods across Europe through the prism of the Eltonian niche",
         "type": "article-journal"
     },
     {
@@ -93,27 +1022,381 @@
         "issued": {
             "date-parts": [
                 [
-                    1935,
-                    9
+                    2015
                 ]
             ]
         },
-        "container-title": "Proceedings of the Zoological Society of London",
+        "container-title": "Oikos",
         "author": [
             {
-                "family": "Nicholson",
-                "given": "A. J."
+                "family": "Poisot",
+                "given": "Timothée"
             },
             {
-                "family": "Bailey",
-                "given": "V. A."
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
             }
         ],
-        "id": "Nicholson1935BalAni",
-        "DOI": "10.1111/j.1096-3642.1935.tb01680.x",
-        "volume": "105",
-        "page": "551-598",
-        "title": "The Balance of Animal Populations..",
+        "id": "Poisot2015SpeWhy",
+        "DOI": "10.1111/oik.01719",
+        "volume": "124",
+        "page": "243-251",
+        "title": "Beyond species: Why ecological interaction networks vary through space and time",
+        "type": "article-journal"
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Methods in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Cirtwill",
+                "given": "Alyssa R."
+            },
+            {
+                "family": "Cazelles",
+                "given": "Kévin"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            }
+        ],
+        "id": "Poisot2016StrPro",
+        "editor": [
+            {
+                "family": "Vamosi",
+                "given": "Jana"
+            }
+        ],
+        "DOI": "10.1111/2041-210X.12468",
+        "volume": "7",
+        "page": "303-312",
+        "title": "The structure of probabilistic networks",
+        "type": "article-journal"
+    },
+    {
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "Global Ecology and Biogeography",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Guéveneux-Julien",
+                "given": "Cynthia"
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Legendre",
+                "given": "Pierre"
+            }
+        ],
+        "id": "Poisot2017HosPar",
+        "DOI": "10.1111/geb.12602",
+        "volume": "26",
+        "page": "942-951",
+        "title": "Hosts, parasites and their interactions respond to different climatic variables",
+        "type": "article-journal"
+    },
+    {
+        "issue": "n/a",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Methods in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Strydom",
+                "given": "Tanya"
+            },
+            {
+                "family": "Bouskila",
+                "given": "Salomé"
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Barros",
+                "given": "Ceres"
+            },
+            {
+                "family": "Caron",
+                "given": "Dominique"
+            },
+            {
+                "family": "Farrell",
+                "given": "Maxwell J."
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Hemming",
+                "given": "Victoria"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura J."
+            },
+            {
+                "family": "Runghen",
+                "given": "Rogini"
+            },
+            {
+                "family": "Dalla Riva",
+                "given": "Giulio V."
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Strydom2022FooWeb",
+        "DOI": "10.1111/2041-210X.13835",
+        "volume": "n/a",
+        "title": "Food web reconstruction through phylogenetic transfer of low-rank network representation",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "EcoEvoRxiv",
+        "DOI": "10.32942/osf.io/vyzgr",
+        "author": [
+            {
+                "family": "Strydom",
+                "given": "Tanya"
+            },
+            {
+                "family": "Bouskila",
+                "given": "Salomé"
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Barros",
+                "given": "Ceres"
+            },
+            {
+                "family": "Caron",
+                "given": "Dominique"
+            },
+            {
+                "family": "Farrell",
+                "given": "Maxwell J."
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Hemming",
+                "given": "Victoria"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura"
+            },
+            {
+                "family": "Runghen",
+                "given": "Rogini"
+            },
+            {
+                "family": "Dalla Riva",
+                "given": "Giulio Valentino"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Strydom2022PreMet",
+        "title": "Predicting metawebs: Transfer of graph embeddings can help alleviate spatial data deficiencies",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "type": "article-journal"
+    },
+    {
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2014
+                ]
+            ]
+        },
+        "container-title": "Global Ecology and Biogeography",
+        "author": [
+            {
+                "family": "Tuanmu",
+                "given": "Mao-Ning"
+            },
+            {
+                "family": "Jetz",
+                "given": "Walter"
+            }
+        ],
+        "id": "Tuanmu2014Glo1km",
+        "DOI": "10.1111/geb.12182",
+        "volume": "23",
+        "page": "1031-1045",
+        "title": "A global 1-km consensus land-cover product for biodiversity and ecosystem modelling",
+        "type": "article-journal"
+    },
+    {
+        "issue": "16",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "container-title": "Ecology and Evolution",
+        "author": [
+            {
+                "family": "Vasconcelos",
+                "given": "Tiago S."
+            },
+            {
+                "family": "Nascimento",
+                "given": "Bruno T. M.",
+                "dropping-particle": "do"
+            },
+            {
+                "family": "Prado",
+                "given": "Vitor H. M."
+            }
+        ],
+        "id": "Vasconcelos2018ExpImp",
+        "DOI": "10.1002/ece3.4357",
+        "volume": "8",
+        "page": "7894-7906",
+        "title": "Expected impacts of climate change threaten the anuran diversity in the Brazilian hotspots",
+        "type": "article-journal"
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Diversity and Distributions",
+        "author": [
+            {
+                "family": "Yao",
+                "given": "Jie"
+            },
+            {
+                "family": "Huang",
+                "given": "Jihong"
+            },
+            {
+                "family": "Ding",
+                "given": "Yi"
+            },
+            {
+                "family": "Xu",
+                "given": "Yue"
+            },
+            {
+                "family": "Xu",
+                "given": "Han"
+            },
+            {
+                "family": "Zang",
+                "given": "Runguo"
+            }
+        ],
+        "id": "Yao2021EcoUni",
+        "DOI": "10.1111/ddi.13205",
+        "volume": "27",
+        "page": "454-462",
+        "title": "Ecological uniqueness of species assemblages and their determinants in forest communities",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    1950
+                ]
+            ]
+        },
+        "container-title": "Cancer",
+        "author": [
+            {
+                "family": "Youden",
+                "given": "W. J."
+            }
+        ],
+        "id": "Youden1950IndRat",
+        "DOI": "10.1002/1097-0142(1950)3:1<32::AID-CNCR2820030106>3.0.CO;2-3",
+        "volume": "3",
+        "page": "32-35",
+        "title": "Index for rating diagnostic tests",
         "type": "article-journal"
     }
 ]
