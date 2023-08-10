@@ -1,3 +1,4 @@
+# Template
 dist/
 *.log
 *synctex*
@@ -20,3 +21,7 @@ tecto*
 *.otf
 *.woff2
 .fonts/*
+
+# Personal
+Makefile
+symlink.md
