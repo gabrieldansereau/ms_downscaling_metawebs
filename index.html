@@ -257,7 +257,7 @@ probability</div>
                 <a href="https://orcid.org/0000-0002-0735-5184" target="_blank">
                     Timothée Poisot
                 </a>
-                <sup class="affiliation">1,2,‡</sup>
+                <sup class="affiliation">1,2</sup>
                 </span>
             </div>
         </div>
@@ -278,24 +278,48 @@ probability</div>
         </section>
 
         <article>
-            <h2 id="methods">Methods</h2>
-            <p>Fig. <strong>¿fig:conceptual?</strong> shows a conceptual
-            overview of the methodological steps. The components were
-            grouped as the inputs (spatial or non-spatial), the
-            localized steps (divided into single-species-level,
-            two-species-level, and network-level steps), and the final
-            spatial output.</p>
-            <h3 id="inputs">Inputs</h3>
+            <h1 id="introduction">Introduction</h1>
+            <p>Here, we focus on developing an explicit spatial
+            probabilistic metaweb for Canadian mammals. This will show
+            draft predictions of what localized networks could look like
+            according to our current knowledge, data, and predictive
+            methods. It will also serve to represent the variability of
+            interactions and assess the uncertainty associated with the
+            predictions.</p>
+            <h1 id="methods">Methods</h1>
+            <p>Fig. 1 shows a conceptual overview of the methodological
+            steps. The components were grouped as the inputs (spatial or
+            non-spatial), the localized steps (divided into
+            single-species-level, two-species-level, and network-level
+            steps), and the final spatial output.</p>
+            <figure>
+            <img src="figures/conceptual-figure.png" id="fig:conceptual"
+            alt="Figure 1: Conceptual figure of the workflow to obtain the spatial probabilistic metaweb (Chapter 1). The workflow has three components: the inputs, the localized steps, and the final spatial output. The inputs are composed of the spatial data (data with information in every cell) and the non-spatial data (constant for all of Canada). The localized steps use these data and are performed separately in every cell, first at a single-species level (using distribution data), then for every species pair (adding interaction data from the metaweb), and finally at the network level by combining the results of all species pairs. The final output coming out of the network-level steps contains a spatialized probabilistic metaweb for every cell across the study extent." />
+            <figcaption aria-hidden="true">Figure 1: Conceptual figure
+            of the workflow to obtain the spatial probabilistic metaweb
+            (Chapter 1). The workflow has three components: the inputs,
+            the localized steps, and the final spatial output. The
+            inputs are composed of the spatial data (data with
+            information in every cell) and the non-spatial data
+            (constant for all of Canada). The localized steps use these
+            data and are performed separately in every cell, first at a
+            single-species level (using distribution data), then for
+            every species pair (adding interaction data from the
+            metaweb), and finally at the network level by combining the
+            results of all species pairs. The final output coming out of
+            the network-level steps contains a spatialized probabilistic
+            metaweb for every cell across the study extent.</figcaption>
+            </figure>
+            <h2 id="inputs">Inputs</h2>
             <p>The inputs were divided into two main categories: the
             spatial and non-spatial ones (<em>Inputs</em> box on
-            Fig. <strong>¿fig:conceptual?</strong>).</p>
+            Fig. 1).</p>
             <p>The main building block for the interaction data was the
             metaweb for Canadian mammals from <span class="citation"
             data-cites="Strydom2022FooWeb">(1)</span>, a non-spatial
-            input (represented as nodes and links on
-            Fig. <strong>¿fig:conceptual?</strong>). As stated above, a
-            metaweb contains all the possible interactions between the
-            species found in a given regional species pool <span
+            input (represented as nodes and links on Fig. 1). A metaweb
+            contains all the possible interactions between the species
+            found in a given regional species pool <span
             class="citation" data-cites="Dunne2006NetStr">(2)</span>.
             The species list for the Canadian metaweb was extracted from
             the International Union for the Conservation of Nature
@@ -326,46 +350,46 @@ probability</div>
             in space.</p>
             <p>The spatial data used to develop the spatial component of
             the metaweb were species occurrences and environmental data.
-            First, I extracted species occurrences from the Global
+            First, we extracted species occurrences from the Global
             Biodiversity Information Facility (GBIF; www.gbif.org) for
             the Canadian mammals using <code>GBIF.jl</code> <span
             class="citation" data-cites="Dansereau2021SimJl">(7)</span>.
             Since GBIF observations represent presence-only data and
-            most predictive models require absence data, I generated
+            most predictive models require absence data, we generated
             pseudo-absence data using the surface range envelope method
             available in <code>SimpleSDMLayers.jl</code> <span
             class="citation" data-cites="Dansereau2021SimJl">(7)</span>.
             This method generates pseudo-absences by selecting random
             non-observed locations within the spatial range delimited by
             the presence data <span class="citation"
-            data-cites="Barbet-Massin2012SelPse">(8)</span>. Then, I
+            data-cites="Barbet-Massin2012SelPse">(8)</span>. Then, we
             used environmental data and species distribution models
             <span class="citation" data-cites="Guisan2005PreSpe">(SDMs,
             9)</span> to predict the distribution of Canadian mammals
-            across the whole country. The environmental data I used were
-            the 19 standard BIOCLIM climate variables from WorldClim 2.0
-            <span class="citation"
-            data-cites="Fick2017WorNew">(10)</span> and the 12 consensus
-            land cover variables from EarthEnv <span class="citation"
-            data-cites="Tuanmu2014Glo1km">(11)</span>. The climate
-            variables represent various measures of temperature and
-            precipitation (e.g., annual ranges, monthly maximum or
-            minimum, seasonality) and are available for land areas
-            across the globe. Therefore, they can be used to capture the
-            climatic tolerance of species and model habitat suitability
-            in new locations. The WorldClim data are available at
-            various resolutions. I decided to use the 2.5 arcmin
-            resolution (around 4.5 km at the Equator) as a compromise to
-            catch potential local variations while limiting computation
-            costs to a manageable level. The land cover variables
-            represent classes such as Evergreen broadleaf trees,
-            Cultivated and managed vegetation, Urban/Built-up, and Open
-            Water. Values range between 0 and 100 and represent the
-            consensus prevalence of each class in percentage within a
-            pixel at a 1-km resolution. Since this is finer than the
-            resolution for the climate data, I coarsened the land cover
-            ones to the same 2.5 arcmin resolution using <span
-            class="citation"
+            across the whole country. The environmental data we used
+            were the 19 standard BIOCLIM climate variables from
+            ==WorldClim 2.0 <span class="citation"
+            data-cites="Fick2017WorNew">(10)</span>== and the 12
+            consensus land cover variables from EarthEnv <span
+            class="citation" data-cites="Tuanmu2014Glo1km">(11)</span>.
+            The climate variables represent various measures of
+            temperature and precipitation (e.g., annual ranges, monthly
+            maximum or minimum, seasonality) and are available for land
+            areas across the globe. Therefore, they can be used to
+            capture the climatic tolerance of species and model habitat
+            suitability in new locations. The WorldClim data are
+            available at various resolutions. We decided to use the 2.5
+            arcmin resolution (around 4.5 km at the Equator) as a
+            compromise to catch potential local variations while
+            limiting computation costs to a manageable level. The land
+            cover variables represent classes such as Evergreen
+            broadleaf trees, Cultivated and managed vegetation,
+            Urban/Built-up, and Open Water. Values range between 0 and
+            100 and represent the consensus prevalence of each class in
+            percentage within a pixel at a 1-km resolution. Since this
+            is finer than the resolution for the climate data, we
+            coarsened the land cover ones to the same 2.5 arcmin
+            resolution using <span class="citation"
             data-cites="GDAL/OGRcontributors2021GdaOgr">(12)</span>.</p>
             <p>Our selection criteria for choosing an SDM algorithm was
             to have a method that generated probabilistic results,
@@ -379,33 +403,29 @@ probability</div>
             <code>EvoTrees.jl</code> <em>Julia</em> package
             (https://github.com/Evovest/EvoTrees.jl). This method
             returns a prediction for every pixel with an average value
-            and a standard deviation, which I used as a measure of
+            and a standard deviation, which we used as a measure of
             uncertainty to build a Normal distribution for the
             probability of occurrence of a given species at all pixels
-            (represented as probability distributions on
-            Fig. <strong>¿fig:conceptual?</strong>).</p>
-            <h3 id="localized-steps">Localized steps</h3>
+            (represented as probability distributions on Fig. 1).</p>
+            <h2 id="localized-steps">Localized steps</h2>
             <p>The next part of the method was the localized steps which
             produce local metawebs in every pixel. This component was
             divided into single-species, two-species, and network-level
-            steps (<em>Localized steps</em> box on
-            Fig. <strong>¿fig:conceptual?</strong>).</p>
+            steps (<em>Localized steps</em> box on Fig. 1).</p>
             <p>The single-species steps represented four possible ways
             to account for uncertainty in the species distributions and
-            bring variation to the spatial metaweb. I explored four
+            bring variation to the spatial metaweb. We explored four
             different options to select a value from the occurrence
             distributions obtained in the previous steps (Inputs
             section): 1) taking the mean from the distribution as the
-            probability of occurrence (option 1 on
-            Fig. <strong>¿fig:conceptual?</strong>); 2) converting the
-            mean value to a binary one using a specific threshold per
-            species (option 2); 3) sampling a random value within the
-            Normal distribution (option 3); 4) converting the random
-            value into a binary result (option 4). The threshold (<span
-            class="math inline"><em>τ</em></span> on
-            Fig. <strong>¿fig:conceptual?</strong>) used was the value
-            that maximized Youden’s <em>J</em> informedness statistic
-            <span class="citation"
+            probability of occurrence (option 1 on Fig. 1); 2)
+            converting the mean value to a binary one using a specific
+            threshold per species (option 2); 3) sampling a random value
+            within the Normal distribution (option 3); 4) converting the
+            random value into a binary result (option 4). The threshold
+            (<span class="math inline"><em>τ</em></span> on Fig. 1) used
+            was the value that maximized Youden’s <em>J</em>
+            informedness statistic <span class="citation"
             data-cites="Youden1950IndRat">(13)</span>, the same metric
             used by <span class="citation"
             data-cites="Strydom2022FooWeb">(1)</span> at an intermediate
@@ -414,69 +434,68 @@ probability</div>
             the species distributions can affect the metaweb result and
             reproduce some of the filterings that create the local
             network realizations <span class="citation"
-            data-cites="Poisot2015SpeWhy">(5)</span>. I expected
+            data-cites="Poisot2015SpeWhy">(5)</span>. We expected
             thresholding to have a more pronounced effect on network
             structure as it should reduce the number of links by
             removing many of the rare interactions <span
             class="citation" data-cites="Poisot2016StrPro">(14)</span>.
-            Meanwhile, I expected random sampling to create spatial
+            Meanwhile, we expected random sampling to create spatial
             heterogeneity compared to the mean probabilities, as
             including some extreme values should disrupt the potential
             effects of environmental gradients.</p>
             <p>Next, the two-species steps aimed to give the probability
             of observing a given interaction in a location. For all
-            species pairs, I multiplied the two species’ occurrence
+            species pairs, we multiplied the two species’ occurrence
             probability obtained using the sampling options described in
             the previous paragraph, then multiplied the co-occurrence
             probability by the interaction probability from the Canadian
             metaweb.</p>
             <p>The network-level steps then created the probabilistic
-            metaweb for the location. I assembled all the local
+            metaweb for the location. We assembled all the local
             interaction probabilities (from the two-species steps) into
             a probabilistic network <span class="citation"
-            data-cites="Poisot2016StrPro">(<em>sensu</em> 14)</span>. I
-            then sampled several random network realizations to
-            represent the potential local realization process <span
-            class="citation" data-cites="Poisot2015SpeWhy">(5)</span>.
-            Finally, this resulted in a distribution of localized
-            networks, which I averaged over the number of simulations to
-            obtain a probabilistic network.</p>
-            <h3 id="outputs-and-additional-steps">Outputs and additional
-            steps</h3>
-            <p>The final output of my method was the spatial
+            data-cites="Poisot2016StrPro">(14)</span>. We then sampled
+            several random network realizations to represent the
+            potential local realization process <span class="citation"
+            data-cites="Poisot2015SpeWhy">(5)</span>. Finally, this
+            resulted in a distribution of localized networks, which we
+            averaged over the number of simulations to obtain a
+            probabilistic network.</p>
+            <h2 id="outputs-and-additional-steps">Outputs and additional
+            steps</h2>
+            <p>The final output of our method was the spatial
             probabilistic metaweb, which contains a localized
             probabilistic metaweb in every cell across the student
-            extent (Outputs box on
-            Fig. <strong>¿fig:conceptual?</strong>). This gives us an
-            idea of the possible networks in all locations as the
-            metaweb essentially serves to set an upper bound on the
-            potential interactions <span class="citation"
+            extent (Outputs box on Fig. 1). This gives us an idea of the
+            possible networks in all locations as the metaweb
+            essentially serves to set an upper bound on the potential
+            interactions <span class="citation"
             data-cites="Strydom2022PreMet">(6)</span>, but with the
             added benefit of accounting for co-occurrence probabilities
-            in this case. From there, I can create maps of network
+            in this case. From there, we can create maps of network
             properties (e.g. number of links, connectance) measured on
             the local realizations, display their spatial distribution,
             and compute some community-level measures such as species
-            richness. Importantly, I can also calculate the uncertainty
+            richness. Importantly, we can also calculate the uncertainty
             associated with the network and community measurements and
-            contrast their spatial distribution. I computed uncertainty
+            contrast their spatial distribution. We computed uncertainty
             for species richness by summing the standard deviations of
-            the species occurrence probabilities. For networks, I
+            the species occurrence probabilities. For networks, we
             computed link variance based on the link probabilities
             according to <span class="citation"
-            data-cites="Poisot2016StrPro">(14)</span>. I then contrasted
-            their spatial distributions to identify areas where their
-            uncertainty matches. These would either indicate that we
-            should trust the predictions (if the uncertainty is low) or
-            need more sampling (if the uncertainty is high) to improve
-            our current knowledge. On the other hand, identifying areas
-            where the richness and link uncertainty do not match would
-            also be highly informative. It could lead to targeted
-            sampling programs for either component (community or network
-            composition).</p>
-            <p>I compared the compositional uniqueness of the networks
+            data-cites="Poisot2016StrPro">(14)</span>. We then
+            contrasted their spatial distributions to identify areas
+            where their uncertainty matches. These would either indicate
+            that we should trust the predictions (if the uncertainty is
+            low) or need more sampling (if the uncertainty is high) to
+            improve our current knowledge. On the other hand,
+            identifying areas where the richness and link uncertainty do
+            not match would also be highly informative. It could lead to
+            targeted sampling programs for either component (community
+            or network composition).</p>
+            <p>We compared the compositional uniqueness of the networks
             and the communities to verify if they indicated different
-            exceptional areas. I measured uniqueness using the local
+            exceptional areas. We measured uniqueness using the local
             contributions to beta diversity <span class="citation"
             data-cites="Legendre2013BetDiv">(LCBD, 15)</span>, which
             identify sites with exceptional composition by quantifying
@@ -494,15 +513,59 @@ probability</div>
             which has been shown to capture more unique sites and
             uniqueness variability than through species composition
             <span class="citation"
-            data-cites="Poisot2017HosPar">(20)</span>. Here, I measured
+            data-cites="Poisot2017HosPar">(20)</span>. Here, we measured
             and compared the uniqueness of our localized community and
-            network predictions. I was especially interested in seeing
+            network predictions. We were especially interested in seeing
             if the sites identified as unique were the same based on the
             species and the interactions or if this method allowed
             identifying areas unique for one element (interactions, for
             instance) but not the other. Sites with such mismatches
             should warrant more investigation to understand the reasons
             for this difference.</p>
+            <h1 id="results">Results</h1>
+            <p>Fig. 2 shows ecoregion-level measures.</p>
+            <figure>
+            <img src="figures/ecoregion_comparison_iqr.png"
+            id="fig:ecoregion_measures"
+            alt="Figure 2: (A-B) Example of a community measure (A, expected species richness) and a network one (B, expected number of links). Both measures are assembled from the predicted probabilistic communities and networks, respectively. Values are first measured separately for all sites, then the median value is taken to represent the ecoregion-level value. (C-B) Representation of the 89% interquantile range of values within the ecoregion for expected richness (C) and expected number of links (D)." />
+            <figcaption aria-hidden="true">Figure 2: (A-B) Example of a
+            community measure (A, expected species richness) and a
+            network one (B, expected number of links). Both measures are
+            assembled from the predicted probabilistic communities and
+            networks, respectively. Values are first measured separately
+            for all sites, then the median value is taken to represent
+            the ecoregion-level value. (C-B) Representation of the 89%
+            interquantile range of values within the ecoregion for
+            expected richness (C) and expected number of links
+            (D).</figcaption>
+            </figure>
+            <p>Fig. 3 shows the LCBD results for the ecoregions.</p>
+            <figure>
+            <img src="figures/ecoregion_LCBD_4panels.png"
+            id="fig:ecoregion_lcbd"
+            alt="Figure 3: (A-B) Representation of the ecoregion uniqueness values based on species composition (a) and network composition (b). LCBD values were first computed across all sites and scaled relative to the maximum value observed. The ecoregion LCBD value is the median value for the sites in the ecoregion. (C) Bivariate representation of species and network composition LCBD. Values are grouped into three quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The species uniqueness (horizontal axis) goes left to right from low uniqueness (light grey, bottom left) to high uniqueness (green, bottom right). The network composition uniqueness goes bottom-up from low uniqueness (light grey, bottom left) to high uniqueness (blue, top left). (D) Probability densities for the ecoregion LCBD values for species and network LCBD (left), highlighting the variability of the LCBD between ecoregions, and the 89% interquartile range of the values within each ecoregion (right), highlighting the variability within the ecoregions." />
+            <figcaption aria-hidden="true">Figure 3: (A-B)
+            Representation of the ecoregion uniqueness values based on
+            species composition (a) and network composition (b). LCBD
+            values were first computed across all sites and scaled
+            relative to the maximum value observed. The ecoregion LCBD
+            value is the median value for the sites in the ecoregion.
+            (C) Bivariate representation of species and network
+            composition LCBD. Values are grouped into three quantiles
+            separately for each variable. The colour combinations
+            represent the nine possible combinations of quantiles. The
+            species uniqueness (horizontal axis) goes left to right from
+            low uniqueness (light grey, bottom left) to high uniqueness
+            (green, bottom right). The network composition uniqueness
+            goes bottom-up from low uniqueness (light grey, bottom left)
+            to high uniqueness (blue, top left). (D) Probability
+            densities for the ecoregion LCBD values for species and
+            network LCBD (left), highlighting the variability of the
+            LCBD between ecoregions, and the 89% interquartile range of
+            the values within each ecoregion (right), highlighting the
+            variability within the ecoregions.</figcaption>
+            </figure>
+            <h1 class="unnumbered" id="discussion">Discussion</h1>
             <div id="refs" class="references csl-bib-body"
             role="doc-bibliography">
             <div id="ref-Strydom2022FooWeb" class="csl-entry"
