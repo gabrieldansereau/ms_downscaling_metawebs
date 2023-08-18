@@ -279,19 +279,25 @@ probability</div>
 
         <article>
             <h1 id="introduction">Introduction</h1>
-            <p>Here, we focus on developing an explicit spatial
-            probabilistic metaweb for Canadian mammals. This will show
-            draft predictions of what localized networks could look like
-            according to our current knowledge, data, and predictive
-            methods. It will also serve to represent the variability of
-            interactions and assess the uncertainty associated with the
-            predictions.</p>
+            <p>Here, we present a method to downscale a metaweb in space
+            by developing an explicit spatial probabilistic metaweb for
+            Canadian mammals. We present how the spatial structure of
+            the downscaled metaweb varies in space and how the
+            uncertainty of interactions can be made spatially explicit.
+            We further show that the downscaled metaweb can highlight
+            important biodiversity areas and bring novel ecological
+            insights compared to community measures.</p>
             <h1 id="methods">Methods</h1>
             <p>Fig. 1 shows a conceptual overview of the methodological
-            steps. The components were grouped as the inputs (spatial or
-            non-spatial), the localized steps (divided into
-            single-species-level, two-species-level, and network-level
-            steps), and the final spatial output.</p>
+            steps leading to the downscaled metaweb. The components were
+            grouped as the inputs (spatial or non-spatial), the
+            localized steps (divided into single-species-level,
+            two-species-level, and network-level steps), and the final
+            downscaled and spatialized output. Throughout these steps,
+            we highlight the importance of presenting the uncertainty of
+            both interactions and their distribution in space. We argue
+            that this requires adopting a probabilistic view and
+            incorporating variation between scales.</p>
             <figure>
             <img src="figures/conceptual-figure.png" id="fig:conceptual"
             alt="Figure 1: Conceptual figure of the workflow to obtain the spatial probabilistic metaweb (Chapter 1). The workflow has three components: the inputs, the localized steps, and the final spatial output. The inputs are composed of the spatial data (data with information in every cell) and the non-spatial data (constant for all of Canada). The localized steps use these data and are performed separately in every cell, first at a single-species level (using distribution data), then for every species pair (adding interaction data from the metaweb), and finally at the network level by combining the results of all species pairs. The final output coming out of the network-level steps contains a spatialized probabilistic metaweb for every cell across the study extent." />
@@ -314,6 +320,7 @@ probability</div>
             <p>The inputs were divided into two main categories: the
             spatial and non-spatial ones (<em>Inputs</em> box on
             Fig. 1).</p>
+            <h3 id="non-spatial-inputs">Non-spatial inputs</h3>
             <p>The main building block for the interaction data was the
             metaweb for Canadian mammals from <span class="citation"
             data-cites="Strydom2022FooWeb">(1)</span>, a non-spatial
@@ -348,49 +355,71 @@ probability</div>
             producing a spatial metaweb requires additional steps to
             account for species composition and interaction variability
             in space.</p>
+            <h3 id="spatial-inputs">Spatial inputs</h3>
             <p>The spatial data used to develop the spatial component of
             the metaweb were species occurrences and environmental data.
             First, we extracted species occurrences from the Global
             Biodiversity Information Facility (GBIF; www.gbif.org) for
-            the Canadian mammals using <code>GBIF.jl</code> <span
-            class="citation" data-cites="Dansereau2021SimJl">(7)</span>.
-            Since GBIF observations represent presence-only data and
-            most predictive models require absence data, we generated
-            pseudo-absence data using the surface range envelope method
-            available in <code>SimpleSDMLayers.jl</code> <span
-            class="citation" data-cites="Dansereau2021SimJl">(7)</span>.
-            This method generates pseudo-absences by selecting random
-            non-observed locations within the spatial range delimited by
-            the presence data <span class="citation"
-            data-cites="Barbet-Massin2012SelPse">(8)</span>. Then, we
-            used environmental data and species distribution models
-            <span class="citation" data-cites="Guisan2005PreSpe">(SDMs,
-            9)</span> to predict the distribution of Canadian mammals
-            across the whole country. The environmental data we used
-            were the 19 standard BIOCLIM climate variables from
-            ==WorldClim 2.0 <span class="citation"
-            data-cites="Fick2017WorNew">(10)</span>== and the 12
+            the Canadian mammals after reconciling species names between
+            the Canadian metaweb and GBIF using the GBIF Backbone
+            Taxonomy <span class="citation"
+            data-cites="GBIFSecretariat2021GbiBac">(7)</span>. Doing so,
+            we removed potential duplicates where species listed in the
+            Canadian metaweb are considered as a single species by GBIF.
+            We collected occurrences for our species list using the GBIF
+            download API on October 21st 2022 <span class="citation"
+            data-cites="GBIF.org2022GbiOcc">(8)</span>. We restricted
+            our query to occurrences with coordinates between longitudes
+            175°W to 45°W and latitudes 10°N to 90°N. This was meant to
+            collect training data covering a broader range than our
+            prediction target (Canada only) and include observations in
+            similar environments. Then, since GBIF observations
+            represent presence-only data and most predictive models
+            require absence data, we generated pseudo-absence data using
+            the surface range envelope method available in
+            <code>SimpleSDMLayers.jl</code> <span class="citation"
+            data-cites="Dansereau2021SimJl">(9)</span>. This method
+            generates pseudo-absences by selecting random non-observed
+            locations within the spatial range delimited by the presence
+            data <span class="citation"
+            data-cites="Barbet-Massin2012SelPse">(10)</span>.</p>
+            <p>We used environmental data and species distribution
+            models <span class="citation"
+            data-cites="Guisan2005PreSpe">(SDMs, 11)</span> to predict
+            the distribution of Canadian mammals across the whole
+            country. The environmental data we used were the 19
+            bioclimatic variables from CHELSA <span class="citation"
+            data-cites="Karger2017CliHig">(12)</span> and the 12
             consensus land cover variables from EarthEnv <span
-            class="citation" data-cites="Tuanmu2014Glo1km">(11)</span>.
-            The climate variables represent various measures of
-            temperature and precipitation (e.g., annual ranges, monthly
-            maximum or minimum, seasonality) and are available for land
-            areas across the globe. Therefore, they can be used to
-            capture the climatic tolerance of species and model habitat
-            suitability in new locations. The WorldClim data are
-            available at various resolutions. We decided to use the 2.5
-            arcmin resolution (around 4.5 km at the Equator) as a
-            compromise to catch potential local variations while
-            limiting computation costs to a manageable level. The land
+            class="citation" data-cites="Tuanmu2014Glo1km">(13)</span>.
+            The CHELSA bioclimatic variables (<em>bio1-bio19</em>)
+            represent various measures of temperature and precipitation
+            (e.g., annual averages, monthly maximum or minimum,
+            seasonality) and are available for land areas across the
+            globe. Therefore, they can be used to capture the climatic
+            tolerance of species and model habitat suitability in new
+            locations. We used the most recent version, the CHELSA v2.1
+            dataset <span class="citation"
+            data-cites="Karger2021CliHig">(14)</span>. However, this
+            version also includes bioclimatic data for open water, while
+            we decided here to focus only on land surfaces. We used the
+            previous version, CHELSA v1.2 <span class="citation"
+            data-cites="Karger2018DatCli">(15)</span>, which shares a
+            similar grid but does not cover open water, as a mask to
+            clip the v2.1 data to land surfaces only. The EarthEnv land
             cover variables represent classes such as Evergreen
             broadleaf trees, Cultivated and managed vegetation,
             Urban/Built-up, and Open Water. Values range between 0 and
             100 and represent the consensus prevalence of each class in
-            percentage within a pixel at a 1-km resolution. Since this
-            is finer than the resolution for the climate data, we
-            coarsened the land cover ones to the same 2.5 arcmin
-            resolution using <span class="citation"
-            data-cites="GDAL/OGRcontributors2021GdaOgr">(12)</span>.</p>
+            percentage within a pixel. We coarsened both the CHELSA and
+            EarthEnv data from their original 30 arc-second resolution
+            to a 2.5 arc-mininute one (around 4.5 km at the Equator)
+            using <span class="citation"
+            data-cites="GDAL/OGRcontributors2021GdaOgr">(16)</span>.
+            This represented a compromise to catch both local variations
+            and broad scale patterns while limiting computation costs to
+            a manageable level, as memory requirements on localized
+            interactions rise very quickly.</p>
             <p>Our selection criteria for choosing an SDM algorithm was
             to have a method that generated probabilistic results,
             including both a probability of occurrence for a species in
@@ -406,7 +435,14 @@ probability</div>
             and a standard deviation, which we used as a measure of
             uncertainty to build a Normal distribution for the
             probability of occurrence of a given species at all pixels
-            (represented as probability distributions on Fig. 1).</p>
+            (represented as probability distributions on Fig. 1). We
+            trained models across the extent chosen for occurrences
+            (longitudes 175°W to 45°W and latitudes 10°N to 90°N), then
+            predicted species distributions only for Canada. We used the
+            2021 Census Boundary Files from Statistics Canada <span
+            class="citation"
+            data-cites="StatisticsCanada2022BouFil">(17)</span> to set
+            the boundaries for our predictions.</p>
             <h2 id="localized-steps">Localized steps</h2>
             <p>The next part of the method was the localized steps which
             produce local metawebs in every pixel. This component was
@@ -426,7 +462,7 @@ probability</div>
             (<span class="math inline"><em>τ</em></span> on Fig. 1) used
             was the value that maximized Youden’s <em>J</em>
             informedness statistic <span class="citation"
-            data-cites="Youden1950IndRat">(13)</span>, the same metric
+            data-cites="Youden1950IndRat">(18)</span>, the same metric
             used by <span class="citation"
             data-cites="Strydom2022FooWeb">(1)</span> at an intermediate
             step while building the metaweb. The four sampling options
@@ -438,7 +474,7 @@ probability</div>
             thresholding to have a more pronounced effect on network
             structure as it should reduce the number of links by
             removing many of the rare interactions <span
-            class="citation" data-cites="Poisot2016StrPro">(14)</span>.
+            class="citation" data-cites="Poisot2016StrPro">(19)</span>.
             Meanwhile, we expected random sampling to create spatial
             heterogeneity compared to the mean probabilities, as
             including some extreme values should disrupt the potential
@@ -449,20 +485,23 @@ probability</div>
             probability obtained using the sampling options described in
             the previous paragraph, then multiplied the co-occurrence
             probability by the interaction probability from the Canadian
-            metaweb.</p>
+            metaweb. For cases where species in the Canadian metaweb
+            were considered as the same species by the GBIF Backbone
+            Taxonomy (the reconciliation step mentioned earlier), we
+            used the highest interaction probabilities involving the
+            duplicated species.</p>
             <p>The network-level steps then created the probabilistic
             metaweb for the location. We assembled all the local
             interaction probabilities (from the two-species steps) into
             a probabilistic network <span class="citation"
-            data-cites="Poisot2016StrPro">(14)</span>. We then sampled
+            data-cites="Poisot2016StrPro">(19)</span>. We then sampled
             several random network realizations to represent the
             potential local realization process <span class="citation"
             data-cites="Poisot2015SpeWhy">(5)</span>. Finally, this
             resulted in a distribution of localized networks, which we
             averaged over the number of simulations to obtain a
             probabilistic network.</p>
-            <h2 id="outputs-and-additional-steps">Outputs and additional
-            steps</h2>
+            <h2 id="outputs">Outputs</h2>
             <p>The final output of our method was the spatial
             probabilistic metaweb, which contains a localized
             probabilistic metaweb in every cell across the student
@@ -476,44 +515,52 @@ probability</div>
             properties (e.g. number of links, connectance) measured on
             the local realizations, display their spatial distribution,
             and compute some community-level measures such as species
-            richness. Importantly, we can also calculate the uncertainty
-            associated with the network and community measurements and
-            contrast their spatial distribution. We computed uncertainty
-            for species richness by summing the standard deviations of
-            the species occurrence probabilities. For networks, we
-            computed link variance based on the link probabilities
-            according to <span class="citation"
-            data-cites="Poisot2016StrPro">(14)</span>. We then
-            contrasted their spatial distributions to identify areas
-            where their uncertainty matches. These would either indicate
-            that we should trust the predictions (if the uncertainty is
-            low) or need more sampling (if the uncertainty is high) to
-            improve our current knowledge. On the other hand,
-            identifying areas where the richness and link uncertainty do
-            not match would also be highly informative. It could lead to
-            targeted sampling programs for either component (community
-            or network composition).</p>
+            richness. We can also calculate the uncertainty associated
+            with the network and community measurements and contrast
+            their spatial distribution (see Supplementary Material).</p>
+            <h3 id="ecoregions">Ecoregions</h3>
+            <p>Since both species composition and network summary values
+            display a high spatial variation and complex patterns, we
+            simplified the representation of their distribution by
+            grouping sites by ecoregion, as species and interaction
+            composition have been shown to differ between ecoregions
+            across large spatial scales <span class="citation"
+            data-cites="Martins2022GloReg">(20)</span>. To do so, we
+            used the global map of ecoregions from <span
+            class="citation"
+            data-cites="Dinerstein2017EcoApp Martins2022GloReg">(21,also
+            used by 20)</span>, rasterized it, and clipped it to Canada,
+            which selected 44 different ecoregions. For every measure we
+            report (e.g. species richness, number of links), we first
+            calculated the measure for every site separately, then we
+            extracted the median value for each ecoregion. We also
+            measured the within-ecoregion variation by measuring the 89%
+            interquantile range of the values in each ecoregion <span
+            class="citation" data-cites="McElreath2020StaRet">(threshold
+            chosen to avoid confusion with conventional significance
+            tests, inspired by 22)</span>.</p>
+            <h3 id="ecological-uniqueness">Ecological uniqueness</h3>
             <p>We compared the compositional uniqueness of the networks
             and the communities to verify if they indicated different
             exceptional areas. We measured uniqueness using the local
             contributions to beta diversity <span class="citation"
-            data-cites="Legendre2013BetDiv">(LCBD, 15)</span>, which
+            data-cites="Legendre2013BetDiv">(LCBD, 23)</span>, which
             identify sites with exceptional composition by quantifying
             how much one site contributes to the total variance in the
             community composition. While many studies used LCBD values
             to evaluate uniqueness on local scales or few study sites
             <span class="citation"
             data-cites="daSilva2014LocReg Heino2017ExpSpe">(for example,
-            16,17)</span>, recent studies used the measure on predicted
+            24,25)</span>, recent studies used the measure on predicted
             species compositions over broad spatial extents and a large
             number of sites <span class="citation"
-            data-cites="Vasconcelos2018ExpImp Dansereau2022EvaEco">(18,19)</span>.
+            data-cites="Vasconcelos2018ExpImp Dansereau2022EvaEco">(26,27)</span>.
             LCBD values can also be used to measure uniqueness for
             networks by computing the values over the adjacency matrix,
             which has been shown to capture more unique sites and
             uniqueness variability than through species composition
             <span class="citation"
-            data-cites="Poisot2017HosPar">(20)</span>. Here, we measured
+            data-cites="Poisot2017HosPar">(28)</span>. Here, we measured
             and compared the uniqueness of our localized community and
             network predictions. We were especially interested in seeing
             if the sites identified as unique were the same based on the
@@ -522,6 +569,30 @@ probability</div>
             instance) but not the other. Sites with such mismatches
             should warrant more investigation to understand the reasons
             for this difference.</p>
+            <h2 id="software">Software</h2>
+            <p>We used <em>Julia</em> v1.9.0 <span class="citation"
+            data-cites="Bezanson2017JulFre">(29)</span> to implement all
+            our analyses. We used packages <code>GBIF.jl</code> <span
+            class="citation" data-cites="Dansereau2021SimJl">(9)</span>
+            to reconcile species names using the GBIF Backbone Taxonomy,
+            <code>SpeciesDistributionToolkit.jl</code> to handle raster
+            layers and species occurrences,
+            <code>EcologicalNetworks.jl</code> <span class="citation"
+            data-cites="Poisot2019EcoJl">(30)</span> to analyse network
+            and metaweb structure, and <code>Makie.jl</code> <span
+            class="citation" data-cites="Danisch2021MakJl">(31)</span>
+            to produce figures. Our data sources (CHELSA, EarthEnv,
+            Ecoregions) were all unprojected and we did not use a
+            projection in our analyses, but we displayed the results
+            using a Lambert conformal conic projection more appropriate
+            for Canada using <code>GeoMakie.jl</code>. All the code used
+            to implement our analyses is available on GitHub
+            (https://github.com/PoisotLab/SpatialProbabilisticMetaweb)
+            and includes instructions on how to run a smaller example at
+            a coarse resolution. Note that running our analyses at full
+            scale is resource and memory intensive and required the use
+            of compute clusters provided by Calcul Québec and the
+            Digital Research Alliance of Canada.</p>
             <h1 id="results">Results</h1>
             <p>Fig. 2 shows ecoregion-level measures.</p>
             <figure>
@@ -619,9 +690,24 @@ probability</div>
             metawebs: Transfer of graph embeddings can help alleviate
             spatial data deficiencies</a>. 2022; </div>
             </div>
-            <div id="ref-Dansereau2021SimJl" class="csl-entry"
+            <div id="ref-GBIFSecretariat2021GbiBac" class="csl-entry"
             role="doc-biblioentry">
             <div class="csl-left-margin">7. </div><div
+            class="csl-right-inline">GBIF Secretariat. <a
+            href="https://doi.org/10.15468/39omei">GBIF Backbone
+            Taxonomy</a>. 2021; </div>
+            </div>
+            <div id="ref-GBIF.org2022GbiOcc" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">8. </div><div
+            class="csl-right-inline">GBIF.org. <a
+            href="https://doi.org/10.15468/DL.H7GZPV">GBIF occurrence
+            download</a>. The Global Biodiversity Information Facility;
+            2022. </div>
+            </div>
+            <div id="ref-Dansereau2021SimJl" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">9. </div><div
             class="csl-right-inline">Dansereau G, Poisot T. <a
             href="https://doi.org/10.21105/joss.02872">SimpleSDMLayers.jl
             and GBIF.jl: A framework for species distribution modeling
@@ -630,7 +716,7 @@ probability</div>
             </div>
             <div id="ref-Barbet-Massin2012SelPse" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">8. </div><div
+            <div class="csl-left-margin">10. </div><div
             class="csl-right-inline">Barbet-Massin M, Jiguet F, Albert
             CH, Thuiller W. <a
             href="https://doi.org/10.1111/j.2041-210X.2011.00172.x">Selecting
@@ -640,40 +726,66 @@ probability</div>
             </div>
             <div id="ref-Guisan2005PreSpe" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">9. </div><div
+            <div class="csl-left-margin">11. </div><div
             class="csl-right-inline">Guisan A, Thuiller W. <a
             href="https://doi.org/10.1111/j.1461-0248.2005.00792.x">Predicting
             species distribution: Offering more than simple habitat
             models</a>. Ecology Letters. 2005;8(9):993–1009. </div>
             </div>
-            <div id="ref-Fick2017WorNew" class="csl-entry"
+            <div id="ref-Karger2017CliHig" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">10. </div><div
-            class="csl-right-inline">Fick SE, Hijmans RJ. <a
-            href="https://doi.org/10.1002/joc.5086">WorldClim 2: New
-            1-km spatial resolution climate surfaces for global land
-            areas</a>. International Journal of Climatology.
-            2017;37(12):4302–15. </div>
+            <div class="csl-left-margin">12. </div><div
+            class="csl-right-inline">Karger DN, Conrad O, Böhner J,
+            Kawohl T, Kreft H, Soria-Auza RW, et al. <a
+            href="https://doi.org/10.1038/sdata.2017.122">Climatologies
+            at high resolution for the earth’s land surface areas</a>.
+            Scientific Data. 2017;4:170122. </div>
             </div>
             <div id="ref-Tuanmu2014Glo1km" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">11. </div><div
+            <div class="csl-left-margin">13. </div><div
             class="csl-right-inline">Tuanmu MN, Jetz W. <a
             href="https://doi.org/10.1111/geb.12182">A global 1-km
             consensus land-cover product for biodiversity and ecosystem
             modelling</a>. Global Ecology and Biogeography.
             2014;23(9):1031–45. </div>
             </div>
+            <div id="ref-Karger2021CliHig" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">14. </div><div
+            class="csl-right-inline">Karger DN, Conrad O, Böhner J,
+            Kawohl T, Kreft H, Soria-Auza RW, et al. <a
+            href="https://doi.org/10.16904/ENVIDAT.228">Climatologies at
+            high resolution for the earth’s land surface areas</a>.
+            EnviDat; 2021. </div>
+            </div>
+            <div id="ref-Karger2018DatCli" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">15. </div><div
+            class="csl-right-inline">Karger DN, Conrad O, Böhner J,
+            Kawohl T, Kreft H, Soria-Auza RW, et al. <a
+            href="https://doi.org/10.5061/DRYAD.KD1D4">Data from:
+            Climatologies at high resolution for the earth’s land
+            surface areas</a>. Dryad; 2018. p. 7266827510 bytes. </div>
+            </div>
             <div id="ref-GDAL/OGRcontributors2021GdaOgr"
             class="csl-entry" role="doc-biblioentry">
-            <div class="csl-left-margin">12. </div><div
+            <div class="csl-left-margin">16. </div><div
             class="csl-right-inline">GDAL/OGR contributors. GDAL/OGR
             geospatial data abstraction software library. Open Source
             Geospatial Foundation; 2021. </div>
             </div>
+            <div id="ref-StatisticsCanada2022BouFil" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">17. </div><div
+            class="csl-right-inline">Statistics Canada. Boundary files,
+            reference guide second edition, Census year 2021. Second
+            edition. Ottawa: Statistics Canada = Statistique Canada;
+            2022. </div>
+            </div>
             <div id="ref-Youden1950IndRat" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">13. </div><div
+            <div class="csl-left-margin">18. </div><div
             class="csl-right-inline">Youden WJ. <a
             href="https://doi.org/10.1002/1097-0142(1950)3:1&lt;32::AID-CNCR2820030106&gt;3.0.CO;2-3">Index
             for rating diagnostic tests</a>. Cancer. 1950;3(1):32–5.
@@ -681,16 +793,44 @@ probability</div>
             </div>
             <div id="ref-Poisot2016StrPro" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">14. </div><div
+            <div class="csl-left-margin">19. </div><div
             class="csl-right-inline">Poisot T, Cirtwill AR, Cazelles K,
             Gravel D, Fortin MJ, Stouffer DB. <a
             href="https://doi.org/10.1111/2041-210X.12468">The structure
             of probabilistic networks</a>. Vamosi J, editor. Methods in
             Ecology and Evolution. 2016;7(3):303–12. </div>
             </div>
+            <div id="ref-Martins2022GloReg" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">20. </div><div
+            class="csl-right-inline">Martins LP, Stouffer DB, Blendinger
+            PG, Böhning-Gaese K, Buitrón-Jurado G, Correia M, et al. <a
+            href="https://doi.org/10.1038/s41467-022-34355-w">Global and
+            regional ecological boundaries explain abrupt spatial
+            discontinuities in avian frugivory interactions</a>. Nature
+            Communications. 2022;13(1):6943. </div>
+            </div>
+            <div id="ref-Dinerstein2017EcoApp" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">21. </div><div
+            class="csl-right-inline">Dinerstein E, Olson D, Joshi A,
+            Vynne C, Burgess ND, Wikramanayake E, et al. <a
+            href="https://doi.org/10.1093/biosci/bix014">An
+            Ecoregion-Based Approach to Protecting Half the Terrestrial
+            Realm</a>. BioScience. 2017;67(6):534–45. </div>
+            </div>
+            <div id="ref-McElreath2020StaRet" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">22. </div><div
+            class="csl-right-inline">McElreath R. <a
+            href="https://doi.org/10.1201/9780429029608">Statistical
+            rethinking: A bayesian course with examples in R and
+            Stan</a>. Second. New York: Chapman and Hall/CRC; 2020.
+            </div>
+            </div>
             <div id="ref-Legendre2013BetDiv" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">15. </div><div
+            <div class="csl-left-margin">23. </div><div
             class="csl-right-inline">Legendre P, De Cáceres M. <a
             href="https://doi.org/10.1111/ele.12141">Beta diversity as
             the variance of community data: Dissimilarity coefficients
@@ -699,7 +839,7 @@ probability</div>
             </div>
             <div id="ref-daSilva2014LocReg" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">16. </div><div
+            <div class="csl-left-margin">24. </div><div
             class="csl-right-inline">da Silva PG, Hernández MIM. <a
             href="https://doi.org/10.1371/journal.pone.0111883">Local
             and regional effects on community structure of dung beetles
@@ -708,7 +848,7 @@ probability</div>
             </div>
             <div id="ref-Heino2017ExpSpe" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">17. </div><div
+            <div class="csl-left-margin">25. </div><div
             class="csl-right-inline">Heino J, Grönroos M. <a
             href="https://doi.org/10.1007/s00442-016-3754-7">Exploring
             species and site contributions to beta diversity in stream
@@ -717,7 +857,7 @@ probability</div>
             </div>
             <div id="ref-Vasconcelos2018ExpImp" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">18. </div><div
+            <div class="csl-left-margin">26. </div><div
             class="csl-right-inline">Vasconcelos TS, Nascimento BTM do,
             Prado VHM. <a
             href="https://doi.org/10.1002/ece3.4357">Expected impacts of
@@ -727,7 +867,7 @@ probability</div>
             </div>
             <div id="ref-Dansereau2022EvaEco" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">19. </div><div
+            <div class="csl-left-margin">27. </div><div
             class="csl-right-inline">Dansereau G, Legendre P, Poisot T.
             <a href="https://doi.org/10.1111/oik.09063">Evaluating
             ecological uniqueness over broad spatial extents using
@@ -736,13 +876,38 @@ probability</div>
             </div>
             <div id="ref-Poisot2017HosPar" class="csl-entry"
             role="doc-biblioentry">
-            <div class="csl-left-margin">20. </div><div
+            <div class="csl-left-margin">28. </div><div
             class="csl-right-inline">Poisot T, Guéveneux-Julien C,
             Fortin MJ, Gravel D, Legendre P. <a
             href="https://doi.org/10.1111/geb.12602">Hosts, parasites
             and their interactions respond to different climatic
             variables</a>. Global Ecology and Biogeography.
             2017;26(8):942–51. </div>
+            </div>
+            <div id="ref-Bezanson2017JulFre" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">29. </div><div
+            class="csl-right-inline">Bezanson J, Edelman A, Karpinski S,
+            Shah VB. <a href="https://doi.org/10.1137/141000671">Julia:
+            A fresh approach to numerical computing</a>. SIAM Review.
+            2017;59(1):65–98. </div>
+            </div>
+            <div id="ref-Poisot2019EcoJl" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">30. </div><div
+            class="csl-right-inline">Poisot T, Bélisle Z, Hoebeke L,
+            Stock M, Szefer P. <a
+            href="https://doi.org/10.1111/ecog.04310">EcologicalNetworks.jl:
+            Analysing ecological networks of species interactions</a>.
+            Ecography. 2019;42(11):1850–61. </div>
+            </div>
+            <div id="ref-Danisch2021MakJl" class="csl-entry"
+            role="doc-biblioentry">
+            <div class="csl-left-margin">31. </div><div
+            class="csl-right-inline">Danisch S, Krumbiegel J. <a
+            href="https://doi.org/10.21105/joss.03349">Makie.jl:
+            Flexible high-performance data visualization for Julia</a>.
+            Journal of Open Source Software. 2021;6(65):3349. </div>
             </div>
             </div>
         </article>

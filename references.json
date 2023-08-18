@@ -35,6 +35,41 @@
         "type": "article-journal"
     },
     {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "SIAM Review",
+        "author": [
+            {
+                "family": "Bezanson",
+                "given": "Jeff"
+            },
+            {
+                "family": "Edelman",
+                "given": "Alan"
+            },
+            {
+                "family": "Karpinski",
+                "given": "Stefan"
+            },
+            {
+                "family": "Shah",
+                "given": "Viral B."
+            }
+        ],
+        "id": "Bezanson2017JulFre",
+        "DOI": "10.1137/141000671",
+        "volume": "59",
+        "page": "65-98",
+        "title": "Julia: A fresh approach to numerical computing",
+        "type": "article-journal"
+    },
+    {
         "issue": "7",
         "issued": {
             "date-parts": [
@@ -189,6 +224,33 @@
         "volume": "28",
         "page": "1636-1648",
         "title": "Spatial analyses of multi-trophic terrestrial vertebrate assemblages in Europe",
+        "type": "article-journal"
+    },
+    {
+        "issue": "65",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Journal of Open Source Software",
+        "author": [
+            {
+                "family": "Danisch",
+                "given": "Simon"
+            },
+            {
+                "family": "Krumbiegel",
+                "given": "Julius"
+            }
+        ],
+        "id": "Danisch2021MakJl",
+        "DOI": "10.21105/joss.03349",
+        "volume": "6",
+        "page": "3349",
+        "title": "Makie.jl: Flexible high-performance data visualization for Julia",
         "type": "article-journal"
     },
     {
@@ -683,6 +745,43 @@
         "type": "article-journal"
     },
     {
+        "publisher": "The Global Biodiversity Information Facility",
+        "DOI": "10.15468/DL.H7GZPV",
+        "author": [
+            {
+                "literal": "GBIF.org"
+            }
+        ],
+        "id": "GBIF.org2022GbiOcc",
+        "title": "GBIF occurrence download",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "DOI": "10.15468/39omei",
+        "author": [
+            {
+                "literal": "GBIF Secretariat"
+            }
+        ],
+        "id": "GBIFSecretariat2021GbiBac",
+        "title": "GBIF Backbone Taxonomy",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "type": "article-journal"
+    },
+    {
         "publisher": "Open Source Geospatial Foundation",
         "genre": "Manual",
         "author": [
@@ -754,6 +853,165 @@
         "page": "151-160",
         "title": "Exploring species and site contributions to beta diversity in stream insect assemblages",
         "type": "article-journal"
+    },
+    {
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "Scientific Data",
+        "author": [
+            {
+                "family": "Karger",
+                "given": "Dirk Nikolaus"
+            },
+            {
+                "family": "Conrad",
+                "given": "Olaf"
+            },
+            {
+                "family": "Böhner",
+                "given": "Jürgen"
+            },
+            {
+                "family": "Kawohl",
+                "given": "Tobias"
+            },
+            {
+                "family": "Kreft",
+                "given": "Holger"
+            },
+            {
+                "family": "Soria-Auza",
+                "given": "Rodrigo Wilber"
+            },
+            {
+                "family": "Zimmermann",
+                "given": "Niklaus E."
+            },
+            {
+                "family": "Linder",
+                "given": "H. Peter"
+            },
+            {
+                "family": "Kessler",
+                "given": "Michael"
+            }
+        ],
+        "id": "Karger2017CliHig",
+        "DOI": "10.1038/sdata.2017.122",
+        "volume": "4",
+        "page": "170122",
+        "title": "Climatologies at high resolution for the earth’s land surface areas",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Dryad",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "author": [
+            {
+                "family": "Karger",
+                "given": "Dirk N."
+            },
+            {
+                "family": "Conrad",
+                "given": "Olaf"
+            },
+            {
+                "family": "Böhner",
+                "given": "Jürgen"
+            },
+            {
+                "family": "Kawohl",
+                "given": "Tobias"
+            },
+            {
+                "family": "Kreft",
+                "given": "Holger"
+            },
+            {
+                "family": "Soria-Auza",
+                "given": "Rodrigo W."
+            },
+            {
+                "family": "Zimmermann",
+                "given": "Niklaus E."
+            },
+            {
+                "family": "Linder",
+                "given": "H. Peter"
+            },
+            {
+                "family": "Kessler",
+                "given": "Michael"
+            }
+        ],
+        "id": "Karger2018DatCli",
+        "DOI": "10.5061/DRYAD.KD1D4",
+        "page": "7266827510 bytes",
+        "title": "Data from: Climatologies at high resolution for the earth’s land surface areas",
+        "type": ""
+    },
+    {
+        "publisher": "EnviDat",
+        "DOI": "10.16904/ENVIDAT.228",
+        "author": [
+            {
+                "family": "Karger",
+                "given": "Dirk Nikolaus"
+            },
+            {
+                "family": "Conrad",
+                "given": "Olaf"
+            },
+            {
+                "family": "Böhner",
+                "given": "Jürgen"
+            },
+            {
+                "family": "Kawohl",
+                "given": "Tobias"
+            },
+            {
+                "family": "Kreft",
+                "given": "Holger"
+            },
+            {
+                "family": "Soria-Auza",
+                "given": "Rodrigo Wilber"
+            },
+            {
+                "family": "Zimmermann",
+                "given": "Niklaus E."
+            },
+            {
+                "family": "Linder",
+                "given": "H. Peter"
+            },
+            {
+                "family": "Kessler",
+                "given": "Michael"
+            }
+        ],
+        "id": "Karger2021CliHig",
+        "title": "Climatologies at high resolution for the earth’s land surface areas",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "issue": "8",
@@ -963,6 +1221,28 @@
         "type": "article-journal"
     },
     {
+        "edition": "Second",
+        "publisher": "Chapman and Hall/CRC",
+        "publisher-place": "New York",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "author": [
+            {
+                "family": "McElreath",
+                "given": "Richard"
+            }
+        ],
+        "id": "McElreath2020StaRet",
+        "DOI": "10.1201/9780429029608",
+        "title": "Statistical rethinking: A bayesian course with examples in R and Stan",
+        "type": "book"
+    },
+    {
         "issue": "1",
         "issued": {
             "date-parts": [
@@ -1135,6 +1415,65 @@
         "page": "942-951",
         "title": "Hosts, parasites and their interactions respond to different climatic variables",
         "type": "article-journal"
+    },
+    {
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Bélisle",
+                "given": "Zachary"
+            },
+            {
+                "family": "Hoebeke",
+                "given": "Laura"
+            },
+            {
+                "family": "Stock",
+                "given": "Michiel"
+            },
+            {
+                "family": "Szefer",
+                "given": "Piotr"
+            }
+        ],
+        "id": "Poisot2019EcoJl",
+        "DOI": "10.1111/ecog.04310",
+        "volume": "42",
+        "page": "1850-1861",
+        "title": "EcologicalNetworks.jl: Analysing ecological networks of species interactions",
+        "type": "article-journal"
+    },
+    {
+        "edition": "Second edition",
+        "publisher": "Statistics Canada = Statistique Canada",
+        "author": [
+            {
+                "literal": "Statistics Canada"
+            }
+        ],
+        "publisher-place": "Ottawa",
+        "id": "StatisticsCanada2022BouFil",
+        "title": "Boundary files, reference guide second edition, Census year 2021",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "type": "book"
     },
     {
         "issue": "n/a",

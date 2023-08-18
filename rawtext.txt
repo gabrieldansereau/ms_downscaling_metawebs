@@ -1,17 +1,24 @@
 # Introduction
 
-Here, we focus on developing an explicit spatial probabilistic metaweb
-for Canadian mammals. This will show draft predictions of what localized
-networks could look like according to our current knowledge, data, and
-predictive methods. It will also serve to represent the variability of
-interactions and assess the uncertainty associated with the predictions.
+Here, we present a method to downscale a metaweb in space by developing
+an explicit spatial probabilistic metaweb for Canadian mammals. We
+present how the spatial structure of the downscaled metaweb varies in
+space and how the uncertainty of interactions can be made spatially
+explicit. We further show that the downscaled metaweb can highlight
+important biodiversity areas and bring novel ecological insights
+compared to community measures.
 
 # Methods
 
-Fig. 1 shows a conceptual overview of the methodological steps. The
-components were grouped as the inputs (spatial or non-spatial), the
-localized steps (divided into single-species-level, two-species-level,
-and network-level steps), and the final spatial output.
+Fig. 1 shows a conceptual overview of the methodological steps leading
+to the downscaled metaweb. The components were grouped as the inputs
+(spatial or non-spatial), the localized steps (divided into
+single-species-level, two-species-level, and network-level steps), and
+the final downscaled and spatialized output. Throughout these steps, we
+highlight the importance of presenting the uncertainty of both
+interactions and their distribution in space. We argue that this
+requires adopting a probabilistic view and incorporating variation
+between scales.
 
 ![Figure 1: Conceptual figure of the workflow to obtain the spatial
 probabilistic metaweb (Chapter 1). The workflow has three components:
@@ -30,6 +37,8 @@ extent.](figures/conceptual-figure.png){#fig:conceptual}
 
 The inputs were divided into two main categories: the spatial and
 non-spatial ones (*Inputs* box on Fig. 1).
+
+### Non-spatial inputs
 
 The main building block for the interaction data was the metaweb for
 Canadian mammals from @Strydom2022FooWeb, a non-spatial input
@@ -54,36 +63,53 @@ and a higher connectance [@Strydom2022PreMet]. Therefore, producing a
 spatial metaweb requires additional steps to account for species
 composition and interaction variability in space.
 
+### Spatial inputs
+
 The spatial data used to develop the spatial component of the metaweb
 were species occurrences and environmental data. First, we extracted
 species occurrences from the Global Biodiversity Information Facility
-(GBIF; www.gbif.org) for the Canadian mammals using `GBIF.jl`
-[@Dansereau2021SimJl]. Since GBIF observations represent presence-only
-data and most predictive models require absence data, we generated
+(GBIF; www.gbif.org) for the Canadian mammals after reconciling species
+names between the Canadian metaweb and GBIF using the GBIF Backbone
+Taxonomy [@GBIFSecretariat2021GbiBac]. Doing so, we removed potential
+duplicates where species listed in the Canadian metaweb are considered
+as a single species by GBIF. We collected occurrences for our species
+list using the GBIF download API on October 21st 2022
+[@GBIF.org2022GbiOcc]. We restricted our query to occurrences with
+coordinates between longitudes 175°W to 45°W and latitudes 10°N to 90°N.
+This was meant to collect training data covering a broader range than
+our prediction target (Canada only) and include observations in similar
+environments. Then, since GBIF observations represent presence-only data
+and most predictive models require absence data, we generated
 pseudo-absence data using the surface range envelope method available in
 `SimpleSDMLayers.jl` [@Dansereau2021SimJl]. This method generates
 pseudo-absences by selecting random non-observed locations within the
 spatial range delimited by the presence data [@Barbet-Massin2012SelPse].
-Then, we used environmental data and species distribution models [SDMs,
+
+We used environmental data and species distribution models [SDMs,
 @Guisan2005PreSpe] to predict the distribution of Canadian mammals
 across the whole country. The environmental data we used were the 19
-standard BIOCLIM climate variables from ==WorldClim 2.0
-[@Fick2017WorNew]== and the 12 consensus land cover variables from
-EarthEnv [@Tuanmu2014Glo1km]. The climate variables represent various
-measures of temperature and precipitation (e.g., annual ranges, monthly
-maximum or minimum, seasonality) and are available for land areas across
-the globe. Therefore, they can be used to capture the climatic tolerance
-of species and model habitat suitability in new locations. The WorldClim
-data are available at various resolutions. We decided to use the 2.5
-arcmin resolution (around 4.5 km at the Equator) as a compromise to
-catch potential local variations while limiting computation costs to a
-manageable level. The land cover variables represent classes such as
-Evergreen broadleaf trees, Cultivated and managed vegetation,
+bioclimatic variables from CHELSA [@Karger2017CliHig] and the 12
+consensus land cover variables from EarthEnv [@Tuanmu2014Glo1km]. The
+CHELSA bioclimatic variables (*bio1-bio19*) represent various measures
+of temperature and precipitation (e.g., annual averages, monthly maximum
+or minimum, seasonality) and are available for land areas across the
+globe. Therefore, they can be used to capture the climatic tolerance of
+species and model habitat suitability in new locations. We used the most
+recent version, the CHELSA v2.1 dataset [@Karger2021CliHig]. However,
+this version also includes bioclimatic data for open water, while we
+decided here to focus only on land surfaces. We used the previous
+version, CHELSA v1.2 [@Karger2018DatCli], which shares a similar grid
+but does not cover open water, as a mask to clip the v2.1 data to land
+surfaces only. The EarthEnv land cover variables represent classes such
+as Evergreen broadleaf trees, Cultivated and managed vegetation,
 Urban/Built-up, and Open Water. Values range between 0 and 100 and
 represent the consensus prevalence of each class in percentage within a
-pixel at a 1-km resolution. Since this is finer than the resolution for
-the climate data, we coarsened the land cover ones to the same 2.5
-arcmin resolution using @GDAL/OGRcontributors2021GdaOgr.
+pixel. We coarsened both the CHELSA and EarthEnv data from their
+original 30 arc-second resolution to a 2.5 arc-mininute one (around 4.5
+km at the Equator) using @GDAL/OGRcontributors2021GdaOgr. This
+represented a compromise to catch both local variations and broad scale
+patterns while limiting computation costs to a manageable level, as
+memory requirements on localized interactions rise very quickly.
 
 Our selection criteria for choosing an SDM algorithm was to have a
 method that generated probabilistic results, including both a
@@ -97,7 +123,12 @@ package (https://github.com/Evovest/EvoTrees.jl). This method returns a
 prediction for every pixel with an average value and a standard
 deviation, which we used as a measure of uncertainty to build a Normal
 distribution for the probability of occurrence of a given species at all
-pixels (represented as probability distributions on Fig. 1).
+pixels (represented as probability distributions on Fig. 1). We trained
+models across the extent chosen for occurrences (longitudes 175°W to
+45°W and latitudes 10°N to 90°N), then predicted species distributions
+only for Canada. We used the 2021 Census Boundary Files from Statistics
+Canada [@StatisticsCanada2022BouFil] to set the boundaries for our
+predictions.
 
 ## Localized steps
 
@@ -133,7 +164,10 @@ given interaction in a location. For all species pairs, we multiplied
 the two species' occurrence probability obtained using the sampling
 options described in the previous paragraph, then multiplied the
 co-occurrence probability by the interaction probability from the
-Canadian metaweb.
+Canadian metaweb. For cases where species in the Canadian metaweb were
+considered as the same species by the GBIF Backbone Taxonomy (the
+reconciliation step mentioned earlier), we used the highest interaction
+probabilities involving the duplicated species.
 
 The network-level steps then created the probabilistic metaweb for the
 location. We assembled all the local interaction probabilities (from the
@@ -143,7 +177,7 @@ potential local realization process [@Poisot2015SpeWhy]. Finally, this
 resulted in a distribution of localized networks, which we averaged over
 the number of simulations to obtain a probabilistic network.
 
-## Outputs and additional steps
+## Outputs
 
 The final output of our method was the spatial probabilistic metaweb,
 which contains a localized probabilistic metaweb in every cell across
@@ -154,20 +188,28 @@ but with the added benefit of accounting for co-occurrence probabilities
 in this case. From there, we can create maps of network properties
 (e.g. number of links, connectance) measured on the local realizations,
 display their spatial distribution, and compute some community-level
-measures such as species richness. Importantly, we can also calculate
-the uncertainty associated with the network and community measurements
-and contrast their spatial distribution. We computed uncertainty for
-species richness by summing the standard deviations of the species
-occurrence probabilities. For networks, we computed link variance based
-on the link probabilities according to @Poisot2016StrPro. We then
-contrasted their spatial distributions to identify areas where their
-uncertainty matches. These would either indicate that we should trust
-the predictions (if the uncertainty is low) or need more sampling (if
-the uncertainty is high) to improve our current knowledge. On the other
-hand, identifying areas where the richness and link uncertainty do not
-match would also be highly informative. It could lead to targeted
-sampling programs for either component (community or network
-composition).
+measures such as species richness. We can also calculate the uncertainty
+associated with the network and community measurements and contrast
+their spatial distribution (see Supplementary Material).
+
+### Ecoregions
+
+Since both species composition and network summary values display a high
+spatial variation and complex patterns, we simplified the representation
+of their distribution by grouping sites by ecoregion, as species and
+interaction composition have been shown to differ between ecoregions
+across large spatial scales [@Martins2022GloReg]. To do so, we used the
+global map of ecoregions from [@Dinerstein2017EcoApp; also used by
+@Martins2022GloReg], rasterized it, and clipped it to Canada, which
+selected 44 different ecoregions. For every measure we report
+(e.g. species richness, number of links), we first calculated the
+measure for every site separately, then we extracted the median value
+for each ecoregion. We also measured the within-ecoregion variation by
+measuring the 89% interquantile range of the values in each ecoregion
+[threshold chosen to avoid confusion with conventional significance
+tests, inspired by @McElreath2020StaRet].
+
+### Ecological uniqueness
 
 We compared the compositional uniqueness of the networks and the
 communities to verify if they indicated different exceptional areas. We
@@ -190,6 +232,25 @@ method allowed identifying areas unique for one element (interactions,
 for instance) but not the other. Sites with such mismatches should
 warrant more investigation to understand the reasons for this
 difference.
+
+## Software
+
+We used *Julia* v1.9.0 [@Bezanson2017JulFre] to implement all our
+analyses. We used packages `GBIF.jl` [@Dansereau2021SimJl] to reconcile
+species names using the GBIF Backbone Taxonomy,
+`SpeciesDistributionToolkit.jl` to handle raster layers and species
+occurrences, `EcologicalNetworks.jl` [@Poisot2019EcoJl] to analyse
+network and metaweb structure, and `Makie.jl` [@Danisch2021MakJl] to
+produce figures. Our data sources (CHELSA, EarthEnv, Ecoregions) were
+all unprojected and we did not use a projection in our analyses, but we
+displayed the results using a Lambert conformal conic projection more
+appropriate for Canada using `GeoMakie.jl`. All the code used to
+implement our analyses is available on GitHub
+(https://github.com/PoisotLab/SpatialProbabilisticMetaweb) and includes
+instructions on how to run a smaller example at a coarse resolution.
+Note that running our analyses at full scale is resource and memory
+intensive and required the use of compute clusters provided by Calcul
+Québec and the Digital Research Alliance of Canada.
 
 # Results
 
