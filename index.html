@@ -615,7 +615,28 @@ probability</div>
             of compute clusters provided by Calcul Québec and the
             Digital Research Alliance of Canada.</p>
             <h1 id="results">Results</h1>
-            <p>Fig. 2 shows ecoregion-level measures.</p>
+            <p>Our method allowed us to display the spatial distribution
+            of ecoregion-level measures (Fig. 2), either for community
+            measures (e.g. expected species richness) or for network
+            measures (e.g. expected number of links). Importantly, both
+            community and network-level measures presented are not
+            predictions of the measure itself but were instead computed
+            over localized predictions of the communities and networks,
+            then summarized for the ecoregions. Expected ecoregion
+            richness (Fig. 2A), which is the median of the expected
+            species richness of the sites within the ecoregion, and
+            expected number of links (Fig. 2B) displayed similar
+            distributions with a latitudinal gradient and higher values
+            in the south. However, within-ecoregion variability was
+            distributed differently, as some ecoregions along the coasts
+            displayed higher interquantile ranges while ecoregions
+            around the southern border displayed narrower ones
+            (Fig. 2C-D). All results shown are based on the first
+            sampling strategy (option 1) mentioned in the Localized
+            steps section, where species occurrence probabilities were
+            taken as the mean value of the distribution (results for
+            other sampling strategies are discussed in Supplementary
+            Material).</p>
             <figure>
             <img src="figures/ecoregion_comparison_iqr.png"
             id="fig:ecoregion_measures"
@@ -631,7 +652,70 @@ probability</div>
             expected richness (C) and expected number of links
             (D).</figcaption>
             </figure>
-            <p>Fig. 3 shows the LCBD results for the ecoregions.</p>
+            <p>Direct comparison of the spatial distributions of species
+            richness and expected number of links showed some areas with
+            mismatches, both regarding the median estimates and
+            regarding the within-ecoregion variability
+            Fig. <strong>¿fig:ecoregion_bivariates?</strong>. Median
+            values for the ecoregions showed a similar bivariate
+            distribution with ecoregions in the south mostly displaying
+            high species richness and a high number of links
+            (Fig. <strong>¿fig:ecoregion_bivariates?</strong>A). The
+            northernmost ecoregions (Canadian High Artic Tundra and
+            Davis Highlands Tundra) displayed higher richness (based on
+            the quantile rank) compared to the number or links.
+            Inversely, ecoregions further south (Canadian Low Artic
+            Tundra, Northern Canadian Shield Taiga, Southern Hudson Bay
+            Taiga) ranked higher for the number of links than for
+            species richness. On the other hand, within-ecoregion
+            variability showed different bivariate relationships and a
+            less constant latitudinal gradient. This indicates that
+            richness and link do not vary hand in hand (i.e. their
+            variability is not closely connected) although they may show
+            similar distributions for median values.</p>
+            <figure>
+            <img src="figures/ecoregion_bivariates.png"
+            alt="Bivariate relationship between community and network measures for the median ecoregion value (A) and the within-ecoregion 89% interquantile range (B). Values are grouped into three quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. Species richness (horizontal axis) goes left to right from low (light grey, bottom left) to high (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left)." />
+            <figcaption aria-hidden="true">Bivariate relationship
+            between community and network measures for the median
+            ecoregion value (A) and the within-ecoregion 89%
+            interquantile range (B). Values are grouped into three
+            quantiles separately for each variable. The colour
+            combinations represent the nine possible combinations of
+            quantiles. Species richness (horizontal axis) goes left to
+            right from low (light grey, bottom left) to high (green,
+            bottom right). The number of links goes bottom-up from low
+            (light grey, bottom left) to high (blue, top
+            left).</figcaption>
+            </figure>
+            <p>Our results also indicate a mismatch between the
+            uniqueness of communities and networks (Fig. 3). Uniqueness
+            was higher mostly in the north and along the south border
+            for communities, but only in the north for networks
+            (Fig. 3A-B). Consequently, ecoregions with both unique
+            community composition and unique network composition were
+            mostly in the north (Fig. 3C). Meanwhile, some areas were
+            unique for one element but not the other. For instance, the
+            New England-Acadian forests ecoregion (south-east, near 70°W
+            and 48°N) had a highly unique species composition (Fig. 3C)
+            but a more common network composition. Opposite areas with
+            unique network compositions only were higher north between
+            latitudes 52°N and 70°N (Eastern Canadian Shield Taiga,
+            Northern Canadian Shield Taiga, Canadian Low Artic Tundra).
+            When comparing the values, network uniqueness values for
+            ecoregions spanned a narrower range between the 44
+            ecoregions than species LCBD values (Fig. 3D, left).
+            Within-ecoregion variation was also lower for network values
+            with generally lower 89% interquantile ranges among the
+            site-level LCBD values (Fig. 3D, right). Moreover,
+            mismatched sites (unique for only one element) formed two
+            distinct groups when evaluating the relationship between
+            species richness and the number of links (see Supplementary
+            Material). The areas only unique for their species
+            composition had both a high richness and number of links. On
+            the other hand, the sites only unique for their networks had
+            both lower richness and a lower number of links, although
+            they were not the sites with the lowest values for both.</p>
             <figure>
             <img src="figures/ecoregion_LCBD_4panels.png"
             id="fig:ecoregion_lcbd"
