@@ -285,46 +285,46 @@ ecoregion for expected richness (C) and expected number of links
 Direct comparison of the spatial distributions of species richness and
 expected number of links showed some areas with mismatches, both
 regarding the median estimates and regarding the within-ecoregion
-variability Fig. **¿fig:ecoregion_bivariates?**. Median values for the
-ecoregions showed a similar bivariate distribution with ecoregions in
-the south mostly displaying high species richness and a high number of
-links (Fig. **¿fig:ecoregion_bivariates?**A). The northernmost
-ecoregions (Canadian High Artic Tundra and Davis Highlands Tundra)
-displayed higher richness (based on the quantile rank) compared to the
-number or links. Inversely, ecoregions further south (Canadian Low Artic
-Tundra, Northern Canadian Shield Taiga, Southern Hudson Bay Taiga)
-ranked higher for the number of links than for species richness. On the
-other hand, within-ecoregion variability showed different bivariate
-relationships and a less constant latitudinal gradient. This indicates
-that richness and link do not vary hand in hand (i.e. their variability
-is not closely connected) although they may show similar distributions
-for median values.
+variability (Fig. 3). Median values for the ecoregions showed a similar
+bivariate distribution with ecoregions in the south mostly displaying
+high species richness and a high number of links (Fig. 3A). The
+northernmost ecoregions (Canadian High Artic Tundra and Davis Highlands
+Tundra) displayed higher richness (based on the quantile rank) compared
+to the number or links. Inversely, ecoregions further south (Canadian
+Low Artic Tundra, Northern Canadian Shield Taiga, Southern Hudson Bay
+Taiga) ranked higher for the number of links than for species richness.
+On the other hand, within-ecoregion variability showed different
+bivariate relationships and a less constant latitudinal gradient
+(Fig. 3B). This indicates that richness and link do not vary hand in
+hand (i.e. their variability is not closely connected) although they may
+show similar distributions for median values.
 
-![Bivariate relationship between community and network measures for the
-median ecoregion value (A) and the within-ecoregion 89% interquantile
-range (B). Values are grouped into three quantiles separately for each
-variable. The colour combinations represent the nine possible
-combinations of quantiles. Species richness (horizontal axis) goes left
-to right from low (light grey, bottom left) to high (green, bottom
-right). The number of links goes bottom-up from low (light grey, bottom
-left) to high (blue, top left).](figures/ecoregion_bivariates.png)
+![Figure 3: Bivariate relationship between community and network
+measures for the median ecoregion value (A) and the within-ecoregion 89%
+interquantile range (B). Values are grouped into three quantiles
+separately for each variable. The colour combinations represent the nine
+possible combinations of quantiles. Species richness (horizontal axis)
+goes left to right from low (light grey, bottom left) to high (green,
+bottom right). The number of links goes bottom-up from low (light grey,
+bottom left) to high (blue, top
+left).](figures/ecoregion_bivariates.png){#fig:ecoregion_bivariates}
 
 Our results also indicate a mismatch between the uniqueness of
-communities and networks (Fig. 3). Uniqueness was higher mostly in the
+communities and networks (Fig. 4). Uniqueness was higher mostly in the
 north and along the south border for communities, but only in the north
-for networks (Fig. 3A-B). Consequently, ecoregions with both unique
+for networks (Fig. 4A-B). Consequently, ecoregions with both unique
 community composition and unique network composition were mostly in the
-north (Fig. 3C). Meanwhile, some areas were unique for one element but
+north (Fig. 4C). Meanwhile, some areas were unique for one element but
 not the other. For instance, the New England-Acadian forests ecoregion
 (south-east, near 70°W and 48°N) had a highly unique species composition
-(Fig. 3C) but a more common network composition. Opposite areas with
+but a more common network composition (Fig. 4C). Opposite areas with
 unique network compositions only were higher north between latitudes
 52°N and 70°N (Eastern Canadian Shield Taiga, Northern Canadian Shield
 Taiga, Canadian Low Artic Tundra). When comparing the values, network
 uniqueness values for ecoregions spanned a narrower range between the 44
-ecoregions than species LCBD values (Fig. 3D, left). Within-ecoregion
+ecoregions than species LCBD values (Fig. 4D, left). Within-ecoregion
 variation was also lower for network values with generally lower 89%
-interquantile ranges among the site-level LCBD values (Fig. 3D, right).
+interquantile ranges among the site-level LCBD values (Fig. 4D, right).
 Moreover, mismatched sites (unique for only one element) formed two
 distinct groups when evaluating the relationship between species
 richness and the number of links (see Supplementary Material). The areas
@@ -333,7 +333,7 @@ number of links. On the other hand, the sites only unique for their
 networks had both lower richness and a lower number of links, although
 they were not the sites with the lowest values for both.
 
-![Figure 3: (A-B) Representation of the ecoregion uniqueness values
+![Figure 4: (A-B) Representation of the ecoregion uniqueness values
 based on species composition (a) and network composition (b). LCBD
 values were first computed across all sites and scaled relative to the
 maximum value observed. The ecoregion LCBD value is the median value for
