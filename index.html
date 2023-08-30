@@ -369,9 +369,9 @@ probability</div>
             data-cites="GBIFSecretariat2021GbiBac">(GBIF Secretariat
             2021)</span>. Doing so, we removed potential duplicates
             where species listed in the Canadian metaweb are considered
-            as a single species by GBIF. We collected occurrences for
-            our species list using the GBIF download API on October 21st
-            2022 <span class="citation"
+            as a single entity by GBIF. We collected occurrences for our
+            species list (159 species) using the GBIF download API on
+            October 21st 2022 <span class="citation"
             data-cites="GBIF.org2022GbiOcc">(GBIF.org 2022)</span>. We
             restricted our query to occurrences with coordinates between
             longitudes 175°W to 45°W and latitudes 10°N to 90°N. This
@@ -451,7 +451,8 @@ probability</div>
             2021 Census Boundary Files from Statistics Canada <span
             class="citation"
             data-cites="StatisticsCanada2022BouFil">(Statistics Canada
-            2022)</span> to set the boundaries for our predictions.</p>
+            2022)</span> to set the boundaries for our predictions,
+            which gave us 970,698 sites in total.</p>
             <h2 id="localized-steps">Localized steps</h2>
             <p>The next part of the method was the localized steps which
             produce local metawebs in every pixel. This component was
@@ -578,15 +579,31 @@ probability</div>
             composition <span class="citation"
             data-cites="Poisot2017HosPar">(Poisot <em>et al.</em>
             2017)</span>. Here, we measured and compared the uniqueness
-            of our localized community and network predictions. We were
-            especially interested in seeing if the sites identified as
-            unique were the same based on the species and the
-            interactions or if this method allowed identifying areas
-            unique for one element (interactions, for instance) but not
-            the other. Sites with such mismatches should warrant more
-            investigation to understand the reasons for this
-            difference.</p>
-            <h2 id="software">Software</h2>
+            of our localized community and network predictions. For
+            species composition, we assembled a site-by-species
+            community matrix with the probability of occurrence at every
+            location from the species distribution models. For network
+            composition, we assembled a site-by-interaction matrix with
+            the localized interaction values from the spatial
+            probabilistic metaweb. We applied the Hellinger
+            transformation on both matrices and computed the LCBD values
+            from the total variance in the matrices <span
+            class="citation" data-cites="Legendre2013BetDiv">(Legendre
+            &amp; De Cáceres 2013)</span>. High LCBD values indicate a
+            high contribution to the overall variance and a unique
+            species or interaction composition compared to other sites.
+            Since values themselves are very low given our high number
+            of sites <span class="citation"
+            data-cites="Dansereau2022EvaEco">(similar to Dansereau
+            <em>et al.</em> 2022)</span>, what matters primarily is the
+            magnitude of the difference between the sites. Given this,
+            we divided values by the maximum value in each matrix
+            (species or network) and suggest that these should be viewed
+            as relative contributions compared to the highest observed
+            contribution. As with other measures, we then summarized the
+            local uniqueness values by ecoregion by taking the median
+            LCBD value and measuring the 89% interquantile range within
+            all ecoregions. ## Software</p>
             <p>We used <em>Julia</em> v1.9.0 <span class="citation"
             data-cites="Bezanson2017JulFre">(Bezanson <em>et al.</em>
             2017)</span> to implement all our analyses. We used packages
