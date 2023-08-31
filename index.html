@@ -603,7 +603,8 @@ probability</div>
             contribution. As with other measures, we then summarized the
             local uniqueness values by ecoregion by taking the median
             LCBD value and measuring the 89% interquantile range within
-            all ecoregions. ## Software</p>
+            all ecoregions.</p>
+            <h2 id="software">Software</h2>
             <p>We used <em>Julia</em> v1.9.0 <span class="citation"
             data-cites="Bezanson2017JulFre">(Bezanson <em>et al.</em>
             2017)</span> to implement all our analyses. We used packages
@@ -757,7 +758,86 @@ probability</div>
             the values within each ecoregion (right), highlighting the
             variability within the ecoregions.</figcaption>
             </figure>
-            <h1 class="unnumbered" id="discussion">Discussion</h1>
+            <h1 id="discussion">Discussion</h1>
+            <p>The spatial probabilistic metaweb we produced here is a
+            first attempt at downscaling a metaweb and producing
+            localized predictions, as called for by <span
+            class="citation" data-cites="Strydom2022PreMet">Strydom
+            <em>et al.</em> (2022b)</span>. It gives us an idea of what
+            local metawebs or networks could look like in space, given
+            the species distributions and their variability, as well as
+            the uncertainty around the interactions. It is the first
+            representation in space of the metaweb of Canadian mammals
+            <span class="citation"
+            data-cites="Strydom2022FooWeb">(Strydom <em>et al.</em>
+            2022a)</span>, which is not spatialized. Conceptually, this
+            is similar to how the European tetrapod metaweb <span
+            class="citation" data-cites="Maiorano2020TetSpe">(Maiorano
+            <em>et al.</em> 2020)</span> was used to predict localized
+            networks in Europe <span class="citation"
+            data-cites="Braga2019SpaAna OConnor2020UnvFoo Galiana2021SpaSca Gauzere2022DivBio Botella2023LanInt">(Braga
+            <em>et al.</em> 2019; O’Connor <em>et al.</em> 2020; Galiana
+            <em>et al.</em> 2021; Gaüzère <em>et al.</em> 2022; Botella
+            <em>et al.</em> 2023)</span>. Therefore, our approach could
+            open similar possibilities of investigations in North
+            America with food webs of Canadian mammals, for instance on
+            the structure of food webs over space <span class="citation"
+            data-cites="Braga2019SpaAna">(Braga <em>et al.</em>
+            2019)</span>, on the scaling of network area relationships
+            <span class="citation"
+            data-cites="Galiana2021SpaSca">(Galiana <em>et al.</em>
+            2021)</span>, and on the effect of land-use intensification
+            on food webs <span class="citation"
+            data-cites="Botella2023LanInt">(Botella <em>et al.</em>
+            2023)</span>. Moreover, our approach is probabilistic, does
+            not assume species interact whenever they co-occur, and
+            incorporates variability based on environmental conditions,
+            which could lead to different results by introducing a
+            different association between species richness and network
+            properties. <span class="citation"
+            data-cites="Galiana2021SpaSca">Galiana <em>et al.</em>
+            (2021)</span> found that species richness had a large
+            explanatory power over network properties but mentioned it
+            could potentially be due to interactions between species
+            being fixed in space. Here, we found mismatches in the
+            distribution of species richness and interactions, and
+            especially regarding their within-ecoregion variability
+            (Fig. 3), highlighting that interactions might vary
+            differently than species distributions in space. Network
+            measures (links on
+            Fig. <strong>¿fig:ecoregions_bivariates?</strong>A) were
+            also lower in the north, contrarily to previous studies
+            [e.g. connectance higher in the north; <span
+            class="citation" data-cites="Braga2019SpaAna">Braga <em>et
+            al.</em> (2019)</span>; <span class="citation"
+            data-cites="Galiana2021SpaSca">Galiana <em>et al.</em>
+            (2021)</span>].</p>
+            <p>Our LCBD and uniqueness results highlighted that areas
+            with unique network composition might differ from sites with
+            unique species composition. In other words, the joint
+            distribution of community and network uniqueness highlights
+            different diversity hotspots. <span class="citation"
+            data-cites="Poisot2017HosPar">Poisot <em>et al.</em>
+            (2017)</span> showed a similar result with host-parasite
+            communities of rodents and ecto-fleas. Our results further
+            show how these differences could be distributed across
+            ecoregions and a broad spatial extent. Areas unique for only
+            one element (species or network composition) differed in
+            their combination of species richness and number of links
+            (supplementary material), with species-unique sites
+            displaying high values of both measures and network-unique
+            sites displaying low values. Moreover, LCBD scores
+            essentially highlight variability hotspots and are a measure
+            of the variance of community or network structure. Here they
+            also serve as an inter-ecoregion variation measure which can
+            be compared to the within-ecoregion variation highlighted by
+            the interquantile ranges. The narrower range of values for
+            network LCBD values and the lower IQR values indicate that
+            both the inter-ecoregion and within-ecoregion variation are
+            lower for network than for species (Fig. 4). Additionally,
+            higher values for network LCBD also indicate that most
+            ecoregions can hold ecologically unique sites.</p>
+            <h1 class="unnumbered" id="references">References</h1>
             <div id="refs"
             class="references csl-bib-body hanging-indent"
             role="doc-bibliography">
@@ -783,6 +863,23 @@ probability</div>
             href="https://doi.org/10.1111/ele.13525">Co-occurrence is
             not evidence of ecological interactions</a>. <em>Ecology
             Letters</em>, 23, 1050–1063.
+            </div>
+            <div id="ref-Botella2023LanInt" class="csl-entry"
+            role="doc-biblioentry">
+            Botella, C., Gaüzère, P., O’Connor, L., Ohlmann, M., Renaud,
+            J., Dou, Y., <em>et al.</em> (2023). <em><a
+            href="https://doi.org/10.22541/au.168010211.10402875/v1">Land-use
+            intensity influences European tetrapod food-webs</a></em>
+            (Preprint). Preprints.
+            </div>
+            <div id="ref-Braga2019SpaAna" class="csl-entry"
+            role="doc-biblioentry">
+            Braga, J., Pollock, L.J., Barros, C., Galiana, N., Montoya,
+            J.M., Gravel, D., <em>et al.</em> (2019). <a
+            href="https://doi.org/10.1111/geb.12981">Spatial analyses of
+            multi-trophic terrestrial vertebrate assemblages in
+            Europe</a>. <em>Global Ecology and Biogeography</em>, 28,
+            1636–1648.
             </div>
             <div id="ref-daSilva2014LocReg" class="csl-entry"
             role="doc-biblioentry">
@@ -828,6 +925,24 @@ probability</div>
             Dunne, J. (2006). The network structure of food webs. In:
             <em>Ecological Networks: Linking Structure to Dynamics in
             Food Webs</em>. pp. 27–86.
+            </div>
+            <div id="ref-Galiana2021SpaSca" class="csl-entry"
+            role="doc-biblioentry">
+            Galiana, N., Barros, C., Braga, J., Ficetola, G.F.,
+            Maiorano, L., Thuiller, W., <em>et al.</em> (2021). <a
+            href="https://doi.org/10.1111/ecog.05229">The spatial
+            scaling of food web structure across European
+            biogeographical regions</a>. <em>Ecography</em>, 44,
+            653–664.
+            </div>
+            <div id="ref-Gauzere2022DivBio" class="csl-entry"
+            role="doc-biblioentry">
+            Gaüzère, P., O’Connor, L., Botella, C., Poggiato, G.,
+            Münkemüller, T., Pollock, L.J., <em>et al.</em> (2022). <a
+            href="https://doi.org/10.1016/j.cub.2022.03.009">The
+            diversity of biotic interactions complements functional and
+            phylogenetic facets of biodiversity</a>. <em>Current
+            Biology</em>.
             </div>
             <div id="ref-GBIFSecretariat2021GbiBac" class="csl-entry"
             role="doc-biblioentry">
@@ -915,6 +1030,15 @@ probability</div>
             href="https://doi.org/10.1201/9780429029608">Statistical
             rethinking: A bayesian course with examples in R and
             Stan</a></em>. Second. Chapman and Hall/CRC, New York.
+            </div>
+            <div id="ref-OConnor2020UnvFoo" class="csl-entry"
+            role="doc-biblioentry">
+            O’Connor, L.M.J., Pollock, L.J., Braga, J., Ficetola, G.F.,
+            Maiorano, L., Martinez-Almoyna, C., <em>et al.</em> (2020).
+            <a href="https://doi.org/10.1111/jbi.13773">Unveiling the
+            food webs of tetrapods across Europe through the prism of
+            the Eltonian niche</a>. <em>Journal of Biogeography</em>,
+            47, 181–192.
             </div>
             <div id="ref-Poisot2019EcoJl" class="csl-entry"
             role="doc-biblioentry">
