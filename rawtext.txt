@@ -390,9 +390,9 @@ being fixed in space. Here, we found mismatches in the distribution of
 species richness and interactions, and especially regarding their
 within-ecoregion variability (Fig. 3), highlighting that interactions
 might vary differently than species distributions in space. Network
-measures (links on Fig. **¿fig:ecoregions_bivariates?**A) were also
-lower in the north, contrarily to previous studies \[e.g. connectance
-higher in the north; @Braga2019SpaAna; @Galiana2021SpaSca\].
+measures (links on Fig. 3A) were also lower in the north, contrarily to
+previous studies [e.g. connectance higher in the north,
+@Braga2019SpaAna; @Galiana2021SpaSca].
 
 Our LCBD and uniqueness results highlighted that areas with unique
 network composition might differ from sites with unique species
