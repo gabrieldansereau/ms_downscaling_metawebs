@@ -374,6 +374,40 @@
         "type": "article-journal"
     },
     {
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "PeerJ",
+        "author": [
+            {
+                "family": "Desjardins-Proulx",
+                "given": "Philippe"
+            },
+            {
+                "family": "Laigle",
+                "given": "Idaline"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "id": "Desjardins-Proulx2017EcoInt",
+        "DOI": "10.7717/peerj.3644",
+        "volume": "5",
+        "page": "e3644",
+        "title": "Ecological interactions and the Netflix problem",
+        "type": "article-journal"
+    },
+    {
         "issue": "6",
         "issued": {
             "date-parts": [
@@ -638,6 +672,52 @@
         "type": "article-journal"
     },
     {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Frelat",
+                "given": "Romain"
+            },
+            {
+                "family": "Kortsch",
+                "given": "Susanne"
+            },
+            {
+                "family": "Kröncke",
+                "given": "Ingrid"
+            },
+            {
+                "family": "Neumann",
+                "given": "Hermann"
+            },
+            {
+                "family": "Nordström",
+                "given": "Marie C."
+            },
+            {
+                "family": "Olivier",
+                "given": "Pierre E. N."
+            },
+            {
+                "family": "Sell",
+                "given": "Anne F."
+            }
+        ],
+        "id": "Frelat2022FooWeb",
+        "DOI": "10.1111/ecog.05945",
+        "volume": "2022",
+        "title": "Food web structure and community composition: A comparison across space and time in the North Sea",
+        "type": "article-journal"
+    },
+    {
         "issue": "5",
         "issued": {
             "date-parts": [
@@ -855,6 +935,29 @@
         "type": "article-journal"
     },
     {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Functional Ecology",
+        "author": [
+            {
+                "family": "Jordano",
+                "given": "Pedro"
+            }
+        ],
+        "id": "Jordano2016SamNet",
+        "DOI": "10.1111/1365-2435.12763",
+        "volume": "30",
+        "page": "1883-1893",
+        "title": "Sampling networks of ecological interactions",
+        "type": "article-journal"
+    },
+    {
         "issued": {
             "date-parts": [
                 [
@@ -1039,6 +1142,101 @@
         "page": "951-963",
         "title": "Beta diversity as the variance of community data: Dissimilarity coefficients and partitioning",
         "type": "article-journal"
+    },
+    {
+        "DOI": "10.1101/2023.03.10.532098",
+        "author": [
+            {
+                "family": "Lucas",
+                "given": "Pablo"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            },
+            {
+                "family": "Talluto",
+                "given": "Matthew"
+            },
+            {
+                "family": "Polaina",
+                "given": "Ester"
+            },
+            {
+                "family": "Albrecht",
+                "given": "Jörg"
+            },
+            {
+                "family": "Selva",
+                "given": "Nuria"
+            },
+            {
+                "family": "Barba",
+                "given": "Marta"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Penteriani",
+                "given": "Vincenzo"
+            },
+            {
+                "family": "Guégen",
+                "given": "Maya"
+            },
+            {
+                "family": "Balkenhol",
+                "given": "Niko"
+            },
+            {
+                "family": "Dutta",
+                "given": "Trishna"
+            },
+            {
+                "family": "Fedorca",
+                "given": "Ancuta"
+            },
+            {
+                "family": "Frank",
+                "given": "Shane"
+            },
+            {
+                "family": "Zedrosser",
+                "given": "Andreas"
+            },
+            {
+                "family": "Afonso Jordana",
+                "given": "Ivan"
+            },
+            {
+                "family": "Ambarli",
+                "given": "Huseyin"
+            },
+            {
+                "family": "Ballesteros",
+                "given": "Fernando"
+            },
+            {
+                "family": "Bashta",
+                "given": "Andriy-Taras"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura"
+            }
+        ],
+        "id": "Lucas2023IncBio",
+        "title": "Including biotic interactions in species distribution models improves the understanding of species niche: A case of study with the brown bear in Europe",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "issue": "9",
@@ -1243,6 +1441,201 @@
         "type": "book"
     },
     {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Oikos",
+        "author": [
+            {
+                "family": "McLeod",
+                "given": "Anne"
+            },
+            {
+                "family": "Leroux",
+                "given": "Shawn J."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Chu",
+                "given": "Cindy"
+            },
+            {
+                "family": "Cirtwill",
+                "given": "Alyssa R."
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Galiana",
+                "given": "Núria"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Wood",
+                "given": "Spencer A."
+            }
+        ],
+        "id": "McLeod2021SamAsy",
+        "DOI": "10.1111/oik.08650",
+        "volume": "130",
+        "page": "2250-2259",
+        "title": "Sampling and asymptotic network properties of spatial multi-trophic networks",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Mendoza",
+                "given": "Manuel"
+            },
+            {
+                "family": "Araujo",
+                "given": "Miguel B."
+            }
+        ],
+        "id": "Mendoza2022BioBir",
+        "DOI": "10.1111/ecog.06289",
+        "volume": "2022",
+        "page": "e06289",
+        "title": "Biogeography of bird and mammal trophic structures",
+        "other-ids": "MendozaBioBir",
+        "type": "article-journal"
+    },
+    {
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Basic and Applied Ecology",
+        "author": [
+            {
+                "family": "Mestre",
+                "given": "Frederico"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "García-Callejas",
+                "given": "David"
+            },
+            {
+                "family": "Pinto-Cruz",
+                "given": "Carla"
+            },
+            {
+                "family": "Matias",
+                "given": "Miguel G."
+            },
+            {
+                "family": "Araújo",
+                "given": "Miguel B."
+            }
+        ],
+        "id": "Mestre2022DisFoo",
+        "DOI": "10.1016/j.baae.2022.03.011",
+        "volume": "61",
+        "page": "102-115",
+        "title": "Disentangling food-web environment relationships: A review with guidelines",
+        "type": "article-journal"
+    },
+    {
+        "DOI": "10.22541/au.166784603.30222525/v1",
+        "author": [
+            {
+                "family": "Moens",
+                "given": "Merijn"
+            },
+            {
+                "family": "Biesmeijer",
+                "given": "Jacobus"
+            },
+            {
+                "family": "Huang",
+                "given": "Elaine"
+            },
+            {
+                "family": "Vereecken",
+                "given": "Nicolas"
+            },
+            {
+                "family": "Marshall",
+                "given": "Leon"
+            }
+        ],
+        "id": "Moens2022ImpBio",
+        "title": "The importance of biotic interactions in distribution models depends on the type of ecological relations, spatial scale and range",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "container-title": "Trends in Ecology & Evolution",
+        "author": [
+            {
+                "family": "Morales-Castilla",
+                "given": "Ignacio"
+            },
+            {
+                "family": "Matias",
+                "given": "Miguel G."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Araújo",
+                "given": "Miguel B."
+            }
+        ],
+        "id": "Morales-Castilla2015InfBio",
+        "DOI": "10.1016/j.tree.2015.03.014",
+        "volume": "30",
+        "page": "347-356",
+        "title": "Inferring biotic interactions from proxies",
+        "type": "article-journal"
+    },
+    {
         "issue": "1",
         "issued": {
             "date-parts": [
@@ -1295,6 +1688,78 @@
         "volume": "47",
         "page": "181-192",
         "title": "Unveiling the food webs of tetrapods across Europe through the prism of the Eltonian niche",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Preprints",
+        "DOI": "10.22541/au.166853394.45823739/v1",
+        "genre": "Preprint",
+        "author": [
+            {
+                "family": "Poggiato",
+                "given": "Giovanni"
+            },
+            {
+                "family": "Andréoletti",
+                "given": "Jérémy"
+            },
+            {
+                "family": "Shirley",
+                "given": "Laura"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "Poggiato2022IntFoo",
+        "title": "Integrating food webs in species distribution models improves ecological niche estimation and predictions",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "type": "report"
+    },
+    {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2012
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Canard",
+                "given": "Elsa"
+            },
+            {
+                "family": "Mouillot",
+                "given": "David"
+            },
+            {
+                "family": "Mouquet",
+                "given": "Nicolas"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "id": "Poisot2012DisSpe",
+        "DOI": "10.1111/ele.12002",
+        "volume": "15",
+        "page": "1353-1361",
+        "title": "The dissimilarity of species interaction networks",
         "type": "article-journal"
     },
     {
@@ -1456,6 +1921,100 @@
         "type": "article-journal"
     },
     {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Journal of Biogeography",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Bergeron",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Cazelles",
+                "given": "Kevin"
+            },
+            {
+                "family": "Dallas",
+                "given": "Tad"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "MacDonald",
+                "given": "Andrew"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Violet",
+                "given": "Clément"
+            },
+            {
+                "family": "Vissault",
+                "given": "Steve"
+            }
+        ],
+        "id": "Poisot2021GloKno",
+        "DOI": "10.1111/jbi.14127",
+        "volume": "48",
+        "page": "1552-1563",
+        "title": "Global knowledge gaps in species interaction networks data",
+        "other-ids": "Poisot2021GloKnoa",
+        "type": "article-journal"
+    },
+    {
+        "issue": "n/a",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Saravia",
+                "given": "Leonardo A."
+            },
+            {
+                "family": "Marina",
+                "given": "Tomás I."
+            },
+            {
+                "family": "Kristensen",
+                "given": "Nadiah P."
+            },
+            {
+                "family": "De Troch",
+                "given": "Marleen"
+            },
+            {
+                "family": "Momo",
+                "given": "Fernando R."
+            }
+        ],
+        "id": "Saravia2022EcoNet",
+        "DOI": "10.1111/1365-2656.13652",
+        "volume": "n/a",
+        "title": "Ecological network assembly: How the regional metaweb influences local food webs",
+        "type": "article-journal"
+    },
+    {
         "edition": "Second edition",
         "publisher": "Statistics Canada = Statistique Canada",
         "author": [
@@ -1474,6 +2033,78 @@
             ]
         },
         "type": "book"
+    },
+    {
+        "publisher": "Royal Society",
+        "issue": "1837",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Strydom",
+                "given": "Tanya"
+            },
+            {
+                "family": "Catchen",
+                "given": "Michael D."
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Caron",
+                "given": "Dominique"
+            },
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Desjardins-Proulx",
+                "given": "Philippe"
+            },
+            {
+                "family": "Forero-Muñoz",
+                "given": "Norma R."
+            },
+            {
+                "family": "Higino",
+                "given": "Gracielle"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Strydom2021RoaPre",
+        "DOI": "10.1098/rstb.2021.0063",
+        "volume": "376",
+        "page": "20210063",
+        "title": "A roadmap towards predicting species interaction networks (across space and time)",
+        "type": "article-journal"
     },
     {
         "issue": "n/a",
@@ -1670,6 +2301,121 @@
         "volume": "8",
         "page": "7894-7906",
         "title": "Expected impacts of climate change threaten the anuran diversity in the Brazilian hotspots",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "container-title": "Biological Reviews",
+        "author": [
+            {
+                "family": "Wisz",
+                "given": "Mary Susanne"
+            },
+            {
+                "family": "Pottier",
+                "given": "Julien"
+            },
+            {
+                "family": "Kissling",
+                "given": "W. Daniel"
+            },
+            {
+                "family": "Pellissier",
+                "given": "Loïc"
+            },
+            {
+                "family": "Lenoir",
+                "given": "Jonathan"
+            },
+            {
+                "family": "Damgaard",
+                "given": "Christian F."
+            },
+            {
+                "family": "Dormann",
+                "given": "Carsten F."
+            },
+            {
+                "family": "Forchhammer",
+                "given": "Mads C."
+            },
+            {
+                "family": "Grytnes",
+                "given": "John-Arvid"
+            },
+            {
+                "family": "Guisan",
+                "given": "Antoine"
+            },
+            {
+                "family": "Heikkinen",
+                "given": "Risto K."
+            },
+            {
+                "family": "Høye",
+                "given": "Toke T."
+            },
+            {
+                "family": "Kühn",
+                "given": "Ingolf"
+            },
+            {
+                "family": "Luoto",
+                "given": "Miska"
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Nilsson",
+                "given": "Marie-Charlotte"
+            },
+            {
+                "family": "Normand",
+                "given": "Signe"
+            },
+            {
+                "family": "Öckinger",
+                "given": "Erik"
+            },
+            {
+                "family": "Schmidt",
+                "given": "Niels M."
+            },
+            {
+                "family": "Termansen",
+                "given": "Mette"
+            },
+            {
+                "family": "Timmermann",
+                "given": "Allan"
+            },
+            {
+                "family": "Wardle",
+                "given": "David A."
+            },
+            {
+                "family": "Aastrup",
+                "given": "Peter"
+            },
+            {
+                "family": "Svenning",
+                "given": "Jens-Christian"
+            }
+        ],
+        "id": "Wisz2013RolBio",
+        "DOI": "10.1111/j.1469-185X.2012.00235.x",
+        "volume": "88",
+        "page": "15-30",
+        "title": "The role of biotic interactions in shaping distributions and realised assemblages of species: Implications for species distribution modelling",
         "type": "article-journal"
     },
     {
