@@ -20,63 +20,82 @@ repeated samplings in time and space [@Mestre2022DisFoo; @Poisot2021GloKno;
 The metaweb is an increasingly used concept to address the issue of data
 scarcity, and it further holds potential to analyse networks at large spatial
 extents. A metaweb contains all the possible interactions between the species
-found in a given regional species pool [@Dunne2006NetStr]. Studies are now
-directly focused on assembling metawebs for various taxa through extensive
-literature surveys [@Maiorano2020TetSpe] or using predictive tools
-[@Strydom2022FooWeb]. These new data sources have allowed studying network
-structures in novel ways, for instance, assessing changes in food web structure
-across space [@Braga2019SpaAna], the scaling of network area relationships
-[@Galiana2021SpaSca], or how sampling effort affects measured network structure
-[@McLeod2021SamAsy]. A key element that emerged from these studies is that the
-structure of empirical food webs is inherited from the metaweb with little
-influence from habitat and dynamical constraints [@Saravia2022EcoNet]. This
-makes the metaweb the core goal of predictive network ecology
-[@Strydom2022PreMet], i.e. the first approximation of networks in space we
-should aim for. This is not the same as using interactions to improve
-predictions of species distributions as recent studies have done [for example,
-@Poggiato2022IntFoo; @Lucas2023IncBio; @Moens2022ImpBio], answering
-long-standing calls to include interactions within such models
+found in a given regional species pool [@Dunne2006NetStr]. Recent studies have
+focused on assembling metawebs for various taxa through extensive literature
+surveys [European tetrapods, @Maiorano2020TetSpe] or using predictive tools
+[Canadian mammals, @Strydom2022FooWeb]. In comparison, empirical networks are
+local realizations of a regional metaweb [@Poisot2012DisSpe; @Poisot2015SpeWhy]
+and inherit the metaweb structure with little influence from habitat and
+dynamical constraints [@Saravia2022EcoNet]. Given this, @Strydom2022PreMet
+called the prediction of the metaweb structure the core goal of predictive
+network ecology and the key to produce accurate downscaled and local
+predictions. Establishing or predicting the metaweb should therefore be the
+first target for systems where we lack information about local realizations.
+This is not the same as using interactions to improve predictions of species
+distributions as recent studies have done [for example, @Poggiato2022IntFoo;
+@Lucas2023IncBio; @Moens2022ImpBio], although these are incredibly relevant and
+answer long-standing calls to include interactions within such models
 [@Wisz2013RolBio]. Instead, predicting networks in space is a different task and
 it serves a different goal, focusing first on the distribution of networks and
 its drivers rather than on the distribution of species.
 
-Two network aspects are essential to develop a proper spatial perspective: the
-influence from the metaweb and the probabilistic representation. First, networks
-are local realizations of a regional metaweb [@Poisot2012DisSpe;
-@Poisot2015SpeWhy] whose structure they inherit [@Saravia2022EcoNet]. Therefore,
-establishing or predicting the metaweb should be the first target for systems
-where we lack information about local realizations [@Strydom2022PreMet]. Second,
-to account for their variability in space, interactions must be seen as
-probabilistic events [@Poisot2016StrPro]. In contrast, many studies assume
-interactions are binary events, whether at the interaction, network or metaweb
-level [@Gauzere2022DivBio; @Mendoza2022BioBir]. However, a probabilistic view
-can additionally allow propagating uncertainty, which can play a key role in
-evaluating the quality of the predictions. Moreover, assessing model uncertainty
-would enable us to assess to which degree we should trust our predictions and to
-identify what to do to improve the current knowledge. For instance, we could
-locate where our knowledge and models are the most uncertain and determine new
-sampling sites or areas where repeated sampling is necessary.
+A key challenge remains in how to downscale a regional metaweb towards local
+network predictions. @Gravel2019BriElt introduced a mathematical framework
+describing how the metaweb can generate local realizations and showed how it
+could be used for interaction distribution modelling. This approach to
+downscaling is useful when combined with in situ observations of interactions
+and local networks (in this case with willow-galler-parasitoid networks).
+However, such data is rarely available across broad spatial extents
+[@Hortal2015SevSho; @Poisot2021GloKno; @Windsor2023UsiEco]. Spatially replicated
+interaction data required for such model is especially challenging to document
+with large food web systems such as European tetrapod and Canadian mammal
+metawebs [@Maiorano2020TetSpe; @Strydom2022FooWeb]. In contrast, approaches to
+downscaling for European tetrapods combined the metaweb with species
+distribution maps to generate local assemblages [@Braga2019SpaAna;
+@OConnor2020UnvFoo; @Galiana2021SpaSca; @Gauzere2022DivBio]. A potential
+limitation to this approach is that is assumes that interactions are constant
+across space, which ignores behaviour variability and does not consider the
+effect of environmental conditions on interaction realization
+[@Braga2019SpaAna]. This is an advantage of the probabilistic framwork put
+forward by @Gravel2019BriElt and absent from the European metaweb studies, as
+treating interactions as probabilistic events allows to account for their
+variability in space [see @Poisot2016StrPro for probabilistic interactions and
+@Strydom2022PreMet regarding probabilistic metawebs]. We currently lack a
+downscaling framework that is both probabilistic and does not require in situ
+data. Additionally, a probabilistic view can allow propagating uncertainty,
+which can play a key role in evaluating the quality of the predictions.
+Moreover, assessing model uncertainty would enable us to assess to which degree
+we should trust our predictions and to identify what to do to improve the
+current knowledge. For instance, we could locate where our knowledge and models
+are the most uncertain and determine new sampling sites or areas where repeated
+sampling is necessary.
 
 Explicit spatial predictions such as downscaled metaweb predictions are
 essential as they will allow comparisons with extant work for species
-communities. These comparisons are relevant as they may go in unexpected
-directions and highlight new elements regarding network biogeography. For
-instance, @Frelat2022FooWeb found a strong spatial coupling between community
-composition and food web structure but a temporal mismatch depending on the
-spatial scale. @Poisot2017HosPar found that interaction uniqueness captures more
-composition variability than community uniqueness and that sites with
-exceptional compositions might not be the same for networks and communities.
-Spatialized network data will allow these comparisons and allow identifying
-important conservation targets for networks and whether they differ
+communities. Previous downscaling attempts allowed studying network structures
+in novel ways, for instance, assessing changes in food web structure across
+space [@Braga2019SpaAna], the scaling of network area relationships
+[@Galiana2021SpaSca], or how sampling effort affects measured network structure
+[@McLeod2021SamAsy].  Further comparisons are relevant as they may go in
+unexpected directions and highlight new elements regarding network biogeography.
+For instance, @Frelat2022FooWeb found a strong spatial coupling between
+community composition and food web structure but a temporal mismatch depending
+on the spatial scale. @Poisot2017HosPar found that interaction uniqueness
+captures more composition variability than community uniqueness and that sites
+with exceptional compositions might not be the same for networks and
+communities. Spatialized network data will allow these comparisons and allow
+identifying important conservation targets for networks and whether they differ
 geographically from areas currently prioritized for biodiversity conservation.
 
 Here, we present a method to downscale a metaweb in space by spatially
 reconstructing local instances of a probabilistic metaweb of Canadian mammals.
-We explore how the spatial structure of the downscaled metaweb varies in space
-and how the uncertainty of interactions can be made spatially explicit. We
-further show that the downscaled metaweb can highlight important biodiversity
-areas and bring novel ecological insights compared to traditional community
-measures like species richness.
+We do so using a probabilistic approach to both species distributions and
+interactions in a system without spatially replicated interaction data. We then
+explore how the spatial structure of the downscaled metaweb varies in space and
+how the uncertainty of interactions can be made spatially explicit. We further
+show that the downscaled metaweb can highlight important biodiversity areas and
+bring novel ecological insights compared to traditional community measures like
+species richness.
 
 # Methods
 
