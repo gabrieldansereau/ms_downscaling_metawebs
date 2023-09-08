@@ -418,35 +418,38 @@ ecoregions.](figures/ecoregion_LCBD_4panels.png){#fig:ecoregion_lcbd}
 
 # Discussion
 
-Our approach presents a way to downscale a metaweb and produce localized
-predicitions using probabilistic networks as inputs and outputs and
-incorporating uncertainty, as called for by @Strydom2022PreMet. It gives us an
-idea of what local metawebs or networks could look like in space, given the
-species distributions and their variability, as well as the uncertainty around
-the interactions. We also provide the first spatial representation of the
-metaweb of Canadian mammals [@Strydom2022FooWeb] and a probabilistic equivalent
-to how the European tetrapod metaweb [@Maiorano2020TetSpe] was used to predict
-localized networks in Europe [@Braga2019SpaAna; @OConnor2020UnvFoo;
-@Galiana2021SpaSca; @Gauzere2022DivBio; @Botella2023LanInt]. Therefore, our
-approach could open similar possibilities of investigations in North America
-with food webs of Canadian mammals, for instance on the structure of food webs
-over space [@Braga2019SpaAna] and on the effect of land-use intensification on
-food webs [@Botella2023LanInt]. Interesting research areas could include
-assessing climate change impacts on network structure or investigating linkages
-between network structure and stability. Moreover, since our approach is
-probabilistic, it does not assume species interact whenever they co-occur, and
-incorporates variability based on environmental conditions, which could lead to
-different results by introducing a different association between species
-richness and network properties. @Galiana2021SpaSca found that species richness
-had a large explanatory power over network properties but mentioned it could
-potentially be due to interactions between species being fixed in space. Here,
-we found mismatches in the distribution of species richness and interactions,
-and especially regarding their within-ecoregion variability
+Our approach presents a way to downscale a metaweb, produce localized
+predictions using probabilistic networks as inputs and outputs, and incorporatie
+uncertainty, as called for by @Strydom2022PreMet. It gives us an idea of what
+local metawebs or networks could look like in space, given the species
+distributions and their variability, as well as the uncertainty around the
+interactions. We also provide the first spatial representation of the metaweb of
+Canadian mammals [@Strydom2022FooWeb] and a probabilistic equivalent to how the
+European tetrapod metaweb [@Maiorano2020TetSpe] was used to predict localized
+networks in Europe [@Braga2019SpaAna; @OConnor2020UnvFoo; @Galiana2021SpaSca;
+@Gauzere2022DivBio; @Botella2023LanInt]. Therefore, our approach could open
+similar possibilities of investigations in North America with food webs of
+Canadian mammals, for instance on the structure of food webs over space
+[@Braga2019SpaAna] and on the effect of land-use intensification on food webs
+[@Botella2023LanInt]. Interesting research areas could include assessing climate
+change impacts on network structure or investigating linkages between network
+structure and stability. Moreover, since our approach is probabilistic, it does
+not assume species interact whenever they co-occur, and incorporates variability
+based on environmental conditions, which could lead to different results by
+introducing a different association between species richness and network
+properties. @Galiana2021SpaSca found that species richness had a large
+explanatory power over network properties but mentioned it could potentially be
+due to interactions between species being fixed in space. Here, we found
+mismatches in the distribution of species richness and interactions, and
+especially regarding their within-ecoregion variability
 ([@Fig:ecoregion_bivariates]), highlighting that interactions might vary
 differently than species distributions in space. Network measures (links on
 [@Fig:ecoregion_bivariates]A) were also lower in the north, contrarily to
-previous studies [e.g. connectance higher in the north, @Braga2019SpaAna;
-@Galiana2021SpaSca].
+previous studies where connectance was higher in the north, although those were
+in Europe for all tetrapods  [@Braga2019SpaAna; @Galiana2021SpaSca] and
+willow-galler-parasitoid networks [@Gravel2019BriElt]. Further research should
+investigate why these results might be different between the two continents and
+whether it is due to the methodology, data, or biogeographical processes.
 
 Our LCBD and uniqueness results highlighted that areas with unique network
 composition might differ from sites with unique species composition. In other
@@ -466,6 +469,26 @@ for network LCBD values and the lower IQR values indicate that both the
 inter-ecoregion and within-ecoregion variation are lower for network than for
 species ([@Fig:ecoregion_lcbd]). Additionally, higher values for network LCBD
 also indicate that most ecoregions can hold ecologically unique sites.
+
+When to use the method we presented here will depend on the availability of
+interaction data or existing metawebs and on the intent to incorporate
+interaction variability, as well as ecoregion-level variability. In systems
+where in situ interaction and network data are available, the approach put
+forward by @Gravel2019BriElt achieves a similar purpose as we attempted here,
+but is more rigourous and allows modelling the effect of the environment on the
+interactions. Without such data, establishing or predicting the metaweb should
+be the first step towards producing localized predictions [@Strydom2022PreMet].
+Well-documented binary metawebs such as the European tetrapod metaweb could be
+partly be combined with our approach if used with probabilistic SDMs and
+summarized by ecoregions (as they would only lack an initial probabilistic
+metaweb, but would still obtain a more probabilistic output). Our approach will
+essentially differ from previous attempts in how it perceives uncertainty and
+variability. For instance, rare interactions should not be over-represented
+[@Poisot2016StrPro] and should have lesser effects over computed network
+measures. Summarizing results by ecoregion allows showing variation within and
+between ecologically-meaningful biogeographic boundaries [@Martins2022GloReg],
+which as our results showed is not constant across space and can help identify
+contrasting diversity hotspots.
 
 \newpage
 
