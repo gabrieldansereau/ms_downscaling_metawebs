@@ -1,43 +1,42 @@
 # Introduction
 
-Sampling species interactions and ecological networks in repeated locations in
-space and time is a challenging task [@Jordano2016SamNet]. Most studies on food
-webs have previously focused on local webs limited in size and extent, and are
-rarely replicated in space and time [@Mestre2022DisFoo]. Interactions can show
-important variations in space [@Poisot2015SpeWhy], yet available network data
-also show important geographical bias, limiting our ability to answer questions
-in many biomes and over broad spatial extents [@Poisot2021GloKno]. Moreover,
-global network monitoring is insufficient to properly describe and undestand how
-ecosystems are reacting to global change [@Windsor2023UsiEco]. Predictive
-approaches are increasingly used to predict species interactions [e.g.
-@Desjardins-Proulx2017EcoInt; @Morales-Castilla2015InfBio] and can handle
-limited data to circumvent data scarcity [@Strydom2021RoaPre], but they are
-rarely used to make explicitly spatial predictions. As a result, there have been
-repeated calls for globally distributed interaction and network data and
-repeated samplings in time and space [@Mestre2022DisFoo; @Poisot2021GloKno;
-@Windsor2023UsiEco]. 
+Sampling ecological networks in space and time is a challenging task
+[@Jordano2016SamNet]. Most studies on food webs have previously focused on local
+webs limited in size and extent, and are rarely replicated in space and time
+[@Mestre2022DisFoo]. Interactions can show important variations in space
+[@Poisot2015SpeWhy], yet available network data also show important geographical
+bias, limiting our ability to answer questions in many biomes and over broad
+spatial extents [@Poisot2021GloKno]. Moreover, global network monitoring is
+insufficient to properly describe and undestand how ecosystems are reacting to
+global change [@Windsor2023UsiEco]. Predictive approaches are increasingly used
+to predict species interactions [e.g., @Desjardins-Proulx2017EcoInt;
+@Morales-Castilla2015InfBio] and can handle limited data to circumvent data
+scarcity [@Strydom2021RoaPre], but are rarely used to make explicitly spatial
+predictions. As a result, there have been repeated calls for globally
+distributed interaction and network data and repeated sampling in time and space
+[@Mestre2022DisFoo; @Windsor2023UsiEco]. 
 
 The metaweb is an increasingly used concept to address the issue of data
 scarcity, and it further holds potential to analyse networks at large spatial
-extents. A metaweb contains all the possible interactions between the species
-found in a given regional species pool [@Dunne2006NetStr]. Recent studies have
-focused on assembling metawebs for various taxa through extensive literature
-surveys [European tetrapods, @Maiorano2020TetSpe] or using predictive tools
+extents. A metaweb contains all possible interactions between species found in a
+given regional species pool [@Dunne2006NetStr]. Recent studies have focused on
+assembling metawebs for various taxa through literature surveys and expert
+elicitation [European tetrapods, @Maiorano2020TetSpe] or using predictive tools
 [Canadian mammals, @Strydom2022FooWeb]. In comparison, empirical networks are
-local realizations of a regional metaweb [@Poisot2012DisSpe; @Poisot2015SpeWhy]
-and inherit the metaweb structure with little influence from habitat and
-dynamical constraints [@Saravia2022EcoNet]. Given this, @Strydom2022PreMet
-called the prediction of the metaweb structure the core goal of predictive
-network ecology and the key to produce accurate downscaled and local
-predictions. Establishing or predicting the metaweb should therefore be the
-first target for systems where we lack information about local realizations.
-This is not the same as using interactions to improve predictions of species
-distributions as recent studies have done [for example, @Poggiato2022IntFoo;
-@Lucas2023IncBio; @Moens2022ImpBio], although these are incredibly relevant and
-answer long-standing calls to include interactions within such models
-[@Wisz2013RolBio]. Instead, predicting networks in space is a different task and
-it serves a different goal, focusing first on the distribution of networks and
-its drivers rather than on the distribution of species.
+local realizations of a regional metaweb [@Poisot2012DisSpe] and inherit the
+metaweb structure with little influence from habitat and dynamical constraints
+[@Saravia2022EcoNet]. Given this, @Strydom2022PreMet called the prediction of
+the metaweb structure the core goal of predictive network ecology and the key to
+produce accurate downscaled and local predictions. Establishing or predicting
+the metaweb should therefore be the first target for systems where we lack
+information about local realizations. This is not the same as using interactions
+to improve predictions of species distributions as recent studies have done [for
+example, @Poggiato2022IntFoo; @Lucas2023IncBio; @Moens2022ImpBio], although
+these are incredibly relevant and answer long-standing calls to include
+interactions within such models [@Wisz2013RolBio]. Instead, predicting networks
+in space is a different task and it serves a different goal, focusing first on
+the distribution of networks and its drivers rather than on the distribution of
+species.
 
 A key challenge remains in how to downscale a regional metaweb towards local
 network predictions. @Gravel2019BriElt introduced a mathematical framework
@@ -56,7 +55,7 @@ distribution maps to generate local assemblages [@Braga2019SpaAna;
 limitation to this approach is that is assumes that interactions are constant
 across space, which ignores behaviour variability and does not consider the
 effect of environmental conditions on interaction realization
-[@Braga2019SpaAna]. This is an advantage of the probabilistic framwork put
+[@Braga2019SpaAna]. This is an advantage of the probabilistic framework put
 forward by @Gravel2019BriElt and absent from the European metaweb studies, as
 treating interactions as probabilistic events allows to account for their
 variability in space [see @Poisot2016StrPro for probabilistic interactions and
@@ -172,8 +171,8 @@ v1.2 [@Karger2018DatCli], which does not cover open water. The EarthEnv
 land-cover variables represent classes such as Evergreen broadleaf trees,
 Cultivated and managed vegetation, Urban/Built-up, and Open Water. Values range
 between 0 and 100 and represent the consensus prevalence of each class in
-percentage within a pixel (hereafter considered as sites). We coarsened both the
-CHELSA and EarthEnv data from their original 30 arc-second resolution to a 2.5
+percentage within a pixel (hereafter called sites). We coarsened both the CHELSA
+and EarthEnv data from their original 30 arc-second resolution to a 2.5
 arc-mininute one (around 4.5 km at the Equator) using GDAL
 [@GDAL/OGRcontributors2021GdaOgr]. This resolution compromised capturing both
 local variations and broad scale patterns, while limiting computation costs to a
