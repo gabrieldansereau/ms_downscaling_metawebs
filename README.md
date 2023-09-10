@@ -9,8 +9,8 @@ bias, limiting our ability to answer questions in many biomes and over broad
 spatial extents [@Poisot2021GloKno]. Moreover, global network monitoring is
 insufficient to properly describe and undestand how ecosystems are reacting to
 global change [@Windsor2023UsiEco]. Predictive approaches are increasingly used
-to predict species interactions [e.g., @Desjardins-Proulx2017EcoInt;
-@Morales-Castilla2015InfBio] and can handle limited data to circumvent data
+to predict species interactions [e.g., @Morales-Castilla2015InfBio;
+@Desjardins-Proulx2017EcoInt] and can handle limited data to circumvent data
 scarcity [@Strydom2021RoaPre], but are rarely used to make explicitly spatial
 predictions. As a result, there have been repeated calls for globally
 distributed interaction and network data and repeated sampling in time and space
@@ -31,7 +31,7 @@ produce accurate downscaled and local predictions. Establishing or predicting
 the metaweb should therefore be the first target for systems where we lack
 information about local realizations. This is not the same as using interactions
 to improve predictions of species distributions as recent studies have done [for
-example, @Poggiato2022IntFoo; @Lucas2023IncBio; @Moens2022ImpBio], although
+example,  @Moens2022ImpBio; @Poggiato2022IntFoo; @Lucas2023IncBio], although
 these are incredibly relevant and answer long-standing calls to include
 interactions within such models [@Wisz2013RolBio]. Instead, predicting networks
 in space is a different task and it serves a different goal, focusing first on
@@ -58,7 +58,7 @@ effect of environmental conditions on interaction realization
 [@Braga2019SpaAna]. This is an advantage of the probabilistic framework put
 forward by @Gravel2019BriElt and absent from the European metaweb studies, as
 treating interactions as probabilistic events allows to account for their
-variability in space [see @Poisot2016StrPro for probabilistic interactions and
+variability in space [see @Poisot2016StrPro for probabilistic interactions; also
 @Strydom2022PreMet regarding probabilistic metawebs]. We currently lack a
 downscaling framework that is both probabilistic and does not require in situ
 data. Additionally, a probabilistic view can allow propagating uncertainty,
