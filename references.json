@@ -107,7 +107,7 @@
         "type": "article-journal"
     },
     {
-        "publisher": "Preprints",
+        "publisher": "Authorea",
         "DOI": "10.22541/au.168010211.10402875/v1",
         "genre": "Preprint",
         "author": [
@@ -1799,7 +1799,7 @@
         "type": "article-journal"
     },
     {
-        "publisher": "Preprints",
+        "publisher": "Authorea",
         "DOI": "10.22541/au.166853394.45823739/v1",
         "genre": "Preprint",
         "author": [
@@ -2085,7 +2085,7 @@
         "type": "article-journal"
     },
     {
-        "issue": "n/a",
+        "issue": "3",
         "issued": {
             "date-parts": [
                 [
@@ -2118,8 +2118,10 @@
         ],
         "id": "Saravia2022EcoNet",
         "DOI": "10.1111/1365-2656.13652",
-        "volume": "n/a",
+        "volume": "91",
+        "page": "630-642",
         "title": "Ecological network assembly: How the regional metaweb influences local food webs",
+        "other-ids": "Saravia2022EcoNeta",
         "type": "article-journal"
     },
     {
@@ -2215,7 +2217,7 @@
         "type": "article-journal"
     },
     {
-        "issue": "n/a",
+        "issue": "12",
         "issued": {
             "date-parts": [
                 [
@@ -2280,8 +2282,10 @@
         ],
         "id": "Strydom2022FooWeb",
         "DOI": "10.1111/2041-210X.13835",
-        "volume": "n/a",
+        "volume": "13",
+        "page": "2838-2849",
         "title": "Food web reconstruction through phylogenetic transfer of low-rank network representation",
+        "other-ids": "Strydom2022FooWeba",
         "type": "article-journal"
     },
     {

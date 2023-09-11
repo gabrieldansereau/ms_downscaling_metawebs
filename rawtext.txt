@@ -11,7 +11,7 @@ questions in many biomes and over broad spatial extents
 to properly describe and undestand how ecosystems are reacting to global
 change [@Windsor2023UsiEco]. Predictive approaches are increasingly used
 to predict species interactions [e.g.,
-@Desjardins-Proulx2017EcoInt; @Morales-Castilla2015InfBio] and can
+@Morales-Castilla2015InfBio; @Desjardins-Proulx2017EcoInt] and can
 handle limited data to circumvent data scarcity [@Strydom2021RoaPre],
 but are rarely used to make explicitly spatial predictions. As a result,
 there have been repeated calls for globally distributed interaction and
@@ -35,7 +35,7 @@ predictions. Establishing or predicting the metaweb should therefore be
 the first target for systems where we lack information about local
 realizations. This is not the same as using interactions to improve
 predictions of species distributions as recent studies have done [for
-example, @Poggiato2022IntFoo; @Lucas2023IncBio; @Moens2022ImpBio],
+example, @Moens2022ImpBio; @Poggiato2022IntFoo; @Lucas2023IncBio],
 although these are incredibly relevant and answer long-standing calls to
 include interactions within such models [@Wisz2013RolBio]. Instead,
 predicting networks in space is a different task and it serves a
@@ -65,7 +65,7 @@ on interaction realization [@Braga2019SpaAna]. This is an advantage of
 the probabilistic framework put forward by @Gravel2019BriElt and absent
 from the European metaweb studies, as treating interactions as
 probabilistic events allows to account for their variability in space
-[see @Poisot2016StrPro for probabilistic interactions and
+[see @Poisot2016StrPro for probabilistic interactions; also
 @Strydom2022PreMet regarding probabilistic metawebs]. We currently lack
 a downscaling framework that is both probabilistic and does not require
 in situ data. Additionally, a probabilistic view can allow propagating
@@ -111,12 +111,12 @@ like species richness.
 
 Fig. 1 shows a conceptual overview of the methodological steps leading
 to the downscaled metaweb. The components were grouped as non-spatial
-and spatial inputs, localized steps (divided into single-species-level,
-two-species-level, and network-level steps), and the final downscaled
-and spatialized metaweb. Throughout these steps, we highlight the
-importance of presenting the uncertainty of interactions and of their
-distribution in space. We argue that this requires adopting a
-probabilistic view and incorporating variation between scales.
+and spatial inputs, localized site steps (divided into
+single-species-level, two-species-level, and network-level steps), and
+the final downscaled and spatialized metaweb. Throughout these steps, we
+highlight the importance of presenting the uncertainty of interactions
+and of their distribution in space. We argue that this requires adopting
+a probabilistic view and incorporating variation between scales.
 
 ![Figure 1: Conceptual figure of the workflow to obtain the spatial
 probabilistic metaweb (Chapter 1). The workflow has three components:
@@ -131,7 +131,9 @@ pairs. The final output coming out of the network-level steps contains a
 spatialized probabilistic metaweb for every cell across the study
 extent.](figures/conceptual-figure.png){#fig:conceptual}
 
-## Non-spatial inputs
+## Data
+
+### Metaweb
 
 The main source of interaction data was the metaweb for Canadian mammals
 from @Strydom2022FooWeb, which is a-spatial, i.e., it represents
@@ -149,29 +151,30 @@ allows incorporating interaction variability between species (i.e.,
 taking into account that two species may not always interact whenever or
 wherever they occur); however, we highlight that other factors beyond
 trait and phylogenetic matching (e.g., population densities) will also
-contribute to observed interaction probabilities.
+contribute to observed interaction frequencies.
 
-## Spatial inputs
+### Species occurrences
 
 The downscaling of the metaweb involved combining it with species
 occurrence and environmental data. First, we extracted species
 occurrences from the Global Biodiversity Information Facility (GBIF;
 www.gbif.org) for the Canadian mammals after reconciling species names
 between the Canadian metaweb and GBIF using the GBIF Backbone Taxonomy
-[@GBIFSecretariat2021GbiBac]. Doing so, we removed potential duplicates
-where species listed in the Canadian metaweb are considered as a single
-entity by GBIF. We collected occurrences for our species list (159
-species) using the GBIF download API on October 21st 2022
-[@GBIF.org2022GbiOcc]. We restricted our query to occurrences with
+[@GBIFSecretariat2021GbiBac]. This step removed potential duplicates by
+combining species listed in the Canadian metaweb which were considered
+as a single entity by GBIF. We collected occurrences for the updated
+species list (159 species) using the GBIF download API on October 21st
+2022 [@GBIF.org2022GbiOcc]. We restricted our query to occurrences with
 coordinates between longitudes 175°W to 45°W and latitudes 10°N to 90°N.
 This was meant to collect training data covering a broader range than
 our prediction target (Canada only) and include observations in similar
 environments. Then, since GBIF observations represent presence-only data
 and most predictive models require absence data, we generated
-pseudo-absence data using the surface range envelope method available in
-`SimpleSDMLayers.jl` [@Dansereau2021SimJl]. This method generates
-pseudo-absences by selecting random non-observed sites within the
-spatial range delimited by the presence data [@Barbet-Massin2012SelPse].
+pseudo-absence data using the surface range envelope method, which
+selects random non-observed sites within the spatial range delimited by
+the presence data [@Barbet-Massin2012SelPse].
+
+### Environmental data
 
 We used species distribution models [SDMs, @Guisan2005PreSpe] to project
 Canadian mammal habitat suitability across the country, which we treated
@@ -196,6 +199,10 @@ resolution compromised capturing both local variations and broad scale
 patterns, while limiting computation costs to a manageable level as
 memory requirements increase rapidly with spatial resolution.
 
+## Analyses
+
+### Species distribution models
+
 Our selection criteria for choosing an SDM algorithm was to have a
 method that generated probabilistic results [similar to
 @Gravel2019BriElt], including both a probability of occurrence for a
@@ -216,7 +223,7 @@ only for Canada. We used the 2021 Census Boundary Files from Statistics
 Canada [@StatisticsCanada2022BouFil] to set the boundaries for our
 predictions, which gave us 970,698 sites in total.
 
-## Localized steps: Building site-level instances of the metaweb
+### Building site-level instances of the metaweb
 
 The next part of the method was the localized steps which produce local
 metawebs for every site. This component was divided into single-species,
@@ -226,26 +233,25 @@ The single-species steps represented four possible ways to account for
 uncertainty in the species distributions and bring variation to the
 spatial metaweb. We explored four different options to select a value
 (*P(occurrence)*; Fig. 1) from the occurrence distributions obtained in
-the previous steps (Inputs section): 1) taking the mean from the
-distribution as the probability of occurrence (option 1 on Fig. 1); 2)
-converting the mean value to a binary one using a specific threshold per
-species (option 2); 3) sampling a random value within the Normal
-distribution (option 3); or 4) converting a random value into a binary
-result (option 4, using a separate draw from option 3 and the same
-threshold as in option 2). The threshold ($\tau$ on Fig. 1) used was the
-value that maximized Youden's *J* informedness statistic
-[@Youden1950IndRat], the same metric used by @Strydom2022FooWeb at an
-intermediate step while building the metaweb. The four sampling options
-were intended to explore how uncertainty and variation in the species
-distributions can affect the metaweb result. We expected thresholding to
-have a more pronounced effect on network structure as it should reduce
-the number of links by removing many of the rare interactions
-[@Poisot2016StrPro]. Meanwhile, we expected random sampling to create
-spatial heterogeneity compared to the mean probabilities, as including
-some extreme values should confound the potential effects of
-environmental gradients. We chose option 1 as the default to present
-results as it is intuitive and essentially represents the result of a
-probabilistic SDM [as in @Gravel2019BriElt].
+the previous steps: 1) taking the mean from the distribution as the
+probability of occurrence (option 1 on Fig. 1); 2) converting the mean
+value to a binary one using a specific threshold per species (option 2);
+3) sampling a random value within the Normal distribution (option 3); or
+4) converting a random value into a binary result (option 4, using a
+separate draw from option 3 and the same threshold as in option 2). The
+threshold ($\tau$ on Fig. 1) used was the value that maximized Youden's
+*J* informedness statistic [@Youden1950IndRat], the same metric used by
+@Strydom2022FooWeb at an intermediate step while building the metaweb.
+The four sampling options were intended to explore how uncertainty and
+variation in the species distributions can affect the metaweb result. We
+expected thresholding to have a more pronounced effect on network
+structure as it should reduce the number of links by removing many of
+the rare interactions [@Poisot2016StrPro]. Meanwhile, we expected random
+sampling to create spatial heterogeneity compared to the mean
+probabilities, as including some extreme values should confound the
+potential effects of environmental gradients. We chose option 1 as the
+default to present results as it is intuitive and essentially represents
+the result of a probabilistic SDM [as in @Gravel2019BriElt].
 
 Next, the two-species steps were aimed at assigning a probability of
 observing an interaction between two species in a given site. For each
@@ -266,7 +272,7 @@ in a distribution of localized networks, which we averaged over the
 number of simulations to obtain a single probabilistic network for the
 site.
 
-## Outputs: The downscaled metaweb
+### Downscaled metaweb
 
 The final output of our method was the downscaled metaweb, which
 contains a localized probabilistic metaweb in every site across the
@@ -279,11 +285,14 @@ different structure. Nonetheless, from the downscaled metaweb we can
 create maps of network properties (e.g. number of links, connectance)
 measured on the local probabilities, display their spatial distribution,
 and compute some traditional community-level measures such as species
-richness. We can also calculate the uncertainty associated with the
-network and community measurements and compare their spatial
-distribution (see Supplementary Material). We computed expected metrics
-on probabilistic networks following @Poisot2016StrPro [see
-@Gravel2019BriElt for a similar example].
+richness. We chose to compute and display the expected number of links
+[measured on probabilistic networks following @Poisot2016StrPro; also
+see @Gravel2019BriElt for a similar example] as its relationship with
+species richness has been highlighted in a spatial context in recent
+studies [@Galiana2021SpaSca; @Galiana2022EcoNet]. We also computed the
+uncertainty associated with the community and network measurements
+(richness variance and link variance, respectively) and compared their
+spatial distribution (see Supplementary Material).
 
 ### Analyses of results by ecoregions
 
@@ -340,19 +349,24 @@ interquantile range within all ecoregions.
 We used *Julia* v1.9.0 [@Bezanson2017JulFre] to implement all our
 analyses. We used packages `GBIF.jl` [@Dansereau2021SimJl] to reconcile
 species names using the GBIF Backbone Taxonomy,
-`SpeciesDistributionToolkit.jl` to handle raster layers and species
-occurrences, `EcologicalNetworks.jl` [@Poisot2019EcoJl] to analyse
-network and metaweb structure, and `Makie.jl` [@Danisch2021MakJl] to
-produce figures. Our data sources (CHELSA, EarthEnv, Ecoregions) were
-all unprojected and we did not use a projection in our analyses, but we
-displayed the results using a Lambert conformal conic projection more
-appropriate for Canada using `GeoMakie.jl`. All the code used to
-implement our analyses is available on GitHub
+`SpeciesDistributionToolkit.jl`
+(https://github.com/PoisotLab/SpeciesDistributionToolkit.jl) to handle
+raster layers, species occurrences and generate pseudoabsences,
+`EvoTrees.jl` (https://github.com/Evovest/EvoTrees.jl) to perform the
+Gradient Boosted Trees, `EcologicalNetworks.jl` [@Poisot2019EcoJl] to
+analyse network and metaweb structure, and `Makie.jl`
+[@Danisch2021MakJl] to produce figures. Our data sources (CHELSA,
+EarthEnv, Ecoregions) were all unprojected and we did not use a
+projection in our analyses, but we displayed the results using a Lambert
+conformal conic projection more appropriate for Canada using
+`GeoMakie.jl` (https://github.com/MakieOrg/GeoMakie.jl). All the code
+used to implement our analyses is available on GitHub
 (https://github.com/PoisotLab/SpatialProbabilisticMetaweb) and includes
 instructions on how to run a smaller example at a coarser resolution.
 Note that running our analyses at full scale is resource and memory
 intensive and required the use of compute clusters provided by Calcul
-Québec and the Digital Research Alliance of Canada.
+Québec and the Digital Research Alliance of Canada. Final scripts ran
+for 0.0109 CPU core-years and peaked at 460 GB of RAM.
 
 # Results
 
@@ -371,10 +385,10 @@ the south. However, within-ecoregion variability was distributed
 differently, as some ecoregions along the coasts displayed higher
 interquantile ranges while ecoregions around the southern border
 displayed narrower ones (Fig. 2C-D). All results shown are based on the
-first sampling strategy (option 1) mentioned in the Localized steps
-section, where species occurrence probabilities were taken as the mean
-value of the distribution (results for other sampling strategies are
-discussed in Supplementary Material).
+first sampling strategy (option 1) mentioned in the *Building site-level
+instances of the metaweb* section, where species occurrence
+probabilities were taken as the mean value of the distribution (results
+for other sampling strategies are discussed in Supplementary Material).
 
 ![Figure 2: (A-B) Example of a community measure (A, expected species
 richness) and a network one (B, expected number of links). Both measures
@@ -537,4 +551,4 @@ identify contrasting diversity hotspots.
 ```{=tex}
 \newpage
 ```
-# 
+# References
