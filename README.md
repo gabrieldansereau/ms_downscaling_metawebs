@@ -12,14 +12,14 @@ ability to answer questions in many biomes and over broad spatial extents
 properly describe and understand how ecosystems are reacting to global change
 [@Windsor2023UsiEco]. As a result, there have been repeated calls for globally
 distributed interaction and network data and repeated sampling in time and space
-[@Mestre2022DisFoo; @Windsor2023UsiEco]. Approaches to predict species
-interactions [e.g., @Morales-Castilla2015InfBio; @Desjardins-Proulx2017EcoInt]
-are increasingly used as an alternative to determine potential interactions and
-can handle limited data to circumvent data scarcity [@Strydom2021RoaPre], but
-are rarely used to make explicitly spatial predictions. Given limited resources,
-sampling can be optimized to assess targeted network properties [e.g.,
-@McLeod2021SamAsy]; yet, doing this across whole networks and various taxa over
-broad spatial scales remains a challenge.
+[@Baiser2019EcoRul; @Mestre2022DisFoo; @Windsor2023UsiEco]. Approaches to
+predict species interactions [e.g., @Morales-Castilla2015InfBio;
+@Desjardins-Proulx2017EcoInt] are increasingly used as an alternative to
+determine potential interactions and can handle limited data to circumvent data
+scarcity [@Strydom2021RoaPre], but are rarely used to make explicitly spatial
+predictions. Given limited resources, sampling can be optimized to assess
+targeted network properties [e.g., @McLeod2021SamAsy]; yet, doing this across
+whole networks and various taxa over broad spatial scales remains a challenge.
 
 The metaweb is an increasingly used concept to address the issue of data
 scarcity, and it further holds potential to analyse networks at large spatial
@@ -72,20 +72,23 @@ and whether they differ geographically from areas currently prioritized for
 biodiversity conservation.
 
 A key challenge remains in how to downscale a regional metaweb towards local
-network predictions reflecting the spatial variability of interactions. A
-potential limitation to previous downscaling approaches is that they assume
-interactions are constant across space, which ignores behaviour variability and
-does not consider the effect of environmental conditions on interaction
-realization [@Braga2019SpaAna]. In contrast, recent studies argued that seeing
-interactions as probabilistic events (rather than binary ones) allows to account
-for their variability in space [@Poisot2016StrPro] and that this should also be
-reflected in metawebs [@Strydom2022PreMet]. @Gravel2019BriElt introduced a
-probabilistic framework describing how the metaweb can generate local
-realizations and showed how it could be used for interaction distribution
-modelling. This approach to downscaling is useful when combined with in situ
-observations of interactions and local networks to train interaction models (in
-this case with willow-galler-parasitoid networks). However, such data is rarely
-available across broad spatial extents [@Hortal2015SevSho; @Poisot2021GloKno;
+network predictions reflecting the spatial variability of interactions. Even
+when the metaweb is known, local networks may vary substantially and differ from
+the metaweb structure [@McLeod2021SamAsy], which emphasizes the need for methods
+to generate local, downscaled networks predictions. A potential limitation to
+previous downscaling approaches is that they assume interactions are constant
+across space, which ignores behaviour variability and does not consider the
+effect of environmental conditions on interaction realization
+[@Braga2019SpaAna]. In contrast, recent studies argued that seeing interactions
+as probabilistic events (rather than binary ones) allows to account for their
+variability in space [@Poisot2016StrPro] and that this should also be reflected
+in metawebs [@Strydom2022PreMet]. @Gravel2019BriElt introduced a probabilistic
+framework describing how the metaweb can generate local realizations and showed
+how it could be used for interaction distribution modelling. This approach to
+downscaling is useful when combined with in situ observations of interactions
+and local networks to train interaction models (in this case with
+willow-galler-parasitoid networks). However, such data is rarely available
+across broad spatial extents [@Hortal2015SevSho; @Poisot2021GloKno;
 @Windsor2023UsiEco]. Spatially replicated interaction data required for such
 model is especially challenging to document with large food web systems such as
 European tetrapod and Canadian mammal metawebs [@Maiorano2020TetSpe;
@@ -344,8 +347,8 @@ analyses is available on GitHub
 instructions on how to run a smaller example at a coarser resolution. Note that
 running our analyses at full scale is resource and memory intensive and required
 the use of compute clusters provided by Calcul Québec and the Digital Research
-Alliance of Canada. Final scripts ran for 0.0109 CPU core-years and peaked at
-460 GB of RAM.
+Alliance of Canada. Final scripts required 900 CPU core-hours and peaked at 500
+GB of RAM.
 
 # Results
 
