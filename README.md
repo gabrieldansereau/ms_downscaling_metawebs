@@ -10,16 +10,15 @@ available network data also show important geographical bias, limiting our
 ability to answer questions in many biomes and over broad spatial extents
 [@Poisot2021GloKno]. Moreover, global network monitoring is insufficient to
 properly describe and understand how ecosystems are reacting to global change
-[@Windsor2023UsiEco]. As a result, there have been repeated calls for globally
-distributed interaction and network data and repeated sampling in time and space
-[@Baiser2019EcoRul; @Mestre2022DisFoo; @Windsor2023UsiEco]. Approaches to
-predict species interactions [e.g., @Morales-Castilla2015InfBio;
-@Desjardins-Proulx2017EcoInt] are increasingly used as an alternative to
-determine potential interactions and can handle limited data to circumvent data
-scarcity [@Strydom2021RoaPre], but are rarely used to make explicitly spatial
-predictions. Given limited resources, sampling can be optimized to assess
-targeted network properties [e.g., @McLeod2021SamAsy]; yet, doing this across
-whole networks and various taxa over broad spatial scales remains a challenge.
+[@Windsor2023UsiEco]. Approaches to predict species interactions [e.g.,
+@Morales-Castilla2015InfBio; @Desjardins-Proulx2017EcoInt] are increasingly used
+as an alternative to determine potential interactions and can handle limited
+data to circumvent data scarcity [@Strydom2021RoaPre], but are rarely used to
+make explicitly spatial predictions. As a result, there have been repeated calls
+for globally distributed interaction and network data and repeated sampling in
+time and space [@Mestre2022DisFoo; @Windsor2023UsiEco], which will help
+understand the macroecological variations of food webs [@Baiser2019EcoRul].
+==(Tim: transition to metaweb concept)==
 
 The metaweb is an increasingly used concept to address the issue of data
 scarcity, and it further holds potential to analyse networks at large spatial
@@ -50,11 +49,12 @@ species.
 
 Explicit spatial predictions such as downscaled metaweb predictions are
 essential as they will allow comparisons with extant work for species
-communities. Recent approaches to downscaling for European tetrapods combined
-the metaweb with species distribution maps to generate local assemblages
-[@Braga2019SpaAna; @OConnor2020UnvFoo; @Galiana2021SpaSca; @Gauzere2022DivBio].
-These downscaled assemblages allowed studying network structures in novel ways,
-for instance, assessing changes in food web structure across space
+communities. Recent approaches to downscaling combined the metaweb with species
+distribution maps to generate local assemblages for European tetrapods
+[@Braga2019SpaAna; @OConnor2020UnvFoo; @Galiana2021SpaSca; @Gauzere2022DivBio]
+and North Sea demersal fishes and benthic epifauna [@Frelat2022FooWeb]. These
+downscaled assemblages allowed studying network structures in novel ways, for
+instance, assessing changes in food web structure across space
 [@Braga2019SpaAna] and the scaling of network area relationships
 [@Galiana2021SpaSca]. Other examples have shown that the metaweb can be used to
 investigate large scale variation in food web structure, indicating high
@@ -513,10 +513,48 @@ metaweb, but would still obtain a more probabilistic output). Our approach will
 essentially differ from previous attempts in how it perceives uncertainty and
 variability. For instance, rare interactions should not be over-represented
 [@Poisot2016StrPro] and should have lesser effects over computed network
-measures. Summarizing results by ecoregion allows showing variation within and
-between ecologically-meaningful biogeographic boundaries [@Martins2022GloReg],
-which as our results showed is not constant across space and can help identify
-contrasting diversity hotspots.
+measures. Furthermore, summarizing results by ecoregion allows showing variation
+within and between ecologically-meaningful biogeographic boundaries
+[@Martins2022GloReg], which as our results showed is not constant across space
+and can help identify contrasting diversity hotspots.
+
+The recent shift in focus towards building metawebs opens many opportunities for
+projections of networks in space through probabilistic downscaling as we
+suggested here. Metawebs have been documented in many systems, further allowinf
+to build new ones from predictions. How the European tetrapod metaweb
+[@Maiorano2020TetSpe] was used to predict the Canadian mammal metaweb
+[@Strydom2022FooWeb] is one such case, but recent examples also extends to other
+systems. Metawebs have been compiled for many marine food webs [e.g., Barents
+sea, @Kortsch2019FooStr; North Scotia sea, @Lopez-Lopez2022EcoNet; Gulf of Riga,
+@Kortsch2021DisTem] and used to predict the probability of novel interactions
+[Artic food web of the Barents sea, @Pecuchet2020NovFee]. @Olivier2019ExpTem
+built a temporally resolved metaweb of demersal fish and benthic epifauna, but
+also suggested combining their approach with techniques estimating the
+probability of occurrence of trophic relationships to better describe spatial
+and temporal variability. @Lurgi2020GeoVar built a metaweb for rocky intertidal
+communities as well as probabilistic (occurrence-based) networks (and also
+showed that environmental factors do not affect the structure of binary and
+probabilistic networks in different ways). @Albouy2019MarFis predicted the
+global marine fish food web using a probabilistic model, showing the potential
+to describe networks across broad spatial scales. Similarly, predictive
+approaches are also increasingly used with other interaction types to highlight
+interactions hotspots on global scales [e.g. mapping geographical hotspots of
+predicted host-virus interactions between bats and betacoronaviruse,
+@Becker2022OptPre; predicting the distribution of hidden interactions in the
+mammalian virome, @Poisot2023NetEmb]. Overall, these recent examples show that
+there is an opportunity for downscaling towards local network predictions
+through probabilistic metawebs and that many different systems can now be
+projected in space.
+
+In this study, we presented a probabilistic framework to downscale a metaweb
+towards local networks based on the Canadian mammal metaweb and species
+occurrences from GBIF. Our approach showed that community and network structures
+do not always vary in the same way between and within ecoregions. Contrasting
+these spatial distributions highlighted variability hotspots unique for
+different aspects of their biodiversity. Our approach can be extended to many
+systems given recent developments in metaweb documentation and prediction, which
+will improve the description of ecological networks across broad spatial extents
+without additional sampling.
 
 \newpage
 
