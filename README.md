@@ -402,7 +402,7 @@ combinations represent the nine possible combinations of quantiles. Species
 richness (horizontal axis) goes left to right from low (light grey, bottom left)
 to high (green, bottom right). The number of links goes bottom-up from low
 (light grey, bottom left) to high (blue, top
-left).](figures/ecoregion_bivariates.png){#fig:ecoregion_bivariates height=60%}
+left).](figures/ecoregion_bivariates.png){#fig:ecoregion_bivariates}
 
 Our results also indicate a mismatch between the uniqueness of communities and
 networks ([@Fig:ecoregion_lcbd]). Uniqueness was higher mostly in the north and
