@@ -1,5 +1,180 @@
 [
     {
+        "publisher": "Nature Publishing Group",
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Nature Ecology & Evolution",
+        "author": [
+            {
+                "family": "Albouy",
+                "given": "Camille"
+            },
+            {
+                "family": "Archambault",
+                "given": "Philippe"
+            },
+            {
+                "family": "Appeltans",
+                "given": "Ward"
+            },
+            {
+                "family": "Araújo",
+                "given": "Miguel B."
+            },
+            {
+                "family": "Beauchesne",
+                "given": "David"
+            },
+            {
+                "family": "Cazelles",
+                "given": "Kevin"
+            },
+            {
+                "family": "Cirtwill",
+                "given": "Alyssa R."
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Galiana",
+                "given": "Nuria"
+            },
+            {
+                "family": "Leroux",
+                "given": "Shawn J."
+            },
+            {
+                "family": "Pellissier",
+                "given": "Loïc"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Wood",
+                "given": "Spencer A."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "id": "Albouy2019MarFis",
+        "DOI": "10.1038/s41559-019-0950-y",
+        "volume": "3",
+        "page": "1153-1161",
+        "title": "The marine fish food web is globally connected",
+        "type": "article-journal"
+    },
+    {
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Global Ecology and Biogeography",
+        "author": [
+            {
+                "family": "Baiser",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Cirtwill",
+                "given": "Alyssa R."
+            },
+            {
+                "family": "Dunne",
+                "given": "Jennifer A."
+            },
+            {
+                "family": "Fahimipour",
+                "given": "Ashkaan K."
+            },
+            {
+                "family": "Gilarranz",
+                "given": "Luis J."
+            },
+            {
+                "family": "Grochow",
+                "given": "Joshua A."
+            },
+            {
+                "family": "Li",
+                "given": "Daijiang"
+            },
+            {
+                "family": "Martinez",
+                "given": "Neo D."
+            },
+            {
+                "family": "McGrew",
+                "given": "Alicia"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Romanuk",
+                "given": "Tamara N."
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Trotta",
+                "given": "Lauren B."
+            },
+            {
+                "family": "Valdovinos",
+                "given": "Fernanda S."
+            },
+            {
+                "family": "Williams",
+                "given": "Richard J."
+            },
+            {
+                "family": "Wood",
+                "given": "Spencer A."
+            },
+            {
+                "family": "Yeakel",
+                "given": "Justin D."
+            }
+        ],
+        "id": "Baiser2019EcoRul",
+        "editor": [
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            }
+        ],
+        "DOI": "10.1111/geb.12925",
+        "page": "geb.12925",
+        "title": "Ecogeographical rules and the macroecology of food webs",
+        "type": "article-journal"
+    },
+    {
         "issue": "2",
         "issued": {
             "date-parts": [
@@ -32,6 +207,93 @@
         "volume": "3",
         "page": "327-338",
         "title": "Selecting pseudo-absences for species distribution models: How, where and how many?",
+        "type": "article-journal"
+    },
+    {
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "The Lancet Microbe",
+        "author": [
+            {
+                "family": "Becker",
+                "given": "Daniel J"
+            },
+            {
+                "family": "Albery",
+                "given": "Gregory F"
+            },
+            {
+                "family": "Sjodin",
+                "given": "Anna R"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Bergner",
+                "given": "Laura M"
+            },
+            {
+                "family": "Chen",
+                "given": "Binqi"
+            },
+            {
+                "family": "Cohen",
+                "given": "Lily E"
+            },
+            {
+                "family": "Dallas",
+                "given": "Tad A"
+            },
+            {
+                "family": "Eskew",
+                "given": "Evan A"
+            },
+            {
+                "family": "Fagre",
+                "given": "Anna C"
+            },
+            {
+                "family": "Farrell",
+                "given": "Maxwell J"
+            },
+            {
+                "family": "Guth",
+                "given": "Sarah"
+            },
+            {
+                "family": "Han",
+                "given": "Barbara A"
+            },
+            {
+                "family": "Simmons",
+                "given": "Nancy B"
+            },
+            {
+                "family": "Stock",
+                "given": "Michiel"
+            },
+            {
+                "family": "Teeling",
+                "given": "Emma C"
+            },
+            {
+                "family": "Carlson",
+                "given": "Colin J"
+            }
+        ],
+        "id": "Becker2022OptPre",
+        "DOI": "10.1016/S2666-5247(21)00245-7",
+        "volume": "3",
+        "page": "e625-e637",
+        "title": "Optimising predictive models to prioritise viral discovery in zoonotic reservoirs",
         "type": "article-journal"
     },
     {
@@ -769,6 +1031,140 @@
         "type": "article-journal"
     },
     {
+        "publisher": "Nature Publishing Group",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Nature Ecology & Evolution",
+        "author": [
+            {
+                "family": "Galiana",
+                "given": "Núria"
+            },
+            {
+                "family": "Lurgi",
+                "given": "Miguel"
+            },
+            {
+                "family": "Bastazini",
+                "given": "Vinicius A. G."
+            },
+            {
+                "family": "Bosch",
+                "given": "Jordi"
+            },
+            {
+                "family": "Cagnolo",
+                "given": "Luciano"
+            },
+            {
+                "family": "Cazelles",
+                "given": "Kevin"
+            },
+            {
+                "family": "Claramunt-López",
+                "given": "Bernat"
+            },
+            {
+                "family": "Emer",
+                "given": "Carine"
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Grass",
+                "given": "Ingo"
+            },
+            {
+                "family": "Hernández-Castellano",
+                "given": "Carlos"
+            },
+            {
+                "family": "Jauker",
+                "given": "Frank"
+            },
+            {
+                "family": "Leroux",
+                "given": "Shawn J."
+            },
+            {
+                "family": "McCann",
+                "given": "Kevin"
+            },
+            {
+                "family": "McLeod",
+                "given": "Anne M."
+            },
+            {
+                "family": "Montoya",
+                "given": "Daniel"
+            },
+            {
+                "family": "Mulder",
+                "given": "Christian"
+            },
+            {
+                "family": "Osorio-Canadas",
+                "given": "Sergio"
+            },
+            {
+                "family": "Reverté",
+                "given": "Sara"
+            },
+            {
+                "family": "Rodrigo",
+                "given": "Anselm"
+            },
+            {
+                "family": "Steffan-Dewenter",
+                "given": "Ingolf"
+            },
+            {
+                "family": "Traveset",
+                "given": "Anna"
+            },
+            {
+                "family": "Valverde",
+                "given": "Sergi"
+            },
+            {
+                "family": "Vázquez",
+                "given": "Diego P."
+            },
+            {
+                "family": "Wood",
+                "given": "Spencer A."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Roslin",
+                "given": "Tomas"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            },
+            {
+                "family": "Montoya",
+                "given": "José M."
+            }
+        ],
+        "id": "Galiana2022EcoNet",
+        "DOI": "10.1038/s41559-021-01644-4",
+        "page": "1-8",
+        "title": "Ecological network complexity scales with area",
+        "type": "article-journal"
+    },
+    {
         "DOI": "10.1016/j.cub.2022.03.009",
         "author": [
             {
@@ -1225,6 +1621,116 @@
         "type": ""
     },
     {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Kortsch",
+                "given": "Susanne"
+            },
+            {
+                "family": "Primicerio",
+                "given": "Raul"
+            },
+            {
+                "family": "Aschan",
+                "given": "Michaela"
+            },
+            {
+                "family": "Lind",
+                "given": "Sigrid"
+            },
+            {
+                "family": "Dolgov",
+                "given": "Andrey V."
+            },
+            {
+                "family": "Planque",
+                "given": "Benjamin"
+            }
+        ],
+        "id": "Kortsch2019FooStr",
+        "DOI": "10.1111/ecog.03443",
+        "volume": "42",
+        "page": "295-308",
+        "title": "Food-web structure varies along environmental gradients in a high-latitude marine ecosystem",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Kortsch",
+                "given": "Susanne"
+            },
+            {
+                "family": "Frelat",
+                "given": "Romain"
+            },
+            {
+                "family": "Pecuchet",
+                "given": "Laurene"
+            },
+            {
+                "family": "Olivier",
+                "given": "Pierre"
+            },
+            {
+                "family": "Putnis",
+                "given": "Ivars"
+            },
+            {
+                "family": "Bonsdorff",
+                "given": "Erik"
+            },
+            {
+                "family": "Ojaveer",
+                "given": "Henn"
+            },
+            {
+                "family": "Jurgensone",
+                "given": "Iveta"
+            },
+            {
+                "family": "Strāķe",
+                "given": "Solvita"
+            },
+            {
+                "family": "Rubene",
+                "given": "Gunta"
+            },
+            {
+                "family": "Krūze",
+                "given": "Ēriks"
+            },
+            {
+                "family": "Nordström",
+                "given": "Marie C."
+            }
+        ],
+        "id": "Kortsch2021DisTem",
+        "DOI": "10.1111/1365-2656.13447",
+        "volume": "90",
+        "page": "1205-1216",
+        "title": "Disentangling temporal food web dynamics facilitates understanding of ecosystem functioning",
+        "type": "article-journal"
+    },
+    {
         "issue": "8",
         "issued": {
             "date-parts": [
@@ -1249,6 +1755,45 @@
         "volume": "16",
         "page": "951-963",
         "title": "Beta diversity as the variance of community data: Dissimilarity coefficients and partitioning",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Ecosystems",
+        "author": [
+            {
+                "family": "López-López",
+                "given": "Lucía"
+            },
+            {
+                "family": "Genner",
+                "given": "Martin J."
+            },
+            {
+                "family": "Tarling",
+                "given": "Geraint A."
+            },
+            {
+                "family": "Saunders",
+                "given": "Ryan A."
+            },
+            {
+                "family": "O’Gorman",
+                "given": "Eoin J."
+            }
+        ],
+        "id": "Lopez-Lopez2022EcoNet",
+        "DOI": "10.1007/s10021-021-00665-1",
+        "volume": "25",
+        "page": "457-470",
+        "title": "Ecological Networks in the Scotia Sea: Structural Changes Across Latitude and Depth",
         "type": "article-journal"
     },
     {
@@ -1345,6 +1890,49 @@
             ]
         },
         "type": ""
+    },
+    {
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Lurgi",
+                "given": "Miguel"
+            },
+            {
+                "family": "Galiana",
+                "given": "Núria"
+            },
+            {
+                "family": "Broitman",
+                "given": "Bernardo R."
+            },
+            {
+                "family": "Kéfi",
+                "given": "Sonia"
+            },
+            {
+                "family": "Wieters",
+                "given": "Evie A."
+            },
+            {
+                "family": "Navarrete",
+                "given": "Sergio A."
+            }
+        ],
+        "id": "Lurgi2020GeoVar",
+        "DOI": "10.1002/ecy.3165",
+        "volume": "101",
+        "page": "e03165",
+        "title": "Geographical variation of multiplex ecological networks in marine intertidal communities",
+        "type": "article-journal"
     },
     {
         "issue": "9",
@@ -1799,6 +2387,108 @@
         "type": "article-journal"
     },
     {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Olivier",
+                "given": "Pierre"
+            },
+            {
+                "family": "Frelat",
+                "given": "Romain"
+            },
+            {
+                "family": "Bonsdorff",
+                "given": "Erik"
+            },
+            {
+                "family": "Kortsch",
+                "given": "Susanne"
+            },
+            {
+                "family": "Kröncke",
+                "given": "Ingrid"
+            },
+            {
+                "family": "Möllmann",
+                "given": "Christian"
+            },
+            {
+                "family": "Neumann",
+                "given": "Hermann"
+            },
+            {
+                "family": "Sell",
+                "given": "Anne F."
+            },
+            {
+                "family": "Nordström",
+                "given": "Marie C."
+            }
+        ],
+        "id": "Olivier2019ExpTem",
+        "DOI": "10.1111/ecog.04461",
+        "volume": "42",
+        "page": "2107-2121",
+        "title": "Exploring the temporal variability of a food web using long-term biomonitoring data",
+        "type": "article-journal"
+    },
+    {
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "container-title": "Global Change Biology",
+        "author": [
+            {
+                "family": "Pecuchet",
+                "given": "Laurene"
+            },
+            {
+                "family": "Blanchet",
+                "given": "Marie-Anne"
+            },
+            {
+                "family": "Frainer",
+                "given": "André"
+            },
+            {
+                "family": "Husson",
+                "given": "Bérengère"
+            },
+            {
+                "family": "Jørgensen",
+                "given": "Lis L."
+            },
+            {
+                "family": "Kortsch",
+                "given": "Susanne"
+            },
+            {
+                "family": "Primicerio",
+                "given": "Raul"
+            }
+        ],
+        "id": "Pecuchet2020NovFee",
+        "DOI": "10.1111/gcb.15196",
+        "volume": "26",
+        "page": "4894-4906",
+        "title": "Novel feeding interactions amplify the impact of species redistribution on an Arctic food web",
+        "type": "article-journal"
+    },
+    {
         "publisher": "Authorea",
         "DOI": "10.22541/au.166853394.45823739/v1",
         "genre": "Preprint",
@@ -2082,6 +2772,65 @@
         "page": "1552-1563",
         "title": "Global knowledge gaps in species interaction networks data",
         "other-ids": "Poisot2021GloKnoa",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "container-title": "Patterns",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Ouellet",
+                "given": "Marie-Andrée"
+            },
+            {
+                "family": "Mollentze",
+                "given": "Nardus"
+            },
+            {
+                "family": "Farrell",
+                "given": "Maxwell J."
+            },
+            {
+                "family": "Becker",
+                "given": "Daniel J."
+            },
+            {
+                "family": "Brierley",
+                "given": "Liam"
+            },
+            {
+                "family": "Albery",
+                "given": "Gregory F."
+            },
+            {
+                "family": "Gibb",
+                "given": "Rory J."
+            },
+            {
+                "family": "Seifert",
+                "given": "Stephanie N."
+            },
+            {
+                "family": "Carlson",
+                "given": "Colin J."
+            }
+        ],
+        "id": "Poisot2023NetEmb",
+        "DOI": "10.1016/j.patter.2023.100738",
+        "volume": "4",
+        "page": "100738",
+        "title": "Network embedding unveils the hidden interactions in the mammalian virome",
         "type": "article-journal"
     },
     {
@@ -2631,6 +3380,49 @@
         "volume": "3",
         "page": "32-35",
         "title": "Index for rating diagnostic tests",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "container-title": "Current Landscape Ecology Reports",
+        "author": [
+            {
+                "family": "Zarnetske",
+                "given": "Phoebe L."
+            },
+            {
+                "family": "Baiser",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Strecker",
+                "given": "Angela"
+            },
+            {
+                "family": "Record",
+                "given": "Sydne"
+            },
+            {
+                "family": "Belmaker",
+                "given": "Jonathan"
+            },
+            {
+                "family": "Tuanmu",
+                "given": "Mao-Ning"
+            }
+        ],
+        "id": "Zarnetske2017IntLan",
+        "DOI": "10.1007/s40823-017-0021-5",
+        "volume": "2",
+        "page": "12-29",
+        "title": "The Interplay Between Landscape Structure and Biotic Interactions",
         "type": "article-journal"
     }
 ]
