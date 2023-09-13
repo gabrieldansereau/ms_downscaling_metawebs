@@ -605,6 +605,19 @@ in metaweb documentation and prediction, which will improve the
 description of ecological networks across broad spatial extents without
 additional sampling.
 
+# Acknowledgements
+
+We acknowledge that this study was conducted on land within the
+traditional unceded territory of the Saint Lawrence Iroquoian,
+Anishinabewaki, Mohawk, Huron-Wendat, and Omàmiwininiwak nations. GD is
+funded by the NSERC Postgraduate Scholarship -- Doctoral (grant ES D --
+558643), the FRQNT doctoral scholarship (grant no. 301750), and the
+NSERC CREATE BIOS² program. This research was enabled in part by support
+provided by Calcul Québec
+([calculquebec.ca](http://www.calculquebec.ca)) and the Digital Research
+Alliance of Canada ([alliance​can​.ca](https://alliancecan.ca/)) through
+the Narval general purpose cluster.
+
 ```{=tex}
 \newpage
 ```
