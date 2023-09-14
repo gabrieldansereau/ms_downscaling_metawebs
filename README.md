@@ -85,7 +85,7 @@ when the metaweb is known, local networks may vary substantially and differ both
 from one another and from the metaweb [@McLeod2021SamAsy], emphasizing the need
 for methods to generate local, downscaled network predictions. A potential
 limitation to previous downscaling approaches is that they assume interactions
-are constant across space, which ignores well-documenter interaction
+are constant across space, which ignores well-documented interaction
 variability, and masks the effect of environmental conditions on interaction
 realization [@Braga2019SpaAna]. In contrast, recent studies argued that seeing
 interactions as probabilistic events (rather than binary ones) allows us to
@@ -555,7 +555,7 @@ interactions hotspots on global scales [e.g. mapping geographical hotspots of
 predicted host-virus interactions between bats and betacoronaviruses,
 @Becker2022OptPre; predicting the distribution of hidden interactions in the
 mammalian virome, @Poisot2023NetEmb]. Our method offers the potential to bring
-these global predictions down to the local scale where theyr can be made more
+these global predictions down to the local scale where they can be made more
 actionable, and vastly increases the diversity of ecological networks that can
 be projected in space.
 
