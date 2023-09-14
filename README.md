@@ -36,8 +36,8 @@ the global scale. Recent studies have focused on assembling metawebs for various
 taxa through literature surveys and expert elicitation [European tetrapods,
 @Maiorano2020TetSpe] or using predictive tools [marine fishes,
 @Albouy2019MarFis; Canadian mammals, @Strydom2022FooWeb]. At a finer spatial
-scale, the locally observed food webs ["realization" of the metaweb;
-@Poisot2012DisSpe] relfect local environmental conditions, but nevertheless
+scale, the locally observed food webs ["realization" of the metaweb,
+@Poisot2012DisSpe] reflect local environmental conditions, but nevertheless
 retain the signal of the metaweb to which they belong [@Saravia2022EcoNet].
 Given this, @Strydom2022PreMet called the prediction of the metaweb structure
 the core goal of predictive network ecology, as if there is a strong link
