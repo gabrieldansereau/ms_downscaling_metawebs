@@ -216,9 +216,10 @@ associated with the prediction. These were crucial to obtaining a probabilistic
 version of the metaweb as they were used to create spatial variations in the
 localized interaction probabilities (see next section). One suitable method for
 this is Gradient Boosted Trees with a Gaussian maximum likelihood from the
-`EvoTrees.jl` *Julia* package (https://github.com/Evovest/EvoTrees.jl). This
-method returns a prediction for every site with an average value and a standard
-deviation, which we used as a measure of uncertainty to build a Normal
+`EvoTrees.jl` *Julia* package
+([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl)).
+This method returns a prediction for every site with an average value and a
+standard deviation, which we used as a measure of uncertainty to build a Normal
 distribution for the probability of occurrence of a given species at all sites
 (represented as probability distributions on @Fig:conceptual). We trained models
 across the extent chosen for occurrences (longitudes 175°W to 45°W and latitudes
@@ -343,22 +344,24 @@ all ecoregions.
 We used _Julia_ v1.9.0 [@Bezanson2017JulFre] to implement all our analyses. We
 used packages `GBIF.jl` [@Dansereau2021SimJl] to reconcile species names using
 the GBIF Backbone Taxonomy, `SpeciesDistributionToolkit.jl`
-(https://github.com/PoisotLab/SpeciesDistributionToolkit.jl) to handle raster
-layers, species occurrences and generate pseudoabsences, `EvoTrees.jl`
-(https://github.com/Evovest/EvoTrees.jl) to perform the Gradient Boosted Trees,
-`EcologicalNetworks.jl` [@Poisot2019EcoJl] to analyze network and metaweb
-structure, and `Makie.jl` [@Danisch2021MakJl] to produce figures. Our data
-sources (CHELSA, EarthEnv, Ecoregions) were all unprojected, and we did not use
-a projection in our analyses. However, we displayed the results using a Lambert
-conformal conic projection more appropriate for Canada using `GeoMakie.jl`
-(https://github.com/MakieOrg/GeoMakie.jl). All the code used to implement our
-analyses is available on GitHub
-(https://github.com/PoisotLab/SpatialProbabilisticMetaweb) and includes
-instructions on how to run a smaller example at a coarser resolution. Note that
-running our analyses at full scale is resource and memory-intensive and required
-the use of compute clusters provided by Calcul Québec and the Digital Research
-Alliance of Canada. Final scripts required 900 CPU core-hours and peaked at 500
-GB of RAM.
+([https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl))
+to handle raster layers, species occurrences and generate pseudoabsences,
+`EvoTrees.jl`
+([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl))
+to perform the Gradient Boosted Trees, `EcologicalNetworks.jl`
+[@Poisot2019EcoJl] to analyze network and metaweb structure, and `Makie.jl`
+[@Danisch2021MakJl] to produce figures. Our data sources (CHELSA, EarthEnv,
+Ecoregions) were all unprojected, and we did not use a projection in our
+analyses. However, we displayed the results using a Lambert conformal conic
+projection more appropriate for Canada using `GeoMakie.jl`
+([https://github.com/MakieOrg/GeoMakie.jl](https://github.com/MakieOrg/GeoMakie.jl)).
+All the code used to implement our analyses is available on GitHub
+([https://github.com/PoisotLab/SpatialProbabilisticMetaweb](https://github.com/PoisotLab/SpatialProbabilisticMetaweb))
+and includes instructions on how to run a smaller example at a coarser
+resolution. Note that running our analyses at full scale is resource and
+memory-intensive and required the use of compute clusters provided by Calcul
+Québec and the Digital Research Alliance of Canada. Final scripts required 900
+CPU core-hours and peaked at 500 GB of RAM.
 
 # Results
 
