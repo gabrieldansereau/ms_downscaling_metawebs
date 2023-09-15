@@ -1,5 +1,23 @@
+---
+title: Site-level figures and results
+subtitle: Supplementary material to *Spatially explicit predictions of food web structure from regional level data*
+author:
+- Gabriel Dansereau
+- Ceres Barros
+- Timothée Poisot
+header-includes:
+---
+
 \renewcommand{\thefigure}{S\arabic{figure}}
 <!-- \setcounter{figure}{0} -->
+
+\newpage
+
+<!-- Sampling options -->
+
+![Illustration of the effect of changing the sampling options for the species occurrence probabilities: a) taking the mean from the distribution as the probability of occurrence; b) converting the mean value to a binary one using a specific threshold per species; c) sampling a random value within the Normal distribution; d) converting the random value into a binary result.](figures/richness_all.png){#fig:sampling_options}
+
+\newpage
 
 <!-- Main richness & links figures -->
 
@@ -36,9 +54,3 @@ Bivariate representation of the estimates (a) and uncertainty (b) of species ric
 <!-- LCBD densities -->
 
 ![Difference in the grouping of the sites identified as unique only for their networks (pink) or only their species composition (cyan). Sites unique only for their species composition mostly have high species richness and a high number of links while sites unique for their network composition only have low richness and number of links. Other sites not belonging to the unique species or network groups are shown in the background (black) and span a wider range. Values on the y-axis for the density figures (right) are probability densities scaled so that the area under the curve equals one. Similarly, the area under the curve for a given range of values on the x-axis (richness or links) represents the probability of observing a value in that range for the different site groupings.](figures/lcbd_bivariate_densities.png){#fig:lcbd_scatter}
-
-\newpage
-
-<!-- Sampling options -->
-
-![Illustration of the effect of changing the sampling options for the species occurrence probabilities: a) taking the mean from the distribution as the probability of occurrence; b) converting the mean value to a binary one using a specific threshold per species; c) sampling a random value within the Normal distribution; d) converting the random value into a binary result.](figures/richness_all.png){#fig:sampling_options}

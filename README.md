@@ -226,6 +226,8 @@ across the extent chosen for occurrences (longitudes 175°W to 45°W and latitud
 10°N to 90°N), then predicted species distributions only for Canada. We used the
 2021 Census Boundary Files from Statistics Canada [@StatisticsCanada2022BouFil]
 to set the boundaries for our predictions, which gave us 970,698 sites in total.
+Performance evaluation for the single species SDMs are available at
+[https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv](https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv).
 
 ### Building site-level instances of the metaweb
 
@@ -383,7 +385,9 @@ displayed narrower ones ([@Fig:ecoregion_measures]C-D). All results shown are
 based on the first sampling strategy (option 1) mentioned in the *Building
 site-level instances of the metaweb* section, where species occurrence
 probabilities were taken as the mean value of the distribution (results for
-other sampling strategies are discussed in Supplementary Material). 
+other sampling strategies are shown in Supplementary Material, Fig. S1).
+Site-level results (before summarizing by ecoregion) are also provided in
+Supplementary Material (Figs. S2-S5).
 
 ![(A-B) Example of a community measure (A, expected species richness) and a
 network one (B, expected number of links). Both measures are assembled from the
@@ -503,16 +507,17 @@ communities of rodents and ectoparasitic fleas. Our results further show how
 these differences could be distributed across ecoregions and a broad spatial
 extent. Areas unique for only one element (species or network composition)
 differed in their combination of species richness and number of links
-(supplementary material), with species-unique sites displaying high values of
-both measures and network-unique sites displaying low values. Moreover, LCBD
-scores essentially highlight variability hotspots and are a measure of the
-variance of community or network structure. Here, they also serve as an
-inter-ecoregion variation measure, which can be compared to the within-ecoregion
-variation highlighted by the interquantile ranges. The narrower range of values
-for network LCBD values and the lower IQR values indicate that both the
-inter-ecoregion and within-ecoregion variation are lower for networks than for
-species ([@Fig:ecoregion_lcbd]). Additionally, higher values for network LCBD
-also indicate that most ecoregions can hold ecologically unique sites.
+(Supplementary Material, Fig. S5), with species-unique sites displaying high
+values of both measures and network-unique sites displaying low values.
+Moreover, LCBD scores essentially highlight variability hotspots and are a
+measure of the variance of community or network structure. Here, they also serve
+as an inter-ecoregion variation measure, which can be compared to the
+within-ecoregion variation highlighted by the interquantile ranges. The narrower
+range of values for network LCBD values and the lower IQR values indicate that
+both the inter-ecoregion and within-ecoregion variation are lower for networks
+than for species ([@Fig:ecoregion_lcbd]). Additionally, higher values for
+network LCBD also indicate that most ecoregions can hold ecologically unique
+sites.
 
 When to use the method we presented here will depend on the availability of
 interaction data or existing metawebs, and on the intent to incorporate
