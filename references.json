@@ -1621,6 +1621,46 @@
         "type": ""
     },
     {
+        "publisher": "Royal Society",
+        "issue": "1814",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "container-title": "Proceedings of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Kortsch",
+                "given": "Susanne"
+            },
+            {
+                "family": "Primicerio",
+                "given": "Raul"
+            },
+            {
+                "family": "Fossheim",
+                "given": "Maria"
+            },
+            {
+                "family": "Dolgov",
+                "given": "Andrey V."
+            },
+            {
+                "family": "Aschan",
+                "given": "Michaela"
+            }
+        ],
+        "id": "Kortsch2015CliCha",
+        "DOI": "10.1098/rspb.2015.1546",
+        "volume": "282",
+        "page": "20151546",
+        "title": "Climate change alters the structure of arctic marine food webs due to poleward shifts of boreal generalists",
+        "type": "article-journal"
+    },
+    {
         "issue": "2",
         "issued": {
             "date-parts": [
