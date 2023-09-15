@@ -645,14 +645,14 @@ food web structure from regional level data</div>
             the localized interaction probabilities (see next section).
             One suitable method for this is Gradient Boosted Trees with
             a Gaussian maximum likelihood from the
-            <code>EvoTrees.jl</code> <em>Julia</em> package
-            (https://github.com/Evovest/EvoTrees.jl). This method
-            returns a prediction for every site with an average value
-            and a standard deviation, which we used as a measure of
-            uncertainty to build a Normal distribution for the
-            probability of occurrence of a given species at all sites
-            (represented as probability distributions on Fig. 1). We
-            trained models across the extent chosen for occurrences
+            <code>EvoTrees.jl</code> <em>Julia</em> package (<a
+            href="https://github.com/Evovest/EvoTrees.jl">https://github.com/Evovest/EvoTrees.jl</a>).
+            This method returns a prediction for every site with an
+            average value and a standard deviation, which we used as a
+            measure of uncertainty to build a Normal distribution for
+            the probability of occurrence of a given species at all
+            sites (represented as probability distributions on Fig. 1).
+            We trained models across the extent chosen for occurrences
             (longitudes 175°W to 45°W and latitudes 10°N to 90°N), then
             predicted species distributions only for Canada. We used the
             2021 Census Boundary Files from Statistics Canada <span
@@ -836,24 +836,26 @@ food web structure from regional level data</div>
             data-cites="Dansereau2021SimJl">(Dansereau &amp; Poisot
             2021)</span> to reconcile species names using the GBIF
             Backbone Taxonomy,
-            <code>SpeciesDistributionToolkit.jl</code>
-            (https://github.com/PoisotLab/SpeciesDistributionToolkit.jl)
+            <code>SpeciesDistributionToolkit.jl</code> (<a
+            href="https://github.com/PoisotLab/SpeciesDistributionToolkit.jl">https://github.com/PoisotLab/SpeciesDistributionToolkit.jl</a>)
             to handle raster layers, species occurrences and generate
-            pseudoabsences, <code>EvoTrees.jl</code>
-            (https://github.com/Evovest/EvoTrees.jl) to perform the
-            Gradient Boosted Trees, <code>EcologicalNetworks.jl</code>
-            <span class="citation" data-cites="Poisot2019EcoJl">(Poisot
-            <em>et al.</em> 2019)</span> to analyze network and metaweb
-            structure, and <code>Makie.jl</code> <span class="citation"
+            pseudoabsences, <code>EvoTrees.jl</code> (<a
+            href="https://github.com/Evovest/EvoTrees.jl">https://github.com/Evovest/EvoTrees.jl</a>)
+            to perform the Gradient Boosted Trees,
+            <code>EcologicalNetworks.jl</code> <span class="citation"
+            data-cites="Poisot2019EcoJl">(Poisot <em>et al.</em>
+            2019)</span> to analyze network and metaweb structure, and
+            <code>Makie.jl</code> <span class="citation"
             data-cites="Danisch2021MakJl">(Danisch &amp; Krumbiegel
             2021)</span> to produce figures. Our data sources (CHELSA,
             EarthEnv, Ecoregions) were all unprojected, and we did not
             use a projection in our analyses. However, we displayed the
             results using a Lambert conformal conic projection more
-            appropriate for Canada using <code>GeoMakie.jl</code>
-            (https://github.com/MakieOrg/GeoMakie.jl). All the code used
-            to implement our analyses is available on GitHub
-            (https://github.com/PoisotLab/SpatialProbabilisticMetaweb)
+            appropriate for Canada using <code>GeoMakie.jl</code> (<a
+            href="https://github.com/MakieOrg/GeoMakie.jl">https://github.com/MakieOrg/GeoMakie.jl</a>).
+            All the code used to implement our analyses is available on
+            GitHub (<a
+            href="https://github.com/PoisotLab/SpatialProbabilisticMetaweb">https://github.com/PoisotLab/SpatialProbabilisticMetaweb</a>)
             and includes instructions on how to run a smaller example at
             a coarser resolution. Note that running our analyses at full
             scale is resource and memory-intensive and required the use
