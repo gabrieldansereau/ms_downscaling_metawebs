@@ -27,3 +27,5 @@ Makefile
 symlink.md
 test.pdf
 metadata.yaml
+.Rproj.user
+*.Rproj
