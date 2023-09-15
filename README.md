@@ -87,8 +87,9 @@ structure, indicating high geographical connections and heterogeneous
 robustness against species extinctions [@Albouy2019MarFis], which are
 only apparent when the local and global networks are both available
 <!--Ceres: there's also this one by Kortsch et al. 2015 that could maybe be integrated into this sentence. https://royalsocietypublishing.org/doi/10.1098/rspb.2015.1546-->.
-Further comparisons
-between network structure and other community properties <!--Ceres: comparisions of what to what? the previous sentence was not explicitly talking about comparisions, so I think you may want to be more specific here. Provided a suggestion.-->
+Further comparisons between network structure and other community
+properties
+<!--Ceres: comparisions of what to what? the previous sentence was not explicitly talking about comparisions, so I think you may want to be more specific here. Provided a suggestion.-->
 are relevant as they may highlight new and surprising elements regarding
 network biogeography
 <!--Ceres: edited for simpler, more streamlined text-->. For instance,
@@ -581,7 +582,7 @@ could be distributed across ecoregions and in a broad spatial extent.
 Areas unique for only one element (species or network composition)
 differed in their combination of species richness and number of links
 (Supplementary Material, Fig. S5), with species-unique sites displaying
-high values of both measures and network-unique sites displaying low
+high values of both measures, and network-unique sites displaying low
 values. Moreover, LCBD scores essentially highlight variability hotspots
 and are a measure of the variance of community or network structure.
 Here, they also serve as an inter-ecoregion variation measure, which can
@@ -595,8 +596,9 @@ also indicate that most ecoregions can hold ecologically unique sites.
 When to use the method we presented here will depend on the availability
 of interaction data or existing metawebs, and on the intent to
 incorporate interaction variability, as well as ecoregion-level
-variability. In systems where in situ interaction and network data are
-available, the approach put forward by @Gravel2019BriElt achieves a
+variability. In systems where *in situ* interaction and network data
+<!--Ceres: aren't interaction data and network data the same? Or rather, isn't interaction data a subset of network data? Maybe you mean community composition data and interaction data, or complete network data?-->
+are available, the approach put forward by @Gravel2019BriElt achieves a
 similar purpose as we attempted here, but is more rigourous and allows
 modelling the effect of the environment on the interactions themselves.
 Without such data, establishing or predicting the metaweb should be the
@@ -640,7 +642,7 @@ interaction types to highlight interactions hotspots on global scales
 [e.g. mapping geographical hotspots of predicted host-virus interactions
 between bats and betacoronaviruses, @Becker2022OptPre; predicting the
 distribution of hidden interactions in the mammalian virome,
-@Poisot2023NetEmb]. Our method offers the potential to bring these
+@Poisot2023NetEmb]. Our workflow offers the potential to bring these
 global predictions down to the local scale where they can be made more
 actionable, and vastly increases the diversity of ecological networks
 that can be projected in space.
