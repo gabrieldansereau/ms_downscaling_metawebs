@@ -187,21 +187,22 @@ contribute to observed interaction frequencies.
 The downscaling of the metaweb involved combining it with species
 occurrence and environmental data. First, we extracted species
 occurrences from the Global Biodiversity Information Facility (GBIF;
-www.gbif.org) for the Canadian mammals after reconciling species names
-between the Canadian metaweb and GBIF using the GBIF Backbone Taxonomy
-[@GBIFSecretariat2021GbiBac]. This step removed potential duplicates by
-combining species listed in the Canadian metaweb which were considered
-as a single entity by GBIF. We collected occurrences for the updated
-species list (159 species) using the GBIF download API on October 21st
-2022 [@GBIF.org2022GbiOcc]. We restricted our query to occurrences with
-coordinates between longitudes 175°W to 45°W and latitudes 10°N to 90°N.
-This was meant to collect training data covering a broader range than
-our prediction target (Canada only) and include observations in similar
-environments. Then, since GBIF observations represent presence-only data
-and most predictive models require absence data, we generated
-pseudo-absence data using the surface range envelope method, which
-selects random non-observed sites within the spatial range delimited by
-the presence data [@Barbet-Massin2012SelPse].
+[www.gbif.org](www.gbif.org)) for the Canadian mammals after reconciling
+species names between the Canadian metaweb and GBIF using the GBIF
+Backbone Taxonomy [@GBIFSecretariat2021GbiBac]. This step removed
+potential duplicates by combining species listed in the Canadian metaweb
+which were considered as a single entity by GBIF. We collected
+occurrences for the updated species list (159 species) using the GBIF
+download API on October 21st 2022 [@GBIF.org2022GbiOcc]. We restricted
+our query to occurrences with coordinates between longitudes 175°W to
+45°W and latitudes 10°N to 90°N. This was meant to collect training data
+covering a broader range than our prediction target (Canada only) and
+include observations in similar environments. Then, since GBIF
+observations represent presence-only data and most predictive models
+require absence data, we generated pseudo-absence data using the surface
+range envelope method, which selects random non-observed sites within
+the spatial range delimited by the presence data
+[@Barbet-Massin2012SelPse].
 
 ### Environmental data
 
@@ -251,8 +252,8 @@ models across the extent chosen for occurrences (longitudes 175°W to
 only for Canada. We used the 2021 Census Boundary Files from Statistics
 Canada [@StatisticsCanada2022BouFil] to set the boundaries for our
 predictions, which gave us 970,698 sites in total. Performance
-evaluation for the single species SDMs are available at
-<https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv>.
+evaluation for the single species SDMs are available on
+[GitHub](https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv).
 
 ### Building site-level instances of the metaweb
 
@@ -419,12 +420,12 @@ values in the south. However, within-ecoregion variability was
 distributed differently, as some ecoregions along the coast displayed
 higher interquantile ranges, while ecoregions around the southern border
 displayed narrower ones (Fig. 2C-D). All results shown are based on the
-first sampling strategy (option 1) mentioned in the \[*Building
-site-level instances of the metaweb*\] section, where we used the mean
-value of the species distributions as the species occurrence
-probabilities (results for other sampling strategies are shown in
-Supplementary Material, Fig. S1). Site-level results (before summarizing
-by ecoregion) are also provided in Supplementary Material (Figs. S2-S5).
+first sampling strategy (option 1) mentioned in the *Building site-level
+instances of the metaweb* section, where we used the mean value of the
+species distributions as the species occurrence probabilities (results
+for other sampling strategies are shown in Supplementary Material, Fig.
+S1). Site-level results (before summarizing by ecoregion) are also
+provided in Supplementary Material (Figs. S2-S5).
 
 ![Figure 2: (A-B) Example of a community measure (A, expected species
 richness) and a network one (B, expected number of links). Both measures

@@ -573,7 +573,8 @@ food web structure from regional level data</div>
             <p>The downscaling of the metaweb involved combining it with
             species occurrence and environmental data. First, we
             extracted species occurrences from the Global Biodiversity
-            Information Facility (GBIF; www.gbif.org) for the Canadian
+            Information Facility (GBIF; <a
+            href="www.gbif.org">www.gbif.org</a>) for the Canadian
             mammals after reconciling species names between the Canadian
             metaweb and GBIF using the GBIF Backbone Taxonomy <span
             class="citation"
@@ -650,8 +651,7 @@ food web structure from regional level data</div>
             One suitable method for this is Gradient Boosted Trees with
             a Gaussian maximum likelihood from the
             <code>EvoTrees.jl</code> <em>Julia</em> package (<a
-            href="https://github.com/Evovest/EvoTrees.jl"
-            class="uri">https://github.com/Evovest/EvoTrees.jl</a>).
+            href="https://github.com/Evovest/EvoTrees.jl">https://github.com/Evovest/EvoTrees.jl</a>).
             This method returns a prediction for every site with an
             average value and a standard deviation, which we used as a
             measure of uncertainty to build a Normal distribution for
@@ -665,9 +665,8 @@ food web structure from regional level data</div>
             data-cites="StatisticsCanada2022BouFil">(Statistics Canada
             2022)</span> to set the boundaries for our predictions,
             which gave us 970,698 sites in total. Performance evaluation
-            for the single species SDMs are available at <a
-            href="https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv"
-            class="uri">https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv</a>.</p>
+            for the single species SDMs are available on <a
+            href="https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv">GitHub</a>.</p>
             <h3
             id="building-site-level-instances-of-the-metaweb">Building
             site-level instances of the metaweb</h3>
@@ -846,13 +845,11 @@ food web structure from regional level data</div>
             2021)</span> to reconcile species names using the GBIF
             Backbone Taxonomy,
             <code>SpeciesDistributionToolkit.jl</code> (<a
-            href="https://github.com/PoisotLab/SpeciesDistributionToolkit.jl"
-            class="uri">https://github.com/PoisotLab/SpeciesDistributionToolkit.jl</a>)
+            href="https://github.com/PoisotLab/SpeciesDistributionToolkit.jl">https://github.com/PoisotLab/SpeciesDistributionToolkit.jl</a>)
             to handle raster layers, species occurrences and generate
             pseudoabsences, <code>EvoTrees.jl</code> (<a
-            href="https://github.com/Evovest/EvoTrees.jl"
-            class="uri">https://github.com/Evovest/EvoTrees.jl</a>) to
-            perform the Gradient Boosted Trees,
+            href="https://github.com/Evovest/EvoTrees.jl">https://github.com/Evovest/EvoTrees.jl</a>)
+            to perform the Gradient Boosted Trees,
             <code>EcologicalNetworks.jl</code> <span class="citation"
             data-cites="Poisot2019EcoJl">(Poisot <em>et al.</em>
             2019)</span> to analyze network and metaweb structure, and
@@ -863,13 +860,12 @@ food web structure from regional level data</div>
             use a projection in our analyses. However, we displayed the
             results using a Lambert conformal conic projection more
             appropriate for Canada using <code>GeoMakie.jl</code> (<a
-            href="https://github.com/MakieOrg/GeoMakie.jl"
-            class="uri">https://github.com/MakieOrg/GeoMakie.jl</a>).
+            href="https://github.com/MakieOrg/GeoMakie.jl">https://github.com/MakieOrg/GeoMakie.jl</a>).
             All the code used to implement our analyses is archived on
-            Zenodo (<a href="https://doi.org/10.5281/zenodo.8350065"
-            class="uri">https://doi.org/10.5281/zenodo.8350065</a>) and
-            includes instructions on how to run a smaller example at a
-            coarser resolution. Note that running our analyses at full
+            Zenodo (<a
+            href="https://doi.org/10.5281/zenodo.8350065">https://doi.org/10.5281/zenodo.8350065</a>)
+            and includes instructions on how to run a smaller example at
+            a coarser resolution. Note that running our analyses at full
             scale is resource and memory-intensive and required the use
             of computer clusters provided by Calcul Québec and the
             Digital Research Alliance of Canada. Full-scale computations
@@ -894,8 +890,8 @@ food web structure from regional level data</div>
             higher interquantile ranges, while ecoregions around the
             southern border displayed narrower ones (Fig. 2C-D). All
             results shown are based on the first sampling strategy
-            (option 1) mentioned in the [<em>Building site-level
-            instances of the metaweb</em>] section, where we used the
+            (option 1) mentioned in the <em>Building site-level
+            instances of the metaweb</em> section, where we used the
             mean value of the species distributions as the species
             occurrence probabilities (results for other sampling
             strategies are shown in Supplementary Material, Fig. S1).
