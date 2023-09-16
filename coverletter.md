@@ -32,7 +32,7 @@ projected in space.
 
 This work has not been previously published and is not being considered by any
 other journal. It appeared as a preprint on ==EcoEvoRxiv with the following DOI:
-...==. All authors agree with the manuscript content and its submission to the
-journal. The authors declare no conflict of interest.
+https://doi.org/10.32942/X2TW2S. All authors agree with the manuscript content
+and its submission to the journal. The authors declare no conflict of interest.
 
 We look forward to your editorial decision on this manuscript.
