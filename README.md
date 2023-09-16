@@ -167,20 +167,21 @@ contribute to observed interaction frequencies.
 
 The downscaling of the metaweb involved combining it with species occurrence and
 environmental data. First, we extracted species occurrences from the Global
-Biodiversity Information Facility (GBIF; www.gbif.org) for the Canadian mammals
-after reconciling species names between the Canadian metaweb and GBIF using the
-GBIF Backbone Taxonomy [@GBIFSecretariat2021GbiBac]. This step removed potential
-duplicates by combining species listed in the Canadian metaweb which were
-considered as a single entity by GBIF. We collected occurrences for the updated
-species list (159 species) using the GBIF download API on October 21st 2022
-[@GBIF.org2022GbiOcc]. We restricted our query to occurrences with coordinates
-between longitudes 175°W to 45°W and latitudes 10°N to 90°N. This was meant to
-collect training data covering a broader range than our prediction target
-(Canada only) and include observations in similar environments. Then, since GBIF
-observations represent presence-only data and most predictive models require
-absence data, we generated pseudo-absence data using the surface range envelope
-method, which selects random non-observed sites within the spatial range
-delimited by the presence data [@Barbet-Massin2012SelPse].
+Biodiversity Information Facility (GBIF; [www.gbif.org](www.gbif.org)) for the
+Canadian mammals after reconciling species names between the Canadian metaweb
+and GBIF using the GBIF Backbone Taxonomy [@GBIFSecretariat2021GbiBac]. This
+step removed potential duplicates by combining species listed in the Canadian
+metaweb which were considered as a single entity by GBIF. We collected
+occurrences for the updated species list (159 species) using the GBIF download
+API on October 21st 2022 [@GBIF.org2022GbiOcc]. We restricted our query to
+occurrences with coordinates between longitudes 175°W to 45°W and latitudes 10°N
+to 90°N. This was meant to collect training data covering a broader range than
+our prediction target (Canada only) and include observations in similar
+environments. Then, since GBIF observations represent presence-only data and
+most predictive models require absence data, we generated pseudo-absence data
+using the surface range envelope method, which selects random non-observed sites
+within the spatial range delimited by the presence data
+[@Barbet-Massin2012SelPse].
 
 ### Environmental data
 
@@ -217,17 +218,18 @@ associated with the prediction. These were crucial to obtaining a probabilistic
 version of the metaweb as they were used to create spatial variations in the
 localized interaction probabilities (see next section). One suitable method for
 this is Gradient Boosted Trees with a Gaussian maximum likelihood from the
-`EvoTrees.jl` *Julia* package (<https://github.com/Evovest/EvoTrees.jl>). This
-method returns a prediction for every site with an average value and a standard
-deviation, which we used as a measure of uncertainty to build a Normal
+`EvoTrees.jl` *Julia* package
+([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl)).
+This method returns a prediction for every site with an average value and a
+standard deviation, which we used as a measure of uncertainty to build a Normal
 distribution for the probability of occurrence of a given species at all sites
 (represented as probability distributions on @Fig:conceptual). We trained models
 across the extent chosen for occurrences (longitudes 175°W to 45°W and latitudes
 10°N to 90°N), then predicted species distributions only for Canada. We used the
 2021 Census Boundary Files from Statistics Canada [@StatisticsCanada2022BouFil]
 to set the boundaries for our predictions, which gave us 970,698 sites in total.
-Performance evaluation for the single species SDMs are available at
-<https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv>.
+Performance evaluation for the single species SDMs are available on
+[GitHub](https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv).
 
 ### Building site-level instances of the metaweb
 
@@ -347,21 +349,24 @@ range.
 We used *Julia* v1.9.0 [@Bezanson2017JulFre] to implement all our analyses. We
 used packages `GBIF.jl` [@Dansereau2021SimJl] to reconcile species names using
 the GBIF Backbone Taxonomy, `SpeciesDistributionToolkit.jl`
-(<https://github.com/PoisotLab/SpeciesDistributionToolkit.jl>) to handle raster
-layers, species occurrences and generate pseudoabsences, `EvoTrees.jl`
-(<https://github.com/Evovest/EvoTrees.jl>) to perform the Gradient Boosted
-Trees, `EcologicalNetworks.jl` [@Poisot2019EcoJl] to analyze network and metaweb
-structure, and `Makie.jl` [@Danisch2021MakJl] to produce figures. Our data
-sources (CHELSA, EarthEnv, Ecoregions) were all unprojected, and we did not use
-a projection in our analyses. However, we displayed the results using a Lambert
-conformal conic projection more appropriate for Canada using `GeoMakie.jl`
-(<https://github.com/MakieOrg/GeoMakie.jl>). All the code used to implement our
-analyses is archived on Zenodo (<https://doi.org/10.5281/zenodo.8350065>) and
-includes instructions on how to run a smaller example at a coarser resolution.
-Note that running our analyses at full scale is resource and memory-intensive
-and required the use of computer clusters provided by Calcul Québec and the
-Digital Research Alliance of Canada. Full-scale computations required 900 CPU
-core-hours and peaked at 500 GB of RAM.
+([https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl))
+to handle raster layers, species occurrences and generate pseudoabsences,
+`EvoTrees.jl`
+([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl))
+to perform the Gradient Boosted Trees, `EcologicalNetworks.jl`
+[@Poisot2019EcoJl] to analyze network and metaweb structure, and `Makie.jl`
+[@Danisch2021MakJl] to produce figures. Our data sources (CHELSA, EarthEnv,
+Ecoregions) were all unprojected, and we did not use a projection in our
+analyses. However, we displayed the results using a Lambert conformal conic
+projection more appropriate for Canada using `GeoMakie.jl`
+([https://github.com/MakieOrg/GeoMakie.jl](https://github.com/MakieOrg/GeoMakie.jl)).
+All the code used to implement our analyses is archived on Zenodo
+([https://doi.org/10.5281/zenodo.8350065](https://doi.org/10.5281/zenodo.8350065))
+and includes instructions on how to run a smaller example at a coarser
+resolution. Note that running our analyses at full scale is resource and
+memory-intensive and required the use of computer clusters provided by Calcul
+Québec and the Digital Research Alliance of Canada. Full-scale computations
+required 900 CPU core-hours and peaked at 500 GB of RAM.
 
 # Results
 
@@ -380,7 +385,7 @@ within-ecoregion variability was distributed differently, as some ecoregions
 along the coast displayed higher interquantile ranges, while ecoregions around
 the southern border displayed narrower ones ([@Fig:ecoregion_measures]C-D). All
 results shown are based on the first sampling strategy (option 1) mentioned in
-the [*Building site-level instances of the metaweb*] section, where we used the
+the *Building site-level instances of the metaweb* section, where we used the
 mean value of the species distributions as the species occurrence probabilities
 (results for other sampling strategies are shown in Supplementary Material, Fig.
 S1). Site-level results (before summarizing by ecoregion) are also provided in
