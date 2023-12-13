@@ -178,10 +178,17 @@ occurrences with coordinates between longitudes 175°W to 45°W and latitudes 10
 to 90°N. This was meant to collect training data covering a broader range than
 our prediction target (Canada only) and include observations in similar
 environments. Then, since GBIF observations represent presence-only data and
-most predictive models require absence data, we generated pseudo-absence data
-using the surface range envelope method, which selects random non-observed sites
-within the spatial range delimited by the presence data
-[@Barbet-Massin2012SelPse].
+most predictive models require absence data, we generated the same number of
+pseudo-absence data as occurrences for every species [@Barbet-Massin2012SelPse].
+We weighted candidate sites by their distance to a known observation (separately
+for each species) using the `DistanceToEvent` method from the *Julia* package
+`SpeciesDistributionToolkit`
+[https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl)
+, making it more likely to select sites further away from an observation and the
+known species range. This is because our intent was to model the potential
+distribution of species, capturing wider responses to the environment, as the
+downscaled metaweb we aimed to produce is potential in nature (see *Downscaled
+metaweb* section below).
 
 ### Environmental data
 
@@ -259,7 +266,7 @@ compared to the mean probabilities, as including some extreme values should
 confound the potential effects of environmental gradients. We chose option 1 to
 present our results as it is intuitive and essentially represents the result of
 a probabilistic SDM [as in @Gravel2019BriElt], but results obtained with other
-sampling strategies are available in Supplementary Material, Fig. S1.
+sampling strategies are available in Supplementary Material.
 
 Next, the two-species steps were aimed at assigning a probability of observing
 an interaction between two species in a given site. For each species pair, we
@@ -350,7 +357,7 @@ We used *Julia* v1.9.0 [@Bezanson2017JulFre] to implement all our analyses. We
 used packages `GBIF.jl` [@Dansereau2021SimJl] to reconcile species names using
 the GBIF Backbone Taxonomy, `SpeciesDistributionToolkit.jl`
 ([https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl))
-to handle raster layers, species occurrences and generate pseudoabsences,
+to handle raster layers, species occurrences and generate pseudo-absences,
 `EvoTrees.jl`
 ([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl))
 to perform the Gradient Boosted Trees, `EcologicalNetworks.jl`
@@ -380,16 +387,23 @@ from the localized predictions of the communities and networks obtained from the
 downscaling of the metaweb, then summarized for the ecoregions (using the median
 value). Expected ecoregion richness ([@Fig:ecoregion_measures]A) and expected
 number of links ([@Fig:ecoregion_measures]B) displayed similar distributions
-with a latitudinal gradient and higher values in the south. However,
-within-ecoregion variability was distributed differently, as some ecoregions
-along the coast displayed higher interquantile ranges, while ecoregions around
-the southern border displayed narrower ones ([@Fig:ecoregion_measures]C-D). All
-results shown are based on the first sampling strategy (option 1) mentioned in
-the *Building site-level instances of the metaweb* section, where we used the
-mean value of the species distributions as the species occurrence probabilities
-(results for other sampling strategies are shown in Supplementary Material, Fig.
-S1). Site-level results (before summarizing by ecoregion) are also provided in
-Supplementary Material (Figs. S2-S5).
+with a latitudinal gradient and higher values in the south. Within-ecoregion
+variability was distributed slightly differently with a less constant
+latitudinal gradiant, notably lower interquantile ranges near the southern
+border (for example, near Vancouver Island and the Rockies on the West Coast,
+and near the Ontario Peninsula, the Saint-Lawrence Valley, and Central
+New-Brunswick in the East; [@Fig:ecoregion_measures]C-D). Bivariate comparison
+of the distributions of species richness and expected number of links and of
+their respective within-ecoregion variability further shows some areas of
+mismatches, indicating that richness and links do not co-vary completely
+although they may show similar distributions for median values (see
+Supplementary Material, Fig. S1). All results shown are based on the first
+sampling strategy (option 1) mentioned in the *Building site-level instances of
+the metaweb* section, where we used the mean value of the species distributions
+as the species occurrence probabilities (results for other sampling strategies
+are shown in Supplementary Material, Fig. S2). Site-level results (before
+summarizing by ecoregion) are also provided in Supplementary Material (Figs.
+S3-S5).
 
 ![(A-B) Example of a community measure (A, expected species richness) and a
 network one (B, expected number of links). Both measures are assembled from the
@@ -402,54 +416,21 @@ marks representing even intervals. Real values (non-log transformed) are shown
 beside major tick marks while minor ticks represent half
 increments.](figures/ecoregion_comparison_iqr.png){#fig:ecoregion_measures}
 
-Direct comparison of the spatial distributions of species richness and expected
-number of links showed some areas with mismatches, both regarding the median
-estimates and regarding the within-ecoregion variability
-([@Fig:ecoregion_bivariates]). Median values for the ecoregions showed a similar
-bivariate distribution, with ecoregions in the south mostly displaying high
-species richness and a high number of links ([@Fig:ecoregion_bivariates]A). The
-northernmost ecoregions (Canadian High Artic Tundra and Davis Highlands Tundra)
-displayed higher richness (based on the quantile rank) compared to the number of
-links. Inversely, ecoregions further south (Canadian Low Artic Tundra, Northern
-Canadian Shield Taiga, Southern Hudson Bay Taiga) ranked higher for the number
-of links than for species richness. On the other hand, within-ecoregion
-variability showed different bivariate relationships and a less constant
-latitudinal gradient ([@Fig:ecoregion_bivariates]B). This indicates that
-richness and links do not co-vary completely (i.e. their variability is not
-highly correlated) although they may show similar distributions for median
-values.
-
-![Bivariate relationship between community and network measures for the median
-ecoregion value (A) and the within-ecoregion 89% interquantile range (B). Values
-are grouped into five quantiles separately for each variable. The colour
-combinations represent the nine possible combinations of quantiles. Species
-richness (horizontal axis) goes left to right from low (light grey, bottom left)
-to high (green, bottom right). The number of links goes bottom-up from low
-(light grey, bottom left) to high (blue, top
-left).](figures/ecoregion_bivariates.png){#fig:ecoregion_bivariates}
-
 Our results also indicate a mismatch between the uniqueness of communities and
 networks ([@Fig:ecoregion_lcbd]). Uniqueness was higher mostly in the north and
-along the south border for communities, but only in the north for networks
+along the south border for communities, but mostly in the north for networks
 ([@Fig:ecoregion_lcbd]A-B). Consequently, ecoregions with both unique community
 composition and unique network composition were mostly in the north
 ([@Fig:ecoregion_lcbd]C). Meanwhile, some areas were unique for one element but
-not the other. For instance, the New England-Acadian forests ecoregion
-(south-east, near 70°W and 48°N) had a highly unique species composition but a
-more common network composition ([@Fig:ecoregion_lcbd]C). Opposite areas with
-unique network compositions only were observed at higher between latitudes 52°N
-and 70°N (Eastern Canadian Shield Taiga, Northern Canadian Shield Taiga,
-Canadian Low Artic Tundra). Also, network uniqueness values for ecoregions
-spanned a narrower range between the 44 ecoregions than species LCBD values
-([@Fig:ecoregion_lcbd]D, left). Within-ecoregion variation was also lower for
-network values with generally lower 89% interquantile ranges among the
-site-level LCBD values ([@Fig:ecoregion_lcbd]D, right). Moreover, mismatched
-sites (unique for only one element) formed two distinct groups when evaluating
-the relationship between species richness and the number of links (see
-Supplementary Material, Fig. S5). The areas only unique for their species
-composition had both a high richness and number of links. On the other hand, the
-sites only unique for their networks had both lower richness and a lower number
-of links, although they were not the sites with the lowest values for both.
+not the other. For instance, ecoregions along the south border had a unique
+species composition but a more common network composition
+([@Fig:ecoregion_lcbd]C). Two ecoregions showed the opposite (unique network
+compositions only) at higher latitudes (Davis Highlands tundra, near 70°N, and
+Southern Hudson Bay taiga, near 54°N). Moreover, network uniqueness values for
+ecoregions spanned a narrower range between the 44 ecoregions than species LCBD
+values ([@Fig:ecoregion_lcbd]D, left). Within-ecoregion variation was also lower
+for network values with generally lower 89% interquantile ranges among the
+site-level LCBD values ([@Fig:ecoregion_lcbd]D, right).
 
 ![(A-B) Representation of the ecoregion uniqueness values based on species
 composition (A) and network composition (B). LCBD values were first computed
@@ -492,11 +473,11 @@ they co-occur and incorporates variability based on environmental conditions
 introducing a different association between species richness and network
 properties. @Galiana2021SpaSca found that species richness had a large
 explanatory power over network properties, but mentioned this could potentially
-be due to interactions between species being constant across space. Here, we
+be due to interactions between species being constant across space. ==Here, we
 found mismatches in the distribution of species richness and interactions that
 were especially apparent in their within-ecoregion variability
 ([@Fig:ecoregion_bivariates]), highlighting that interactions might vary
-differently than species distributions even over continental-scale gradients.
+differently than species distributions even over continental-scale gradients==.
 Network density (links on [@Fig:ecoregion_bivariates]A) were also lower in the
 north, contrarily to what was observed for all European terrestrial tetrapods
 [@Braga2019SpaAna; @Galiana2021SpaSca] and for willow-galler-parasitoid networks
@@ -509,21 +490,15 @@ Our LCBD and uniqueness results highlighted that areas with unique network
 composition differ from sites with unique species composition. In other words,
 the joint distribution of community and network uniqueness highlights different
 diversity hotspots. @Poisot2017HosPar showed a similar result with host-parasite
-communities of rodents and ectoparasitic fleas. Our results further show how
-these differences could be distributed across ecoregions and in a broad spatial
-extent. Areas unique for only one element (species or network composition)
-differed in their combination of species richness and number of links
-(Supplementary Material, Fig. S5), with species-unique sites displaying high
-values of both measures, and network-unique sites displaying low values.
-Moreover, LCBD scores essentially highlight variability hotspots and are a
-measure of the variance of community or network structure. Here, they also serve
-as an inter-ecoregion variation measure, which can be compared to the
-within-ecoregion variation highlighted by the interquantile ranges. The narrower
-range of values for network LCBD values and the lower IQR values indicate that
-both the inter-ecoregion and within-ecoregion variation are lower for networks
-than for species ([@Fig:ecoregion_lcbd]). Additionally, higher values for
-network LCBD also indicate that most ecoregions can hold ecologically unique
-sites.
+communities of rodents and ectoparasitic fleas. Our results further show that
+these differences could be distributed across ecoregions and over a broad
+spatial extent for mammal food webs. LCBD scores essentially highlight
+variability hotspots and are a measure of the variance of community or network
+structure. Here, they also serve as an inter-ecoregion variation measure, which
+can be compared to the within-ecoregion variation highlighted by the
+interquantile ranges. The narrower range of values for network LCBD values and
+the lower IQR values indicate that both the inter-ecoregion and within-ecoregion
+variation are lower for networks than for species ([@Fig:ecoregion_lcbd]).
 
 When to use the workflow we presented here will depend on the availability of
 interaction data or existing metawebs, and on the intent to incorporate

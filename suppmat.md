@@ -1,5 +1,5 @@
 ---
-title: Site-level figures and results
+title: Supplementary ecoregion-level and site-level figures
 subtitle: Supplementary material to *Spatially explicit predictions of food web structure from regional level data*
 author:
 - Gabriel Dansereau
@@ -12,6 +12,16 @@ header-includes:
 <!-- \setcounter{figure}{0} -->
 
 \newpage
+
+### Supplementary ecoregion-level figure
+
+<!-- Ecoregion bivariate -->
+
+![Bivariate relationship between community and network measures for the median ecoregion value (A) and the within-ecoregion 89% interquantile range (B). Values are grouped into five quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. Species richness (horizontal axis) goes left to right from low (light grey, bottom left) to high (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left).](figures/ecoregion_bivariates.png){#fig:ecoregion_bivariates height=60%}
+
+\newpage
+
+### Supplementary site-level figures
 
 <!-- Sampling options -->
 
