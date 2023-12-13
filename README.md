@@ -397,8 +397,10 @@ predicted probabilistic communities and networks, respectively. Values are first
 measured separately for all sites; then, the median value within each ecoregion
 was taken to represent the ecoregion-level value. (C-B) Representation of the
 89% interquantile range of values within the ecoregion for expected richness (C)
-and expected number of links
-(D).](figures/ecoregion_comparison_iqr.png){#fig:ecoregion_measures}
+and expected number of links (D). All color bars follow a log scale with tick
+marks representing even intervals. Real values (non-log transformed) are shown
+beside major tick marks while minor ticks represent half
+increments.](figures/ecoregion_comparison_iqr.png){#fig:ecoregion_measures}
 
 Direct comparison of the spatial distributions of species richness and expected
 number of links showed some areas with mismatches, both regarding the median
@@ -419,7 +421,7 @@ values.
 
 ![Bivariate relationship between community and network measures for the median
 ecoregion value (A) and the within-ecoregion 89% interquantile range (B). Values
-are grouped into three quantiles separately for each variable. The colour
+are grouped into five quantiles separately for each variable. The colour
 combinations represent the nine possible combinations of quantiles. Species
 richness (horizontal axis) goes left to right from low (light grey, bottom left)
 to high (green, bottom right). The number of links goes bottom-up from low
@@ -450,7 +452,7 @@ sites only unique for their networks had both lower richness and a lower number
 of links, although they were not the sites with the lowest values for both.
 
 ![(A-B) Representation of the ecoregion uniqueness values based on species
-composition (a) and network composition (b). LCBD values were first computed
+composition (A) and network composition (B). LCBD values were first computed
 across all sites and scaled relative to the maximum value observed. The
 ecoregion LCBD value is the median value for the sites in the ecoregion. (C)
 Bivariate representation of species and network composition LCBD. Values are
@@ -460,8 +462,8 @@ uniqueness (horizontal axis) goes left to right from low uniqueness (light grey,
 bottom left) to high uniqueness (green, bottom right). The network composition
 uniqueness goes bottom-up from low uniqueness (light grey, bottom left) to high
 uniqueness (blue, top left). (D) Probability densities for the ecoregion LCBD
-values for species and network LCBD (left), highlighting the variability of the
-LCBD between ecoregions, and the 89% interquartile range of the values within
+values for species and network LCBD (left), highlighting the variability of LCBD
+values between ecoregions, and the 89% interquartile range of the values within
 each ecoregion (right), highlighting the variability within the
 ecoregions.](figures/ecoregion_LCBD_4panels.png){#fig:ecoregion_lcbd}
 
