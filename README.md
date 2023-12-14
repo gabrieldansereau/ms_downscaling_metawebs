@@ -353,12 +353,50 @@ As with other measures, we then summarized the local uniqueness values by
 ecoregion by taking the median LCBD value and measuring the 89% interquantile
 range.
 
+### Analyses of network motifs
+
+To further explore network structure in space, we investigated the distribution
+of network motifs across space. Motifs are defined sets of interaction between
+species [@Milo2002NetMot; @Stouffer2007EviExi], for instance two predators
+sharing one prey, which are repeated within larger and more complex food webs.
+Motifs are linked to community persistence [@Stouffer2010UndFoo] and community
+structure [@Cirtwill2015ConPre; @Simmons2019MotBip], are conserved across scales
+[@Baker2015SpeRol; @Baiser2016MotAss], and are part of a common backbone of
+interactions among all food webs [@Mora2018IdeCom]. We focused on four of the
+most studied three-species motifs [@Stouffer2007EviExi; @Stouffer2010UndFoo;
+@Baiser2016MotAss] : S1 (tri-trophic food chains), S2 (omnivory), S4
+(exploitative competition) and S5 (apparent competition).  These motifs can be
+grouped into two pairs according to the ecological information they display: S1
+and S2 highlight different trophic structures, while S4 and S5 identicate
+different competition types. Therefore, we compared the spatial distribution of
+the motifs in each pair to see which ones were dominant across all our sites.
+First, we computed the expected motif count for each of the four motifs for all
+sites using the localized probabilistic networks from the downscaled metaweb
+[following @Poisot2016StrPro]. Then, we compared the expected counts of the
+motifs within the two pairs. To do so, we used a measure of normalized
+difference similar to the Normalized Difference Vegetation Index (NDVI), where
+we compute the difference between the two motif counts over their sum. We called
+the index comparing the two trophic motifs (S1 and S2) the Normalized Difference
+Trophic Index (NDTI), and the one comparing the competition motifs (S4 and S5)
+the Normalized Difference Competition Index. We defined both indexes as: $$NDTI
+= \frac{(S1 - S2)}{(S1 +S2)}$$ $$NDCI = \frac{(S4 - S5)}{(S4 +S5)}$$ Values for
+both indexes are bounded between -1 and 1. A value of 0 indicates that both
+motifs have the same expected counts. Positive values indicate that the first
+motif in each index (S1 and S4) is dominant and has a higher expected count,
+while negative values indicate that the second motif (S2 and S5) is dominant. As
+with previous measures, we then summarized both index values by ecoregion by
+taking the ecoregion median and measuring its within-ecoregion variation with
+the 89% interquantile range. Ecoregion values therefore indicate if one type of
+trophic structure (for NDTI) and one type of competition (for NDCI) is dominant
+in the ecoregion, while the interquantile range values measures whether the
+dominant type varies within the ecoregion.
+
 We used *Julia* v1.9.0 [@Bezanson2017JulFre] to implement all our analyses. We
 used packages `GBIF.jl` [@Dansereau2021SimJl] to reconcile species names using
 the GBIF Backbone Taxonomy, `SpeciesDistributionToolkit.jl`
 ([https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl))
-to handle raster layers, species occurrences and generate pseudo-absences,
-`EvoTrees.jl`
+to handle raster layers, species occurrences and generate pseudo-absences (using
+the `DistanceToEvent` method), `EvoTrees.jl`
 ([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl))
 to perform the Gradient Boosted Trees, `EcologicalNetworks.jl`
 [@Poisot2019EcoJl] to analyze network and metaweb structure, and `Makie.jl`
@@ -448,6 +486,19 @@ values between ecoregions, and the 89% interquartile range of the values within
 each ecoregion (right), highlighting the variability within the
 ecoregions.](figures/ecoregion_LCBD_4panels.png){#fig:ecoregion_lcbd}
 
+
+
+![Comparison of the dominant ecological motifs across ecoregions. A) Normalized
+Difference Index (NDTI) comparing the trophic motifs S1 (tri-trophic food
+chains) and S2 (omnivory). Positive values indicate a dominance of S1 while
+negative values indicate a dominance of S2. Values equal or superior to |0.5|
+are shown with the same color as they indicate a high dominance of one motif. B)
+Normalized Difference Index (NDCI) comparing the competition motifs S4
+(exploitative competition) and S5 (apparent competition). Positive values
+indicate a dominance of S4 while negative values indicate a dominance of S5.
+(C-D) Representation of the 89% interquantile range of values within the
+ecoregion for the trophic motifs index (NDTI, C) and competition motifs index
+(NDCI, D).](figures/motifs_ecoregion_NDI_4panels.png){#fig:motifs}
 # Discussion
 
 Our approach presents a way to downscale a metaweb, produce localized
