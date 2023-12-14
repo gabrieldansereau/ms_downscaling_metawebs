@@ -61,6 +61,14 @@ Bivariate representation of the estimates (a) and uncertainty (b) of species ric
 
 \newpage
 
-<!-- LCBD densities -->
+<!-- Motif figures -->
 
-![Difference in the grouping of the sites identified as unique only for their networks (pink) or only their species composition (cyan). Sites unique only for their species composition mostly have high species richness and a high number of links while sites unique for their network composition only have low richness and number of links. Other sites not belonging to the unique species or network groups are shown in the background (black) and span a wider range. Values on the y-axis for the density figures (right) are probability densities scaled so that the area under the curve equals one. Similarly, the area under the curve for a given range of values on the x-axis (richness or links) represents the probability of observing a value in that range for the different site groupings.](figures/lcbd_bivariate_densities.png){#fig:lcbd_scatter}
+<div id="fig:motifs" class="subfigures">
+
+  ![Normalized Difference Trophic Index (NDTI)](figures/motifs_NDI_trophic.png){#fig:motifs_ndti height=40%}
+
+  ![Normalized Difference Competition Index (NDCI)](figures/motifs_NDI_competition.png){#fig:motifs_ndci height=40%}
+
+Comparison of the dominant ecological motifs across ecoregions. a) Normalized Difference Index (NDTI) comparing the trophic motifs S1 (tri-trophic food chains) and S2 (omnivory). Positive values indicate a dominance of S1 while negative values indicate a dominance of S2. Values equal or superior to |0.5| are shown with the same color as they indicate a high dominance of one motif. b) Normalized Difference Index (NDCI) comparing the competition motifs S4 (exploitative competition) and S5 (apparent competition). Positive values indicate a dominance of S4 while negative values indicate a dominance of S5.
+
+</div>

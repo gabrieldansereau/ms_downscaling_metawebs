@@ -577,6 +577,18 @@ interquantile ranges. The narrower range of values for network LCBD values and
 the lower IQR values indicate that both the inter-ecoregion and within-ecoregion
 variation are lower for networks than for species ([@Fig:ecoregion_lcbd]).
 
+Our analysis of the distribution of dominant network motifs revealed additional
+areas of variation in network structure. Trophic motifs (S1 and S2, measured
+through NDTI values) showed a latitudinal gradient different from the richness
+and links ones, with high dominance of tri-trophic chains (S1) in the north and
+higher omnivory counts (S2) only in a few ecoregions in the south. This results
+did not seem related to ecoregion variance, which once again showed a very
+different distribution from the median values. Meanwhile, competition motifs (S4
+and S5, measured through NDCI values) showed an even dominance of apparent
+competition (S5) but high variance in a single ecoregion. Overall, our results
+show that dominant motifs within a mammal food web vary between ecoregions and
+vary differently across space.
+
 When to use the workflow we presented here will depend on the availability of
 interaction data or existing metawebs, and on the intent to incorporate
 interaction variability, as well as ecoregion-level variability. In systems
