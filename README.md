@@ -389,7 +389,7 @@ value). Expected ecoregion richness ([@Fig:ecoregion_measures]A) and expected
 number of links ([@Fig:ecoregion_measures]B) displayed similar distributions
 with a latitudinal gradient and higher values in the south. Within-ecoregion
 variability was distributed slightly differently with a less constant
-latitudinal gradiant, notably lower interquantile ranges near the southern
+latitudinal gradient, notably lower interquantile ranges near the southern
 border (for example, near Vancouver Island and the Rockies on the West Coast,
 and near the Ontario Peninsula, the Saint-Lawrence Valley, and Central
 New-Brunswick in the East; [@Fig:ecoregion_measures]C-D). Bivariate comparison
@@ -473,18 +473,23 @@ they co-occur and incorporates variability based on environmental conditions
 introducing a different association between species richness and network
 properties. @Galiana2021SpaSca found that species richness had a large
 explanatory power over network properties, but mentioned this could potentially
-be due to interactions between species being constant across space. ==Here, we
-found mismatches in the distribution of species richness and interactions that
-were especially apparent in their within-ecoregion variability
-([@Fig:ecoregion_bivariates]), highlighting that interactions might vary
-differently than species distributions even over continental-scale gradients==.
-Network density (links on [@Fig:ecoregion_bivariates]A) were also lower in the
-north, contrarily to what was observed for all European terrestrial tetrapods
+be due to interactions between species being constant across space. Here, we
+found that potential species richness and number of links displayed similar
+distributions following a latitudinal gradient, but that the within-ecoregion
+variance was lower along the southern border than the measures themselves
+[(@Fig:ecoregion_measures]). Why the relationship between the median ecoregion
+values and the ecoregion variance is not constant across space could be verified
+through more tests in future studies (for instance, testing the effect of higher
+urban density in the south). Examples of metaweb structure in space are rare and
+not ideal for comparison with our results. For instance, we found that network
+density (links on [@Fig:ecoregion_measures]B) were lower in the north, which is
+contrary to what was observed for all European terrestrial tetrapods
 [@Braga2019SpaAna; @Galiana2021SpaSca] and for willow-galler-parasitoid networks
-[@Gravel2019BriElt], where connectance was higher in northern regions. Further
-research should investigate why these results might differ between the two
-continents and whether it is due to the methodology, data, or biogeographical
-processes.
+[@Gravel2019BriElt], where connectance was higher in northern regions. However,
+those are systems with different environmental conditions and number of species.
+Further research should investigate why these results might differ between
+continents and ecological systems and whether it is due to the methodology,
+data, or biogeographical processes.
 
 Our LCBD and uniqueness results highlighted that areas with unique network
 composition differ from sites with unique species composition. In other words,
