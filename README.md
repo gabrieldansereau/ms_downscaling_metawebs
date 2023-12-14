@@ -441,7 +441,7 @@ the metaweb* section, where we used the mean value of the species distributions
 as the species occurrence probabilities (results for other sampling strategies
 are shown in Supplementary Material, Fig. S2). Site-level results (before
 summarizing by ecoregion) are also provided in Supplementary Material (Figs.
-S3-S5).
+S3-S6).
 
 ![(A-B) Example of a community measure (A, expected species richness) and a
 network one (B, expected number of links). Both measures are assembled from the
@@ -486,7 +486,28 @@ values between ecoregions, and the 89% interquartile range of the values within
 each ecoregion (right), highlighting the variability within the
 ecoregions.](figures/ecoregion_LCBD_4panels.png){#fig:ecoregion_lcbd}
 
-
+Comparing the distribution of dominant network motifs revealed additional areas
+of variation in network structure ([@Fig:motifs]). NDTI displayed a latitudinal
+gradient between the trophic motifs. Northern ecoregions showed positive NDTI
+values and high dominance of S1 (tri-trophic chains) expected counts compared to
+S2 (omnivory) but ecoregions along the south border showed a reduced dominance
+([@Fig:motifs]A). Ecoregions near the Ontario Peninsula and Saint-Lawrence
+Valley showed values close to zero, indicating a balance between two motifs,
+while Central New Brunswick had slighty negative values, indicating a low
+dominance of S2. In comparison, NDCI values showed an evenly high dominance of
+S5 (apparent competition) over S4 (exploitative competition) across all
+ecoregions ([@Fig:motifs]B). Meanwhile, within-ecoregion variance displayed a
+different spatial distribution from the median values. NDTI interquantile ranges
+spanned a wide range of values and were higher both in the north and in the
+south (although not in the ecoregions with higher NDTI median values)
+([@Fig:motifs]C). On the other hand, NDCI interquantile ranges showed lower
+within-ecoregion variance in most ecoregions except in the northernmost one
+(Canadian High Arctic tundra), which has a notably higher value­
+([@Fig:motifs]D). Although this higher variance does not reflect in the NDCI
+median values, it does appear when looking at the site-level, where this
+ecoregion is the only one with patches with high positive NDCI values
+(indicating a dominance of S4) surrounded by highly negative values (indicating
+a dominance of S5) as in other ecoregions (Fig. S6B).
 
 ![Comparison of the dominant ecological motifs across ecoregions. A) Normalized
 Difference Index (NDTI) comparing the trophic motifs S1 (tri-trophic food
