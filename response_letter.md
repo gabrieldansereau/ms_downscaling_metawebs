@@ -92,14 +92,13 @@ We incorporated most of the suggestions from Reviewer 2 in the updated manuscrip
 > Data:  
 > L. 111. Why did you include species distributions and occurrences (long. and lat.) outside of Canada, and as far south as central America? Does it improve your predictions? Did you make a test run with species ranges restricted to Canada, or North America? What happens to your predictions/results if you are more conservative in your species range? I wonder whether including data from so far south can result in an over- or under- representation of certain species in some of your ecoregions, especially in the southern parts of Canada, could it? Could you provide a test with a more conservative species range more closely reflecting the biogeography of Canada, or at minimum justify your choice and its implications.  
 
-- Training SDMs on a wider range is a standard practice
-- Species were selected for the Canadian Metaweb according to IUCN
-- We want to include species even if only the southern part of their range is in Canada
+Our intent is to model the potential distributions of species and wide responses to environmental conditions, which we emphasized in this revised version. Therefore, we believe it is appropriate to include occurrences outside of Canada to train our models as it can provide information on environmentally similar sites Canada which might not have been sampled. We recognize that our training extent is very wide and goes far beyond Canada in the hope of capturing a wide span of environmental conditions and as much of the species distributions in Canada as possible. It is a choice we made considering the goal of our study and discussed in referenced textbooks. For instance, Guisan et al. (2018) mention that using a only a subset of the species range (as we would be doing if considering only observations in Canada) does not allow to model the full niche of species and full extent of environmentally suitable conditions. Consequently, the risk of over-representating species ranges in the south seems acceptable because we intend to represent potential distributions, therefore the full niche overlapping Canada.
+
+We would also like to note that only species present in Canada according to IUCN were included in the Canadian metaweb, so we do not get an additional input of species by considering novel environmental conditions.
 
 > L. 114. Can the random choice of pseudo-absences in space influence the outcome, or does this computational step not have any effect on the results at all?  
 
-- The method to select pseudo-absences does have an effect, as shown with our updated result
-- We believe the DistanceToEvent method will be more appropriate to model the potential distribution of the species, as suggested by Reviewer 1
+The method to select pseudo-absences does have an effect. As we explained in our general response, we believe selecting pseudo-absences further away from occurrences better represents the potential distribution of species and is more appropriate the downscale the metaweb. We added this explanation on **LXYZ**.
   
 > L. 213. What are the localized interaction values? What do you mean by “interaction value”, the interaction probability, mean/median no. of links at a given site? This is not clear. 
   
