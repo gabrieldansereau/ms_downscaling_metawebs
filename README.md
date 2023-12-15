@@ -617,6 +617,19 @@ for showing variation within and between ecologically meaningful biogeographic
 boundaries [@Martins2022GloReg], which, as our results showed, is not constant
 across space and can help identify contrasting diversity hotspots.
 
+Adding validation to our framework will be highly important for the predictions
+to be actionable. We see it as the next step since data availability currently
+remains an issue. Developing a way to generate actionable information when
+information is initially scarce, as we present here, is highly important in
+itself. Our manuscript highlights the application of a predictive pipeline in a
+case where interactions are almost fully predicted, but it can equally be
+applied when there are additional data about the interaction network. Moreover,
+the predictions we make are already actionnable, as any future sampling of food
+web structure can be used to validate them, and fed into the model to iterate
+these results again. As @Strydom2023GraEmb point out, validation of metaweb
+predictions, empirical sampling, and method design should all proceed jointly,
+and making conceptual progress in one of these areas helps all the others.
+
 The recent shift in focus towards building metawebs opens many opportunities for
 projections of networks in space through probabilistic downscaling, as we
 suggested here. Metawebs have been documented in many systems, allowing us to
