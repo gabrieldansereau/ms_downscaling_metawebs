@@ -81,6 +81,7 @@ The European tetrapod metaweb is based on expert knowledge and litterature revie
 We added more information on the size and content of the Canadian mammal metaweb relevant to this manuscript (LXYZ). We would however like to point out that we are not creating themetaweb here, but only re-using the one produced by Strydom et al. (2022). The metaweb is available alongside their manuscript.
 
 > This leads me to another important question, why were only species richness and number of link density calculated as network properties. Strictly, speaking you would not have needed a food web approach to calculate these two properties. It would have been more interesting if you would have provided analyses of connectance, and in- and out-degree, in space? How was the choice of metrics made, could you please add a justification to the paper.  
+
 We added a motifs analysis which makes use of the food web approach. Regarding the choice of network properties, we considered showing connectance, but its spatial distribution closely follows that of the number of links. Given the limited space for figures, we chose to represent the number of links as its relationship with species richness has been highlighted in a spatial context in recent studies (Galiana et al. 2021; Galiana et al. 2022). Gravel et al. 2019 also showed it as their main network property across space. We did not deem necessary to present as many properties as Braga et al. (2019).
 
 > Finally, while the paper is generally well-written, the clarity of some parts of the text could still be improved.  
@@ -103,29 +104,27 @@ We would also like to note that only species present in Canada according to IUCN
 The method to select pseudo-absences does have an effect. As we explained in our general response, we believe selecting pseudo-absences further away from occurrences better represents the potential distribution of species and is more appropriate the downscale the metaweb. We added this explanation on **LXYZ**.
   
 > L. 213. What are the localized interaction values? What do you mean by “interaction value”, the interaction probability, mean/median no. of links at a given site? This is not clear. 
-  
+
+We clarified this on **LXYZ**. The site-by-interaction matrix is assembled with the localized probability of individual interactions at every site, based on the downscaled metaweb. Its dimensions are 970,698 sites by 3,108 interactions (the number of defined interactions in the Canadian metaweb once reconciled with GBIF taxonomy). This is analoguous to the site-by-species community matrix used for species uniqueness (970,698 sites by 159 species).
+
 > L. 242. Are the expected median values per ecoregions based on a median binary summary web of the many versions of the localized metawebs, or did you calculate species richness and number of links per species for the many versions of the localized metawebs and then take the median? Could you make this clearer. How are the probabilities of the interactions reflected in these median values? … because rare interactions are less often predicted and hence the median number of links per species would be lower?  
 
-- The median values represent the median across all sites in the ecoregion
-- Species richness and number of links are first calculated on the localized metawebs
-- Then we calculate the median value across all sites in the ecoregion and attribute this value for the ecoregion
-- An ecoregion with a high median for the number of links could either have interactions with a very high probability or many interactions with a lower probability
+We clarified this on **LXYZ**. The median values represent the median across all sites in the ecoregion. First, we calculated species richness and number of links separately on all sites in the ecoregion based on the downscaled metaweb. Then, we take the median value across all sites in the ecoregion and attribute this value for the ecoregion. An ecoregion with a high median for the number of links could either have some interactions with a very high probability or many interactions with a lower probability.
 
 > Discussion:  
 > L. 301. Are you comparing your predicted mammal food web from Canada to the observed tetrapod food web in Europe, the latter which includes more species, especially at lower trophic levels (I assume)? Is this meaningful at all?  
 
-- We recognize this is not the best comparison (as we mention in the text)
-- However, we think it's relevant to mention here as it is the closest comparison of a metaweb structure in space
-
-> L. 302. It would have been nice if you could reflect upon and elaborate in which way the data and methodology could have influenced the results. The same for biogeography.  
+We nuanced this statement on **LXYZ**. We recognize this is not the best comparison (as we mention in the text). However, we think it's relevant to mention here as it is the closest comparison of a metaweb structure in space.
  
 > L. 303. There should be differences between Europe and Canada due to varying climatic conditions at the same latitudes. Due to the Gulf stream northern areas of Europe are much milder in e.g., temperature than regions in Canada, so it makes sense that the food webs differ in connection given that temperatures influence species trophic interactions and food web properties.  
 
-- We emphasized that we show examples of the potential distribution of the network metrics, not a detailed analysis of network structure in Canada.
+We incorporated part of this statement.
 
 > Figures:  
 > The figures are pretty, but it was impossible to read the color code (blue-green shading) on a grey color scale print out.  
 
-- We chose this specific color palette as there are very few colorblind-friendly ones
+We chose these specific colors as there are very few colorblind-friendly bivariate color palettes (based on this review: https://jakubnowosad.com/posts/2020-08-25-cbc-bp2/). We kept the same colors throughout for species and network results for consistency. It is unfortunate that the colors do not stand out on grey print out but we prefer to stick with a colorblind-friendly option.
 
-> Fig. 3b. Could the higher variation in the predictions in the southernmost part of Canada be because the predictions were trained on data of species occurrences (distributions) outside the range of
+> Fig. 3b. Could the higher variation in the predictions in the southernmost part of Canada be because the predictions were trained on data of species occurrences (distributions) outside the range of Canada?
+
+This result has changed, as explained in our detailed response. We would however emphasize that the correct interpretation of the new result is that there is higher variation within the ecoregions (not variation in the predictions) near the southern border. 
