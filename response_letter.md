@@ -29,11 +29,11 @@ Please also find below our point-by-point response to all comments from the revi
 
 > Thank you for a great paper. I really like the design of your workflow, and I think it provides a sound and solid way of downscaling the metawebs into ecoregion or local webs, that could foster new analyses of different taxa and regions. Just to be clear, I believe the structure of your workflow seems quite sound to me, and the way it embeds probabilistic measures of potential distributions and potential interactions may help modelling the variability that local networks may have in nature in a realistic way. In fact, I do look forward to see comparisons of these potential networks with empirical networks (and where do realized networks lie within the possible networks), but that’s a different step, that first requires developing the analytical framework that you are presenting here. I only have two major suggestions which, I believe, would sharpen and strengthen your workflow, and a specific comment.  
 
-We are grateful to Reviewer 1 for their kind words and understanding of our manuscript.
+We are grateful to Reviewer 1 for their positive comments and understanding of our manuscript.
 
 > Why do you use random pseudoabsences within the species range to construct the Species Distribution Models if you want to represent the potential distribution? You do it throughout all the range of the data, but that includes both areas within the species range, and areas outside of it. I’m telling this because the decision is not meaningless in terms of whether you model current distributions (where including absences in places within the range to include areas that could host presences but are unoccupied by the species matters) or potential distributions (where capturing the wider responses to the environment is what matters). That is, capturing where the species is vs where the species could be. A consequence of this is that how you pick pseudoabsences is a key choice, and I believe you may have taken the wrong direction. There are examples in the literature about how to make this choice, but if you would create them from outside of the observed range of the species, or assigning lower probability to choosing non-sampled places within the known species range I believe your models will represent potential distribution much better. If you do so, this should be much clear in the text.  
 
-As mentioned above, we agree with the reviewer that we should aim to model potential distributions and wider responses to the environment. We followed the reviewer's suggestion and assigned a lower probability of choosing pseudo-absences near occurrences (therefore the known species range) and a higher probability of choosing sites further away.
+As mentioned above, we agree with the reviewer that we should aim to model potential distributions and wider responses to the environment and clarified it on **LXYZ**. We followed the reviewer's suggestion and assigned a lower probability of choosing pseudo-absences near occurrences (therefore the known species range) and a higher probability of choosing sites further away.
   
 > Your spatial comparison between richness and network size is so great that I wonder whether you do not explore other aspects of network structure, such as nestedness and modularity. These metrics may help understanding better the spatial mismatches between richness and number of links shown in figs 3 and 4, as if I’m getting it correctly, these may be caused by the selection of a handful modules in the northern ecoregions, compared to more connected networks towards the south-southwest.  
 
@@ -51,60 +51,40 @@ We believe that our analysis of motifs further explores the gradients in network
 ## Reviewer 2
 
 ### General comment
+
 > Dansereau et al. use a predicted tetrapod metaweb to predict the structure of mammal food webs for Canada at the local scale. I enjoyed reading the paper and applaud the authors for their efforts in predicting species interactions in space, which is a monumental task, and hard, maybe even impossible, to achieve empirically. All in all, the work by Dansereau et al. 2023 is very impressive and deals with a topic of high relevance and importance for food web ecology, and beyond. Especially, the enormous pipeline of computations behind this work is truly impressive and inspiring. The framework presented opens many new opportunities and holds great potential for improving predictive food web ecology. It especially nice to see that this approach allows for capturing variability in trophic interactions at the local food webs. 
 
 We are thankful to Reviewer 2 for their acknowledgement of the work we put into this manuscript.
 
 > That said, I do have some concerns and questions regarding the realism and validity of the predictions, based on species distribution data outside of the target region (Canada), and on a predicted metaweb based on species interactions from a different continent, which results in predictive algorithms trained on data outside the target region(s). Moreover, the study bases prediction upon prediction in a long pipeline of predictions, are there any risk involved with this in terms of how realistic the networks are? Could you add some reflections about this in the main text.  
 
-- Point out that the Canadian metaweb was validated
-- SDMs are also validated
-- We intend to represent potential networks and distributions
-- We want to show the potential variation in space
+We would like to point out that the Canadian metaweb was validated when presented by Strydom et al. (2022), which we also clarified in the main text (**LXYZ**). The success rate was 91% for interactions recorded in the Global Biotic Interactions (GloBI) database and of 92% for interactions documented in Newfoundland by Strong and Leroux (2014). These success rates are impressive given that only 4% of species are shared with Europe. We also evaluated the performance of our SDMs, which was very high for all species (available on [GitHub](https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv)). Given these, we believe our predictions will be realistic enough, especially as we now further focused on potential distributions following Reviewer 1's suggestions. Our intent is to represent potential networks and potential variation in space as a first methodological step, which we achieve here in a explicit way as we use and report probabilistic values throughout.
 
 > In the following, I would like to ask some clarifying questions about the premise of this work and the choices made, which I also think should be made clearer in the main text. As far as I understand it, the accuracy of the metaweb is important for the accuracy of the local food web predictions, which in turn is important for the local webs to be actionable, one of the ultimate goals with this work.  
 
-- Repondre un petit truc. Clarifier ce qui est important ou non
+We would like to emphasize that the premise of our work is to generate local food web predictions when all we have is an higher level metaweb and no specific localized data, as we discuss in the last paragraphs of the Discussion. The accuracy of the predictions will of course depend on the accuracy of the data (here the metaweb). Yet, developing a way to generate actionable information when no information is available is also highly important in our view.
 
 > Without comparing the predicted output to observed data, how sure can you be that the predicted food webs reflect actual food web realizations? Therefore, a validation of the results should be added to the paper, and this should also be discussed. There must be some field sampled information on mammals in Canada for some of the defined ecoregions which you could use for comparing the predicted species composition of the food webs to observed ones. For the predictions to be actionable, this would seem an important step.  
 
-- As Reviewer 1 pointed out we present an analytical framework first and foremost
-- Summary results, such as motifs, will be easier to validate than entire networks, especially at the ecoregion level
-- Validation would be relevant, but data availability is an issue
-- Issues with available data
-	- Newfoundland: not spatial, already used for Canadian metaweb
-	- Arctic food webs: few species
-	- Marine motifs: marine species
-	- Problème déjà existant pour validation metaweb, trop circulaire de revalider. Peut pas faire sans pseudo replication
-- Recommander comment on devrait valider par la suite
-``
+We appreciate Reviewer 2's concerns over validation and actionability of the predictions. As Reviewer 1 pointed out, we present first and foremost an analytical framework which is necessary before we can compare potential networks and predictions with empirical networks. One of the benefits of the approach we present here is that our summary results, such as the new ones for motifs, will be easier to validate than entire networks, especially at the ecoregion level. 
+
+Validation would indeed be relevant and highly important for the predictions to be actionable, as Reviewer 2 mentions. We see it as the next step since data availability is for now an issue. What we can do, for now, is to recommend how validation should be done once we have the data. We should not slow down the development of methods that generate actionable predictions, as they also generate information we do not already have and can tell us where to look specifically. For instance, our maps do not show complete networks; they show reasonable biogeographical gradients which should hold with empirical networks and tell us where to look next given network structure or hotspots of uniqueness. As Strydom et al. (2023, Methods in Ecology and Evolution) point out, validation of (metaweb) predictions, empirical sampling, and method design should all proceed jointly.
+
 > If I understand correctly, for the predictions behind this study to work, field sampled observations are necessary - that is the European tetrapod metaweb based on field observations were essential to make the predicted Canadian metaweb. I find this fundamental premise of the metaweb construction underreported in this paper. Despite all the help computers can provide in making highly resolved predictions of species interactions in space, they still need high quality input data based on field observations to work properly. This point is not trivial, especially not for the “actionability” of the predictions. This should be acknowledged in the paper.  
 
-- The European tetrapod metaweb is based on expert knowledge and litterature review, not field observations, although this also requires tremendous work
-- Yes, our framework does require a metaweb, but it could be applied to any one. We use the probabilistic value here, but it doesn't have to be. (as we discuss in the Discussion)
-	- Surtout si incertitude à échelle des interactions
-	- Couper en 2. Oui étape suivante est validation empirique. 
-	- Si on avait pas ce problème, pas d'infos sur où regarder pour réseaux.
-	- Carte dit où regarder et à quel endroit, pas les réseaux complets. Mais on s'attend à gradients biogéo raisonnables
-	- Qu'est-ce qu'on suggère comme utilisation des résultats et ce qui n'est pas faisable
-	- On apprécie les inquiétudes
-- Lack of input data is one the point of Tanya's manuscript: when we don't know, we can infer from somewhere else
-	- But this is not the point of our paper
-- Also from Tanya's perspective manuscript: a metaweb is sometimes "simpler" to obtain than localized network values in multiple locations
+The European tetrapod metaweb is based on expert knowledge and litterature review (**LXYZ**), not field observations (although this also requires tremendous work). As we mention in the Discussion, our framework does require a metaweb, but it could be applied to any one. It is especially useful if used with probabilistic values and uncertainty at the scale of interactions, as we do here, but it doesn't have to be. What to do when we don't have have a metaweb is not the point of the current manuscript; rather it was covered by Strydom et al. (2022) and Strydom et al. (2023), on which we admittedly based a lot of this work, who showed that we can transfer knowledge from other sources (as was done from Europe for the Canadian metaweb) and that building a metaweb is an essential step before getting to localized network values.
 
 > Generally, I find the description of the metaweb and the assumptions behind it too sparse. How big is the metaweb? How many species, links and trophic levels does it contain? Does it only contain mammals? What resource species (prey) does it contain? Is it just mammals preying on other mammals? Could you provide a network of the metaweb in the SI with some more information?  
 
-- We added more information on the metaweb relevant to this paper
-- But we are not creating the metaweb here, we're reusing it from another manuscript
+We added more information on the size and content of the Canadian mammal metaweb relevant to this manuscript (LXYZ). We would however like to point out that we are not creating themetaweb here, but only re-using the one produced by Strydom et al. (2022). The metaweb is available alongside their manuscript.
 
 > This leads me to another important question, why were only species richness and number of link density calculated as network properties. Strictly, speaking you would not have needed a food web approach to calculate these two properties. It would have been more interesting if you would have provided analyses of connectance, and in- and out-degree, in space? How was the choice of metrics made, could you please add a justification to the paper.  
 
-- We added a motifs analysis which makes use of the food web approach
-- Connectance is in supp.mat. The spatial distribution exactly matches the number of links as, following Poisot et al. 2016's probabilistic definitions, it is the number of link divided by the number of species in the metaweb (159)
-- Previous studies such as Gravel et al. 2019, Braga et al. 2019 use number of links/connectance as their main network property in space
+We added a motifs analysis which makes use of the food web approach. Regarding the choice of network properties, we considered showing connectance, but its spatial distribution exactly matches the number of links. This is normal as connectance is measured on a probabilistic network as the number of link divided by the number of species in the metaweb (Poisot et al. 2016), which is constant across our study extent. Given the limited space for figures, we chose to represent the number of links as its relationship with species richness has been highlighted in a spatial context in recent studies (Galiana et al. 2021; Galiana et al. 2022). Gravel et al. 2019 also showed it as their main network property across space. We did not deem necessary to present as many properties as Braga et al. (2019).
 
 > Finally, while the paper is generally well-written, the clarity of some parts of the text could still be improved.  
 
+We followed the reviewer's suggestion where they identified that the text was unclear to them.``
 ### Detailed comments
 
 We incorporated most of the suggestions from Reviewer 2 in the updated manuscript. All changes are listed in the additional Track Changes file. Here, we further provide responses to a few specific comments from the Reviewer.
@@ -147,4 +127,4 @@ We incorporated most of the suggestions from Reviewer 2 in the updated manuscrip
 
 - We chose this specific color palette as there are very few colorblind-friendly ones
 
-> Fig. 3b. Could the higher variation in the predictions in the southernmost part of Canada be because the predictions were trained on data of species occurrences (distributions) outside the range of Canada?``
+> Fig. 3b. Could the higher variation in the predictions in the southernmost part of Canada be because the predictions were trained on data of species occurrences (distributions) outside the range of
