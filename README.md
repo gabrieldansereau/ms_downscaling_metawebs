@@ -155,13 +155,15 @@ Nature (IUCN) checklist [@Strydom2022FooWeb]. Briefly, the metaweb was developed
 using graph embedding and phylogenetic transfer learning based on the metaweb of
 European terrestrial mammals, which is itself based on a comprehensive survey of
 interactions reported in the scientific literature [@Maiorano2020TetSpe]. The
-Canadian metaweb is probabilistic, which has the advantage of reflecting the
-likelihood of an interaction taking place given the phylogenetic and trait match
-between two species. This allows incorporating interaction variability between
-species (i.e., taking into account that two species may not always interact
-whenever or wherever they occur); however, we highlight that other factors
-beyond trait and phylogenetic matching (e.g., population densities) will also
-contribute to observed interaction frequencies.
+Canadian metaweb showed a 91% success rate for known interactions between
+Canadian mammals recorded in global databases [@Strydom2022FooWeb]. This metaweb
+is probabilistic, which has the advantage of reflecting the likelihood of an
+interaction taking place given the phylogenetic and trait match between two
+species. This allows incorporating interaction variability between species
+(i.e., taking into account that two species may not always interact whenever or
+wherever they occur); however, we highlight that other factors beyond trait and
+phylogenetic matching (e.g., population densities) will also contribute to
+observed interaction frequencies.
 
 ### Species occurrences
 
@@ -263,10 +265,10 @@ pronounced effect on network structure as it should reduce the number of links
 by removing many of the rare interactions [@Poisot2016StrPro]. On the other
 hand, we expected random sampling to create higher spatial heterogeneity
 compared to the mean probabilities, as including some extreme values should
-confound the potential effects of environmental gradients. We chose option 1 to
-present our results as it is intuitive and essentially represents the result of
-a probabilistic SDM [as in @Gravel2019BriElt], but results obtained with other
-sampling strategies are available in Supplementary Material.
+confound the main trends promoted by environmental gradients. We chose option 1
+to present our results as it is intuitive and essentially represents the result
+of a probabilistic SDM [as in @Gravel2019BriElt], but results obtained with
+other sampling strategies are available in Supplementary Material.
 
 Next, the two-species steps were aimed at assigning a probability of observing
 an interaction between two species in a given site. For each species pair, we
@@ -337,21 +339,23 @@ networks by computing the values over the adjacency matrix, which has been shown
 to capture more unique sites and uniqueness variability than through species
 composition [@Poisot2017HosPar]. Here, we measured and compared the uniqueness
 of our localized community and network predictions. For species composition, we
-assembled a site-by-species community matrix with the probability of occurrence
-at every site from the species distribution models. For network composition, we
-assembled a site-by-interaction matrix with the localized interaction values
-from the spatial probabilistic metaweb. We applied the Hellinger transformation
-on both matrices and computed the LCBD values from the total variance in the
-matrices [@Legendre2013BetDiv]. High LCBD values indicate a high contribution to
-the overall variance and a unique species or interaction composition compared to
-other sites. Since the values themselves are very low given our high number of
-sites [as in @Dansereau2022EvaEco], what matters primarily is the magnitude of
-the difference between the sites. Given this, we divided values by the maximum
-value in each matrix (species or network) and suggest that these should be
-viewed as relative contributions compared to the highest observed contribution.
-As with other measures, we then summarized the local uniqueness values by
-ecoregion by taking the median LCBD value and measuring the 89% interquantile
-range.
+assembled a site-by-species community matrix (970,698 sites by 159 species) with
+the probability of occurrence of each species at every site obtained in the
+species distribution models. For network composition, we assembled a
+site-by-interaction matrix with the localized probability of interaction at
+every site given by the downscaled metaweb (therefore 970,698 sites by 3,108
+interactions with defined probabilities in the metaweb). We applied the
+Hellinger transformation on both matrices and computed the LCBD values from the
+total variance in the matrices [@Legendre2013BetDiv]. High LCBD values indicate
+a high contribution to the overall variance and a unique species or interaction
+composition compared to other sites. Since the values themselves are very low
+given our high number of sites [as in @Dansereau2022EvaEco], what matters
+primarily is the magnitude of the difference between the sites. Given this, we
+divided values by the maximum value in each matrix (species or network) and
+suggest that these should be viewed as relative contributions compared to the
+highest observed contribution. As with other measures, we then summarized the
+local uniqueness values by ecoregion by taking the median LCBD value and
+measuring the 89% interquantile range.
 
 ### Analyses of network motifs
 
@@ -422,26 +426,26 @@ community and network-level measures presented here are not actual predictions
 of the measure itself (e.g., we do not present a prediction of actual species
 richness at each location). Instead, they are the reflection of these metrics
 from the localized predictions of the communities and networks obtained from the
-downscaling of the metaweb, then summarized for the ecoregions (using the median
-value). Expected ecoregion richness ([@Fig:ecoregion_measures]A) and expected
-number of links ([@Fig:ecoregion_measures]B) displayed similar distributions
-with a latitudinal gradient and higher values in the south. Within-ecoregion
-variability was distributed slightly differently with a less constant
-latitudinal gradient, notably lower interquantile ranges near the southern
-border (for example, near Vancouver Island and the Rockies on the West Coast,
-and near the Ontario Peninsula, the Saint-Lawrence Valley, and Central
-New-Brunswick in the East; [@Fig:ecoregion_measures]C-D). Bivariate comparison
-of the distributions of species richness and expected number of links and of
-their respective within-ecoregion variability further shows some areas of
-mismatches, indicating that richness and links do not co-vary completely
-although they may show similar distributions for median values (see
-Supplementary Material, Fig. S1). All results shown are based on the first
-sampling strategy (option 1) mentioned in the *Building site-level instances of
-the metaweb* section, where we used the mean value of the species distributions
-as the species occurrence probabilities (results for other sampling strategies
-are shown in Supplementary Material, Fig. S2). Site-level results (before
-summarizing by ecoregion) are also provided in Supplementary Material (Figs.
-S3-S6).
+downscaling of the metaweb, then summarized across the ecoregions (taking the
+median within each ecoregion). Expected ecoregion richness
+([@Fig:ecoregion_measures]A) and expected number of links
+([@Fig:ecoregion_measures]B) displayed similar distributions with a latitudinal
+gradient and higher values in the south. Within-ecoregion variability was
+distributed slightly differently with a less constant latitudinal gradient,
+notably lower interquantile ranges near the southern border (for example, near
+Vancouver Island and the Rockies on the West Coast, and near the Ontario
+Peninsula, the Saint-Lawrence Valley, and Central New-Brunswick in the East;
+[@Fig:ecoregion_measures]C-D). Bivariate comparison of the distributions of
+species richness and expected number of links and of their respective
+within-ecoregion variability further shows some areas of mismatches, indicating
+that richness and links do not co-vary completely although they may show similar
+distributions for median values (see Supplementary Material, Fig. S1). All
+results shown are based on the first sampling strategy (option 1) mentioned in
+the *Building site-level instances of the metaweb* section, where we used the
+mean value of the species distributions as the species occurrence probabilities
+(results for other sampling strategies are shown in Supplementary Material, Fig.
+S2). Site-level results (before summarizing by ecoregion) are also provided in
+Supplementary Material (Figs. S3-S6).
 
 ![(A-B) Example of a community measure (A, expected species richness) and a
 network one (B, expected number of links). Both measures are assembled from the
@@ -555,13 +559,14 @@ through more tests in future studies (for instance, testing the effect of higher
 urban density in the south). Examples of metaweb structure in space are rare and
 not ideal for comparison with our results. For instance, we found that network
 density (links on [@Fig:ecoregion_measures]B) were lower in the north, which is
-contrary to what was observed for all European terrestrial tetrapods
+contrary to what was observed in Europe for the terrestrial tetrapod metaweb
 [@Braga2019SpaAna; @Galiana2021SpaSca] and for willow-galler-parasitoid networks
 [@Gravel2019BriElt], where connectance was higher in northern regions. However,
-those are systems with different environmental conditions and number of species.
-Further research should investigate why these results might differ between
-continents and ecological systems and whether it is due to the methodology,
-data, or biogeographical processes.
+those are systems with different number of species and environmental conditions
+(e.g. Europe and Canada could differ due to varying climatic conditions at the
+same latitudes). Further research should investigate why these results might
+differ between continents and ecological systems and whether it is due to the
+methodology, data, or biogeographical processes.
 
 Our LCBD and uniqueness results highlighted that areas with unique network
 composition differ from sites with unique species composition. In other words,
@@ -596,14 +601,17 @@ where *in situ* interaction and complete network data are available, the
 approach put forward by @Gravel2019BriElt achieves a similar purpose as we
 attempted here, but is more rigourous and allows modelling the effect of the
 environment on the interactions themselves. Without such data, establishing or
-predicting the metaweb should be the first step toward producing localized
-predictions [@Strydom2022PreMet]. Well-documented binary metawebs such as the
-European tetrapod metaweb could be partly combined with our approach if used
-with probabilistic SDMs and summarized by ecoregions (as they would only lack an
-initial probabilistic metaweb, but would still obtain a more probabilistic
-output). Our approach will essentially differ from previous attempts in how it
-perceives uncertainty and variability. For instance, rare interactions should
-not be over-represented [@Poisot2016StrPro] and should have lesser effects over
+predicting the metaweb (e.g. using transfer learning) should be the first step
+toward producing localized predictions [@Strydom2022PreMet]. Our framework then
+downscales the metaweb towards the localized predictions, here using the
+probabilistic Canadian mammal one, but it can also use other metawebs generated
+through various means. Well-documented binary ones such as the European tetrapod
+metaweb could be partly combined with our approach if used with probabilistic
+SDMs and summarized by ecoregions (as they would only lack an initial
+probabilistic metaweb, but would still obtain a more probabilistic output). Our
+approach will essentially differ from previous attempts in how it perceives
+uncertainty and variability. For instance, rare interactions should not be
+over-represented [@Poisot2016StrPro] and should have lesser effects over
 computed network measures. Furthermore, summarizing results by ecoregion allows
 for showing variation within and between ecologically meaningful biogeographic
 boundaries [@Martins2022GloReg], which, as our results showed, is not constant
