@@ -11,14 +11,19 @@ header-includes:
 
 # RSTB-2023-0166 Author response to reviewers
 
-Here is the response from the authors.
+We would like to thank both reviewers for their helpful input on our manuscript. Following their comments, we did two main changes to our manuscript. First, we added an analysis of network motifs across ecoregions to further explore the variation in network structure across space, as both reviewers suggested. We added a new figure with those results (now Fig. 4). We decided to move our previous Fig. 3 (showing the bivariate relationships between community and network measures) to Supplementary Material (now Fig. S1) to respect the Journal's limit on the number of figures. However, we will gladly put it back in the main text if the Editor judges that we have room for it.
 
-Main changes:
+Second, we followed Reviewer 1's suggestion regarding pseudo-absences and changed our random selection algorithm for one which weights candidate sites by their distance to an observation, making it more likely to select sites further away from observed ones. We believe that doing so allows us to better represent the potential distributions of species, as Reviewer 1 mentioned. Consequently, we re-ran our species distribution models and updated our figures given the new distributions. This does not change the conclusions from our manuscript, except for one result which is worth discussing below. Otherwise, our results are very consistent, notably regarding the latitudinal gradients of species richness and number of links, the differences in the spatial distributions of ecoregion median values and within-ecoregion variance, and the contrast between hotspots of network and species uniqueness.
 
-- Change in pseudoabsence generation method
-- Updated all results accordingly
-- Added motifs analysis to further explore network structure in space
-- **Moved the richness-links bivariate maps to supp.mat.**
+The one result which differs from our previous version is the mismatch in the distributions of species richness and number of links that we reported in our earlier analyses. As we can see on our updated Fig. 1 and Fig. S1, both spatial distributions now follow each other quite closely, while they showed clear differences before. Nonetheless, we believe this result follows logically from the change of focus towards potential distributions and is preferable for two reasons. First, as Reviewer 1 pointed out, modelling potential distributions and wider responses to the environment makes more sense to go along with the metaweb concept. The metaweb and its downscaled localized version we present here are highly potential in nature and aim to serve as an upper boundary for what the interactions could be at a local scale. Therefore, using potential distributions ensures that we capture the widest potential output given the environment. Second, changing the pseudo-absence generation method smoothed out the results for species richness and reduced over-fitting towards the cities, which we think is more appropriate here (see the previous and updated richness figures below). As we now select pseudo-absences further away from the species occurrences, our distribution models essentially do in-filling within the observed species range and is likely to generate distributions with less holes. Notably, species richness increased in most areas, now reaching a maximum around 100 compared to 85 before (as visible on the figure below). Consequently, the number of links increased even more than richness (from a maximum around 700 links up to 850 links). Given the increase in richness, species can realize their interactions with the highest probabilities in more locations except in very poor sites. Doing so, we believe it normal to observe an better agreement between the two distributions, as there is now less of a spatial constraint on where species can realize their interactions.
+
+Please also find below is our point-by-point response to comments from the reviewers.
+
+\renewcommand{\thefigure}{R\arabic{figure}}
+
+![Previous site-level richness map](figures/richness_mean_previous.png){#fig:previous height=45%}
+
+![Updated site-level richness map](figures/richness_mean.png){#fig:updated height=45%}
 
 ## Reviewer 1
 
@@ -32,12 +37,13 @@ We are grateful to Reviewer 1 for their kind words and understanding of our manu
 - Our intent is to model the potential distribution
 - Consequently we changed the pseudoabsence generation method for the DistanceToEvent one, which weight candidate sites by their distance to an observation, making it more likely to select sites further away from observed ones
 - Add justification from Barbet-Massin et al.?
+- See [[2023-12-13#Catch-up]]
   
 > Your spatial comparison between richness and network size is so great that I wonder whether you do not explore other aspects of network structure, such as nestedness and modularity. These metrics may help understanding better the spatial mismatches between richness and number of links shown in figs 3 and 4, as if I’m getting it correctly, these may be caused by the selection of a handful modules in the northern ecoregions, compared to more connected networks towards the south-southwest.  
 
 - We added an analysis of motifs
 - We chose motifs over nestedness and modularity as they are ecologically meaningful and have a clear interpretation
-- **Brush over mismatch betweeb richness and links?**
+- ==Brush over mismatch betweeb richness and links?==
 
 > Line 162; rather than potential effects (which to me includes all potential variation associated to the probabilistic models) I would say “main/overall trends promoted by environmental gradients”, or something similar, emphasizing that the variability creates “noise” in local networks, but that such “noise” is realistic.  
 
@@ -63,6 +69,9 @@ We are thankful to Reviewer 2 for their acknowledgement of the work we put into 
 - We want to show the potential variation in space
 
 > In the following, I would like to ask some clarifying questions about the premise of this work and the choices made, which I also think should be made clearer in the main text. As far as I understand it, the accuracy of the metaweb is important for the accuracy of the local food web predictions, which in turn is important for the local webs to be actionable, one of the ultimate goals with this work.  
+
+- Repondre un petit truc. Clarifier ce qui est important ou non
+
 > Without comparing the predicted output to observed data, how sure can you be that the predicted food webs reflect actual food web realizations? Therefore, a validation of the results should be added to the paper, and this should also be discussed. There must be some field sampled information on mammals in Canada for some of the defined ecoregions which you could use for comparing the predicted species composition of the food webs to observed ones. For the predictions to be actionable, this would seem an important step.  
 
 - As Reviewer 1 pointed out we present an analytical framework first and foremost
@@ -72,11 +81,19 @@ We are thankful to Reviewer 2 for their acknowledgement of the work we put into 
 	- Newfoundland: not spatial, already used for Canadian metaweb
 	- Arctic food webs: few species
 	- Marine motifs: marine species
+	- Problème déjà existant pour validation metaweb, trop circulaire de revalider. Peut pas faire sans pseudo replication
+- Recommender comment on devrait valider par la suite
 
 > If I understand correctly, for the predictions behind this study to work, field sampled observations are necessary - that is the European tetrapod metaweb based on field observations were essential to make the predicted Canadian metaweb. I find this fundamental premise of the metaweb construction underreported in this paper. Despite all the help computers can provide in making highly resolved predictions of species interactions in space, they still need high quality input data based on field observations to work properly. This point is not trivial, especially not for the “actionability” of the predictions. This should be acknowledged in the paper.  
 
 - The European tetrapod metaweb is based on expert knowledge and litterature review, not field observations, although this also requires tremendous work
 - Yes, our framework does require a metaweb, but it could be applied to any one. We use the probabilistic value here, but it doesn't have to be. (as we discuss in the Discussion)
+	- Surtout si incertitude à échelle des interactions
+	- Couper en 2. Oui étape suivante est validation empirique. 
+	- Si on avait pas ce problème, pas d'infos sur où regarder pour réseaux.
+	- Carte dit où regarder et à quel endroit, pas les réseaux complets. Mais on s'attend à gradients biogéo raisonnables
+	- Qu'est-ce qu'on suggère comme utilisation des résultats et ce qui n'est pas faisable
+	- On apprécie les inquiétudes
 - Lack of input data is one the point of Tanya's manuscript: when we don't know, we can infer from somewhere else
 	- But this is not the point of our paper
 - Also from Tanya's perspective manuscript: a metaweb is sometimes "simpler" to obtain than localized network values in multiple locations
