@@ -186,8 +186,8 @@ pseudo-absence data as occurrences for every species [@Barbet-Massin2012SelPse].
 We weighted candidate sites by their distance to a known observation (separately
 for each species) using the `DistanceToEvent` method from the *Julia* package
 `SpeciesDistributionToolkit`
-[https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl)
-, making it more likely to select sites further away from an observation and the
+([https://github.com/PoisotLab/SpeciesDistributionToolkit.jl](https://github.com/PoisotLab/SpeciesDistributionToolkit.jl)),
+making it more likely to select sites further away from an observation and the
 known species range. This is because our intent was to model the potential
 distribution of species, capturing wider responses to the environment, as the
 downscaled metaweb we aimed to produce is potential in nature (see *Downscaled
@@ -510,7 +510,7 @@ south (although not in the ecoregions with higher NDTI median values)
 within-ecoregion variance in most ecoregions except in the northernmost one
 (Canadian High Arctic tundra), which has a notably higher value­
 ([@Fig:motifs]D). Although this higher variance does not reflect in the NDCI
-median values, it does appear when looking at the site-level, where this
+median values, it does appear when looking at the site-level values, where this
 ecoregion is the only one with patches with high positive NDCI values
 (indicating a dominance of S4) surrounded by highly negative values (indicating
 a dominance of S5) as in other ecoregions (Fig. S6B).
@@ -526,6 +526,7 @@ indicate a dominance of S4 while negative values indicate a dominance of S5.
 (C-D) Representation of the 89% interquantile range of values within the
 ecoregion for the trophic motifs index (NDTI, C) and competition motifs index
 (NDCI, D).](figures/motifs_ecoregion_NDI_4panels.png){#fig:motifs}
+
 # Discussion
 
 Our approach presents a way to downscale a metaweb, produce localized
@@ -555,7 +556,7 @@ be due to interactions between species being constant across space. Here, we
 found that potential species richness and number of links displayed similar
 distributions following a latitudinal gradient, but that the within-ecoregion
 variance was lower along the southern border than the measures themselves
-[(@Fig:ecoregion_measures]). Why the relationship between the median ecoregion
+([@Fig:ecoregion_measures]). Why the relationship between the median ecoregion
 values and the ecoregion variance is not constant across space could be verified
 through more tests in future studies (for instance, testing the effect of higher
 urban density in the south). Examples of metaweb structure in space are rare and
