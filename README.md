@@ -39,12 +39,12 @@ tetrapods, @Maiorano2020TetSpe] or using predictive tools [marine fishes,
 scale, the local food webs [i.e. the local "realization" of the metaweb when
 combined with species distributions, @Poisot2012DisSpe] reflect local
 environmental conditions but still retain the signal of the metaweb to which
-they belong [@Saravia2022EcoNet]. Given this, @Strydom2022PreMet defended that
+they belong [@Saravia2022EcoNet]. Given this, @Strydom2023GraEmb defended that
 predicting the metaweb's structure should be the core goal of predictive network
 ecology. Assuming there is a strong link between the metaweb and its local
 realizations, more accurate predictions of the metaweb will have the potential
 to bring us closer to producing accurate local (downscaled) predictions
-[@Strydom2022PreMet]. Therefore, establishing or predicting the metaweb should
+[@Strydom2023GraEmb]. Therefore, establishing or predicting the metaweb should
 be the first target in systems lacking information about local realizations.
 This is not the same as using interactions to improve predictions of species
 distributions, as recent studies have done [@Moens2022ImpBio;
@@ -92,7 +92,7 @@ variability, and masks the effect of environmental conditions on interaction
 realization [@Braga2019SpaAna]. In contrast, recent studies argued that seeing
 interactions as probabilistic (rather than binary) events allows us to account
 for their variability in space [@Poisot2016StrPro] and that this should also be
-reflected at the metaweb level [@Strydom2022PreMet]. @Gravel2019BriElt
+reflected at the metaweb level [@Strydom2023GraEmb]. @Gravel2019BriElt
 introduced a probabilistic framework describing how the metaweb can generate
 local realizations and showed how it could be used for modelling interaction
 distributions. This approach to downscaling is relevant when combined with *in
@@ -294,7 +294,7 @@ probabilistic network for the site.
 The final output of our workflow was the downscaled metaweb, which contains a
 localized probabilistic metaweb in every site across the study area (*Outputs*
 box in @Fig:conceptual). The metaweb sets an upper bound on the potential
-interactions [@Strydom2022PreMet], therefore, the downscaled metaweb is a
+interactions [@Strydom2023GraEmb], therefore, the downscaled metaweb is a
 refined upper boundary at the local scale that takes into account
 co-occurrences. It is still potential in nature and differs from a local
 realization, from which it should have a different structure. Nonetheless, from
@@ -529,7 +529,7 @@ ecoregion for the trophic motifs index (NDTI, C) and competition motifs index
 
 Our approach presents a way to downscale a metaweb, produce localized
 predictions using probabilistic networks as inputs and outputs, and incorporate
-uncertainty, as called for by @Strydom2022PreMet. It gives us an idea of what
+uncertainty, as called for by @Strydom2023GraEmb. It gives us an idea of what
 local metawebs or networks could look like in space, given species distributions
 and their variability, as well as the uncertainty around species interactions.
 We also provide the first spatial representation of the metaweb of Canadian
@@ -603,7 +603,7 @@ approach put forward by @Gravel2019BriElt achieves a similar purpose as we
 attempted here, but is more rigourous and allows modelling the effect of the
 environment on the interactions themselves. Without such data, establishing or
 predicting the metaweb (e.g. using transfer learning) should be the first step
-toward producing localized predictions [@Strydom2022PreMet]. Our framework then
+toward producing localized predictions [@Strydom2023GraEmb]. Our framework then
 downscales the metaweb towards the localized predictions, here using the
 probabilistic Canadian mammal one, but it can also use other metawebs generated
 through various means. Well-documented binary ones such as the European tetrapod
