@@ -412,12 +412,12 @@ analyses. However, we displayed the results using a Lambert conformal conic
 projection more appropriate for Canada using `GeoMakie.jl`
 ([https://github.com/MakieOrg/GeoMakie.jl](https://github.com/MakieOrg/GeoMakie.jl)).
 All the code used to implement our analyses is archived on Zenodo
-([https://doi.org/10.5281/zenodo.8350065](https://doi.org/10.5281/zenodo.8350065))
-and includes instructions on how to run a smaller example at a coarser
-resolution. Note that running our analyses at full scale is resource and
-memory-intensive and required the use of computer clusters provided by Calcul
-Québec and the Digital Research Alliance of Canada. Full-scale computations
-required 900 CPU core-hours and peaked at 500 GB of RAM.
+[<https://doi.org/10.5281/zenodo.8350065>\; @Dansereau2023PoiSpa] and includes
+instructions on how to run a smaller example at a coarser resolution. Note that
+running our analyses at full scale is resource and memory-intensive and required
+the use of computer clusters provided by Calcul Québec and the Digital Research
+Alliance of Canada. Full-scale computations required 900 CPU core-hours and
+peaked at 500 GB of RAM.
 
 # Results
 
