@@ -416,8 +416,9 @@ All the code used to implement our analyses is archived on Zenodo
 instructions on how to run a smaller example at a coarser resolution. Note that
 running our analyses at full scale is resource and memory-intensive and required
 the use of computer clusters provided by Calcul Québec and the Digital Research
-Alliance of Canada. Full-scale computations required 900 CPU core-hours and
-peaked at 500 GB of RAM.
+Alliance of Canada. Full-scale computations (excluding motifs) required 900 CPU
+core-hours and peaked at 500 GB of RAM. Computations for network motifs were
+even more intensive and required 12 CPU core-years.
 
 # Results
 
