@@ -41,18 +41,18 @@ combined with species distributions, @Poisot2012DisSpe] reflect local
 environmental conditions but still retain the signal of the metaweb to which
 they belong [@Saravia2022EcoNet]. Given this, @Strydom2022PreMet defended that
 predicting the metaweb's structure should be the core goal of predictive network
-ecology, as if there is a strong link between the metaweb and its local
-realizations, more accurante predictions of the metaweb will have the potential
-to bring us closer to producing accurate local (downscaled) predictions.
-Therefore, establishing or predicting the metaweb should be the first target in
-systems lacking information about local realizations. This is not the same as
-using interactions to improve predictions of species distributions, as recent
-studies have done [@Moens2022ImpBio; @Poggiato2022IntFoo; @Lucas2023IncBio],
-although these are incredibly relevant and answer long-standing calls to include
-interactions within such models [@Wisz2013RolBio]. Instead, predicting networks
-in space is a different task, and it serves a different goal: focusing first on
-the distribution of network structures and its drivers rather than on the
-distribution of species.
+ecology. Assuming there is a strong link between the metaweb and its local
+realizations, more accurate predictions of the metaweb will have the potential
+to bring us closer to producing accurate local (downscaled) predictions
+[@Strydom2022PreMet]. Therefore, establishing or predicting the metaweb should
+be the first target in systems lacking information about local realizations.
+This is not the same as using interactions to improve predictions of species
+distributions, as recent studies have done [@Moens2022ImpBio;
+@Poggiato2022IntFoo; @Lucas2023IncBio], although these are incredibly relevant
+and answer long-standing calls to include interactions within such models
+[@Wisz2013RolBio]. Instead, predicting networks in space is a different task,
+and it serves a different goal: focusing first on the distribution of network
+structures and its drivers rather than on the distribution of species.
 
 Explicit spatial predictions (such as downscaled metaweb predictions) are
 essential as they will allow comparisons with extant work for species-rich
@@ -149,7 +149,8 @@ cell across the study extent.](figures/conceptual-figure.png){#fig:conceptual}
 
 The main source of interaction data was the metaweb for Canadian mammals from
 @Strydom2022FooWeb, which is a-spatial, i.e., it represents interactions between
-mammals that can occur anywhere in Canada. The species list for the Canadian
+mammals that can occur anywhere in Canada. It contains 163 species and 3280
+links with a probability of interaction. The species list for the Canadian
 metaweb was extracted from the International Union for the Conservation of
 Nature (IUCN) checklist [@Strydom2022FooWeb]. Briefly, the metaweb was developed
 using graph embedding and phylogenetic transfer learning based on the metaweb of
@@ -230,13 +231,14 @@ this is Gradient Boosted Trees with a Gaussian maximum likelihood from the
 `EvoTrees.jl` *Julia* package
 ([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl)).
 This method returns a prediction for every site with an average value and a
-standard deviation, which we used as a measure of uncertainty to build a Normal
-distribution for the probability of occurrence of a given species at all sites
-(represented as probability distributions on @Fig:conceptual). We trained models
-across the extent chosen for occurrences (longitudes 175°W to 45°W and latitudes
-10°N to 90°N), then predicted species distributions only for Canada. We used the
-2021 Census Boundary Files from Statistics Canada [@StatisticsCanada2022BouFil]
-to set the boundaries for our predictions, which gave us 970,698 sites in total.
+standard deviation, which we considered as a measure of uncertainty. We used the
+average value and standard deviation to build a Normal distribution for the
+probability of occurrence of a given species at each site (represented as
+probability distributions on @Fig:conceptual). We trained models across the
+extent chosen for occurrences (longitudes 175°W to 45°W and latitudes 10°N to
+90°N), then predicted species distributions only for Canada. We used the 2021
+Census Boundary Files from Statistics Canada [@StatisticsCanada2022BouFil] to
+set the boundaries for our predictions, which gave us 970,698 sites in total.
 Performance evaluation for the single species SDMs are available on
 [GitHub](https://github.com/PoisotLab/SpatialProbabilisticMetaweb/blob/main/data/input/sdm_fit_results.csv).
 
@@ -422,12 +424,11 @@ required 900 CPU core-hours and peaked at 500 GB of RAM.
 Our workflow allowed us to display the spatial distribution of ecoregion-level
 community measures (here, expected species richness) and network measures
 (expected number of links; [@Fig:ecoregion_measures]). We highlight that the
-community and network-level measures presented here are not actual predictions
-of the measure itself (e.g., we do not present a prediction of actual species
-richness at each location). Instead, they are the reflection of these metrics
-from the localized predictions of the communities and networks obtained from the
-downscaling of the metaweb, then summarized across the ecoregions (taking the
-median within each ecoregion). Expected ecoregion richness
+measures presented here are first computed over the predicted communities and
+networks obtained when downscaling the metaweb, then summarized across the
+ecoregions (taking the median within each ecoregion). They are not a direct
+prediction of the measure itself (e.g., we do not present a prediction of actual
+species richness at each location). Expected ecoregion richness
 ([@Fig:ecoregion_measures]A) and expected number of links
 ([@Fig:ecoregion_measures]B) displayed similar distributions with a latitudinal
 gradient and higher values in the south. Within-ecoregion variability was
@@ -645,18 +646,18 @@ also suggested combining their approach with techniques estimating the
 probability of occurrence of trophic relationships to describe spatial and
 temporal variability more accurately. @Lurgi2020GeoVar built a metaweb and
 probabilistic (occurrence-based) networks for rocky intertidal communities (and
-also showed that environmental factors do not affect the structure of binary and
-probabilistic networks in different ways). @Albouy2019MarFis predicted the
-global marine fish food web using a probabilistic model, showing the potential
-to describe networks across broad spatial scales. Similarly, predictive
-approaches are also increasingly used with other interaction types to highlight
-interactions hotspots on global scales [e.g. mapping geographical hotspots of
-predicted host-virus interactions between bats and betacoronaviruses,
-@Becker2022OptPre; predicting the distribution of hidden interactions in the
-mammalian virome, @Poisot2023NetEmb]. Our workflow offers the potential to bring
-these global predictions down to the local scale where they can be made more
-actionable, and vastly increases the diversity of ecological networks that can
-be projected in space.
+doing so they also showed that environmental factors do not affect the structure
+of binary and probabilistic networks in different ways). @Albouy2019MarFis
+predicted the global marine fish food web using a probabilistic model, showing
+the potential to describe networks across broad spatial scales. Similarly,
+predictive approaches are also increasingly used with other interaction types to
+highlight interactions hotspots on global scales [e.g. mapping geographical
+hotspots of predicted host-virus interactions between bats and
+betacoronaviruses, @Becker2022OptPre; predicting the distribution of hidden
+interactions in the mammalian virome, @Poisot2023NetEmb]. Our workflow offers
+the potential to bring these global predictions down to the local scale where
+they can be made more actionable, and vastly increases the diversity of
+ecological networks that can be projected in space.
 
 # Acknowledgements
 
