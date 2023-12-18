@@ -345,7 +345,7 @@ assembled a site-by-species community matrix (970,698 sites by 159 species) with
 the probability of occurrence of each species at every site obtained in the
 species distribution models. For network composition, we assembled a
 site-by-interaction matrix with the localized probability of interaction at
-every site given by the downscaled metaweb (therefore 970,698 sites by 3,108
+every site given by the downscaled metaweb (therefore, 970,698 sites by 3,108
 interactions with defined probabilities in the metaweb). We applied the
 Hellinger transformation on both matrices and computed the LCBD values from the
 total variance in the matrices [@Legendre2013BetDiv]. High LCBD values indicate
@@ -370,22 +370,22 @@ structure [@Cirtwill2015ConPre; @Simmons2019MotBip], are conserved across scales
 [@Baker2015SpeRol; @Baiser2016MotAss], and are part of a common backbone of
 interactions among all food webs [@Mora2018IdeCom]. We focused on four of the
 most studied three-species motifs [@Stouffer2007EviExi; @Stouffer2010UndFoo;
-@Baiser2016MotAss] : S1 (tri-trophic food chains), S2 (omnivory), S4
-(exploitative competition) and S5 (apparent competition).  These motifs can be
-grouped into two pairs according to the ecological information they display: S1
-and S2 highlight different trophic structures, while S4 and S5 identicate
-different competition types. Therefore, we compared the spatial distribution of
-the motifs in each pair to see which ones were dominant across all our sites.
-First, we computed the expected motif count for each of the four motifs for all
-sites using the localized probabilistic networks from the downscaled metaweb
+@Baiser2016MotAss]: S1 (tri-trophic food chains), S2 (omnivory), S4
+(exploitative competition) and S5 (apparent competition). These motifs can be
+grouped into two pairs according to their ecological information: S1 and S2
+highlight different trophic structures, while S4 and S5 indicate different
+competition types. Therefore, we compared the spatial distribution of the motifs
+in each pair to see which ones were dominant across all our sites. First, we
+computed the expected motif count for each of the four motifs for all sites
+using the localized probabilistic networks from the downscaled metaweb
 [following @Poisot2016StrPro]. Then, we compared the expected counts of the
-motifs within the two pairs. To do so, we used a measure of normalized
-difference similar to the Normalized Difference Vegetation Index (NDVI), where
-we compute the difference between the two motif counts over their sum. We called
-the index comparing the two trophic motifs (S1 and S2) the Normalized Difference
-Trophic Index (NDTI), and the one comparing the competition motifs (S4 and S5)
-the Normalized Difference Competition Index. We defined both indexes as: $$NDTI
-= \frac{(S1 - S2)}{(S1 +S2)}$$ $$NDCI = \frac{(S4 - S5)}{(S4 +S5)}$$ Values for
+motifs within the two pairs. To do so, we used a normalized difference measure
+similar to the Normalized Difference Vegetation Index (NDVI), where we compute
+the difference between the two motif counts over their sum. We called the index
+comparing the two trophic motifs (S1 and S2) the Normalized Difference Trophic
+Index (NDTI) and the one comparing the competition motifs (S4 and S5) the
+Normalized Difference Competition Index. We defined both indexes as: $$NDTI =
+\frac{(S1 - S2)}{(S1 +S2)}$$ $$NDCI = \frac{(S4 - S5)}{(S4 +S5)}$$ Values for
 both indexes are bounded between -1 and 1. A value of 0 indicates that both
 motifs have the same expected counts. Positive values indicate that the first
 motif in each index (S1 and S4) is dominant and has a higher expected count,
@@ -394,7 +394,7 @@ with previous measures, we then summarized both index values by ecoregion by
 taking the ecoregion median and measuring its within-ecoregion variation with
 the 89% interquantile range. Ecoregion values therefore indicate if one type of
 trophic structure (for NDTI) and one type of competition (for NDCI) is dominant
-in the ecoregion, while the interquantile range values measures whether the
+in the ecoregion, while the interquantile range values measure whether the
 dominant type varies within the ecoregion.
 
 We used *Julia* v1.9.0 [@Bezanson2017JulFre] to implement all our analyses. We
@@ -455,14 +455,14 @@ predicted probabilistic communities and networks, respectively. Values are first
 measured separately for all sites; then, the median value within each ecoregion
 was taken to represent the ecoregion-level value. (C-B) Representation of the
 89% interquantile range of values within the ecoregion for expected richness (C)
-and expected number of links (D). All color bars follow a log scale with tick
+and expected number of links (D). All colour bars follow a log scale with tick
 marks representing even intervals. Real values (non-log transformed) are shown
 beside major tick marks while minor ticks represent half
 increments.](figures/ecoregion_comparison_iqr.png){#fig:ecoregion_measures}
 
 Our results also indicate a mismatch between the uniqueness of communities and
 networks ([@Fig:ecoregion_lcbd]). Uniqueness was higher mostly in the north and
-along the south border for communities, but mostly in the north for networks
+along the south border for communities, but mainly in the north for networks
 ([@Fig:ecoregion_lcbd]A-B). Consequently, ecoregions with both unique community
 composition and unique network composition were mostly in the north
 ([@Fig:ecoregion_lcbd]C). Meanwhile, some areas were unique for one element but
@@ -499,7 +499,7 @@ values and high dominance of S1 (tri-trophic chains) expected counts compared to
 S2 (omnivory) but ecoregions along the south border showed a reduced dominance
 ([@Fig:motifs]A). Ecoregions near the Ontario Peninsula and Saint-Lawrence
 Valley showed values close to zero, indicating a balance between two motifs,
-while Central New Brunswick had slighty negative values, indicating a low
+while Central New Brunswick had slightly negative values, indicating a low
 dominance of S2. In comparison, NDCI values showed an evenly high dominance of
 S5 (apparent competition) over S4 (exploitative competition) across all
 ecoregions ([@Fig:motifs]B). Meanwhile, within-ecoregion variance displayed a
@@ -517,12 +517,12 @@ a dominance of S5) as in other ecoregions (Fig. S6B).
 
 ![Comparison of the dominant ecological motifs across ecoregions. A) Normalized
 Difference Index (NDTI) comparing the trophic motifs S1 (tri-trophic food
-chains) and S2 (omnivory). Positive values indicate a dominance of S1 while
+chains) and S2 (omnivory). Positive values indicate a dominance of S1, while
 negative values indicate a dominance of S2. Values equal or superior to |0.5|
-are shown with the same color as they indicate a high dominance of one motif. B)
-Normalized Difference Index (NDCI) comparing the competition motifs S4
+are shown with the same colour as they indicate a high dominance of one motif.
+B) Normalized Difference Index (NDCI) comparing the competition motifs S4
 (exploitative competition) and S5 (apparent competition). Positive values
-indicate a dominance of S4 while negative values indicate a dominance of S5.
+indicate a dominance of S4, while negative values indicate a dominance of S5.
 (C-D) Representation of the 89% interquantile range of values within the
 ecoregion for the trophic motifs index (NDTI, C) and competition motifs index
 (NDCI, D).](figures/motifs_ecoregion_NDI_4panels.png){#fig:motifs}
@@ -559,17 +559,17 @@ variance was lower along the southern border than the measures themselves
 ([@Fig:ecoregion_measures]). Why the relationship between the median ecoregion
 values and the ecoregion variance is not constant across space could be verified
 through more tests in future studies (for instance, testing the effect of higher
-urban density in the south). Examples of metaweb structure in space are rare and
-not ideal for comparison with our results. For instance, we found that network
-density (links on [@Fig:ecoregion_measures]B) were lower in the north, which is
-contrary to what was observed in Europe for the terrestrial tetrapod metaweb
-[@Braga2019SpaAna; @Galiana2021SpaSca] and for willow-galler-parasitoid networks
-[@Gravel2019BriElt], where connectance was higher in northern regions. However,
-those are systems with different number of species and environmental conditions
-(e.g. Europe and Canada could differ due to varying climatic conditions at the
-same latitudes). Further research should investigate why these results might
-differ between continents and ecological systems and whether it is due to the
-methodology, data, or biogeographical processes.
+urban density in the south). Examples of metaweb structures in space are rare
+and not ideal for comparison with our results. For instance, we found that
+network density (links on [@Fig:ecoregion_measures]B) was lower in the north,
+which is contrary to what was observed in Europe for the terrestrial tetrapod
+metaweb [@Braga2019SpaAna; @Galiana2021SpaSca] and for willow-galler-parasitoid
+networks [@Gravel2019BriElt], where connectance was higher in northern regions.
+However, those are systems with different numbers of species and environmental
+conditions (e.g. Europe and Canada could differ due to varying climatic
+conditions at the same latitudes). Further research should investigate why these
+results might differ between continents and ecological systems and whether it is
+due to the methodology, data, or biogeographical processes.
 
 Our LCBD and uniqueness results highlighted that areas with unique network
 composition differ from sites with unique species composition. In other words,
@@ -589,7 +589,7 @@ Our analysis of the distribution of dominant network motifs revealed additional
 areas of variation in network structure. Trophic motifs (S1 and S2, measured
 through NDTI values) showed a latitudinal gradient different from the richness
 and links ones, with high dominance of tri-trophic chains (S1) in the north and
-higher omnivory counts (S2) only in a few ecoregions in the south. This results
+higher omnivory counts (S2) only in a few ecoregions in the south. These results
 did not seem related to ecoregion variance, which once again showed a very
 different distribution from the median values. Meanwhile, competition motifs (S4
 and S5, measured through NDCI values) showed an even dominance of apparent
@@ -602,7 +602,7 @@ interaction data or existing metawebs, and on the intent to incorporate
 interaction variability, as well as ecoregion-level variability. In systems
 where *in situ* interaction and complete network data are available, the
 approach put forward by @Gravel2019BriElt achieves a similar purpose as we
-attempted here, but is more rigourous and allows modelling the effect of the
+attempted here, but is more rigorous and allows modelling the effect of the
 environment on the interactions themselves. Without such data, establishing or
 predicting the metaweb (e.g. using transfer learning) should be the first step
 toward producing localized predictions [@Strydom2023GraEmb]. Our framework then
@@ -625,9 +625,9 @@ to be actionable. We see it as the next step since data availability currently
 remains an issue. Developing a way to generate actionable information when
 information is initially scarce, as we present here, is highly important in
 itself. Our manuscript highlights the application of a predictive pipeline in a
-case where interactions are almost fully predicted, but it can equally be
+case where interactions are almost entirely predicted, but it can equally be
 applied when there are additional data about the interaction network. Moreover,
-the predictions we make are already actionnable, as any future sampling of food
+the predictions we make are already actionable, as any future sampling of food
 web structure can be used to validate them, and fed into the model to iterate
 these results again. As @Strydom2023GraEmb point out, validation of metaweb
 predictions, empirical sampling, and method design should all proceed jointly,
@@ -648,14 +648,14 @@ also suggested combining their approach with techniques estimating the
 probability of occurrence of trophic relationships to describe spatial and
 temporal variability more accurately. @Lurgi2020GeoVar built a metaweb and
 probabilistic (occurrence-based) networks for rocky intertidal communities (and
-doing so they also showed that environmental factors do not affect the structure
-of binary and probabilistic networks in different ways). @Albouy2019MarFis
-predicted the global marine fish food web using a probabilistic model, showing
-the potential to describe networks across broad spatial scales. Similarly,
-predictive approaches are also increasingly used with other interaction types to
-highlight interactions hotspots on global scales [e.g. mapping geographical
-hotspots of predicted host-virus interactions between bats and
-betacoronaviruses, @Becker2022OptPre; predicting the distribution of hidden
+in doing so, they also showed that environmental factors do not affect the
+structure of binary and probabilistic networks in different ways).
+@Albouy2019MarFis predicted the global marine fish food web using a
+probabilistic model, showing the potential to describe networks across broad
+spatial scales. Similarly, predictive approaches are also increasingly used with
+other interaction types to highlight interaction hotspots on global scales [e.g.
+mapping geographical hotspots of predicted host-virus interactions between bats
+and betacoronaviruses, @Becker2022OptPre; predicting the distribution of hidden
 interactions in the mammalian virome, @Poisot2023NetEmb]. Our workflow offers
 the potential to bring these global predictions down to the local scale where
 they can be made more actionable, and vastly increases the diversity of
