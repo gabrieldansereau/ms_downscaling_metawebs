@@ -18,7 +18,8 @@ data to circumvent data scarcity [@Strydom2021RoaPre], but are still rarely used
 to make explicitly spatial predictions. As a result, there have been repeated
 calls for globally distributed interaction and network data coupled to repeated
 sampling in time and space [@Mestre2022DisFoo; @Windsor2023UsiEco], which will
-help understand the macroecological variations of food webs [@Baiser2019EcoRul]. Despite these limitations, food web ecologists often can infer a reasonable
+help understand the macroecological variations of food webs [@Baiser2019EcoRul].
+Despite these limitations, food web ecologists often can infer a reasonable
 approximation of the network existing within a region. This representation,
 called a metaweb, contains all possible interactions between species in a given
 regional species pool [@Dunne2006NetStr], and provides a solid foundation to
@@ -43,88 +44,100 @@ ecology. Assuming there is a strong link between the metaweb and its local
 realizations, more accurate predictions of the metaweb will have the potential
 to bring us closer to producing accurate local (downscaled) predictions
 [@Strydom2023GraEmb]. Therefore, establishing or predicting the metaweb should
-be the first target in communities where data about local realizations (*i.e.* documented interactions at specific places) are lacking.
-Our approach differs from using interactions to improve predictions of species
-distributions, as has been done by recent studies [@Moens2022ImpBio;
-@Poggiato2022IntFoo; @Lucas2023IncBio]. Although the two are complementary, and answer long-standing calls to include interactions within species distribution models
-[@Wisz2013RolBio], predicting networks in space is a different task serving a different goal: focusing first on the distribution of network
-structures and its drivers rather than on the distribution of species.
+be the first target in communities where data about local realizations (*i.e.*
+documented interactions at specific places) are lacking. Our approach differs
+from using interactions to improve predictions of species distributions, as has
+been done by recent studies [@Moens2022ImpBio; @Poggiato2022IntFoo;
+@Lucas2023IncBio]. Although the two are complementary, and answer long-standing
+calls to include interactions within species distribution models
+[@Wisz2013RolBio], predicting networks in space is a different task serving a
+different goal: focusing first on the distribution of network structures and its
+drivers rather than on the distribution of species.
 
-Explicit spatial predictions of the structure of species interaction networks (downscaled metaweb predictions) are
-essential, as they allow comparisons with extant work for species-rich
-communities. Recent approaches to metaweb downscaling combined a regional
-metaweb with species distribution maps to generate local assemblages for
-European tetrapods [@Braga2019SpaAna; @OConnor2020UnvFoo; @Galiana2021SpaSca;
-@Gauzere2022DivBio], Barents Sea marine taxa [@Kortsch2019FooStr], and North Sea
-demersal fishes and benthic epifauna [@Frelat2022FooWeb]. These downscaled
-assemblages open up novel ways to study network structures, such as
-assessing changes in food web structure across space [@Braga2019SpaAna], or
-describing the scaling of Network Area Relationships [NARs; @Galiana2021SpaSca]. Other
-examples have shown that the metaweb can be used to investigate large-scale
-variation in food web structure, indicating high geographical connections and
-heterogeneous robustness against species extinctions [@Albouy2019MarFis], which
-are only apparent when the local and global networks are *both* available. Further
-comparisons between network structure and other community properties are
-relevant as they may highlight new and surprising elements regarding network
-biogeography. For instance, @Frelat2022FooWeb found a strong spatial coupling
-between community composition and food web structure, but a temporal mismatch
-depending on the spatial scale. @Poisot2017HosPar found that interaction
-uniqueness captures more composition variability than community uniqueness, and
-that sites with exceptional compositions might differ for networks and
-communities, because species distributions and species interactions had
-different bioclimatic drivers. Spatialized network data will allow these
-comparisons, identifying important conservation targets for networks and whether
-they differ geographically from areas currently prioritized for biodiversity
-conservation.
+Explicit spatial predictions of the structure of species interaction networks
+(downscaled metaweb predictions) are essential, as they allow comparisons with
+extant work for species-rich communities. Recent approaches to metaweb
+downscaling combined a regional metaweb with species distribution maps to
+generate local assemblages for European tetrapods [@Braga2019SpaAna;
+@OConnor2020UnvFoo; @Galiana2021SpaSca; @Gauzere2022DivBio], Barents Sea marine
+taxa [@Kortsch2019FooStr], and North Sea demersal fishes and benthic epifauna
+[@Frelat2022FooWeb]. These downscaled assemblages open up novel ways to study
+network structures, such as assessing changes in food web structure across space
+[@Braga2019SpaAna], or describing the scaling of Network Area Relationships
+[NARs; @Galiana2021SpaSca]. Other examples have shown that the metaweb can be
+used to investigate large-scale variation in food web structure, indicating high
+geographical connections and heterogeneous robustness against species
+extinctions [@Albouy2019MarFis], which are only apparent when the local and
+global networks are *both* available. Further comparisons between network
+structure and other community properties are relevant as they may highlight new
+and surprising elements regarding network biogeography. For instance,
+@Frelat2022FooWeb found a strong spatial coupling between community composition
+and food web structure, but a temporal mismatch depending on the spatial scale.
+@Poisot2017HosPar found that interaction uniqueness captures more composition
+variability than community uniqueness, and that sites with exceptional
+compositions might differ for networks and communities, because species
+distributions and species interactions had different bioclimatic drivers.
+Spatialized network data will allow these comparisons, identifying important
+conservation targets for networks and whether they differ geographically from
+areas currently prioritized for biodiversity conservation.
 
-Yet, downscaling a regional metaweb towards local
-network predictions that reflect the spatial variability of interactions remains an important methodological challenge. Even
-when the metaweb is known, local networks have been shown to vary substantially and differ both
-amongst themselves and from the metaweb [@McLeod2021SamAsy]. This emphasizes the
-need for methods to generate local, downscaled network predictions. A potential
-limitation to previous downscaling approaches is that they assumed interactions
-are equiprobable across space, which ignores well-documented interaction
-variability, and masks the effect of environmental conditions on interaction
-realization [@Braga2019SpaAna]. As a consequence, this can over-represent interactions locally, but also lead to local predicted networks that are more homogeneous than they should. In contrast, recent studies argued that seeing
-interactions as probabilistic (rather than binary) events allows us to account
-for their variability in space [@Poisot2016StrPro] and that this should also be
-reflected at the metaweb level [@Strydom2023GraEmb]. @Gravel2019BriElt
-introduced a probabilistic framework describing how the metaweb can generate
-local realizations and showed how it could be used for modelling interaction
-distributions. This approach to downscaling is especially relevant when combined with *in
-situ* observations of interactions and local networks to train interaction
-models. However, such
-data is rarely available across broad spatial extents [@Hortal2015SevSho;
-@Poisot2021GloKno; @Windsor2023UsiEco]. Spatially replicated interaction data
-required for such models are especially challenging to document with large food
-web such as European tetrapod and Canadian mammal metawebs
-[@Maiorano2020TetSpe; @Strydom2022FooWeb], where hundreds of species result in
-tens of thousands of species pairs that may potentially interact, over continental-scale spatial extents. We currently
-lack a downscaling framework that is both probabilistic and can be trained
-without replicated *in situ* interaction data. But the lack of *in situ* interaction data actually constitutes an interesting opportunity: adopting a probabilistic
-view can allow propagating uncertainty, which can play a key role in evaluating
-the quality (and expected variability) of the predictions. Assessing model uncertainty would enable us to
-determine to which degree we should trust our predictions and to identify what
-to do to improve the current knowledge.
+Yet, downscaling a regional metaweb towards local network predictions that
+reflect the spatial variability of interactions remains an important
+methodological challenge. Even when the metaweb is known, local networks have
+been shown to vary substantially and differ both amongst themselves and from the
+metaweb [@McLeod2021SamAsy]. This emphasizes the need for methods to generate
+local, downscaled network predictions. A potential limitation to previous
+downscaling approaches is that they assumed interactions are equiprobable across
+space, which ignores well-documented interaction variability, and masks the
+effect of environmental conditions on interaction realization
+[@Braga2019SpaAna]. As a consequence, this can over-represent interactions
+locally, but also lead to local predicted networks that are more homogeneous
+than they should. In contrast, recent studies argued that seeing interactions as
+probabilistic (rather than binary) events allows us to account for their
+variability in space [@Poisot2016StrPro] and that this should also be reflected
+at the metaweb level [@Strydom2023GraEmb]. @Gravel2019BriElt introduced a
+probabilistic framework describing how the metaweb can generate local
+realizations and showed how it could be used for modelling interaction
+distributions. This approach to downscaling is especially relevant when combined
+with *in situ* observations of interactions and local networks to train
+interaction models. However, such data is rarely available across broad spatial
+extents [@Hortal2015SevSho; @Poisot2021GloKno; @Windsor2023UsiEco]. Spatially
+replicated interaction data required for such models are especially challenging
+to document with large food web such as European tetrapod and Canadian mammal
+metawebs [@Maiorano2020TetSpe; @Strydom2022FooWeb], where hundreds of species
+result in tens of thousands of species pairs that may potentially interact, over
+continental-scale spatial extents. We currently lack a downscaling framework
+that is both probabilistic and can be trained without replicated *in situ*
+interaction data. But the lack of *in situ* interaction data actually
+constitutes an interesting opportunity: adopting a probabilistic view can allow
+propagating uncertainty, which can play a key role in evaluating the quality
+(and expected variability) of the predictions. Assessing model uncertainty would
+enable us to determine to which degree we should trust our predictions and to
+identify what to do to improve the current knowledge.
 
 Here, we present a workflow to downscale a metaweb in space, and illustrate it
 by spatially reconstructing local instances of a probabilistic metaweb of
 Canadian mammals. We do so using a probabilistic approach to both species
 distributions and interactions in a system without spatially replicated
 interaction data. We then explore how the spatial structure of the downscaled
-metaweb varies in space and how the uncertainty in predicted interactions can be made
-spatially explicit. We further show that the downscaled metaweb can highlight
-important biodiversity areas and bring novel ecological insight compared to
-traditional community measures like species richness or compositional uniqueness. We conclude by listing key considerations for the validation of such predictions.
+metaweb varies in space and how the uncertainty in predicted interactions can be
+made spatially explicit. We further show that the downscaled metaweb can
+highlight important biodiversity areas and bring novel ecological insight
+compared to traditional community measures like species richness or
+compositional uniqueness. We conclude by listing key considerations for the
+validation of such predictions.
 
 # Methods
 
 In @Fig:conceptual, we present a conceptual overview of the predictive pipeline
 leading to the downscaled metaweb. Its components were grouped as non-spatial
-and spatial data, localized site steps (divided into species, species-pair, and network level steps), and the final downscaled, spatialized metaweb. Throughout these steps, we highlight the importance of
-presenting the uncertainty of interactions and their distribution in space ,as well as the variability in the structure of reconstructed networks. We
-argue that this requires adopting a probabilistic view of both species presence and interactions, and incorporating this
-variation between scales.
+and spatial data, localized site steps (divided into species, species-pair, and
+network level steps), and the final downscaled, spatialized metaweb. Throughout
+these steps, we highlight the importance of presenting the uncertainty of
+interactions and their distribution in space ,as well as the variability in the
+structure of reconstructed networks. We argue that this requires adopting a
+probabilistic view of both species presence and interactions, and incorporating
+this variation between scales.
 
 ![Conceptual figure of the proposed workflow used to downscale the probabilistic
 metaweb in space. The workflow has three components: the data, the localized
@@ -135,30 +148,37 @@ first at a single-species level (using distribution data), then for every
 species pair (adding interaction data from the metaweb), and finally at the
 network level by combining the results of all species pairs. The final output of
 the network-level steps contains a downscaled probabilistic metaweb for every
-cell across the study extent. Note that in order to mitigate some of the fine-scale grain in the data, we present most outputs at the ecoregion scale, with pixel-scale maps in supplementary material.](figures/conceptual-figure.png){#fig:conceptual}
+cell across the study extent. Note that in order to mitigate some of the
+fine-scale grain in the data, we present most outputs at the ecoregion scale,
+with pixel-scale maps in supplementary
+material.](figures/conceptual-figure.png){#fig:conceptual}
 
 ## Data
 
 ### Metaweb
 
-We collected probabilistic interaction data from the reconstructed metaweb of trophic interactions between Canadian mammals from
-@Strydom2022FooWeb. This metaweb is a-spatial, *i.e.*, it represents interactions between
-mammals that can occur anywhere in Canada. It contains 163 species, and 3280
-links with a non-zero probability of interaction. The species list for the Canadian
-metaweb was extracted from the International Union for the Conservation of
-Nature (IUCN) checklist [@Strydom2022FooWeb]. The metaweb was reconstructed
-using graph embedding and phylogenetic transfer learning based on the metaweb of
-European terrestrial mammals, which is itself based on a comprehensive survey of
-interactions reported in the scientific literature [@Maiorano2020TetSpe] -- the European metaweb is likely the most extensive collective collection of such interactions available today. The
-Canadian metaweb showed a 91% success rate in its correct identification of known interactions between
-Canadian mammals recorded in global databases [@Strydom2022FooWeb]. This metaweb
-is probabilistic, which has the advantage of reflecting the likelihood of an
+We collected probabilistic interaction data from the reconstructed metaweb of
+trophic interactions between Canadian mammals from @Strydom2022FooWeb. This
+metaweb is a-spatial, *i.e.*, it represents interactions between mammals that
+can occur anywhere in Canada. It contains 163 species, and 3280 links with a
+non-zero probability of interaction. The species list for the Canadian metaweb
+was extracted from the International Union for the Conservation of Nature (IUCN)
+checklist [@Strydom2022FooWeb]. The metaweb was reconstructed using graph
+embedding and phylogenetic transfer learning based on the metaweb of European
+terrestrial mammals, which is itself based on a comprehensive survey of
+interactions reported in the scientific literature [@Maiorano2020TetSpe] -- the
+European metaweb is likely the most extensive collective collection of such
+interactions available today. The Canadian metaweb showed a 91% success rate in
+its correct identification of known interactions between Canadian mammals
+recorded in global databases [@Strydom2022FooWeb]. This metaweb is
+probabilistic, which has the advantage of reflecting the likelihood of an
 interaction taking place given the phylogenetic and trait match between two
-species; in other words, the probability of an interaction in the metaweb describes our confidence in the biological feasibility of this interaction. This allows incorporating interaction variability between species
-(*i.e.*, taking into account that two species may not always interact whenever or
-wherever they occur); however, other factors beyond trait and
-phylogenetic matching (*e.g.*, population densities) will also contribute to
-observed interaction frequencies.
+species; in other words, the probability of an interaction in the metaweb
+describes our confidence in the biological feasibility of this interaction. This
+allows incorporating interaction variability between species (*i.e.*, taking
+into account that two species may not always interact whenever or wherever they
+occur); however, other factors beyond trait and phylogenetic matching (*e.g.*,
+population densities) will also contribute to observed interaction frequencies.
 
 ### Species occurrences
 
@@ -179,11 +199,13 @@ most predictive models require absence data, we generated the same number of
 pseudo-absence data as occurrences for every species [@Barbet-Massin2012SelPse].
 We weighted candidate sites by their distance to a known observation (separately
 for each species) using the `DistanceToEvent` method from the *Julia* package
-`SpeciesDistributionToolkit`, making it more likely to select sites further away from an observation and the
-known species range. This is because our intent was to model the potential
-distribution of species, capturing wider responses to the environment, as the
-downscaled metaweb we aimed to produce is potential in nature (see *Downscaled
-metaweb* section below). We used the Haversine distance between observation and candidate pseudo-absence cells when drawing pseudo-absences.
+`SpeciesDistributionToolkit`, making it more likely to select sites further away
+from an observation and the known species range. This is because our intent was
+to model the potential distribution of species, capturing wider responses to the
+environment, as the downscaled metaweb we aimed to produce is potential in
+nature (see *Downscaled metaweb* section below). We used the Haversine distance
+between observation and candidate pseudo-absence cells when drawing
+pseudo-absences.
 
 ### Environmental data
 
@@ -197,12 +219,13 @@ various measures of temperature and precipitation (*e.g.*, annual averages,
 monthly maximum or minimum, seasonality) and are available for land areas across
 the globe. We used the most recent version, the CHELSA v2.1 dataset
 [@Karger2021CliHig], and subsetted it to land surfaces only using the CHELSA
-v1.2 [@Karger2018DatCli], which does not cover open water (this is appropriate as the data we use as input only cover terrestrial mammals). The EarthEnv
+v1.2 [@Karger2018DatCli], which does not cover open water (this is appropriate
+as the data we use as input only cover terrestrial mammals). The EarthEnv
 land-cover variables represent classes such as Evergreen broadleaf trees,
 Cultivated and managed vegetation, Urban/Built-up, and Open Water. Values range
 between 0 and 100 and represent the consensus prevalence of each class in
-percentage within a pixel (hereafter called a "site"). We coarsened both the CHELSA
-and EarthEnv data from their original 30 arc-second resolution to a 2.5
+percentage within a pixel (hereafter called a "site"). We coarsened both the
+CHELSA and EarthEnv data from their original 30 arc-second resolution to a 2.5
 arc-minute one (around 4.5 km at the Equator) using GDAL
 [@GDAL/OGRcontributors2021GdaOgr]. This resolution compromised capturing both
 local variations and broad-scale patterns while limiting computation costs to a
@@ -219,11 +242,14 @@ probability of occurrence for a species in a specific site and the uncertainty
 associated with the prediction. These were crucial to obtaining a probabilistic
 version of the metaweb as they were used to create spatial variations in the
 localized interaction probabilities (see next section). One suitable method for
-this is Gradient Boosted Trees with a Gaussian maximum likelihood estimator from the
-`EvoTrees.jl` *Julia* package
+this is Gradient Boosted Trees with a Gaussian maximum likelihood estimator from
+the `EvoTrees.jl` *Julia* package
 ([https://github.com/Evovest/EvoTrees.jl](https://github.com/Evovest/EvoTrees.jl)).
 This method returns a prediction for every site with an average value and a
-standard deviation, which we considered as a measure of uncertainty; specifically, the output of a Gaussian MLL BRT is the probability distribution of observing the positive (*i.e.* presence) class. We used the mean and standard deviation of the predicted outcome to build a Normal distribution for the
+standard deviation, which we considered as a measure of uncertainty;
+specifically, the output of a Gaussian MLL BRT is the probability distribution
+of observing the positive (*i.e.* presence) class. We used the mean and standard
+deviation of the predicted outcome to build a Normal distribution for the
 probability of occurrence of a given species at each site (represented as
 probability distributions on @Fig:conceptual). We trained models across the
 extent chosen for occurrences (longitudes 175°W to 45°W and latitudes 10°N to
@@ -409,7 +435,8 @@ running our analyses at full scale is resource and memory-intensive and required
 the use of computer clusters provided by Calcul Québec and the Digital Research
 Alliance of Canada. Full-scale computations (excluding motifs) required 900 CPU
 core-hours and peaked at 500 GB of RAM. Computations for network motifs were
-susbtantially more demanding, requiring about 12 CPU core-years (approx. $10^5$ hours).
+susbtantially more demanding, requiring about 12 CPU core-years (approx. $10^5$
+hours).
 
 # Results
 
@@ -419,8 +446,8 @@ community measures (here, expected species richness) and network measures
 measures presented here are first computed over the predicted communities and
 networks obtained when downscaling the metaweb, then summarized across the
 ecoregions (taking the median within each ecoregion). They are not a direct
-prediction of the measure itself (*e.g.*, we do not present a prediction of actual
-species richness at each location). Expected ecoregion richness
+prediction of the measure itself (*e.g.*, we do not present a prediction of
+actual species richness at each location). Expected ecoregion richness
 ([@Fig:ecoregion_measures]A) and expected number of links
 ([@Fig:ecoregion_measures]B) displayed similar distributions with a latitudinal
 gradient and higher values in the south. Within-ecoregion variability was
@@ -547,16 +574,20 @@ be due to interactions between species being constant across space. Here, we
 found that potential species richness and number of links displayed similar
 distributions following a latitudinal gradient, but that the within-ecoregion
 variance was lower along the southern border than the measures themselves
-([@Fig:ecoregion_measures]). The causes for this lack of consistency at the eco-region scale could be verified in future studies; for instance, higher urban density in the south can create more heterogeneity within an eco-region, and the variability in network structure may reflect true landscape variability within eco-regions. We found that
-network density (links on [@Fig:ecoregion_measures]B) was lower in the north,
-which is contrary to what was observed in Europe for the terrestrial tetrapod
-metaweb [@Braga2019SpaAna; @Galiana2021SpaSca] and for willow-galler-parasitoid
-networks [@Gravel2019BriElt], where connectance was higher in northern regions.
-However, those are systems with different numbers of species and environmental
-conditions (*e.g.* Europe and Canada could differ due to varying climatic
-conditions, land-use, and speciesc composition at the same latitudes). Further research should investigate why these
-results might differ between continents and ecological systems and whether it is
-due to the methodology, data, or biogeographical processes.
+([@Fig:ecoregion_measures]). The causes for this lack of consistency at the
+eco-region scale could be verified in future studies; for instance, higher urban
+density in the south can create more heterogeneity within an eco-region, and the
+variability in network structure may reflect true landscape variability within
+eco-regions. We found that network density (links on [@Fig:ecoregion_measures]B)
+was lower in the north, which is contrary to what was observed in Europe for the
+terrestrial tetrapod metaweb [@Braga2019SpaAna; @Galiana2021SpaSca] and for
+willow-galler-parasitoid networks [@Gravel2019BriElt], where connectance was
+higher in northern regions. However, those are systems with different numbers of
+species and environmental conditions (*e.g.* Europe and Canada could differ due
+to varying climatic conditions, land-use, and speciesc composition at the same
+latitudes). Further research should investigate why these results might differ
+between continents and ecological systems and whether it is due to the
+methodology, data, or biogeographical processes.
 
 Our LCBD and uniqueness results highlighted that areas with unique network
 composition differ from sites with unique species composition. In other words,
@@ -581,7 +612,8 @@ did not seem related to ecoregion variance, which once again showed a very
 different distribution from the median values. Meanwhile, competition motifs (S4
 and S5, measured through NDCI values) showed an even dominance of apparent
 competition (S5) but high variance in a single ecoregion. Overall, our results
-show that dominant motifs within a mammal food web not only vary between ecoregions, but actually vary differently across space.
+show that dominant motifs within a mammal food web not only vary between
+ecoregions, but actually vary differently across space.
 
 When to use the workflow we presented here will depend on the availability of
 interaction data or existing metawebs, and on the intent to incorporate
@@ -606,13 +638,34 @@ for showing variation within and between ecologically meaningful biogeographic
 boundaries [@Martins2022GloReg], which, as our results showed, is not constant
 across space and can help identify contrasting diversity hotspots.
 
-Although our approach can generate a wealth of predictions, the next step is quite obviously to work on the validation of these  predictions. This step is mandatory if the predictions are to be made actionable. Nevertheless, developing a way to generate these predictions when
-information is initially scarce, as we present here, is highly important in
-itself: it establishes a baseline for what the expected measurements will look like, but also (through quantification of variability and uncertainty) provides an estimate of where a more sustained effort is required to adequately document food web structure. For instance, documenting interactions at a single location in an eco-region with high variability of predicted network structure may ultimately be less informative, whereas more homogeneous eco-regions constitute "low-hanging fruits" for validation. Any future sampling of food
-web structure can be used to (in)validate the predictions: they can be fed into the model to iterate
-these results again, and by decreasing the uncertainty associated to the interactions, can boost the accuracy of the entire model. There are two external sources of information that can also increase the predictive ability of the model. Because the downscaling relies on SDMs, any additional documentation of species presences can be reflected in the network prediction. Furthemore, because the metaweb itself was obtained through transfer learning from data describing a different system, any change to the knowledge in this other data can be reflected in the input data. As @Strydom2023GraEmb point out, validation of metaweb
-predictions, empirical sampling, and method design should all proceed jointly,
-and making conceptual progress in one of these areas helps all the others. In this manuscript, we focused on motif composition, both for its relevance to functional properties of food webs, but also because it can be fairly reliably infered from partial network data; in other words, validating some predictions is not necessarily relying upon exhaustive documentation of local food webs.
+Although our approach can generate a wealth of predictions, the next step is
+quite obviously to work on the validation of these  predictions. This step is
+mandatory if the predictions are to be made actionable. Nevertheless, developing
+a way to generate these predictions when information is initially scarce, as we
+present here, is highly important in itself: it establishes a baseline for what
+the expected measurements will look like, but also (through quantification of
+variability and uncertainty) provides an estimate of where a more sustained
+effort is required to adequately document food web structure. For instance,
+documenting interactions at a single location in an eco-region with high
+variability of predicted network structure may ultimately be less informative,
+whereas more homogeneous eco-regions constitute "low-hanging fruits" for
+validation. Any future sampling of food web structure can be used to
+(in)validate the predictions: they can be fed into the model to iterate these
+results again, and by decreasing the uncertainty associated to the interactions,
+can boost the accuracy of the entire model. There are two external sources of
+information that can also increase the predictive ability of the model. Because
+the downscaling relies on SDMs, any additional documentation of species
+presences can be reflected in the network prediction. Furthemore, because the
+metaweb itself was obtained through transfer learning from data describing a
+different system, any change to the knowledge in this other data can be
+reflected in the input data. As @Strydom2023GraEmb point out, validation of
+metaweb predictions, empirical sampling, and method design should all proceed
+jointly, and making conceptual progress in one of these areas helps all the
+others. In this manuscript, we focused on motif composition, both for its
+relevance to functional properties of food webs, but also because it can be
+fairly reliably infered from partial network data; in other words, validating
+some predictions is not necessarily relying upon exhaustive documentation of
+local food webs.
 
 The recent shift in focus towards building metawebs opens many opportunities for
 projections of networks in space through probabilistic downscaling, as we
