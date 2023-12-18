@@ -713,3 +713,60 @@ Narval general purpose cluster.
 \newpage
 
 # References
+
+::: {#refs}
+:::
+
+# Figures
+
+**Figure 1: Conceptual figure of the proposed workflow used to downscale the
+probabilistic metaweb in space. The workflow has three components: the data, the
+localized steps, and the final spatial output. The data are composed of spatial
+data (with information in every cell) and non-spatial data (constant for all of
+Canada). The localized steps use these data and are performed separately in
+every cell, first at a single-species level (using distribution data), then for
+every species pair (adding interaction data from the metaweb), and finally at
+the network level by combining the results of all species pairs. The final
+output of the network-level steps contains a downscaled probabilistic metaweb
+for every cell across the study extent. Note that in order to mitigate some of
+the fine-scale grain in the data, we present most outputs at the ecoregion
+scale, with pixel-scale maps in supplementary material.**
+
+
+**Figure 2: (A-B) Example of a community measure (A, expected species richness)
+and a network one (B, expected number of links). Both measures are assembled
+from the predicted probabilistic communities and networks, respectively. Values
+are first measured separately for all sites; then, the median value within each
+ecoregion was taken to represent the ecoregion-level value. (C-B) Representation
+of the 89% interquantile range of values within the ecoregion for expected
+richness (C) and expected number of links (D). All colour bars follow a log
+scale with tick marks representing even intervals. Real values (non-log
+transformed) are shown beside major tick marks while minor ticks represent half
+increments.**
+
+**Figure 3: (A-B) Representation of the ecoregion uniqueness values based on
+species composition (A) and network composition (B). LCBD values were first
+computed across all sites and scaled relative to the maximum value observed. The
+ecoregion LCBD value is the median value for the sites in the ecoregion. (C)
+Bivariate representation of species and network composition LCBD. Values are
+grouped into three quantiles separately for each variable. The colour
+combinations represent the nine possible combinations of quantiles. The species
+uniqueness (horizontal axis) goes left to right from low uniqueness (light grey,
+bottom left) to high uniqueness (green, bottom right). The network composition
+uniqueness goes bottom-up from low uniqueness (light grey, bottom left) to high
+uniqueness (blue, top left). (D) Probability densities for the ecoregion LCBD
+values for species and network LCBD (left), highlighting the variability of LCBD
+values between ecoregions, and the 89% interquartile range of the values within
+each ecoregion (right), highlighting the variability within the ecoregions.**
+
+**Figure 4: Comparison of the dominant ecological motifs across ecoregions. A)
+Normalized Difference Index (NDTI) comparing the trophic motifs S1 (tri-trophic
+food chains) and S2 (omnivory). Positive values indicate a dominance of S1,
+while negative values indicate a dominance of S2. Values equal or superior to
+|0.5| are shown with the same colour as they indicate a high dominance of one
+motif. B) Normalized Difference Index (NDCI) comparing the competition motifs S4
+(exploitative competition) and S5 (apparent competition). Positive values
+indicate a dominance of S4, while negative values indicate a dominance of S5.
+(C-D) Representation of the 89% interquantile range of values within the
+ecoregion for the trophic motifs index (NDTI, C) and competition motifs index
+(NDCI, D).**
