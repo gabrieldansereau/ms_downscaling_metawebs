@@ -11,7 +11,7 @@ sampling efforts in a few areas or biomes, limiting our ability to answer
 questions in many biomes and over broad spatial extents [@Poisot2021GloKno].
 Moreover, global monitoring of biotic interactions is insufficient to properly
 describe and understand how ecosystems are reacting to global change
-[@Windsor2023UsiEco]. Approaches to predict species interactions [*e.g.*,
+[@Windsor2023UsiEco]. Approaches to predict species interactions [*e.g.*\,
 @Desjardins-Proulx2017EcoInt; @Morales-Castilla2015InfBio] are increasingly used
 as an alternative to determine potential interactions; they can handle limited
 data to circumvent data scarcity [@Strydom2021RoaPre], but are still rarely used
