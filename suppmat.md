@@ -1,5 +1,5 @@
 ---
-title: Site-level figures and results
+title: Supplementary ecoregion-level and site-level figures
 subtitle: Supplementary material to *Spatially explicit predictions of food web structure from regional level data*
 author:
 - Gabriel Dansereau
@@ -12,6 +12,16 @@ header-includes:
 <!-- \setcounter{figure}{0} -->
 
 \newpage
+
+### Supplementary ecoregion-level figure
+
+<!-- Ecoregion bivariate -->
+
+![Bivariate relationship between community and network measures for the median ecoregion value (A) and the within-ecoregion 89% interquantile range (B). Values are grouped into five quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. Species richness (horizontal axis) goes left to right from low (light grey, bottom left) to high (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left).](figures/ecoregion_bivariates.png){#fig:ecoregion_bivariates height=60%}
+
+\newpage
+
+### Supplementary site-level figures
 
 <!-- Sampling options -->
 
@@ -39,7 +49,7 @@ Site-level examples of a community measure (a, expected species richness) and a 
 
   ![Comparison of the estimates' uncertainty](figures/bivariate_richness_links_variance.png){#fig:bivariate_uncertainty height=40%}
 
-Bivariate representation of the estimates (a) and uncertainty (b) of species richness and the number of links. Values are grouped into three quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The richness (horizontal axis) goes left to right from low richness (light grey, bottom left) to high richness (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left). Variance measures (b) for richness and links are computed respectively as the sum of all occurrence and interaction probabilities in each site.
+Bivariate representation of the estimates (a) and uncertainty (b) of species richness and the number of links. Values are grouped into five quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The richness (horizontal axis) goes left to right from low richness (light grey, bottom left) to high richness (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left). Uncertainty values (b) are computed for every site as the sum of the standard deviations returned for each species by the Gradient Boosted Trees with a Gaussian maximum likelihood estimator (for richness uncertainty) and as link variance measured on the local probabilistic networks (for links uncertainty).
 
 </div>
 
@@ -51,6 +61,14 @@ Bivariate representation of the estimates (a) and uncertainty (b) of species ric
 
 \newpage
 
-<!-- LCBD densities -->
+<!-- Motif figures -->
 
-![Difference in the grouping of the sites identified as unique only for their networks (pink) or only their species composition (cyan). Sites unique only for their species composition mostly have high species richness and a high number of links while sites unique for their network composition only have low richness and number of links. Other sites not belonging to the unique species or network groups are shown in the background (black) and span a wider range. Values on the y-axis for the density figures (right) are probability densities scaled so that the area under the curve equals one. Similarly, the area under the curve for a given range of values on the x-axis (richness or links) represents the probability of observing a value in that range for the different site groupings.](figures/lcbd_bivariate_densities.png){#fig:lcbd_scatter}
+<div id="fig:motifs" class="subfigures">
+
+  ![Normalized Difference Trophic Index (NDTI)](figures/motifs_NDI_trophic.png){#fig:motifs_ndti height=40%}
+
+  ![Normalized Difference Competition Index (NDCI)](figures/motifs_NDI_competition.png){#fig:motifs_ndci height=40%}
+
+Comparison of the dominant ecological motifs across ecoregions. a) Normalized Difference Index (NDTI) comparing the trophic motifs S1 (tri-trophic food chains) and S2 (omnivory). Positive values indicate a dominance of S1 while negative values indicate a dominance of S2. Values equal or superior to |0.5| are shown with the same color as they indicate a high dominance of one motif. b) Normalized Difference Index (NDCI) comparing the competition motifs S4 (exploitative competition) and S5 (apparent competition). Positive values indicate a dominance of S4 while negative values indicate a dominance of S5.
+
+</div>
