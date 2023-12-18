@@ -585,7 +585,7 @@ terrestrial tetrapod metaweb [@Braga2019SpaAna; @Galiana2021SpaSca] and for
 willow-galler-parasitoid networks [@Gravel2019BriElt], where connectance was
 higher in northern regions. However, those are systems with different numbers of
 species and environmental conditions (*e.g.*, Europe and Canada could differ due
-to varying climatic conditions, land-use, and speciesc composition at the same
+to varying climatic conditions, land-use, and species composition at the same
 latitudes). Further research should investigate why these results might differ
 between continents and ecological systems and whether it is due to the
 methodology, data, or biogeographical processes.
