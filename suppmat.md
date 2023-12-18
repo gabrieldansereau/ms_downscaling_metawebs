@@ -49,7 +49,7 @@ Site-level examples of a community measure (a, expected species richness) and a 
 
   ![Comparison of the estimates' uncertainty](figures/bivariate_richness_links_variance.png){#fig:bivariate_uncertainty height=40%}
 
-Bivariate representation of the estimates (a) and uncertainty (b) of species richness and the number of links. Values are grouped into three quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The richness (horizontal axis) goes left to right from low richness (light grey, bottom left) to high richness (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left). Variance measures (b) for richness and links are computed respectively as the sum of all occurrence and interaction probabilities in each site.
+Bivariate representation of the estimates (a) and uncertainty (b) of species richness and the number of links. Values are grouped into five quantiles separately for each variable. The colour combinations represent the nine possible combinations of quantiles. The richness (horizontal axis) goes left to right from low richness (light grey, bottom left) to high richness (green, bottom right). The number of links goes bottom-up from low (light grey, bottom left) to high (blue, top left). Uncertainty values (b) are computed for every site as the sum of the standard deviations returned for each species by the Gradient Boosted Trees with Gaussian maximum likelihood (for richness uncertainty) and as link variance measured on the local probabilistic networks (for links uncertainty).
 
 </div>
 
