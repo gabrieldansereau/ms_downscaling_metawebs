@@ -80,6 +80,37 @@
         "type": "article-journal"
     },
     {
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Oikos",
+        "author": [
+            {
+                "family": "Baiser",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Elhesha",
+                "given": "Rasha"
+            },
+            {
+                "family": "Kahveci",
+                "given": "Tamer"
+            }
+        ],
+        "id": "Baiser2016MotAss",
+        "DOI": "10.1111/oik.02532",
+        "volume": "125",
+        "page": "480-491",
+        "title": "Motifs in the assembly of food web networks",
+        "type": "article-journal"
+    },
+    {
         "issued": {
             "date-parts": [
                 [
@@ -172,6 +203,42 @@
         "DOI": "10.1111/geb.12925",
         "page": "geb.12925",
         "title": "Ecogeographical rules and the macroecology of food webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "container-title": "Ecography",
+        "author": [
+            {
+                "family": "Baker",
+                "given": "Nick J."
+            },
+            {
+                "family": "Kaartinen",
+                "given": "Riikka"
+            },
+            {
+                "family": "Roslin",
+                "given": "Tomas"
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            }
+        ],
+        "id": "Baker2015SpeRol",
+        "DOI": "10.1111/ecog.00913",
+        "volume": "38",
+        "page": "130-139",
+        "title": "Species’ roles in food webs show fidelity across a highly variable oak forest",
+        "other-ids": "Baker2015SpeRola",
         "type": "article-journal"
     },
     {
@@ -489,6 +556,33 @@
         "type": "article-journal"
     },
     {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Cirtwill",
+                "given": "Alyssa R."
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            }
+        ],
+        "id": "Cirtwill2015ConPre",
+        "DOI": "10.1111/1365-2656.12323",
+        "volume": "84",
+        "page": "734-744",
+        "title": "Concomitant predation on parasites is highly variable but constrains the ways in which parasites contribute to food web structure",
+        "type": "article-journal"
+    },
+    {
         "issue": "65",
         "issued": {
             "date-parts": [
@@ -573,6 +667,30 @@
         "title": "Evaluating ecological uniqueness over broad spatial extents using species distribution modelling",
         "other-ids": "DansereauEvaEco",
         "type": "article-journal"
+    },
+    {
+        "publisher": "Zenodo",
+        "DOI": "10.5281/ZENODO.8350065",
+        "author": [
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Dansereau2023PoiSpa",
+        "title": "PoisotLab/SpatialProbabilisticMetaweb: V1.0",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "publisher": "Public Library of Science",
@@ -1365,6 +1483,32 @@
         "page": "993-1009",
         "title": "Predicting species distribution: Offering more than simple habitat models",
         "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "family": "Guisan",
+                "given": "Antoine"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            },
+            {
+                "family": "Zimmermann",
+                "given": "Niklaus E"
+            }
+        ],
+        "id": "Guisan2017HabSui",
+        "title": "Habitat suitability and distribution models with applications in R",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "type": "book"
     },
     {
         "issue": "1",
@@ -2302,6 +2446,50 @@
         "type": "article-journal"
     },
     {
+        "publisher": "American Association for the Advancement of Science",
+        "issue": "5594",
+        "issued": {
+            "date-parts": [
+                [
+                    2002
+                ]
+            ]
+        },
+        "container-title": "Science",
+        "author": [
+            {
+                "family": "Milo",
+                "given": "R."
+            },
+            {
+                "family": "Shen-Orr",
+                "given": "S."
+            },
+            {
+                "family": "Itzkovitz",
+                "given": "S."
+            },
+            {
+                "family": "Kashtan",
+                "given": "N."
+            },
+            {
+                "family": "Chklovskii",
+                "given": "D."
+            },
+            {
+                "family": "Alon",
+                "given": "U."
+            }
+        ],
+        "id": "Milo2002NetMot",
+        "DOI": "10.1126/science.298.5594.824",
+        "volume": "298",
+        "page": "824-827",
+        "title": "Network Motifs: Simple Building Blocks of Complex Networks",
+        "type": "article-journal"
+    },
+    {
         "DOI": "10.22541/au.166784603.30222525/v1",
         "author": [
             {
@@ -2337,6 +2525,45 @@
         "type": ""
     },
     {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "container-title": "Nature Communications",
+        "author": [
+            {
+                "family": "Mora",
+                "given": "Bernat Bramon"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Gilarranz",
+                "given": "Luis J."
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            }
+        ],
+        "id": "Mora2018IdeCom",
+        "DOI": "10.1038/s41467-018-05056-0",
+        "volume": "9",
+        "page": "2603",
+        "title": "Identifying a common backbone of interactions underlying food webs from different ecosystems",
+        "type": "article-journal"
+    },
+    {
         "issue": "6",
         "issued": {
             "date-parts": [
@@ -2370,6 +2597,25 @@
         "page": "347-356",
         "title": "Inferring biotic interactions from proxies",
         "type": "article-journal"
+    },
+    {
+        "publisher": "https://jakubnowosad.com/posts/2020-08-25-cbc-bp2",
+        "author": [
+            {
+                "family": "Nowosad",
+                "given": "Jakub"
+            }
+        ],
+        "id": "Nowosad2020HowCho",
+        "title": "How to choose a bivariate color palette?",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "issue": "1",
@@ -2914,6 +3160,53 @@
         "type": "article-journal"
     },
     {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Oikos",
+        "author": [
+            {
+                "family": "Simmons",
+                "given": "Benno I."
+            },
+            {
+                "family": "Cirtwill",
+                "given": "Alyssa R."
+            },
+            {
+                "family": "Baker",
+                "given": "Nick J."
+            },
+            {
+                "family": "Wauchope",
+                "given": "Hannah S."
+            },
+            {
+                "family": "Dicks",
+                "given": "Lynn V."
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Sutherland",
+                "given": "William J."
+            }
+        ],
+        "id": "Simmons2019MotBip",
+        "DOI": "10.1111/oik.05670",
+        "volume": "128",
+        "page": "154-170",
+        "title": "Motifs in bipartite ecological networks: Uncovering indirect interactions",
+        "type": "article-journal"
+    },
+    {
         "edition": "Second edition",
         "publisher": "Statistics Canada = Statistique Canada",
         "author": [
@@ -2932,6 +3225,69 @@
             ]
         },
         "type": "book"
+    },
+    {
+        "publisher": "Royal Society",
+        "issue": "1621",
+        "issued": {
+            "date-parts": [
+                [
+                    2007
+                ]
+            ]
+        },
+        "container-title": "Proceedings of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Stouffer",
+                "given": "Daniel B"
+            },
+            {
+                "family": "Camacho",
+                "given": "Juan"
+            },
+            {
+                "family": "Jiang",
+                "given": "Wenxin"
+            },
+            {
+                "family": "Nunes Amaral",
+                "given": "Luís A"
+            }
+        ],
+        "id": "Stouffer2007EviExi",
+        "DOI": "10.1098/rspb.2007.0571",
+        "volume": "274",
+        "page": "1931-1940",
+        "title": "Evidence for the existence of a robust pattern of prey selection in food webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2010
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Bascompte",
+                "given": "Jordi"
+            }
+        ],
+        "id": "Stouffer2010UndFoo",
+        "DOI": "10.1111/j.1461-0248.2009.01407.x",
+        "volume": "13",
+        "page": "154-161",
+        "title": "Understanding food-web persistence from local to global scales",
+        "type": "article-journal"
     },
     {
         "publisher": "Royal Society",
@@ -3079,7 +3435,6 @@
     },
     {
         "publisher": "EcoEvoRxiv",
-        "DOI": "10.32942/osf.io/vyzgr",
         "author": [
             {
                 "family": "Strydom",
@@ -3143,6 +3498,73 @@
                 ]
             ]
         },
+        "type": "article-journal"
+    },
+    {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "container-title": "Methods in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Strydom",
+                "given": "Tanya"
+            },
+            {
+                "family": "Bouskila",
+                "given": "Salomé"
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Barros",
+                "given": "Ceres"
+            },
+            {
+                "family": "Caron",
+                "given": "Dominique"
+            },
+            {
+                "family": "Farrell",
+                "given": "Maxwell J."
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura J."
+            },
+            {
+                "family": "Runghen",
+                "given": "Rogini"
+            },
+            {
+                "family": "Dalla Riva",
+                "given": "Giulio V."
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Strydom2023GraEmb",
+        "DOI": "10.1111/2041-210X.14228",
+        "volume": "14",
+        "page": "2917-2930",
+        "title": "Graph embedding and transfer learning can help predict potential species interaction networks despite data limitations",
         "type": "article-journal"
     },
     {
@@ -3238,7 +3660,7 @@
         "volume": "50",
         "page": "57-69",
         "title": "Using ecological networks to answer questions in global biogeography and ecology",
-        "other-ids": "WindsorUsiEco",
+        "other-ids": "Windsor2022UsiEco,WindsorUsiEco",
         "type": "article-journal"
     },
     {
