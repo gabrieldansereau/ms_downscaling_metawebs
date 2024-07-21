@@ -493,6 +493,65 @@
         "type": "report"
     },
     {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "container-title": "Global Change Biology",
+        "author": [
+            {
+                "family": "Botella",
+                "given": "Christophe"
+            },
+            {
+                "family": "Gaüzère",
+                "given": "Pierre"
+            },
+            {
+                "family": "O’Connor",
+                "given": "Louise"
+            },
+            {
+                "family": "Ohlmann",
+                "given": "Marc"
+            },
+            {
+                "family": "Renaud",
+                "given": "Julien"
+            },
+            {
+                "family": "Dou",
+                "given": "Yue"
+            },
+            {
+                "family": "Graham",
+                "given": "Catherine H."
+            },
+            {
+                "family": "Verburg",
+                "given": "Peter H."
+            },
+            {
+                "family": "Maiorano",
+                "given": "Luigi"
+            },
+            {
+                "family": "Thuiller",
+                "given": "Wilfried"
+            }
+        ],
+        "id": "Botella2024LanInt",
+        "DOI": "10.1111/gcb.17167",
+        "volume": "30",
+        "page": "e17167",
+        "title": "Land-use intensity influences European tetrapod food webs",
+        "type": "article-journal"
+    },
+    {
         "issue": "11",
         "issued": {
             "date-parts": [
@@ -683,6 +742,30 @@
         ],
         "id": "Dansereau2023PoiSpa",
         "title": "PoisotLab/SpatialProbabilisticMetaweb: V1.0",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "publisher": "Zenodo",
+        "DOI": "10.5281/ZENODO.10403410",
+        "author": [
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Dansereau2023PoiSpaa",
+        "title": "PoisotLab/SpatialProbabilisticMetaweb: V2.0",
         "issued": {
             "date-parts": [
                 [
@@ -1005,15 +1088,27 @@
         "type": "article-journal"
     },
     {
+        "publisher": "Oxford University Press",
         "author": [
             {
                 "family": "Dunne",
                 "given": "Jennifer"
             }
         ],
+        "publisher-place": "Oxford ; New York",
         "id": "Dunne2006NetStr",
         "page": "27-86",
         "title": "The network structure of food webs",
+        "editor": [
+            {
+                "family": "Pascual",
+                "given": "Mercedes"
+            },
+            {
+                "family": "Dunne",
+                "given": "Jennifer"
+            }
+        ],
         "issued": {
             "date-parts": [
                 [
@@ -1146,6 +1241,7 @@
         "volume": "44",
         "page": "653-664",
         "title": "The spatial scaling of food web structure across European biogeographical regions",
+        "other-ids": "Galiana2021SpaScaa",
         "type": "article-journal"
     },
     {
@@ -1340,7 +1436,7 @@
     },
     {
         "publisher": "The Global Biodiversity Information Facility",
-        "DOI": "10.15468/DL.H7GZPV",
+        "DOI": "10.15468/dl.h7gzpv",
         "author": [
             {
                 "literal": "GBIF.org"
@@ -1802,6 +1898,7 @@
         "volume": "282",
         "page": "20151546",
         "title": "Climate change alters the structure of arctic marine food webs due to poleward shifts of boreal generalists",
+        "other-ids": "Kortsch2015CliChaa",
         "type": "article-journal"
     },
     {
@@ -1845,6 +1942,7 @@
         "volume": "42",
         "page": "295-308",
         "title": "Food-web structure varies along environmental gradients in a high-latitude marine ecosystem",
+        "other-ids": "Kortsch2019FooWeb",
         "type": "article-journal"
     },
     {
@@ -1981,7 +2079,14 @@
         "type": "article-journal"
     },
     {
-        "DOI": "10.1101/2023.03.10.532098",
+        "publisher": "bioRxiv",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
         "author": [
             {
                 "family": "Lucas",
@@ -2065,14 +2170,11 @@
             }
         ],
         "id": "Lucas2023IncBio",
+        "DOI": "10.1101/2023.03.10.532098",
+        "chapter-number": "New Results",
+        "page": "2023.03.10.532098",
         "title": "Including biotic interactions in species distribution models improves the understanding of species niche: A case of study with the brown bear in Europe",
-        "issued": {
-            "date-parts": [
-                [
-                    2023
-                ]
-            ]
-        },
+        "other-ids": "Lucas2023IncBioa",
         "type": ""
     },
     {
@@ -2299,7 +2401,7 @@
         "type": "article-journal"
     },
     {
-        "edition": "Second",
+        "edition": "2",
         "publisher": "Chapman and Hall/CRC",
         "publisher-place": "New York",
         "issued": {
@@ -2490,7 +2592,9 @@
         "type": "article-journal"
     },
     {
+        "publisher": "Authorea",
         "DOI": "10.22541/au.166784603.30222525/v1",
+        "genre": "Preprint",
         "author": [
             {
                 "family": "Moens",
@@ -3120,6 +3224,99 @@
         "type": "article-journal"
     },
     {
+        "publisher": "Zenodo",
+        "DOI": "10.5281/ZENODO.5884351",
+        "author": [
+            {
+                "family": "Rouault",
+                "given": "Even"
+            },
+            {
+                "family": "Warmerdam",
+                "given": "Frank"
+            },
+            {
+                "family": "Schwehr",
+                "given": "Kurt"
+            },
+            {
+                "family": "Kiselev",
+                "given": "Andrey"
+            },
+            {
+                "family": "Butler",
+                "given": "Howard"
+            },
+            {
+                "family": "Łoskot",
+                "given": "Mateusz"
+            },
+            {
+                "family": "Szekeres",
+                "given": "Tamas"
+            },
+            {
+                "family": "Tourigny",
+                "given": "Etienne"
+            },
+            {
+                "family": "Landa",
+                "given": "Martin"
+            },
+            {
+                "family": "Miara",
+                "given": "Idan"
+            },
+            {
+                "family": "Elliston",
+                "given": "Ben"
+            },
+            {
+                "family": "Chaitanya",
+                "given": "Kumar"
+            },
+            {
+                "family": "Plesea",
+                "given": "Lucian"
+            },
+            {
+                "family": "Morissette",
+                "given": "Daniel"
+            },
+            {
+                "family": "Jolma",
+                "given": "Ari"
+            },
+            {
+                "family": "Dawson",
+                "given": "Nyall"
+            },
+            {
+                "family": "Baston",
+                "given": "Daniel"
+            },
+            {
+                "family": "Stigter",
+                "given": "Craig",
+                "non-dropping-particle": "de"
+            },
+            {
+                "family": "Miura",
+                "given": "Hiroshi"
+            }
+        ],
+        "id": "Rouault2024Gda",
+        "title": "GDAL",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
         "issue": "3",
         "issued": {
             "date-parts": [
@@ -3435,6 +3632,7 @@
     },
     {
         "publisher": "EcoEvoRxiv",
+        "DOI": "10.32942/osf.io/vyzgr",
         "author": [
             {
                 "family": "Strydom",
