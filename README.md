@@ -227,7 +227,7 @@ between 0 and 100 and represent the consensus prevalence of each class in
 percentage within a pixel (hereafter called a "site"). We coarsened both the
 CHELSA and EarthEnv data from their original 30 arc-second resolution to a 2.5
 arc-minute one (around 4.5 km at the Equator) using GDAL
-[@GDAL/OGRcontributors2021GdaOgr]. This resolution compromised capturing both
+[@Rouault2024Gda]. This resolution compromised capturing both
 local variations and broad-scale patterns while limiting computation costs to a
 manageable level as memory requirements rapidly increase with spatial
 resolution.
@@ -556,10 +556,10 @@ We also provide the first spatial representation of the metaweb of Canadian
 mammals [@Strydom2022FooWeb] and a probabilistic equivalent to how the European
 tetrapod metaweb [@Maiorano2020TetSpe] was used to predict localized networks in
 Europe [@Braga2019SpaAna; @OConnor2020UnvFoo; @Galiana2021SpaSca;
-@Gauzere2022DivBio; @Botella2023LanInt]. Therefore, our approach could open
+@Gauzere2022DivBio; @Botella2024LanInt]. Therefore, our approach could open
 similar possibilities of investigations on the variation of structure in space
 [@Braga2019SpaAna] and on the effect of land-use intensification
-[@Botella2023LanInt] on North American food webs, particularly Canadian mammal
+[@Botella2024LanInt] on North American food webs, particularly Canadian mammal
 food webs. Other interesting research applications include assessing climate
 change impacts on network structure [*e.g.*, @Kortsch2015CliCha] or
 investigating linkages between network structure and stability
