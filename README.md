@@ -471,7 +471,7 @@ Supplementary Material (Figs. S3-S6).
 network one (B, expected number of links). Both measures are assembled from the
 predicted probabilistic communities and networks, respectively. Values are first
 measured separately for all sites; then, the median value within each ecoregion
-was taken to represent the ecoregion-level value. (C-B) Representation of the
+was taken to represent the ecoregion-level value. (C-D) Representation of the
 89% interquantile range of values within the ecoregion for expected richness (C)
 and expected number of links (D). All colour bars follow a log scale with tick
 marks representing even intervals. Real values (non-log transformed) are shown
