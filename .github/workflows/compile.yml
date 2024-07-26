@@ -26,9 +26,9 @@ jobs:
           arch: 'x64'      
       - name: Get the typesetter
         run: |
-          wget https://github.com/PoisotLab/manuscript-typesetter/archive/refs/tags/v${{ matrix.typesetter-version }}.tar.gz
-          tar -xvf v${{ matrix.typesetter-version }}.tar.gz
-          mv manuscript-typesetter-${{ matrix.typesetter-version }} .typesetter
+          wget https://github.com/gabrieldansereau/manuscript-typesetter/archive/refs/tags/2024-07_ms_downscaling_metawebs.tar.gz -O main.tar.gz
+          tar -xvf main.tar.gz
+          mv manuscript-typesetter-* .typesetter
       - name: Julia packages
         uses: julia-actions/julia-buildpkg@v1
         with:
